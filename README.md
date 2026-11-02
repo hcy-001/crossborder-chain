@@ -104,7 +104,8 @@ clone 下来想直接看产出，用仓库里那份标注过的演示答卷（�
 
 ```bash
 npm run chain:dir -- --direction "女士针织开衫" --region RU --intake data/intake/demo-ru.json
-# → package/<sku>__<id>/handoff.md   约 3–4 分钟（含建模与出图）
+# → package/<sku>/handoff.md（已存在则加 __<时间片>）
+# 耗时 30 秒到 5 分钟：干净 clone 首次约 36 秒；本机有历史产物时会重新出图建模，约 4–5 分钟
 ```
 
 下面是这条命令内部依次跑的五段，也可以单独调。
