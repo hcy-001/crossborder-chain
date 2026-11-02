@@ -15,7 +15,7 @@ import { dirname, join, resolve } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
-import { parseMissingFields, slugOf } from "../../scripts/run-direction.mjs";
+import { extractPackageDir, parseMissingFields, slugOf } from "../../scripts/run-direction.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -70,4 +70,28 @@ test("缺参数时打印用法并以 2 退出，不启动任何采集", () => {
   assert.match(result.stdout, /用法:/);
   // 参数错就不该有「方向验证」这类进展输出
   assert.equal(/① 方向验证/.test(result.stdout), false);
+});
+
+// ── 包目录提取：两种形态都要认 ────────────────────────
+// 干净 clone 是「首次跑」，目录不带 __时间片。只认带后缀的那种，
+// 在别人的机器上就会显示「包 见上」——等于没告诉人产物在哪。
+const BS = String.fromCharCode(92); // 反斜杠，避免测试文件里出现转义噪音
+
+test("extractPackageDir：已存在时的 <sku>__<时间片> 形态", () => {
+  const line = `1. 打开 \`D:${BS}work${BS}package${BS}kurtka-x__604133/handoff.md\`，按「开工三步」往下做`;
+  assert.equal(extractPackageDir(line), `D:${BS}work${BS}package${BS}kurtka-x__604133`);
+});
+
+test("extractPackageDir：首次跑时的 <sku> 形态（无时间片）", () => {
+  const line = `1. 打开 \`/tmp/cb-v11/package/kurtka-zhenskaia-osenniaia-eac468/handoff.md\`，按`;
+  assert.equal(extractPackageDir(line), "package/kurtka-zhenskaia-osenniaia-eac468");
+});
+
+test("extractPackageDir：相对路径形态", () => {
+  assert.equal(extractPackageDir("package/sku__123/handoff.md"), "package/sku__123");
+});
+
+test("extractPackageDir：没有 handoff 路径时返回 null，不瞎猜", () => {
+  assert.equal(extractPackageDir("出包成功：ozon、yandex-market"), null);
+  assert.equal(extractPackageDir(""), null);
 });

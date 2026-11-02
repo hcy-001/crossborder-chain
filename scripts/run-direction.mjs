@@ -55,6 +55,23 @@ export function parseMissingFields(text) {
   return out;
 }
 
+/**
+ * 从 chain 的输出里取出包目录。
+ *
+ * 两种形态都要认：
+ *   - 首次跑：`package/<sku>`（干净 clone 必然走这条）
+ *   - 已存在：`package/<sku>__<时间片>`
+ * 只认带时间片的那种，干净环境里就会显示「见上」，等于没告诉人包在哪。
+ * 以 `handoff.md` 为锚点反推，比匹配目录名形状可靠。
+ */
+export function extractPackageDir(text) {
+  const source = String(text ?? "");
+  const withDrive = source.match(/[A-Za-z]:[\\/][^\n`]*?package[\\/][^\\/\n`]+(?=[\\/]handoff\.md)/);
+  if (withDrive) return withDrive[0];
+  const relative = source.match(/package[\\/][^\\/\n`]+(?=[\\/]handoff\.md)/);
+  return relative ? relative[0] : null;
+}
+
 function usage() {
   console.log(`一个方向 → 一个可提交包（串跑 ①②③④，并列出 ⑤ 还差什么）
 
@@ -326,9 +343,7 @@ async function main() {
   // 先汇总，再由成功与否决定退出码。
   const packageLine = chainOk ? (pickLines(chain.stdout, [/package_dir|产出|交付说明/])[0] ?? "") : "";
   // chain 把包路径写在「下一步：打开 `<path>/handoff.md`」里，路径分隔符随平台变化（/ 或 \\）
-  const packageDir = chainOk
-    ? ((chain.stdout.match(/package[\\/][A-Za-z0-9_\-]+__\d+/) ?? [])[0] ?? null)
-    : null;
+  const packageDir = chainOk ? extractPackageDir(chain.stdout) : null;
   if (chainOk && packageLine) console.log(`   ${packageLine.replace(/^\s+/, "")}`);
   if (!chainOk) {
     console.log(`   ✗ 未出包（退出码 ${chain.code}）：答卷缺项，见下方「阻断出包」清单`);
