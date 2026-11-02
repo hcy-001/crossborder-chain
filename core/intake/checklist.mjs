@@ -235,6 +235,34 @@ export const INTAKE_ITEMS = Object.freeze([
     consequence: "选直接提交 → 需要读写 key + 明确的类目与价格，且失败要能回滚（下架接口同样要权限）。"
   },
   {
+    key: "image_host_kind",
+    group: "账号与权限",
+    type: "string",
+    severity: "confirm",
+    question: "商品图放在哪里？（平台只收公网 URL；公用图床已实测全部不可用）",
+    options: ["自有对象存储（OSS/S3/R2）", "自有 CDN", "店铺自带图床", "卖家后台手动上传（API 不提交图片）", "暂无"],
+    example: "自有对象存储（OSS/S3/R2）",
+    unknown_ok: true,
+    default: "暂无",
+    why: "各平台的图片字段只接受公网可访问 URL，不接受本地文件、也不接受 data URI。"
+      + "本次实测：四家公用图床服务全部不可用（一家已停上传，三家超时或被拦）——这条路走不通。"
+      + "所以图床必须由卖家提供，工具只负责把图放到该地址下并按平台规格命名。",
+    consequence: "没有图床 → 能提交但商品建不出来（is_created=false）。这不是报错，是静默失败，比报错更费时间。"
+  },
+  {
+    key: "image_host_base_url",
+    group: "账号与权限",
+    type: "string",
+    severity: "confirm",
+    question: "图床的 URL 前缀是什么？（拼上文件名就能访问的那种）",
+    example: "图床前缀，填到 sku 目录为止，不含文件名",
+    unknown_ok: true,
+    default: null,
+    why: "提交时要把每张图写成完整 URL 并回读校验可访问性（HTTP 200 + Content-Type 为 image/*）。"
+      + "前缀不对会得到 404，而平台的报错只会说「图片无效」，不会告诉你是路径错了。",
+    consequence: "不填 → 工具不做图片预检，图片问题会推迟到平台审核阶段才暴露。"
+  },
+  {
     key: "color",
     group: "商品",
     type: "string",

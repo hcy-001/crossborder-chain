@@ -41,7 +41,7 @@ npm run quickstart  # 内置样例工单 + 占位图 + 桩判别，约 10 秒
 想看「填完问卷之后」的样子：
 
 ```bash
-npm run intake -- --list                                  # 27 项必问清单（必答 16 / 需确认 9 / 可默认 2）
+npm run intake -- --list                                  # 29 项必问清单（必答 16 / 需确认 9 / 可默认 2）
 node scripts/intake.mjs --check --answers answers.json    # 先校验，缺必答项 exit 2 并点名
 node scripts/chain.mjs --category 女装 --region RU --candidates 1 --intake answers.json
 ```
@@ -124,7 +124,7 @@ BLOCKED: 本包暂不可直接上架（4 项待解）
 | 命令 | 作用 |
 |---|---|
 | `npm run quickstart` | 零 key 跑通全链路，产出演示包 |
-| `npm run intake -- --list` | 27 项必问清单（唯一真源：`core/intake/checklist.mjs`） |
+| `npm run intake -- --list` | 29 项必问清单（唯一真源：`core/intake/checklist.mjs`） |
 | `npm run chain -- --category 女装 --region RU --candidates 2` | 真实链路 |
 | `npm run title:check -- --platform noon --text "..."` | 按平台规则检查标题 |
 | `npm run platform:readiness` | 重新生成 8 平台 × 9 法域就绪矩阵 |
@@ -140,7 +140,7 @@ BLOCKED: 本包暂不可直接上架（4 项待解）
 
 ```mermaid
 flowchart LR
-  A["一句话需求<br/>品类 · 法域 · 候选数"] --> B["27 项问卷<br/>intake"]
+  A["一句话需求<br/>品类 · 法域 · 候选数"] --> B["29 项问卷<br/>intake"]
   B --> C{"必答齐?"}
   C -- 否 --> C1["exit 2<br/>不出包也不出价"]
   C -- 是 --> D["选品工单<br/>确定性打分排序"]
