@@ -59,7 +59,8 @@
     "probe:account": "node scripts/probe-account.mjs",
     "trade:probe": "node scripts/probe-trade.mjs",
     "holidays:probe": "node scripts/probe-region-calendar.mjs",
-    "ci": "node --test && node scripts/gates/check-decouple.mjs && node evals/run.mjs"
+    "ci": "node --test && node scripts/gates/check-decouple.mjs && node evals/run.mjs",
+    "market:scan": "node scripts/market-scan.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",
