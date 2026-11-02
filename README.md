@@ -96,13 +96,13 @@ BLOCKED: 本包暂不可直接上架（4 项待解）
 
 前三段不需要你手里有货，也不需要填问卷。顺序不能反——先验证市场，再谈货源。
 
-| 段 | 命令 | 你得到什么 |
-|---|---|---|
-| ① 方向验证 | `npm run market:scan -- --direction "女士针织开衫" --region RU` | 品类码、进口规模、季节窗口、**款级搜索指数与购物车均价**、方向成立与否 |
-| ② 选品决策 | `npm run select:candidates -- --direction "..." --region RU --count 8` | 5–10 个候选，每个带证据等级、敏感性、自我查证 |
-| ③ 反查货源 | `npm run source:lookup -- --direction "..." --region RU --pick c01` | 1688 检索词、规格要求、**目标进价上限**、验货要点 |
-| ④ 出包 | `npm run chain -- --category 女装 --region RU --candidates 1 --intake answers.json` | 母版图、平台投影、尺码映射、handoff |
-| ⑤ 上架 | `npm run probe:account` 之后接 `/v3/product/import` 流程 | 商品在平台上创建、有库存、可售 |
+| 段 | 命令 | 你得到什么 | 当前证据等级 |
+|---|---|---|---|
+| ① 方向验证 | `npm run market:scan -- --direction "女士针织开衫" --region RU` | 品类码、进口规模、季节窗口、**款级搜索指数与购物车均价**、方向成立与否 | **L2**（数据实抓） |
+| ② 选品决策 | `npm run select:candidates -- --direction "..." --region RU --count 8` | 5–10 个候选，每个带证据等级、敏感性、自我查证 | **L0**：候选是按约束枚举的，不是从竞品销量推出来的 |
+| ③ 反查货源 | `npm run source:lookup -- --direction "..." --region RU --pick c01` | 1688 检索词、规格要求、**目标进价上限**、验货要点 | **L0**：进价由假设倒推，**尚未接入真实报价**；1688 抓取受登录态与风控限制，见 `docs/未决问题清账.md` |
+| ④ 出包 | `npm run chain -- --category 女装 --region RU --candidates 1 --intake answers.json` | 母版图、平台投影、尺码映射、handoff | **L1**：结构完整，图为占位 |
+| ⑤ 上架 | `npm run probe:account` 之后接 `/v3/product/import` 流程 | 商品在平台上创建、有库存、可售 | **L2**：真实跑通并回读确认 |
 
 一段真实的数字链条（俄罗斯女装开衫）：
 
@@ -113,6 +113,8 @@ BLOCKED: 本包暂不可直接上架（4 项待解）
 ```
 
 **每一环都能反算**：`marginAt({priceCny: 180, costCny: 71.6})` 返回 30，不是"大约三成"。
+
+**定位与现状的差，写在明面上**：这条链的目标是「一个方向进去，一个可上架的商品出来」。②③ 两段现在只到 L0 —— 候选是枚举的、进价是倒推的，都没有真实市场对冲。把它们做成 L2 需要的是**竞品成交数据与真实报价**，不是再写代码。缺口的边界与已试过的路径见 `docs/未决问题清账.md`。
 
 ② 的候选不是「市场验证过的爆款」，是「按约束枚举出的合理选项」，排序依据是依据强度而非销量预测。③ 给的是谈判上限，不是成交价。
 
