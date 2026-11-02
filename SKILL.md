@@ -19,7 +19,8 @@ disable-model-invocation: false
 
 | 你手里有 | 从哪进 | 为什么 |
 |---|---|---|
-| 只有方向（「我想做女装开衫，卖俄罗斯」） | **`npm run market:scan`** | 先把方向验证掉，再谈货源 |
+| **只有方向**（「我想做女装开衫，卖俄罗斯」） | **`npm run chain:dir -- --direction "..." --region RU`** | 一条命令跑完 ①②③④，并列出 ⑤ 还差什么 |
+| 想逐步看每段在做什么 | 依次跑 `market:scan` → `select:candidates` → `quotes:1688` → `source:lookup` | 每段单独可调，输出更细 |
 | 已经有货源（1688 链接 + 采购价） | 跳到 §0.1 答题 | 货已在手，直接算账 |
 
 **顺序不能反。** 先有货再验证市场，是拿采购决策去倒推需求——方向不成立时，前面找货、比价、拍图的时间全废。正确顺序是：
@@ -29,6 +30,12 @@ disable-model-invocation: false
 ```
 
 ```bash
+# 推荐：一条命令跑完 ①→④，并列出上架缺口（阻断出包 / 只挡上架 分开列）
+npm run chain:dir -- --direction "女士针织开衫" --region RU
+# 想直接看产出（仓库内 demo 答卷，每项标注 measured/estimated/demo）：
+npm run chain:dir -- --direction "女士针织开衫" --region RU --intake data/intake/demo-ru.json
+
+# 或者逐段手动跑：
 npm run market:scan -- --direction "女士针织开衫" --region RU
 # 产出 data/directions/RU-*.json + 屏幕结论：
 #   品类码 6110（由「开衫」匹配）｜进口 $1.02B｜中国占 31.3%｜$24.72/kg

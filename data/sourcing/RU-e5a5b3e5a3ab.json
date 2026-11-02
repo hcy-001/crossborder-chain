@@ -1,10 +1,10 @@
 {
   "direction": "女士针织开衫",
   "region": "RU",
-  "generated_at": "2026-11-02T14:34:15.794Z",
+  "generated_at": "2026-11-02T15:42:40.606Z",
   "upstream": {
     "candidates_file": "RU-e5a5b3e5a3ab.json",
-    "count": 8
+    "count": 6
   },
   "note": "规格书是「去问什么」，不是「已经问到了」。拿到真实报价后回填 target_cost_cny 对应的实价，再用 marginAt 复核。",
   "briefs": [

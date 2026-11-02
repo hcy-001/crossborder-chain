@@ -33,3 +33,8 @@ config/local.secret.json
 
 *.log
 .DS_Store
+
+# 答卷骨架是每次跑 chain:dir 生成的（含当次的计算结果），不进仓库；
+# 演示答卷留一份，方便 clone 后直接跑通。
+/data/intake/*
+!/data/intake/demo-ru.json
