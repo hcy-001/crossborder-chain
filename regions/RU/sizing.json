@@ -1,0 +1,207 @@
+{
+  "id": "RU",
+  "system": "RU",
+  "label": "RUS",
+  "unit": "см",
+  "status": "unverified",
+  "source": {
+    "status": "partial",
+    "reason": "俄码取值规则取自 Ozon 官方帮助《服装和配饰的尺码》全文；尺码字典（835，含 универсальный）与字段 id 由 Seller API 实测；Wildberries 侧仍未验",
+    "checked_at": "2026-11-01",
+    "reference_level": "official+api"
+  },
+  "size_value_rules": {
+    "status": "final",
+    "source_type": "official",
+    "source": "ozon-help-clothing-and-accessories-size",
+    "source_url": "https://global-help.ozon.com/zh/products/requirements/product-info/clothing-and-accessories-size?region=CHN",
+    "checked_at": "2026-11-01",
+    "separator": ";",
+    "adult": {
+      "min": 34,
+      "max": 86,
+      "step": 2
+    },
+    "height": {
+      "min": 152,
+      "max": 194
+    },
+    "collapse": {
+      "when_consecutive_at_least": 4,
+      "value": "универсальный",
+      "value_id": 35646,
+      "label": "通用",
+      "why": "官方原文：如果商品包含 4 个及以上连续尺码，例如从 42 到 50，请填写「通用」；俄文站对应字典项为 универсальный（Seller API 实拉字典 835 共 46 项，含此项）"
+    },
+    "evidence": [
+      "俄罗斯尺码——必填属性，会影响商品在网站上的搜索和筛选",
+      "如果商品对应一个尺码区间，请用分号分隔：42;44 显示为 42–44",
+      "如果尺码包含多个值，例如从 50 到 54，请用分号分隔填写：50;52;54",
+      "如果商品包含 4 个及以上连续尺码，例如从 42 到 50，请填写「通用」",
+      "成人服装请以步长 2 标注俄码：34, 36, …, 86",
+      "若要标注身高，请选择 152–194 厘米范围内的数值"
+    ]
+  },
+  "chart": {
+    "default_columns": [
+      "Российский размер",
+      "Международный размер",
+      "Обхват груди, см",
+      "Длина изделия, см"
+    ],
+    "int_equivalence": null,
+    "int_equivalence_note": "俄码与国际码对照（42=XS、44=S…）属行业惯例，不是平台官方标准表，因此不写死。需要对照时由 intake 向用户索取，或人工核对后再补。"
+  },
+  "platform_fields": {
+    "ozon": {
+      "shape": "attribute",
+      "size_attribute": "Российский размер",
+      "size_attribute_id": 4295,
+      "size_attribute_required": true,
+      "size_attribute_is_collection": true,
+      "size_attribute_dictionary_id": 835,
+      "multi_size_separator": ";",
+      "size_table_attribute": {
+        "id": 13164,
+        "name": "Таблица размеров JSON",
+        "type": "String",
+        "note": "Добавьте таблицу размеров в формате JSON. Подробнее о заполнении этой характеристики можно узнать в статье \"Таблица размеров\" в \"Базе знаний\"."
+      },
+      "manufacturer_size_attribute": {
+        "id": 9533,
+        "name": "Размер производителя",
+        "note": "Размер, как он указан на этикетке или на коробке производителя. Обратите внимание: данный размер является дополнительным, основной — Российский размер"
+      },
+      "related_attributes": [
+        {
+          "id": 4296,
+          "name": "Рост",
+          "dictionary_id": 1866
+        },
+        {
+          "id": 23074,
+          "name": "Тип ростовки",
+          "dictionary_id": 124413016
+        },
+        {
+          "id": 23063,
+          "name": "Длина юбки/платья",
+          "dictionary_id": 124413006
+        },
+        {
+          "id": 4508,
+          "name": "Размер на модели",
+          "dictionary_id": 945
+        },
+        {
+          "id": 4506,
+          "name": "Рост модели на фото",
+          "dictionary_id": 780
+        }
+      ],
+      "international_attribute": null,
+      "international_note": "该子类目（Одежда/Платье）的属性字典里没有「国际尺码」字段：后台查不到，配置不保留臆造的字段名",
+      "status": "confirmed_api",
+      "source": {
+        "kind": "ozon-seller-api",
+        "endpoint": "/v1/description-category/attribute",
+        "category": "Одежда / Одежда / Платье",
+        "type_id": 93182,
+        "probed_at": "2026-10-29T12:22:20.004Z"
+      },
+      "note": "官方 Seller API 实测于 2026-10-29；类目 Одежда / Одежда / Платье；共 53 个属性，尺码相关 8 个",
+      "required_attributes": {
+        "probed_at": "2026-10-29T12:22:41.566Z",
+        "total": 6,
+        "items": [
+          {
+            "id": 4295,
+            "name": "Российский размер",
+            "type": "String",
+            "is_collection": true,
+            "dictionary_id": 835
+          },
+          {
+            "id": 9163,
+            "name": "Пол",
+            "type": "String",
+            "is_collection": true,
+            "dictionary_id": 320
+          },
+          {
+            "id": 8292,
+            "name": "Объединить на одной карточке",
+            "type": "String",
+            "is_collection": false,
+            "dictionary_id": null
+          },
+          {
+            "id": 10096,
+            "name": "Цвет товара",
+            "type": "String",
+            "is_collection": true,
+            "dictionary_id": 1494
+          },
+          {
+            "id": 8229,
+            "name": "Тип",
+            "type": "String",
+            "is_collection": false,
+            "dictionary_id": 1960
+          },
+          {
+            "id": 31,
+            "name": "Бренд в одежде и обуви",
+            "type": "String",
+            "is_collection": false,
+            "dictionary_id": 28732849
+          }
+        ]
+      }
+    },
+    "wildberries": {
+      "shape": "sizes_array",
+      "sizes_table": "sizes[]",
+      "tech_size_field": "techSize",
+      "wb_size_field": "wbSize",
+      "status": "unverified",
+      "note": "尺码是独立数组；wbSize 需平台自有码表，未取到即留空"
+    },
+    "yandex-market": {
+      "shape": "variation",
+      "variation_name": "Размер",
+      "size_chart_required": null,
+      "status": "unverified",
+      "note": "Маркет 用变体；尺寸表要求在公开文档里未见明确说明，变体名以后台为准。俄码体系与 Ozon 一致（步长 2、34–86）。"
+    }
+  },
+  "rules": [
+    "尺码以俄码为准，国际码只作对照，不替代",
+    "同一 SKU 的多个颜色/尺码合并到一张商品卡（WB 尤其：拆卡会拆散评论与销量历史）",
+    "单位统一用公制（см / г），不出现 inch",
+    "服装类目审核常见的拒因之一是尺码标注不符合俄罗斯标准，提交前需人工对照"
+  ],
+  "confirmation": {
+    "status": "confirmed_by_seller",
+    "required_from_seller": [
+      "ozon.size_attribute",
+      "ozon.international_attribute",
+      "wildberries.tech_size_field",
+      "wildberries.wb_size_field"
+    ],
+    "why": "平台尺码字段名属卖家后台可见口径；公开接口有 WAF（实测 403）、开发者文档有反爬，均无法在无账号条件下核实，因此不猜，交给卖家一次性确认后复用。",
+    "how_to_confirm": [
+      "打开卖家后台 → 商品 → 创建/编辑商品 → 选择服装叶子类目",
+      "在“特征/属性”里找到尺码相关项，抄下字段名（含语言与大小写）",
+      "多尺码平台的“变体/尺码表”页里抄下尺寸字段名，把两处名字填进 regions/RU/sizing.json 的 platform_fields",
+      "填完把 confirmation.status 改为 confirmed_by_seller，并写上确认日期"
+    ],
+    "probe_attempts": [
+      "2026-10-29 card.wb.ru / search.wb.ru 公开接口 → HTTP 403（WAF，未绕过）",
+      "2026-10-29 dev.wildberries.ru 开发者文档 → 返回浏览器校验页（反爬，未绕过）"
+    ],
+    "effect_if_pending": "size-mapping.json 输出 needs_field_confirmation=true，出包照常，但不得声称“可直接上架”",
+    "confirmed_at": "2026-10-29",
+    "confirmed_note": "Ozon 侧由 Seller API 实测确认（非人工抄写）；WB 侧仍待确认"
+  }
+}

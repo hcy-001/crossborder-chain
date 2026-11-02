@@ -1,0 +1,92 @@
+Sell on Amazon
+Sign in
+English
+中文
+Deutsch
+Español
+Français
+Italiano
+日本語
+한국어
+ไทย
+Tiếng Việt
+हिन्दी
+தமிழ்
+português
+繁体中文
+English
+This article applies to selling in: United States
+
+Help / Manage Inventory / Create and manage inventory / Image Troubleshooting / Product image requirements
+
+Product image requirements
+
+Every detail page in the Amazon store requires at least one product image, and we recommend you provide six images and one video. Good images make it easy for customers to evaluate the product. Images should be clear, informative, and attractive. The first image on the product detail page is the \"MAIN\" image and is shown to customers in search. The MAIN image must show only the product for sale on a white background, and the product should fill the image frame. Additional images should show the product in use or in an environment, different angles, and different features.
+
+Important: You can find a list of Amazon's image standards specific to some product categories in the corresponding category Product page style guides. Note that in the case of overlaps or conflicts, the guidelines of each category takes precedence.
+Image Issues
+
+When you upload your image files, they are checked to confirm that they meet technical file requirements. Files failing to meet these requirements will not be uploaded to your listings. When images are received from multiple sellers, Amazon will favor the images that meets the style guides and standards.
+
+If the images on your Amazon product listings do not comply with these product image requirements or violate the Selling Policies and Seller Code of Conduct, the product listings may be removed from search until a compliant image is provided.
+
+Are you having problems uploading images? For more information and image examples, refer to Image Issues .
+
+Site standards for ALL product images
+Images must accurately represent the product that is for sale.
+Images must match the product title.
+Product must fill at least 85% of the image.
+The optimal zoom experience for detail pages requires files to be 1600px or larger on the longest side. Zoom has been shown to help enhance sales. If you are unable to meet this requirement, the smallest your file can be for zoom is 1000px, and the smallest your file can be for the site is 500px.
+Images must not exceed 10,000px on the longest side.
+Images must be JPEG (.jpg or .jpeg), TIFF (.tif), PNG(.png), or GIF (.gif) file formats. JPEG is preferred. Our servers do not support animated .gifs.
+Images must not be blurry, pixelated, or have jagged edges.
+Images must not contain nudity or be sexually suggestive. Leotards, underwear, and swimwear for kids and baby must not be shown on a human model.
+Images must not include any Amazon logos or trademarks, or variations, modifications or anything confusingly similar to Amazon's logos and trademarks. This includes, but is not limited to, any words or logos with the terms AMAZON, PRIME, ALEXA, or the Amazon Smile design.
+Images must not include any badges used on Amazon, or variations, modifications or anything confusingly similar to such badges. This includes, but is not limited to, \"Amazon's Choice,\" \"Premium Choice,\" \"Amazon Alexa,\" \"Works with Amazon Alexa,\" \"Best seller,\" or \"Top seller\". Refer to trademark usage guidelines for more details.
+Site standards for MAIN product images
+MAIN images must have a pure white background (pure white blends in with the Amazon search and product detail pages—RGB color values of 255, 255, 255).
+MAIN images must be professional photographs of the actual product (graphics, illustrations, mockups, or placeholders are not allowed). They must not show excluded accessories or props that might confuse the customer.
+MAIN images must not include text, logos, borders, color blocks, watermarks, or other graphics over the top of a product or in the background.
+MAIN images must not include multiple views of a single product.
+MAIN images must show the entire product that is for sale. Images must not touch or be cut off by the edge of the image frame, with exception of Jewelry (such as necklaces).
+MAIN images must show products outside of their packaging. Boxes, bags, or cases should not appear in the image unless they are an important product feature.
+MAIN images must not show a human model that is sitting, kneeling, leaning or lying down; however, expressing various physical mobilities with assistive technology is encouraged (wheelchairs, prosthetics, etc.).
+MAIN images of multi-pack apparel items and accessories must be photographed flat (off-model).
+MAIN images of clothing accessories must not show any part of a mannequin, regardless of the mannequin’s appearance (clear, solid-color, flesh-toned, framework or hanger).
+MAIN images for Women’s and Men’s clothing must show the product on a human model.
+All images of Kids & Baby clothing must be photographed flat (off-model).
+MAIN images of shoes must show a single shoe, facing left at a 45-degree angle.
+
+If you are creating your own images, you may find our self-service imaging products and photography videos useful.
+
+You can apply 12 simple tips to optimize your images in the Clothing category. To learn how, watch this training video: 
+
+Refer to the full Image Style Guide to understand the requirements across all different Clothing product categories. This document will also give you the guidance on image requirements with clear do’s and don’ts in the Clothing category and examples that help you to create compliant images.
+
+
+
+
+Related articles
+Product image requirements
+Missing product images
+Rotate a product image
+Image Issues
+Technical Image File Requirements
+Name Your Image Files
+Need more help?
+See more on Seller Central
+Visit Seller Forums
+Reach Hundreds of Millions of Customers
+
+Start Selling On Amazon
+
+
+
+
+© 1999-2022, Amazon.com, Inc. or its affiliates
+
+
+ZZE"
+### Ran Playwright code
+```js
+await page.evaluate('() => \'ZZB\'+document.body.innerText+\'ZZE\'');

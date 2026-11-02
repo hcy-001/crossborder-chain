@@ -1,0 +1,22 @@
+{
+  "id": "size-collection",
+  "what": "集合型尺码属性：多码用分号串在同一字段；字段未核实则标 needs_field_confirmation",
+  "input": {
+    "size": {
+      "rows": {
+        "48": [
+          "M/L",
+          "96-104"
+        ],
+        "50": [
+          "L/XL",
+          "100-108"
+        ]
+      }
+    }
+  },
+  "expect": {
+    "attribute_value": "48;50",
+    "variant_mode": "multi_size_in_one_attribute"
+  }
+}

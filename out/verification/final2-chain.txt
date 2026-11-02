@@ -1,0 +1,4 @@
+doctor EXIT=0
+demo EXIT=0
+pack EXIT=0
+verify EXIT=0

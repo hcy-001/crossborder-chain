@@ -1,0 +1,4047 @@
+{
+  "generated_at": "2026-11-02T12:35:59.439Z",
+  "mode": "online",
+  "protocol": {
+    "T1_api": "官方 Seller/Partner API 只读拉取（需凭证）→ 事实为 L2，status=final",
+    "T2_doc": "官方帮助/开发者文档（公开）→ 事实为 L2 文本，需人工确认是否同样适用于该法域",
+    "T3_manual": "后台截图/卖家手抄 → 事实为 L1，status=candidate，必须在真机核对后升级",
+    "rule": "只有 final 事实才能产出\"可提交\"的包；candidate 只能产出待核包；unverified 不参与生成"
+  },
+  "note": "可达性只说明\"能看见入口\"，不等于\"能取到数据\"：Shopee/Lazada/TikTok 的类目属性都必须有 partner 凭证 + 店铺授权。",
+  "platforms": [
+    {
+      "id": "ozon",
+      "name": "Ozon",
+      "regions": [
+        "RU"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/ozon.json",
+        "exists": true,
+        "total": 11,
+        "by_status": {
+          "final": 9,
+          "candidate": 1,
+          "unverified": 1,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.ozon.image.formats",
+          "platform.ozon.image.ratio",
+          "platform.ozon.image.min_size",
+          "platform.ozon.image.max_bytes",
+          "platform.ozon.image.max_count",
+          "platform.ozon.title.max_chars",
+          "platform.ozon.title.max_word_chars",
+          "platform.ozon.title.charset",
+          "platform.ozon.title.auto_generated",
+          "platform.ozon.title.template",
+          "platform.ozon.attribute_map"
+        ],
+        "entries": [
+          {
+            "key": "platform.ozon.image.formats",
+            "value": [
+              "JPEG",
+              "JPG",
+              "PNG",
+              "HEIC",
+              "WEBP"
+            ],
+            "unit": "format-list",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-image-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/media/image-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-09-25T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.ozon.image.ratio",
+            "value": {
+              "width": 3,
+              "height": 4
+            },
+            "unit": "ratio",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-image-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/media/image-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-09-25T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.ozon.image.min_size",
+            "value": {
+              "width": 900,
+              "height": 1200
+            },
+            "unit": "pixel",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-image-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/media/image-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-09-25T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.ozon.image.max_bytes",
+            "value": 10485760,
+            "unit": "bytes",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-image-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/media/image-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-09-25T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.ozon.image.max_count",
+            "value": 30,
+            "unit": "count",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-image-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/media/image-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": "C1",
+            "fetched_at": "2026-09-25T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.ozon.title.max_chars",
+            "value": 200,
+            "unit": "chars",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-help-naming-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/product-info/naming-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "ozon-help-naming-requirements#最大长度",
+                "value": "整个名称——200个字符",
+                "agree": true
+              }
+            ],
+            "divergence_pct": 0,
+            "override": null,
+            "note": "官方原文「整个名称——200个字符」。二手说法 80–120 是**建议写法**不是上限，两者不冲突：上限 200，超出必被拒；短标题只为可读性。"
+          },
+          {
+            "key": "platform.ozon.title.max_word_chars",
+            "value": 27,
+            "unit": "chars",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-help-naming-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/product-info/naming-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文「一个词——27个字符」。超长词是独立的拒因（审核错误清单：词语过长）。"
+          },
+          {
+            "key": "platform.ozon.title.charset",
+            "value": {
+              "allowed": "西里尔字母 а-я А-Я、拉丁字母 a-z A-Z、数字 0-9、符号 . , : ; ( ) - / & \" 以及（仅在必要时的）! ?",
+              "forbidden": [
+                "™",
+                "©",
+                "®",
+                "[",
+                "]",
+                "=",
+                "\\",
+                "«",
+                "»"
+              ],
+              "must_start_uppercase": true,
+              "requires_cyrillic": true,
+              "forbidden_scripts": [
+                "emoji",
+                "cjk"
+              ],
+              "forbidden_content": [
+                "不间断空格 nbsp",
+                "HTML 标记",
+                "其它来源的链接或引用",
+                "促销词/价格/最佳最好等评价词"
+              ]
+            },
+            "unit": "charset-rule",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-help-naming-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/product-info/naming-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方错误示例里明确列了「名称为拉丁语」与「名称中含有不允许的符号，如表情符号或汉字」——所以纯中文标题直接会被拒。"
+          },
+          {
+            "key": "platform.ozon.title.auto_generated",
+            "value": {
+              "enabled": true,
+              "scope_categories": [
+                "服装",
+                "鞋子",
+                "服饰用品和配饰"
+              ],
+              "format": "类型 + 品牌 + 服装和鞋类系列",
+              "why": "官方原文：对于服装和鞋类类目，名称会根据商品的必填特征自动生成；系统会自动为指定的类别生成商品名称，而不管名称字段如何填写"
+            },
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-help-naming-requirements",
+            "source_url": "https://global-help.ozon.com/zh/products/requirements/product-info/naming-requirements?region=CHN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "这条把「标题长度该填多少」从判断题变成伪问题：女装类目的标题不由我们写，由必填属性拼出来。要改标题，改属性，不是改字符串。"
+          },
+          {
+            "key": "platform.ozon.title.template",
+            "value": null,
+            "unit": "template",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "official-query-required",
+            "source_url": "https://global-help.ozon.com/zh/?region=CHN",
+            "source_type": "secondary",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-10-28T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.ozon.attribute_map",
+            "value": {
+              "brand": "#31 Бренд в одежде и обуви",
+              "product_type": "#8229 Тип",
+              "color": "#10096 Цвет товара",
+              "size": "#4295 Российский размер",
+              "audience": "#9163 Пол",
+              "merge_card": "#8292 Объединить на одной карточке"
+            },
+            "unit": "json/map",
+            "scope": {
+              "region": "RU",
+              "platform": "ozon",
+              "category": "outerwear"
+            },
+            "source": "ozon-seller-api-probe",
+            "source_url": "https://api-seller.ozon.ru/v1/description-category/attribute",
+            "source_type": "secondary",
+            "confidence": "secondary",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-10-31T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "属性 id 与俄文名来自 Seller API 实测（L2）；canonical 键与平台属性的配对是人工对照（candidate），由预检对后台核验后升级。值格式「#id 俄文名」让人在平台 attributes.csv 里直接看到目标字段"
+          }
+        ]
+      },
+      "dictionaries": [
+        "10096",
+        "4295",
+        "8229",
+        "9163"
+      ],
+      "channels": {
+        "api": {
+          "status": "reachable",
+          "http": 401,
+          "final_url": "https://api-seller.ozon.ru/v1/description-category/tree",
+          "note": "无凭证返回 401/403 属正常；带 Client-Id/Api-Key 即 200"
+        },
+        "docs": {
+          "status": "cached",
+          "http": null,
+          "body_len": null,
+          "shell": null,
+          "final_url": null,
+          "note": "SPA：curl 只得空壳，需无头浏览器渲染",
+          "cached_evidence": "out/verification/ozon-official/"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": true,
+      "title_final_facts": 4,
+      "verdict": "可出包（图片比例与标题规则均已核实）"
+    },
+    {
+      "id": "yandex-market",
+      "name": "Яндекс Маркет",
+      "regions": [
+        "RU"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/yandex-market.json",
+        "exists": true,
+        "total": 15,
+        "by_status": {
+          "final": 13,
+          "candidate": 0,
+          "unverified": 2,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.yandex-market.title.min_chars",
+          "platform.yandex-market.title.max_chars",
+          "platform.yandex-market.title.structure",
+          "platform.yandex-market.title.auto_generated",
+          "platform.yandex-market.image.min_size",
+          "platform.yandex-market.image.max_file_size",
+          "platform.yandex-market.image.format",
+          "platform.yandex-market.image.background",
+          "platform.yandex-market.image.ratio",
+          "platform.yandex-market.fee.placement_all_goods",
+          "platform.yandex-market.fee.calc_basis",
+          "platform.yandex-market.fee.fashion_rate_unverified",
+          "platform.yandex-market.models",
+          "platform.yandex-market.fitting_support",
+          "platform.yandex-market.image.ratio_policy"
+        ],
+        "entries": [
+          {
+            "key": "platform.yandex-market.title.min_chars",
+            "value": 60,
+            "unit": "chars",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-title-description",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Оптимальная длина — 60-120 символов。这是「最优区间」的下界，不是硬性拒绝门槛。"
+          },
+          {
+            "key": "platform.yandex-market.title.max_chars",
+            "value": 120,
+            "unit": "chars",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-title-description",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文只给「最优区间 60–120」，没有给绝对上限。生成时按 120 控制，超过虽不一定被拒，但会掉搜索排序。"
+          },
+          {
+            "key": "platform.yandex-market.title.structure",
+            "value": "тип товара + производитель + товар (модель) + важные характеристики",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-title-description",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方给的结构公式：品类 + 厂商 + 商品(型号) + 重要特征。"
+          },
+          {
+            "key": "platform.yandex-market.title.auto_generated",
+            "value": "服装/鞋/配饰类目的展示名称由平台生成，卖家填的名称只用于搜索",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-title-description",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文（{% note info \"Для одежды, обуви и аксессуаров\" %}）：卖家创建时填的名称帮买家搜到商品，但**买家看不到**；商品卡上用的是 Маркет 自己生成的名称。**与 Ozon 服装类目同一逻辑** —— 这是俄语区平台的共性，不是个例。"
+          },
+          {
+            "key": "platform.yandex-market.image.min_size",
+            "value": {
+              "width": 200,
+              "height": 200
+            },
+            "unit": "px",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-images",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：размером не меньше 200 × 200 пикселей。门槛比 Ozon(≥1600)、Amazon(≥1600)、noon(宽≥660) 低一个数量级。"
+          },
+          {
+            "key": "platform.yandex-market.image.max_file_size",
+            "value": 10,
+            "unit": "MB",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-images",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：весом не больше 10 МБ。"
+          },
+          {
+            "key": "platform.yandex-market.image.format",
+            "value": [
+              "jpg",
+              "jpeg",
+              "png",
+              "heic",
+              "webp"
+            ],
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-images",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：.jpg, .jpeg, .png, .heic и .webp。**接受 webp 与 heic**，是这批平台里格式最宽的（noon 只收 JPEG）。"
+          },
+          {
+            "key": "platform.yandex-market.image.background",
+            "value": "нейтральный фон — белый или прозрачный",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-images",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：选中性背景 —— 白色或透明；并确保商品清晰可见、不与背景融在一起。**允许透明背景**，与要求纯白的平台不同。"
+          },
+          {
+            "key": "platform.yandex-market.image.ratio",
+            "value": null,
+            "unit": "ratio",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-images",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+            "source_type": "official",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方图片要求页**只规定最小尺寸，没有比例要求**。没有比例就不按猜测裁图 —— 保持 null，投影时如实拒绝出包。补法：后台看商品卡实际展示框，或抓一个在售商品的图测宽高。"
+          },
+          {
+            "key": "platform.yandex-market.fee.placement_all_goods",
+            "value": 42,
+            "unit": "pct",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": null
+            },
+            "source": "yandex-market-rates-placement",
+            "source_url": "https://yandex.ru/support/marketplace/ru/introduction/rates/placement.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "「Все товары」档：FBY / FBS / DBS / Express 四模式同为 42%。**这是兜底档，不是服装档** —— 见 fashion_rate_unverified 那条。"
+          },
+          {
+            "key": "platform.yandex-market.fee.calc_basis",
+            "value": "按卖家标注的售价计算，即使平台打折或用积分",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": null
+            },
+            "source": "yandex-market-rates-placement",
+            "source_url": "https://yandex.ru/support/marketplace/ru/introduction/rates/placement.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：Тариф за услугу размещения — это процент, который **всегда рассчитывается от указанной вами стоимости** проданного товара, даже если Маркет сделал скидку или покупатель использовал баллы Плюса。**这一点与按成交价抽佣的平台不同**：平台自己打折时，你仍按原价付服务费，折扣成本全在卖家侧。"
+          },
+          {
+            "key": "platform.yandex-market.fee.fashion_rate_unverified",
+            "value": null,
+            "unit": "pct",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-rates-placement",
+            "source_url": "https://yandex.ru/support/marketplace/ru/introduction/rates/placement.md",
+            "source_type": "official",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "费率表 581K 字符、覆盖 11 个大类（Авто / Аптека / Бытовая техника / Детские товары / Книги / Оборудование …），**没有独立的服装大类**，「одежд」只作为 Авто 与 Аптека 的子类出现。所以服装的实际费率**未查到**，不拿 42% 冒充。补法：卖家后台选类目时看报价，或抓在售商品反推。"
+          },
+          {
+            "key": "platform.yandex-market.models",
+            "value": [
+              "FBY",
+              "FBS",
+              "Express",
+              "DBS"
+            ],
+            "unit": "list",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": null
+            },
+            "source": "yandex-market-llms-index",
+            "source_url": "https://yandex.ru/support/marketplace/ru/llms.txt",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 8760,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "四种履约模式：FBY（平台仓）、FBS（卖家仓+平台配送）、Express（快速）、DBS（卖家自配送）。每种费率与准入不同，是选品前要先定的事。"
+          },
+          {
+            "key": "platform.yandex-market.fitting_support",
+            "value": true,
+            "unit": "bool",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-llms-index",
+            "source_url": "https://yandex.ru/support/marketplace/ru/orders/fbs/fitting.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 8760,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方有「Продажа одежды, обуви и аксессуаров с примеркой」专页：服装/鞋/配饰支持**试穿后决定**（FBS 模式）。这直接改变退货率与选品逻辑 —— 尺码不准的款在这类模式下退货成本更高。"
+          },
+          {
+            "key": "platform.yandex-market.image.ratio_policy",
+            "value": "preserve",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "yandex-market",
+              "category": "fashion"
+            },
+            "source": "yandex-market-images",
+            "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方图片要求只给「最小 200×200」，**不规定宽高比**。因此投影时保持母版原比例直接出图、不做裁切 —— 平台没禁止的比例不算违规，猜一个比例去裁反而会丢画面。这就是 ratio 事实留 null 却仍能出包的原因。"
+          }
+        ]
+      },
+      "dictionaries": [],
+      "channels": {
+        "api": {
+          "status": "reachable",
+          "http": 404,
+          "final_url": "https://api.partner.market.yandex.ru/",
+          "note": "Partner API 需 Api-Key；无凭证 4xx 属正常"
+        },
+        "docs": {
+          "status": "reachable",
+          "http": 200,
+          "body_len": 26860,
+          "shell": false,
+          "final_url": "https://yandex.ru/support/marketplace/ru/llms.txt",
+          "note": "文档站提供 llms.txt 与 .md 纯文本版本，无需渲染"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": true,
+      "title_final_facts": 4,
+      "verdict": "可出包（平台未规定比例，原图直出；标题规则已核实）"
+    },
+    {
+      "id": "wildberries",
+      "name": "Wildberries",
+      "regions": [
+        "RU"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/wildberries.json",
+        "exists": true,
+        "total": 21,
+        "by_status": {
+          "final": 19,
+          "candidate": 1,
+          "unverified": 1,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.wildberries.image.ratio",
+          "platform.wildberries.image.min_size",
+          "platform.wildberries.image.max_count",
+          "platform.wildberries.image.max_bytes",
+          "platform.wildberries.title.max_chars",
+          "platform.wildberries.title.template",
+          "platform.wildberries.doc_access",
+          "platform.wildberries.image.video_frame",
+          "platform.wildberries.size_chart.channel",
+          "platform.wildberries.size_chart.rule",
+          "platform.wildberries.barcode.rule",
+          "platform.wildberries.brand.rule",
+          "platform.wildberries.package.max_dimension_cm",
+          "platform.wildberries.image.recommended_size",
+          "platform.wildberries.image.compression_quality",
+          "platform.wildberries.image.min_count",
+          "platform.wildberries.image.text_rule",
+          "platform.wildberries.image.russian_only",
+          "platform.wildberries.image.quality_rating",
+          "platform.wildberries.video.max_duration_s",
+          "platform.wildberries.image.min_size_conflict"
+        ],
+        "entries": [
+          {
+            "key": "platform.wildberries.image.ratio",
+            "value": {
+              "width": 3,
+              "height": 4
+            },
+            "unit": "ratio",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "由官方最小尺寸 700×933 推得：700/933≈0.75，即 3:4。母版 900×1200 正好同比例，可原图直出、不裁切。"
+          },
+          {
+            "key": "platform.wildberries.image.min_size",
+            "value": {
+              "width": 700,
+              "height": 933
+            },
+            "unit": "px",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：分辨率最小 700 × 933 像素。注意是 **933** 不是二手流传的 900 —— 700:933 恰好是 3:4，与其他平台的竖图比例一致。"
+          },
+          {
+            "key": "platform.wildberries.image.max_count",
+            "value": 30,
+            "unit": "images",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：一个商品详情页最多可上传 30 张图片和 1 个视频。上界比多数平台宽（Shopee 9、Lazada 8、noon 建议 3）。"
+          },
+          {
+            "key": "platform.wildberries.image.max_bytes",
+            "value": 10485760,
+            "unit": "bytes",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "outerwear"
+            },
+            "source": "viton13-wb-guide",
+            "source_url": "https://viton13.com",
+            "source_type": "secondary",
+            "confidence": "secondary",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-10-28T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.wildberries.title.max_chars",
+            "value": 60,
+            "unit": "chars",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方中文文档《如何创建商品》（更新日期 8/11/2026）：商品名称最大长度为 60 个字符。此前的二手说法「60–100」不准确，官方只给 60 上限。"
+          },
+          {
+            "key": "platform.wildberries.title.template",
+            "value": null,
+            "unit": "template",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "outerwear"
+            },
+            "source": "official-query-required",
+            "source_url": "https://seller.wildberries.ru/instructions",
+            "source_type": "secondary",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-10-28T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.wildberries.doc_access",
+            "value": "seller.wildberries.ru/instructions/ch/ch/material/<ID> 可直连；需浏览器渲染（RSC 流式页面）",
+            "unit": "url",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": null
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "**这是 WB 的正确入口**：之前只试 dev.wildberries.ru（开发者文档，IP 级封禁 498），从没试过卖家中心的中文说明区。路径规律：/instructions/ch/ch/material/A-<ID>，中文（ch）文档与服务端数据同页返回，curl 也能拿到但正文在 RSC payload 里，用无头浏览器取 innerText 最省事。"
+          },
+          {
+            "key": "platform.wildberries.image.video_frame",
+            "value": {
+              "min": 720,
+              "max": 1920
+            },
+            "unit": "px",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：视频帧宽与帧高均为 720 至 1920 像素。"
+          },
+          {
+            "key": "platform.wildberries.size_chart.channel",
+            "value": "无法上传自定义尺码表，须把尺码表做进商品图片",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "**这条会改变交付物形态**：官方原文「目前商品详情页中无法上传自己的尺码表。因此我们强烈建议在商品图片中添加包含您尺码参数的表格。请勿在文本描述中填写尺码，这会对排名产生负面影响。」⇒ 我们的 size-mapping 不是给字段填的，是要出成一张图。而且中国码与俄罗斯码不同，必须换算后再画。"
+          },
+          {
+            "key": "platform.wildberries.size_chart.rule",
+            "value": "尺码有 GOST 规定范围；同一商品所有尺码必须唯一且属同一尺码表",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：选尺码表后逐个添加；尺码有 GOST 规定范围，建议用标准表；同商品所有尺码必须唯一且属于同一张表；「尺码」字段里不能写促销类无关文字。"
+          },
+          {
+            "key": "platform.wildberries.barcode.rule",
+            "value": "商品编号是内部工具可不印；条形码必须印在包装上供仓库验收扫描",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方区分了两个概念：商品编号（内部，任意内容，不查验）与条形码（仓库验收扫描，必须印在包装上）。"
+          },
+          {
+            "key": "platform.wildberries.brand.rule",
+            "value": "必须从建议列表选；不得以符号开头；不得与类目名相同；禁斜杠与重复词；不得填卖家公司名",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：品牌是印在包装或商品上的厂牌，须与类目相符；填卖家公司名是常见错误。"
+          },
+          {
+            "key": "platform.wildberries.package.max_dimension_cm",
+            "value": 700,
+            "unit": "cm",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": null
+            },
+            "source": "wildberries-seller-instructions-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/ch/ch/material/A-292",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：包装尺寸只填整数、不能为 0、**不得超过 700 厘米**；填小于实际会按要约第 13.3 条罚款，填大会多付仓储物流费。"
+          },
+          {
+            "key": "platform.wildberries.image.recommended_size",
+            "value": {
+              "width": 1800,
+              "height": 2400
+            },
+            "unit": "px",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：最低 700×933，**建议 1800×2400 像素以上**。我们的母版 900×1200 只到最低线的 1.29 倍，够用但不是最优 —— 若要投 WB 主页，应出 1800×2400。"
+          },
+          {
+            "key": "platform.wildberries.image.compression_quality",
+            "value": 65,
+            "unit": "pct",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：压缩质量不低于 65%。这条以前没有，直接影响导出参数。"
+          },
+          {
+            "key": "platform.wildberries.image.min_count",
+            "value": 2,
+            "unit": "images",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：没有图片的商品不会出现在搜索结果中，务必上传至少两张。"
+          },
+          {
+            "key": "platform.wildberries.image.text_rule",
+            "value": "商品图不得出现文字；除非确有重要差异（极小码/极大码/100%棉等）可适当说明",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文。注意与「尺码表要放进图片」冲突：尺码表本身就是文字/表格。官方在同一份文档里既说「不得出现文字」，又说「建议把尺码表加进图片」——**尺码表属于被允许的例外**，但要在文案里说明这一点。"
+          },
+          {
+            "key": "platform.wildberries.image.russian_only",
+            "value": "严禁用拉丁字母拼写俄语，统一西里尔字母",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：这是中国卖家在图片设计中最常见也最致命的错误。图上的文字必须是西里尔俄语，不能是中英混排。"
+          },
+          {
+            "key": "platform.wildberries.image.quality_rating",
+            "value": "商品详情页评分 1–10 分，评分下降会降低搜索曝光",
+            "unit": "rule",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：水印过大且不透明、分辨率低等都会拉低评分；评分明显下降会导致曝光降低。"
+          },
+          {
+            "key": "platform.wildberries.video.max_duration_s",
+            "value": 60,
+            "unit": "s",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：建议上传时长不超过 1 分钟；须去除中文内容，可加俄文字幕。"
+          },
+          {
+            "key": "platform.wildberries.image.min_size_conflict",
+            "value": "主规则 700×933；「常见错误」段落写 700×900",
+            "unit": "note",
+            "scope": {
+              "region": "RU",
+              "platform": "wildberries",
+              "category": "fashion"
+            },
+            "source": "wildberries-image-rules-ch",
+            "source_url": "https://seller.wildberries.ru/instructions/cn/ch/material/item-photo-rules-and-common-mistakes-china",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "**同一篇官方文档内部不一致**：技术规格段写「最低分辨率：700 x 933 像素」，后面常见错误段又写「最低建议分辨率为：700 x 900 像素」。取严用 700×933（且它正好是 3:4）。记下这处矛盾，不当成单一数字执行。"
+          }
+        ]
+      },
+      "dictionaries": [],
+      "channels": {
+        "api": {
+          "status": "reachable",
+          "http": 401,
+          "final_url": "https://common-api.wildberries.ru/ping",
+          "note": "公开 ping 返回 401 说明接口在、缺 token；内容接口与类目属性都需 token"
+        },
+        "docs": {
+          "status": "http_498",
+          "http": 498,
+          "body_len": 1138,
+          "shell": false,
+          "final_url": "https://dev.wildberries.ru/openapi/",
+          "note": "开发者文档有浏览器校验"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": true,
+      "title_final_facts": 1,
+      "verdict": "可出包（图片比例与标题规则均已核实）"
+    },
+    {
+      "id": "shopee",
+      "name": "Shopee",
+      "regions": [
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/shopee.json",
+        "exists": true,
+        "total": 15,
+        "by_status": {
+          "final": 13,
+          "candidate": 1,
+          "unverified": 1,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.shopee.image.ratio",
+          "platform.shopee.image.max_count",
+          "platform.shopee.image.min_size",
+          "platform.shopee.title.min_chars",
+          "platform.shopee.title.max_chars",
+          "platform.shopee.title.naming",
+          "platform.shopee.description.min_chars",
+          "platform.shopee.variations.max_types",
+          "platform.shopee.size_chart",
+          "platform.shopee.attribute_map",
+          "platform.shopee.title.limit_source",
+          "platform.shopee.title.max_chars_en",
+          "platform.shopee.title.max_chars_zh",
+          "platform.shopee.title.language_mixing",
+          "platform.shopee.description.language"
+        ],
+        "entries": [
+          {
+            "key": "platform.shopee.image.ratio",
+            "value": {
+              "width": 1,
+              "height": 1
+            },
+            "unit": "ratio",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-listing-optimisation",
+            "source_url": "https://seller.shopee.sg/edu/article/27838",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "shopee-help-mall-guidelines#7081",
+                "value": "封面图最小 500×500，正方形为主",
+                "agree": true
+              }
+            ],
+            "divergence_pct": 0,
+            "override": null,
+            "note": "官方原文：Images must be in either the 1:1 or 4:3 aspect ratio。选 1:1 作为投影目标，因为 1:1 在 4:3 的列表页里也不会被裁。"
+          },
+          {
+            "key": "platform.shopee.image.max_count",
+            "value": 9,
+            "unit": "count",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-best-practices",
+            "source_url": "https://seller.shopee.sg/edu/article/7998",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：You can upload up to nine images (including cover image) for each product SKU。9 张母版图正好用满，无需删图。"
+          },
+          {
+            "key": "platform.shopee.image.min_size",
+            "value": {
+              "width": 500,
+              "height": 500
+            },
+            "unit": "pixel",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-mall-guidelines",
+            "source_url": "https://seller.shopee.sg/edu/article/34",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：Image must be clear, sharp and have a minimum resolution of 500 x 500 pixels —— 但这条写在 Shopee Mall 规范里。普通卖家是否同样适用未在公开页确认，故标 candidate。900×900 的投影远高于此，实际不受影响。"
+          },
+          {
+            "key": "platform.shopee.title.min_chars",
+            "value": 10,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-listing-optimisation",
+            "source_url": "https://seller.shopee.sg/edu/article/27838",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：Title length (≥10 characters)，属于 listing 质量的十项合格线之一。"
+          },
+          {
+            "key": "platform.shopee.title.max_chars",
+            "value": null,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-open-platform-global-product",
+            "source_url": "https://open.shopee.com/developer-guide/213",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "open.shopee.com/developer-guide/213",
+                "value": "global_item_name_length_limit 示例 {min 1, max 500}，中文按 multiplier 折算",
+                "agree": true
+              }
+            ],
+            "divergence_pct": null,
+            "override": null,
+            "note": "没有单一上限，按语言折算：global_item_name_length_limit 为 1–500，text_length_multiplier=2.44 ⇒ 纯英文最多 500 字符、纯中文最多 204 字符（500/2.44=204.92）。本地商品走 v2.product.get_item_limit 按类目返回上限。"
+          },
+          {
+            "key": "platform.shopee.title.naming",
+            "value": "品牌 + 规格与类型 + 型号；每个词首字母大写；禁止全大写（品牌名除外）、禁止促销词与关键词堆砌",
+            "unit": "guideline",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-mall-guidelines",
+            "source_url": "https://seller.shopee.sg/edu/article/34",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "shopee-help-spam-listings#6886",
+                "value": "Brand + Product Name + Model",
+                "agree": true
+              }
+            ],
+            "divergence_pct": null,
+            "override": null
+          },
+          {
+            "key": "platform.shopee.description.min_chars",
+            "value": 60,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-listing-optimisation",
+            "source_url": "https://seller.shopee.sg/edu/article/27838",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：描述至少 60 字符，或有 1 张描述图。"
+          },
+          {
+            "key": "platform.shopee.variations.max_types",
+            "value": 2,
+            "unit": "count",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-list-first-product",
+            "source_url": "https://seller.shopee.sg/edu/article/6933/list-first-product",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Each product can have up to 2 types of variations（如颜色 + 尺码）。超过两类要拆卡。"
+          },
+          {
+            "key": "platform.shopee.size_chart",
+            "value": "fashion 类目建议必填（缺尺码表是 listing 质量扣分项）",
+            "unit": "rule",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-help-listing-optimisation",
+            "source_url": "https://seller.shopee.sg/edu/article/27838",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方把 Lack of a size chart 列为 listing 优化项（for Fashion listings only）；不填不会拒，但会掉质量分。"
+          },
+          {
+            "key": "platform.shopee.attribute_map",
+            "value": {},
+            "unit": "json/map",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-no-public-attribute-api",
+            "source_url": "https://open.shopee.com/documents",
+            "source_type": "official",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "必填属性与字典要 partner_id/key + 店铺授权才能拉（无公开接口）。所以属性表只按 canonical_key 原样输出，标注「未映射到平台字段」。"
+          },
+          {
+            "key": "platform.shopee.title.limit_source",
+            "value": "v2.product.get_item_limit → item_name_length_limit（按类目返回）",
+            "unit": "api-field",
+            "scope": {
+              "region": "SEA",
+              "platform": "shopee",
+              "category": "fashion"
+            },
+            "source": "shopee-open-platform-guide",
+            "source_url": "https://open.shopee.com/developer-guide/213",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "这条把「标题能写多长」从背数字变成查接口：同一平台不同类目上限不同，写死一个数一定有一半类目是错的。未调过该接口，所以标 candidate。"
+          },
+          {
+            "key": "platform.shopee.title.max_chars_en",
+            "value": 500,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "shopee-open-platform-global-product",
+            "source_url": "https://open.shopee.com/developer-guide/213",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "global_item_name_length_limit.max_limit=500（纯英文）。"
+          },
+          {
+            "key": "platform.shopee.title.max_chars_zh",
+            "value": 204,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "shopee-open-platform-global-product",
+            "source_url": "https://open.shopee.com/developer-guide/213",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "text_length_multiplier=2.44，中文上限 500/2.44≈204 字符。"
+          },
+          {
+            "key": "platform.shopee.title.language_mixing",
+            "value": "forbidden",
+            "unit": "rule",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "shopee-open-platform-global-product",
+            "source_url": "https://open.shopee.com/developer-guide/213",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "原文：global_item_name can only be uploaded in plain Simplified Chinese or plain English and numbers. Do not mix English and Chinese —— 混填会导致部分词不被翻译，进而商品被禁（banned）。这是硬规则，不是建议。"
+          },
+          {
+            "key": "platform.shopee.description.language",
+            "value": "简体中文 / 英文 / 数字（同标题口径）",
+            "unit": "rule",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "shopee-open-platform-global-product",
+            "source_url": "https://open.shopee.com/developer-guide/213",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "原文：Global product descriptions can only be filled in simplified Chinese, English, and numbers."
+          }
+        ]
+      },
+      "dictionaries": [],
+      "channels": {
+        "api": {
+          "status": "reachable",
+          "http": 200,
+          "final_url": "https://partner.shopeemobile.com/api/v2/shop/auth_partner",
+          "note": "需 partner_id/key + 店铺授权才能取类目属性"
+        },
+        "docs": {
+          "status": "unreachable",
+          "http": null,
+          "body_len": null,
+          "shell": null,
+          "final_url": null,
+          "note": "公开 API 文档"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": true,
+      "title_final_facts": 6,
+      "verdict": "可出包（图片比例与标题规则均已核实）"
+    },
+    {
+      "id": "lazada",
+      "name": "Lazada",
+      "regions": [
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/lazada.json",
+        "exists": true,
+        "total": 15,
+        "by_status": {
+          "final": 9,
+          "candidate": 5,
+          "unverified": 1,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.lazada.image.ratio",
+          "platform.lazada.image.min_size",
+          "platform.lazada.image.recommended_count",
+          "platform.lazada.image.max_count",
+          "platform.lazada.title.max_chars",
+          "platform.lazada.title.naming",
+          "platform.lazada.image.style_rules",
+          "platform.lazada.attribute_map",
+          "platform.lazada.title.max_bytes",
+          "platform.lazada.title.forbidden_chars",
+          "platform.lazada.package.max_weight_kg",
+          "platform.lazada.package.max_dimension_sum_cm",
+          "platform.lazada.image.main_required",
+          "platform.lazada.attribute.enum_enforced",
+          "platform.lazada.price.sale_must_be_lower"
+        ],
+        "entries": [
+          {
+            "key": "platform.lazada.image.ratio",
+            "value": {
+              "width": 1,
+              "height": 1
+            },
+            "unit": "ratio",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-cn-apparel-image-guide",
+            "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": "LZ1",
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "同一篇的下一句",
+                "value": "图片横向和纵向比例建议 1:1.3",
+                "agree": false
+              }
+            ],
+            "divergence_pct": null,
+            "override": null,
+            "note": "同一篇官方文章自相矛盾：先说「图片为正方形」，紧接着说「比例建议 1:1.3」。投影按 1:1 做（正方形可被任何容器容纳），并在交付说明里写明这处冲突待后台核。"
+          },
+          {
+            "key": "platform.lazada.image.min_size",
+            "value": {
+              "width": 800,
+              "height": 800
+            },
+            "unit": "pixel",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-cn-apparel-image-guide",
+            "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "多个二手源",
+                "value": "≥800×800，纯白底",
+                "agree": true
+              }
+            ],
+            "divergence_pct": null,
+            "override": null,
+            "note": "来源是 Lazada 官方中文站的行业文章（不是 seller center 政策页），故标 candidate。900×900 投影满足此要求。"
+          },
+          {
+            "key": "platform.lazada.image.recommended_count",
+            "value": 4,
+            "unit": "count",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-cn-apparel-image-guide",
+            "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方建议顺序：模特或实物正面图、背面图、侧面图、细节图。这是**建议张数**，不是上限；上限未查到。"
+          },
+          {
+            "key": "platform.lazada.image.max_count",
+            "value": 8,
+            "unit": "images",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4169 CHK_IMAGE_MAX_ITEMS：Upload a maximum of 8 pictures。此前为 unverified。"
+          },
+          {
+            "key": "platform.lazada.title.max_chars",
+            "value": null,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方没有\"字符数\"上限，只有**字节**上限 255（错误码 4160：THD_IC_ERR_F_PRODUCT_00_15_004 / The max length of Multi title for locale can not exceed 255 bytes）。中文 1 字 = 3 字节，所以中文标题实际只能约 85 字。按字符校验会放过超长标题。"
+          },
+          {
+            "key": "platform.lazada.title.naming",
+            "value": "品牌 + 产品类型 + 关键规格（容量/颜色/型号）",
+            "unit": "guideline",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-cn-apparel-image-guide",
+            "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "10100 二手文章",
+                "value": "品牌+产品类型+关键规格",
+                "agree": true
+              }
+            ],
+            "divergence_pct": null,
+            "override": null,
+            "note": "多个来源口径一致，但均非平台政策原文，故标 candidate；写作方向可用，长度不可用。"
+          },
+          {
+            "key": "platform.lazada.image.style_rules",
+            "value": "无杂乱背景（白/浅色底）；不放尺码、促销、文本；严禁出现汉字；主体占画面 70% 以上；禁止拼图；品牌标统一左上角",
+            "unit": "rule",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-cn-apparel-image-guide",
+            "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "「严禁出现汉字」这条对中文母语卖家最容易踩：母版图上任何中文标注都不能进 Lazada 投影。"
+          },
+          {
+            "key": "platform.lazada.attribute_map",
+            "value": {},
+            "unit": "json/map",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-doc",
+            "source_url": "https://open.lazada.com/apps/doc",
+            "source_type": "official",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "类目属性需 appKey/appSecret + 店铺授权。无公开接口，属性表按 canonical_key 原样输出并标注未映射。"
+          },
+          {
+            "key": "platform.lazada.title.max_bytes",
+            "value": 255,
+            "unit": "bytes",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4160 原文：The max length of Multi title for locale can not exceed 255 bytes。换算：纯英文 255 字符、纯中文约 85 字、中英混排按实际字节。"
+          },
+          {
+            "key": "platform.lazada.title.forbidden_chars",
+            "value": "^~<>|",
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4129 BIZ_CHECK_PROP_SPECIAL_CHAR：Special characters are not allowed: \"^~<>|\"。"
+          },
+          {
+            "key": "platform.lazada.package.max_weight_kg",
+            "value": 40,
+            "unit": "kg",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4164：包裹重量超 40kg 需申请 DBS 权限。"
+          },
+          {
+            "key": "platform.lazada.package.max_dimension_sum_cm",
+            "value": 300,
+            "unit": "cm",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4165：长+宽+高 > 300cm 需申请 DBS 权限。"
+          },
+          {
+            "key": "platform.lazada.image.main_required",
+            "value": true,
+            "unit": "bool",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4139 BIZ_CHECK_MAIN_IMAGE_REQUIRE：无主图不允许上传。另有 4116/4158 主图重复校验。"
+          },
+          {
+            "key": "platform.lazada.attribute.enum_enforced",
+            "value": true,
+            "unit": "bool",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4115 CHK_CATPROP_CPV_NOT_ENUM：属性值必须在该类目给出的选项内 —— 与 Ozon 字典校验同理，自由文本填不进去。"
+          },
+          {
+            "key": "platform.lazada.price.sale_must_be_lower",
+            "value": true,
+            "unit": "bool",
+            "scope": {
+              "region": "SEA",
+              "platform": "lazada",
+              "category": "fashion"
+            },
+            "source": "lazada-open-platform-createproduct",
+            "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "错误码 4157：促销价必须低于原价；4141 BIZ_CHECK_PRICE_IS_ZERO 价格为 0 也被拒。"
+          }
+        ]
+      },
+      "dictionaries": [],
+      "channels": {
+        "api": {
+          "status": "reachable",
+          "http": 200,
+          "final_url": "https://api.lazada.com/rest",
+          "note": "需 appKey/appSecret + 店铺授权"
+        },
+        "docs": {
+          "status": "reachable",
+          "http": 200,
+          "body_len": 27371,
+          "shell": false,
+          "final_url": "https://open.lazada.com/apps/user/login?redirectURL=http%3A%2F%2Fopen.lazada.com%2Fapps%2Fdoc",
+          "note": "公开 API 文档"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": false,
+      "title_final_facts": 2,
+      "verdict": "可出包（1:1 为多源口径，已用补边不裁切；尺寸下限仍待后台确认）"
+    },
+    {
+      "id": "tiktok-shop",
+      "name": "TikTok Shop",
+      "regions": [
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/tiktok-shop.json",
+        "exists": true,
+        "total": 8,
+        "by_status": {
+          "final": 6,
+          "candidate": 0,
+          "unverified": 2,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.tiktok-shop.title.min_chars",
+          "platform.tiktok-shop.title.max_chars",
+          "platform.tiktok-shop.image.min_size",
+          "platform.tiktok-shop.image.ratio",
+          "platform.tiktok-shop.image.max_count",
+          "platform.tiktok-shop.image.style_rules",
+          "platform.tiktok-shop.video.max_per_product",
+          "platform.tiktok-shop.attribute_map"
+        ],
+        "entries": [
+          {
+            "key": "platform.tiktok-shop.title.min_chars",
+            "value": 25,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-university-product-guide",
+            "source_url": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=2729991025002257&default_language=zh-CN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：商品名称应保持在 25-200 字符间。注意这条来自「商品发布指南(美国)」，东南亚站点是否同口径未在公开页确认 —— 取值范围保守，25 字符下限对服装标题不构成压力。"
+          },
+          {
+            "key": "platform.tiktok-shop.title.max_chars",
+            "value": 200,
+            "unit": "chars",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-university-product-guide",
+            "source_url": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=2729991025002257&default_language=zh-CN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "TikTok for WooCommerce 集成文档",
+                "value": "至少 1 字符、不超过 255 字符",
+                "agree": false
+              }
+            ],
+            "divergence_pct": 22,
+            "override": null,
+            "note": "两处官方口径不一致：卖家大学的商品发布指南写 25–200，WooCommerce 集成文档写 ≤255。取更严的 200（宁可短，不可被截）。"
+          },
+          {
+            "key": "platform.tiktok-shop.image.min_size",
+            "value": {
+              "width": 600,
+              "height": 600
+            },
+            "unit": "pixel",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-university-product-guide",
+            "source_url": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=2729991025002257&default_language=zh-CN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：图片必须至少为 600 x 600 像素。900×900 投影满足。"
+          },
+          {
+            "key": "platform.tiktok-shop.image.ratio",
+            "value": {
+              "width": 1,
+              "height": 1
+            },
+            "unit": "ratio",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-university-product-guide",
+            "source_url": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=2729991025002257&default_language=zh-CN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方建议 1:1；3:4–4:3 之间也可上传。投影取 1:1（与封面展示位一致）。"
+          },
+          {
+            "key": "platform.tiktok-shop.image.max_count",
+            "value": null,
+            "unit": "count",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-university-product-guide",
+            "source_url": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=2729991025002257&default_language=zh-CN",
+            "source_type": "official",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "TikTok for WooCommerce 集成文档",
+                "value": "至少 1 张，最多 9 张",
+                "agree": true
+              }
+            ],
+            "divergence_pct": null,
+            "override": null,
+            "note": "卖家大学页只写了「避免多张图片重复相同角度」，没给张数上限；集成文档写 9 张。按 9 张使用，但标 unverified —— 9 张母版刚好不被截。"
+          },
+          {
+            "key": "platform.tiktok-shop.image.style_rules",
+            "value": "首图不得有文字/图像/水印；不得用营销贴纸；不得黑白；不得滤镜或模糊；不得数字渲染或占位图；品牌标识须清晰可见",
+            "unit": "rule",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-university-product-guide",
+            "source_url": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=2729991025002257&default_language=zh-CN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "这条对出图影响最大：首图不能带任何文字块，母版里的「卖点标注图」不能当 TTS 首图。"
+          },
+          {
+            "key": "platform.tiktok-shop.video.max_per_product",
+            "value": 1,
+            "unit": "count",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-university-product-guide",
+            "source_url": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=2729991025002257&default_language=zh-CN",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：一个商品发布页能上传 1 个视频（大小上限 5MB）。"
+          },
+          {
+            "key": "platform.tiktok-shop.attribute_map",
+            "value": {},
+            "unit": "json/map",
+            "scope": {
+              "region": "SEA",
+              "platform": "tiktok-shop",
+              "category": "fashion"
+            },
+            "source": "tiktok-shop-open-api",
+            "source_url": "https://partner.tiktokshop.com/doc",
+            "source_type": "official",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "类目属性需 app_key/app_secret + 店铺授权。无公开接口，属性表按 canonical_key 原样输出并标注未映射。"
+          }
+        ]
+      },
+      "dictionaries": [],
+      "channels": {
+        "api": {
+          "status": "reachable",
+          "http": 404,
+          "final_url": "https://open-api.tiktokglobalshop.com/",
+          "note": "需 app_key/app_secret + 店铺授权"
+        },
+        "docs": {
+          "status": "unreachable",
+          "http": null,
+          "body_len": null,
+          "shell": null,
+          "final_url": null,
+          "note": "公开 API 文档"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": true,
+      "title_final_facts": 2,
+      "verdict": "可出包（图片比例与标题规则均已核实）"
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "regions": [
+        "AE",
+        "SA",
+        "SG"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/amazon.json",
+        "exists": true,
+        "total": 21,
+        "by_status": {
+          "final": 19,
+          "candidate": 2,
+          "unverified": 0,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.amazon.image.ratio",
+          "platform.amazon.image.min_size",
+          "platform.amazon.image.fill_ratio",
+          "platform.amazon.image.background",
+          "platform.amazon.image.max_count",
+          "platform.amazon.title.max_chars",
+          "platform.amazon.title.forbidden",
+          "platform.amazon.attribute.required_source",
+          "platform.amazon.title.promo_forbidden",
+          "platform.amazon.title.item_name_max_chars",
+          "platform.amazon.title.differentiation_max_chars",
+          "platform.amazon.title.modular_effective",
+          "platform.amazon.image.ratio_policy",
+          "platform.amazon.image.longest_side_min",
+          "platform.amazon.image.longest_side_max",
+          "platform.amazon.image.zoom_min",
+          "platform.amazon.image.recommended_longest_side",
+          "platform.amazon.image.formats",
+          "platform.amazon.image.min_count",
+          "platform.amazon.image.recommended_count",
+          "platform.amazon.image.model_rule_fashion"
+        ],
+        "entries": [
+          {
+            "key": "platform.amazon.image.ratio",
+            "value": null,
+            "unit": "ratio",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "**官方不规定宽高比**。G1881 现行原文只约束「最长边 500–10,000 像素」，没有任何比例条款。此前按 1:1 裁图是按二手说法推的，会把 3:4 服装母版切掉上下各 12.5%（裙摆与领口）。现改为 ratio_policy=preserve：原图直出、不裁不补。"
+          },
+          {
+            "key": "platform.amazon.image.min_size",
+            "value": {
+              "width": 500,
+              "height": 500
+            },
+            "unit": "px",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文：500 to 10,000 pixels on their longest side。校验器用「宽和高都不小于」这个更保守的口径；对正常服装图两者等价。"
+          },
+          {
+            "key": "platform.amazon.image.fill_ratio",
+            "value": 85,
+            "unit": "pct",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Show the product as 85% of the image。"
+          },
+          {
+            "key": "platform.amazon.image.background",
+            "value": "pure-white-rgb-255-255-255",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Have a pure white background (RGB color values: 255, 255, 255)。少数品类允许无文字无 logo 的场景图，服装不在其列。"
+          },
+          {
+            "key": "platform.amazon.image.max_count",
+            "value": null,
+            "unit": "images",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "**官方未给上限**。此前记的 7 张是二手转述，已撤。上限以后台实际上传位为准。"
+          },
+          {
+            "key": "platform.amazon.title.max_chars",
+            "value": 200,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-sp-api-modular-titles",
+            "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [
+              {
+                "source": "sellercentral G200421970（zh-CN）",
+                "value": "最多 200 个字符",
+                "agree": true
+              },
+              {
+                "source": "sellercentral.amazon.com G200421970（zh-TW）",
+                "value": "最多 75 字符 + 商品亮点 125 字符",
+                "agree": true
+              }
+            ],
+            "divergence_pct": null,
+            "override": null,
+            "note": "**不是冲突，是两段式**。官方 SP-API 文档（updatedAt 2026-09-10）：item_name ≤75 + title_differentiation ≤125 = 合计 200。2026-07-27 起对所有非媒体类商品生效。之前的两个站点版本，一个写合计、一个写分段，口径不同而已。"
+          },
+          {
+            "key": "platform.amazon.title.forbidden",
+            "value": [
+              "HTML",
+              "全大写",
+              "促销语（优惠x%/免费配送/100%保证）",
+              "卖家名或URL",
+              "符号 !*$?"
+            ],
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g200421970-listing-guide",
+            "source_url": "https://sellercentral.amazon.com/help/hub/reference/external/G200421970",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方 G200421970 中文版原文，与 SP-API 模块化标题文档互相印证。此前为 candidate，现有两处官方页一致，升为 final。"
+          },
+          {
+            "key": "platform.amazon.attribute.required_source",
+            "value": "Product Type Definitions API（v2020-09-01）",
+            "unit": "api",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-sp-api",
+            "source_url": "https://developer-docs.amazon.com/sp-api/docs/product-type-definitions-api-v2020-09-01-reference",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "必填属性不是背出来的，是按类目 + 站点查 schema：该接口返回 JSON Schema，required 字段即必填。文档公开可达，但调用需开发者凭证 + 卖家授权，所以标 candidate（路径已确认，未实调）。"
+          },
+          {
+            "key": "platform.amazon.title.promo_forbidden",
+            "value": [
+              "优惠",
+              "折扣",
+              "特价",
+              "包邮",
+              "免费配送",
+              "100%保证",
+              "保证质量",
+              "best price",
+              "free shipping",
+              "discount",
+              "sale off"
+            ],
+            "unit": "words",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g200421970-listing-guide",
+            "source_url": "https://sellercentral.amazon.com/help/hub/reference/external/G200421970",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "把官方那句「禁促销信息（x% 折扣/免费配送/100% 质量保证）」落成可执行词表：命中即报 forbid。"
+          },
+          {
+            "key": "platform.amazon.title.item_name_max_chars",
+            "value": 75,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-sp-api-modular-titles",
+            "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "item_name 存「品牌 + 品类 + 关键特征」，≤75 字符。这是买家在搜索里看到的主标题。"
+          },
+          {
+            "key": "platform.amazon.title.differentiation_max_chars",
+            "value": 125,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-sp-api-modular-titles",
+            "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 4320,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "title_differentiation（Item Highlights）≤125 字符，逗号分隔短语、不写完整句。**只有 item_name ≤75 时才能提交这个字段** —— 主标题写超了，亮点直接提交不上去。"
+          },
+          {
+            "key": "platform.amazon.title.modular_effective",
+            "value": "2026-07-27",
+            "unit": "date",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": null
+            },
+            "source": "amazon-sp-api-modular-titles",
+            "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 8760,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Starting July 27, 2026, this structure applies to all non-media product types submitted through the Listings Items API or the JSON_LISTINGS_FEED。"
+          },
+          {
+            "key": "platform.amazon.image.ratio_policy",
+            "value": "preserve",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方只给像素范围、不给比例 ⇒ 保持原图比例直接出，不做任何几何变换。判据与 Яндекс Маркет 相同：不裁永远比猜着裁安全。"
+          },
+          {
+            "key": "platform.amazon.image.longest_side_min",
+            "value": 500,
+            "unit": "px",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：500 to 10,000 pixels on their longest side —— 下限。"
+          },
+          {
+            "key": "platform.amazon.image.longest_side_max",
+            "value": 10000,
+            "unit": "px",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：500 to 10,000 pixels on their longest side —— 上限。"
+          },
+          {
+            "key": "platform.amazon.image.zoom_min",
+            "value": 1000,
+            "unit": "px",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：We prioritize images larger than 1,000 pixels on the longest side to allow for zoom。这是放大镜门槛，不是上架门槛。"
+          },
+          {
+            "key": "platform.amazon.image.recommended_longest_side",
+            "value": 1600,
+            "unit": "px",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "旧版 G1881（2022-07-07 存档）与亚马逊全球开店中文指引均写：最长边不低于 1,600 像素可启用缩放。现行英文页只保留 1,000 像素的 zoom 门槛，1,600 属最优体验而非硬门。本项目母版最长边 1,200：达到上架线与 zoom 线，未达 1,600。"
+          },
+          {
+            "key": "platform.amazon.image.formats",
+            "value": [
+              "JPEG (.jpg/.jpeg)",
+              "TIFF (.tif)",
+              "PNG (.png)",
+              "非动图 GIF (.gif)"
+            ],
+            "unit": "formats",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Provided in JPEG, TIFF, PNG, or non-animated GIF file formats (JPEG recommended)。"
+          },
+          {
+            "key": "platform.amazon.image.min_count",
+            "value": 1,
+            "unit": "images",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Every product on Amazon must have at least one image。"
+          },
+          {
+            "key": "platform.amazon.image.recommended_count",
+            "value": 6,
+            "unit": "images",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：We recommend having at least six images and one video of the product。建议值。"
+          },
+          {
+            "key": "platform.amazon.image.model_rule_fashion",
+            "value": "成人装用模特站立实拍；童装内衣/泳装/连体衣必须平铺且不用模特；不得出现人台",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA,SG",
+              "platform": "amazon",
+              "category": "fashion"
+            },
+            "source": "amazon-g1881-technical-requirements",
+            "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-02T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Show on a model if the product is clothing in adult sizes. The model must be standing, not sitting, kneeling, leaning, or lying down. Children's and baby undergarments, leotards, swimwear must be photographed lying flat and without models. Don't show any part of a mannequin。"
+          }
+        ]
+      },
+      "dictionaries": [],
+      "channels": {
+        "api": {
+          "status": "reachable",
+          "http": 200,
+          "final_url": "https://sellingpartnerapi-na.amazon.com/",
+          "note": "SP-API 需 LWA 令牌 + 卖家授权；无凭证返回 4xx 属正常"
+        },
+        "docs": {
+          "status": "reachable",
+          "http": 200,
+          "body_len": 1453325,
+          "shell": false,
+          "final_url": "https://developer-docs.amazon/sp-api/",
+          "note": "开发者文档可达；Seller Central 帮助页有登录墙，external 链接会 302 到开店营销页"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": true,
+      "title_final_facts": 6,
+      "verdict": "可出包（平台未规定比例，原图直出；标题规则已核实）"
+    },
+    {
+      "id": "noon",
+      "name": "noon",
+      "regions": [
+        "AE",
+        "SA"
+      ],
+      "spec": {
+        "path": "data/specs/platforms/noon.json",
+        "exists": true,
+        "total": 28,
+        "by_status": {
+          "final": 26,
+          "candidate": 1,
+          "unverified": 1,
+          "conflicted": 0
+        },
+        "keys": [
+          "platform.noon.image.ratio",
+          "platform.noon.image.min_size",
+          "platform.noon.image.format",
+          "platform.noon.image.max_file_size",
+          "platform.noon.image.ppi",
+          "platform.noon.image.background",
+          "platform.noon.image.fill_ratio",
+          "platform.noon.image.min_count",
+          "platform.noon.image.model_preference",
+          "platform.noon.commission.fashion",
+          "platform.noon.commission.minimum",
+          "platform.noon.price.change_threshold",
+          "platform.noon.title.structure",
+          "platform.noon.title.max_chars",
+          "platform.noon.required_attributes",
+          "platform.noon.help_index",
+          "platform.noon.title.max_chars_standard",
+          "platform.noon.title.min_chars",
+          "platform.noon.title.min_chars_reject",
+          "platform.noon.title.forbidden_chars",
+          "platform.noon.title.caps_rule",
+          "platform.noon.title.must_have_product_type",
+          "platform.noon.title.banned",
+          "platform.noon.description.min_chars",
+          "platform.noon.description.max_chars",
+          "platform.noon.feature_bullet.max_chars",
+          "platform.noon.sku.max_chars",
+          "platform.noon.barcode.custom_max_chars"
+        ],
+        "entries": [
+          {
+            "key": "platform.noon.image.ratio",
+            "value": {
+              "width": 3,
+              "height": 4
+            },
+            "unit": "ratio",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方原文只规定「宽高比（aspect ratio）≥ 0.5」，没有固定正方形。取 3:4（0.75）作为服装生成值：在限内、且服装竖图常用。所以 noon 不能按 1:1 裁，也不能用极端长条比例。"
+          },
+          {
+            "key": "platform.noon.image.min_size",
+            "value": {
+              "width": 660,
+              "height": 880
+            },
+            "unit": "px",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：「Image width should be >= 660pixels」。高度按 3:4 推出 880，官方未单独规定高度下限。"
+          },
+          {
+            "key": "platform.noon.image.format",
+            "value": "JPEG/JPG only",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Images must be submitted in JPEG or JPG format only。PNG / WebP 一律不行，比多数平台严格。"
+          },
+          {
+            "key": "platform.noon.image.max_file_size",
+            "value": 10,
+            "unit": "MB",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：The size of the product image must not exceed 10 MB。"
+          },
+          {
+            "key": "platform.noon.image.ppi",
+            "value": 72,
+            "unit": "ppi",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Resolution should be above or equal to ≥72 PPI（为放大时保持清晰）。"
+          },
+          {
+            "key": "platform.noon.image.background",
+            "value": "纯白；服装类目推荐浅灰",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Pure white background for all categories **except for the fashion; where the recommended background is light grey**。这是 noon 与 Amazon/Ozon 的实质差异：服装不必纯白，浅灰更被推荐。"
+          },
+          {
+            "key": "platform.noon.image.fill_ratio",
+            "value": "70-80",
+            "unit": "pct",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "附加图要求商品覆盖画面 70–80%。注意与 Amazon 的「≥85%」不同：noon 给的是区间，不是下限。"
+          },
+          {
+            "key": "platform.noon.image.min_count",
+            "value": 3,
+            "unit": "images",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：highly recommended to upload a minimum of 3 high-quality images（不同角度 / 尺码 / 材质）。是建议值，不是拒绝阈值。"
+          },
+          {
+            "key": "platform.noon.image.model_preference",
+            "value": "成人服装建议模特实拍；童装建议平铺或挂拍",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-seller-help-image-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Adults apparel 建议模特实拍而非平铺/挂拍（泳装与内衣除外）；Kids apparel 相反，建议平铺或挂拍。"
+          },
+          {
+            "key": "platform.noon.commission.fashion",
+            "value": 27,
+            "unit": "pct",
+            "scope": {
+              "region": "SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-fbn-fees-ksa",
+            "source_url": "https://help.noon.partners/hc/en-us/articles/10750279839767",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "KSA FBN 费率表：Fashion / Apparel, Footwear 全部 27%（不含 VAT），该费率有效至 2026-09-09；官方提到部分品牌与 PST 例外，需下载 exceptions sheet。每件最低 1 SAR。"
+          },
+          {
+            "key": "platform.noon.commission.minimum",
+            "value": 1,
+            "unit": "SAR",
+            "scope": {
+              "region": "SA",
+              "platform": "noon",
+              "category": null
+            },
+            "source": "noon-fbn-fees-ksa",
+            "source_url": "https://help.noon.partners/hc/en-us/articles/10750279839767",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "A minimum referral fee of 1 SAR will be charged for each item。低价商品必须把这笔算进毛利。"
+          },
+          {
+            "key": "platform.noon.price.change_threshold",
+            "value": 30,
+            "unit": "pct",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": null
+            },
+            "source": "noon-help-partner-sku-price-update-import",
+            "source_url": "https://help.noon.partners/portal/en/kb/articles/partner-sku-price-update-import",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：任何超过 30% 的调价都会走邮件核验，需分两次改（先 <30%，再补剩余）。这条决定「改价」在 noon 上不是即时动作。"
+          },
+          {
+            "key": "platform.noon.title.structure",
+            "value": "按类目给结构：color + size + quantity 的组合",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-help-product-titles",
+            "source_url": "https://help.noon.partners/hc/en-us/articles/4420324855959",
+            "source_type": "official",
+            "confidence": "candidate",
+            "status": "candidate",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "标题文章公开全文，但示例只覆盖清洁/个护/宠物三类，**没有服装示例**。所以只能确认「按类目给结构」这一机制，服装的具体结构标 candidate。改标题在 Seller Lab 里做，审核约 2 天。"
+          },
+          {
+            "key": "platform.noon.title.max_chars",
+            "value": 160,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "同一篇官方文档里有两处数字：标准写给「Title should be between 5 and 200 characters」，拒绝原因表示例写「Title Too long: The title must not exceed 160 characters」。**160 是被拒的实际阈值，200 是建议标准**，取严按 160 执行，并把这个内部差异写在这里。"
+          },
+          {
+            "key": "platform.noon.required_attributes",
+            "value": null,
+            "unit": "list",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-partner-api",
+            "source_url": "https://api.noon.partners/",
+            "source_type": "official",
+            "confidence": "unverified",
+            "status": "unverified",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 720,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "必填属性清单未核实：需 Partner API 或 Seller Lab 类目页。AE/SA 两法域准入不同（ECAS / SASO-SABER），属性也可能不同。"
+          },
+          {
+            "key": "platform.noon.help_index",
+            "value": "https://help.noon.partners/sitemap.xml（492 条 URL，其中 listing 相关 194 条）",
+            "unit": "url",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": null
+            },
+            "source": "noon-seller-help",
+            "source_url": "https://help.noon.partners/robots.txt",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 8760,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "这是抓 noon 规则的正确入口：首页是 SPA 空壳，文章页却是服务端渲染，curl 即得全文。robots.txt 指向 helpcenter.noon.partners/sitemap.xml。"
+          },
+          {
+            "key": "platform.noon.title.max_chars_standard",
+            "value": 200,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方建议标准的上限（5–200）。生成时不用它做硬门，只用来判断「是否已接近危险区」。"
+          },
+          {
+            "key": "platform.noon.title.min_chars",
+            "value": 20,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "同一篇文档两处不一致：标准写「between 5 and 200 characters」，拒绝示例写「should not be less than 20 characters」。取严按 20 执行；5 只是理论下限，照 5 生成会被拒。"
+          },
+          {
+            "key": "platform.noon.title.min_chars_reject",
+            "value": 20,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "拒绝原因表里的实际下限：「Title should not be less than 20 characters」。生成时按 20 起。"
+          },
+          {
+            "key": "platform.noon.title.forbidden_chars",
+            "value": "@ ^ * # &",
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Titles should not include any special characters (e.g. @, ^, *, #, &, etc.)。"
+          },
+          {
+            "key": "platform.noon.title.caps_rule",
+            "value": "仅每词首字母大写；缩写可全大写（UAE/HP/LED）",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：CAPS, only capitalize the first letter of each word except for prepositions, conjunctions, or articles；明确允许缩写全大写。"
+          },
+          {
+            "key": "platform.noon.title.must_have_product_type",
+            "value": true,
+            "unit": "bool",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Title must contain product identifying information（例：缺 Washing Machine 一词就被判 Product Type Missing）。"
+          },
+          {
+            "key": "platform.noon.title.banned",
+            "value": "促销语 / 价格 / 运费信息 / 无关关键词 / 违禁词 / 拼写错误 / 重复词 / 品牌名位置错",
+            "unit": "rule",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方列出七类禁止项。注意「重复词」是独立拒因（例：Beaded Design Table Cover Gold 里重复的 Gold）。"
+          },
+          {
+            "key": "platform.noon.description.min_chars",
+            "value": 250,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Good product descriptions must not be less than 250 characters。"
+          },
+          {
+            "key": "platform.noon.description.max_chars",
+            "value": 4000,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：...and at the same time it should not exceed 4000 characters。"
+          },
+          {
+            "key": "platform.noon.feature_bullet.max_chars",
+            "value": 250,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-title-requirements",
+            "source_url": "https://help.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Feature bullets must not exceed 250 characters per bullet point。"
+          },
+          {
+            "key": "platform.noon.sku.max_chars",
+            "value": 50,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-single-sku-creation",
+            "source_url": "https://help.noon.partners/en/category/product-listing/single-sku-creation",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Shorten the Partner SKU to 50 characters or fewer（破折号、下划线、空格不计入）。这个「不计入」的口径很少见，按它算才不会误判超长。"
+          },
+          {
+            "key": "platform.noon.barcode.custom_max_chars",
+            "value": 16,
+            "unit": "chars",
+            "scope": {
+              "region": "AE,SA",
+              "platform": "noon",
+              "category": "fashion"
+            },
+            "source": "noon-single-sku-creation",
+            "source_url": "https://help.noon.partners/en/category/product-listing/single-sku-creation",
+            "source_type": "official",
+            "confidence": "official",
+            "status": "final",
+            "conflict_id": null,
+            "fetched_at": "2026-11-01T00:00:00.000Z",
+            "ttl_hours": 2160,
+            "stale": false,
+            "cross_check": [],
+            "divergence_pct": null,
+            "override": null,
+            "note": "官方：Custom Barcodes: Create a unique alphanumeric barcode up to 16 characters。"
+          }
+        ]
+      },
+      "dictionaries": [],
+      "channels": {
+        "api": {
+          "status": "http_418",
+          "http": 418,
+          "final_url": "https://api.noon.partners/",
+          "note": "Partner API 需 key；公开资料极少"
+        },
+        "docs": {
+          "status": "unreachable",
+          "http": null,
+          "body_len": null,
+          "shell": null,
+          "final_url": null,
+          "note": "卖家后台需登录"
+        }
+      },
+      "projectable": true,
+      "ratio_is_final": true,
+      "title_final_facts": 8,
+      "verdict": "可出包（图片比例与标题规则均已核实）"
+    }
+  ],
+  "regions": [
+    {
+      "region": "AE",
+      "platforms": [
+        {
+          "platform": "amazon",
+          "verdict": "可出包（平台未规定比例，原图直出；标题规则已核实）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "noon",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "http_418",
+          "docs": "unreachable"
+        }
+      ],
+      "ready": [
+        "amazon",
+        "noon"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：amazon / noon"
+    },
+    {
+      "region": "ID",
+      "platforms": [
+        {
+          "platform": "shopee",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        },
+        {
+          "platform": "lazada",
+          "verdict": "可出包（1:1 为多源口径，已用补边不裁切；尺寸下限仍待后台确认）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "tiktok-shop",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        }
+      ],
+      "ready": [
+        "shopee",
+        "lazada",
+        "tiktok-shop"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：shopee / lazada / tiktok-shop"
+    },
+    {
+      "region": "MY",
+      "platforms": [
+        {
+          "platform": "shopee",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        },
+        {
+          "platform": "lazada",
+          "verdict": "可出包（1:1 为多源口径，已用补边不裁切；尺寸下限仍待后台确认）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "tiktok-shop",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        }
+      ],
+      "ready": [
+        "shopee",
+        "lazada",
+        "tiktok-shop"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：shopee / lazada / tiktok-shop"
+    },
+    {
+      "region": "PH",
+      "platforms": [
+        {
+          "platform": "shopee",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        },
+        {
+          "platform": "lazada",
+          "verdict": "可出包（1:1 为多源口径，已用补边不裁切；尺寸下限仍待后台确认）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "tiktok-shop",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        }
+      ],
+      "ready": [
+        "shopee",
+        "lazada",
+        "tiktok-shop"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：shopee / lazada / tiktok-shop"
+    },
+    {
+      "region": "RU",
+      "platforms": [
+        {
+          "platform": "ozon",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "cached"
+        },
+        {
+          "platform": "yandex-market",
+          "verdict": "可出包（平台未规定比例，原图直出；标题规则已核实）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "wildberries",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "http_498"
+        }
+      ],
+      "ready": [
+        "ozon",
+        "yandex-market",
+        "wildberries"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：ozon / yandex-market / wildberries"
+    },
+    {
+      "region": "SA",
+      "platforms": [
+        {
+          "platform": "amazon",
+          "verdict": "可出包（平台未规定比例，原图直出；标题规则已核实）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "noon",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "http_418",
+          "docs": "unreachable"
+        }
+      ],
+      "ready": [
+        "amazon",
+        "noon"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：amazon / noon"
+    },
+    {
+      "region": "SG",
+      "platforms": [
+        {
+          "platform": "shopee",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        },
+        {
+          "platform": "lazada",
+          "verdict": "可出包（1:1 为多源口径，已用补边不裁切；尺寸下限仍待后台确认）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "tiktok-shop",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        },
+        {
+          "platform": "amazon",
+          "verdict": "可出包（平台未规定比例，原图直出；标题规则已核实）",
+          "api": "reachable",
+          "docs": "reachable"
+        }
+      ],
+      "ready": [
+        "shopee",
+        "lazada",
+        "tiktok-shop",
+        "amazon"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：shopee / lazada / tiktok-shop / amazon"
+    },
+    {
+      "region": "TH",
+      "platforms": [
+        {
+          "platform": "shopee",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        },
+        {
+          "platform": "lazada",
+          "verdict": "可出包（1:1 为多源口径，已用补边不裁切；尺寸下限仍待后台确认）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "tiktok-shop",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        }
+      ],
+      "ready": [
+        "shopee",
+        "lazada",
+        "tiktok-shop"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：shopee / lazada / tiktok-shop"
+    },
+    {
+      "region": "VN",
+      "platforms": [
+        {
+          "platform": "shopee",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        },
+        {
+          "platform": "lazada",
+          "verdict": "可出包（1:1 为多源口径，已用补边不裁切；尺寸下限仍待后台确认）",
+          "api": "reachable",
+          "docs": "reachable"
+        },
+        {
+          "platform": "tiktok-shop",
+          "verdict": "可出包（图片比例与标题规则均已核实）",
+          "api": "reachable",
+          "docs": "unreachable"
+        }
+      ],
+      "ready": [
+        "shopee",
+        "lazada",
+        "tiktok-shop"
+      ],
+      "draft_ready": [],
+      "verdict": "可出包：shopee / lazada / tiktok-shop"
+    }
+  ]
+}

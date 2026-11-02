@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/receipt.schema.json",
+  "title": "Run and package receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "sku", "snapshot_sha256", "started_at", "finished_at", "duration_ms", "gates", "degradations", "divergences", "stale", "providers"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "sku": {"type": "string", "minLength": 1},
+    "snapshot_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "started_at": {"type": "string"},
+    "finished_at": {"type": "string"},
+    "duration_ms": {"type": "number", "minimum": 0},
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "level", "evidence"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "status": {"enum": ["pass", "fail", "skipped"]},
+          "level": {"enum": ["L0", "L1", "L2"]},
+          "evidence": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "degradations": {"$ref": "#/$defs/records"},
+    "divergences": {"$ref": "#/$defs/records"},
+    "stale": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "expired_days"],
+        "properties": {
+          "key": {"type": "string", "minLength": 1},
+          "expired_days": {"type": ["number", "null"], "minimum": 0}
+        }
+      }
+    },
+    "providers": {"$ref": "#/$defs/records"},
+    "pricing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reasons", "result"],
+      "properties": {
+        "status": {"enum": ["available", "unavailable"]},
+        "reasons": {"type": "array"},
+        "result": {"type": ["object", "null"]}
+      }
+    }
+  },
+  "$defs": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "detail"],
+        "properties": {
+          "kind": {"type": "string", "minLength": 1},
+          "detail": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

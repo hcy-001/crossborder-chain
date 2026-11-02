@@ -1,0 +1,17 @@
+{
+  "source_url": "https://example.com/fx/usd-cny",
+  "fetched_at": "2026-10-29T00:00:00.000Z",
+  "ttl_hours": 24,
+  "payload": {
+    "facts": [
+      {
+        "key": "fx.USD_CNY",
+        "value": 7.1,
+        "unit": "CNY/USD",
+        "source_url": "https://example.com/fx/usd-cny",
+        "fetched_at": "2026-10-29T00:00:00.000Z",
+        "ttl_hours": 24
+      }
+    ]
+  }
+}

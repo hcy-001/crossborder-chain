@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "as_of": "2026-11-01",
+  "why": "跨境服装的销量不是均匀分布的，集中在大促与换季节点。备货截止日通常比活动日早 2–4 周，所以日历必须提前一年排，而不是当月才看。",
+  "caveat": "下列日期为平台年度固定活动（每年同月同日），实际开卖时间、报名截止、入仓截止以平台当年公告为准。本文件只用于排产与备货倒排，不用于对客户承诺时效。",
+  "events": [
+    {"id": "9.9", "name": "9.9 超级购物节", "month": 9, "day": 9, "platforms": ["shopee", "lazada", "tiktok-shop"], "regions": ["SG", "MY", "TH", "PH", "ID", "VN"], "status": "candidate", "lead_weeks": 4},
+    {"id": "10.10", "name": "10.10 大促", "month": 10, "day": 10, "platforms": ["shopee", "lazada", "tiktok-shop"], "regions": ["SG", "MY", "TH", "PH", "ID", "VN"], "status": "candidate", "lead_weeks": 4},
+    {"id": "11.11", "name": "双十一", "month": 11, "day": 11, "platforms": ["shopee", "lazada", "tiktok-shop", "ozon"], "regions": ["SG", "MY", "TH", "PH", "ID", "VN", "RU"], "status": "candidate", "lead_weeks": 6},
+    {"id": "12.12", "name": "双十二", "month": 12, "day": 12, "platforms": ["shopee", "lazada", "tiktok-shop"], "regions": ["SG", "MY", "TH", "PH", "ID", "VN"], "status": "candidate", "lead_weeks": 4},
+    {"id": "black-friday", "name": "黑五", "month": 11, "day": 27, "platforms": ["tiktok-shop", "noon"], "regions": ["AE", "SA", "SG", "MY"], "status": "candidate", "lead_weeks": 5},
+    {"id": "ramadan", "name": "斋月（备货起点）", "month": 2, "day": 17, "platforms": ["shopee", "lazada", "tiktok-shop", "noon"], "regions": ["MY", "ID", "AE", "SA"], "status": "candidate", "lead_weeks": 10, "note": "伊斯兰历每年提前约 11 天，实际以当地月相公告为准；斋月前是中东与马来市场全年最大备货窗口"},
+    {"id": "eid-al-fitr", "name": "开斋节", "month": 3, "day": 20, "platforms": ["shopee", "lazada", "tiktok-shop", "noon"], "regions": ["MY", "ID", "AE", "SA"], "status": "candidate", "lead_weeks": 8, "note": "同上，日期随月相浮动"},
+    {"id": "cny", "name": "春节", "month": 2, "day": 17, "platforms": ["shopee", "lazada", "tiktok-shop", "ozon"], "regions": ["SG", "MY", "VN", "RU"], "status": "candidate", "lead_weeks": 8, "note": "同时也是中国工厂停工窗口，备货要赶在节前 3–4 周出货"}
+  ]
+}

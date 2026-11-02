@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/score.schema.json",
+  "title": "Deterministic category score",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["input_sha256", "candidates", "rankings"],
+  "properties": {
+    "input_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "candidates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "opportunity", "dimensions", "evidence", "risks", "confidence", "signal_coverage"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "opportunity": {"type": "string", "minLength": 1},
+          "dimensions": {"$ref": "#/$defs/dimensions"},
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["D", "G", "M", "L", "C"],
+            "properties": {
+              "D": {"$ref": "#/$defs/evidenceList"},
+              "G": {"$ref": "#/$defs/evidenceList"},
+              "M": {"$ref": "#/$defs/evidenceList"},
+              "L": {"$ref": "#/$defs/evidenceList"},
+              "C": {"$ref": "#/$defs/evidenceList"}
+            }
+          },
+          "risks": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string", "minLength": 1}},
+          "confidence": {"enum": ["official", "secondary", "unverified"]},
+          "signal_coverage": {"enum": ["low", "medium", "high"]}
+        }
+      }
+    },
+    "rankings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conservative", "aggressive", "pilot"],
+      "properties": {
+        "conservative": {"$ref": "#/$defs/ranking"},
+        "aggressive": {"$ref": "#/$defs/ranking"},
+        "pilot": {"$ref": "#/$defs/ranking"}
+      }
+    }
+  },
+  "$defs": {
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["D", "G", "M", "L", "C"],
+      "properties": {
+        "D": {"type": "number", "minimum": 0, "maximum": 100},
+        "G": {"type": "number", "minimum": 0, "maximum": 100},
+        "M": {"type": "number", "minimum": 0, "maximum": 100},
+        "L": {"type": "number", "minimum": 0, "maximum": 100},
+        "C": {"type": "number", "minimum": 0, "maximum": 100}
+      }
+    },
+    "evidenceList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["signal_id", "source", "url"],
+        "properties": {
+          "signal_id": {"type": "string", "minLength": 1},
+          "source": {"type": "string", "minLength": 1},
+          "url": {"type": "string", "pattern": "^https://"}
+        }
+      }
+    },
+    "ranking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "score", "rank", "vector"],
+        "properties": {
+          "candidate_id": {"type": "string", "minLength": 1},
+          "score": {"type": "number", "minimum": 0, "maximum": 100},
+          "rank": {"type": "integer", "minimum": 1},
+          "vector": {
+            "type": "array",
+            "minItems": 5,
+            "maxItems": 5,
+            "items": {"type": "number", "minimum": 0, "maximum": 100}
+          }
+        }
+      }
+    }
+  }
+}

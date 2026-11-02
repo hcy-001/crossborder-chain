@@ -1,0 +1,542 @@
+{
+  "platform": "amazon",
+  "name": "Amazon（AE / SA / SG 站点）",
+  "coverage": [
+    "AE",
+    "SA",
+    "SG"
+  ],
+  "why": "中东两法域（AE/SA）原本只有 noon，而 noon 全站 Akamai 拦截、无公开文档。Amazon.ae / Amazon.sa / Amazon.sg 是当地主流，且其商品规则是公开可见的，作为第二平台补位。",
+  "access": {
+    "seller_help": "sellercentral.amazon.com/gp/help/external/<id> 会 302 到开店营销页（登录墙），无法直接取正文",
+    "developer_docs": "developer-docs.amazon.com 为 SPA，且原路径已改；需渲染 + 正确 URL",
+    "sp_api": "Product Type Definitions API 可给出每个类目必填属性，但需注册开发者并授权（属凭证级）"
+  },
+  "facts": [
+    {
+      "key": "platform.amazon.image.ratio",
+      "value": null,
+      "unit": "ratio",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "**官方不规定宽高比**。G1881 现行原文只约束「最长边 500–10,000 像素」，没有任何比例条款。此前按 1:1 裁图是按二手说法推的，会把 3:4 服装母版切掉上下各 12.5%（裙摆与领口）。现改为 ratio_policy=preserve：原图直出、不裁不补。"
+    },
+    {
+      "key": "platform.amazon.image.min_size",
+      "value": {
+        "width": 500,
+        "height": 500
+      },
+      "unit": "px",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方原文：500 to 10,000 pixels on their longest side。校验器用「宽和高都不小于」这个更保守的口径；对正常服装图两者等价。"
+    },
+    {
+      "key": "platform.amazon.image.fill_ratio",
+      "value": 85,
+      "unit": "pct",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Show the product as 85% of the image。"
+    },
+    {
+      "key": "platform.amazon.image.background",
+      "value": "pure-white-rgb-255-255-255",
+      "unit": "rule",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Have a pure white background (RGB color values: 255, 255, 255)。少数品类允许无文字无 logo 的场景图，服装不在其列。"
+    },
+    {
+      "key": "platform.amazon.image.max_count",
+      "value": null,
+      "unit": "images",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "**官方未给上限**。此前记的 7 张是二手转述，已撤。上限以后台实际上传位为准。"
+    },
+    {
+      "key": "platform.amazon.title.max_chars",
+      "value": 200,
+      "unit": "chars",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-sp-api-modular-titles",
+      "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "sellercentral G200421970（zh-CN）",
+          "value": "最多 200 个字符",
+          "agree": true
+        },
+        {
+          "source": "sellercentral.amazon.com G200421970（zh-TW）",
+          "value": "最多 75 字符 + 商品亮点 125 字符",
+          "agree": true
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "**不是冲突，是两段式**。官方 SP-API 文档（updatedAt 2026-09-10）：item_name ≤75 + title_differentiation ≤125 = 合计 200。2026-07-27 起对所有非媒体类商品生效。之前的两个站点版本，一个写合计、一个写分段，口径不同而已。"
+    },
+    {
+      "key": "platform.amazon.title.forbidden",
+      "value": [
+        "HTML",
+        "全大写",
+        "促销语（优惠x%/免费配送/100%保证）",
+        "卖家名或URL",
+        "符号 !*$?"
+      ],
+      "unit": "rule",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g200421970-listing-guide",
+      "source_url": "https://sellercentral.amazon.com/help/hub/reference/external/G200421970",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方 G200421970 中文版原文，与 SP-API 模块化标题文档互相印证。此前为 candidate，现有两处官方页一致，升为 final。"
+    },
+    {
+      "key": "platform.amazon.attribute.required_source",
+      "value": "Product Type Definitions API（v2020-09-01）",
+      "unit": "api",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-sp-api",
+      "source_url": "https://developer-docs.amazon.com/sp-api/docs/product-type-definitions-api-v2020-09-01-reference",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "必填属性不是背出来的，是按类目 + 站点查 schema：该接口返回 JSON Schema，required 字段即必填。文档公开可达，但调用需开发者凭证 + 卖家授权，所以标 candidate（路径已确认，未实调）。"
+    },
+    {
+      "key": "platform.amazon.title.promo_forbidden",
+      "value": [
+        "优惠",
+        "折扣",
+        "特价",
+        "包邮",
+        "免费配送",
+        "100%保证",
+        "保证质量",
+        "best price",
+        "free shipping",
+        "discount",
+        "sale off"
+      ],
+      "unit": "words",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g200421970-listing-guide",
+      "source_url": "https://sellercentral.amazon.com/help/hub/reference/external/G200421970",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "把官方那句「禁促销信息（x% 折扣/免费配送/100% 质量保证）」落成可执行词表：命中即报 forbid。"
+    },
+    {
+      "key": "platform.amazon.title.item_name_max_chars",
+      "value": 75,
+      "unit": "chars",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-sp-api-modular-titles",
+      "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "item_name 存「品牌 + 品类 + 关键特征」，≤75 字符。这是买家在搜索里看到的主标题。"
+    },
+    {
+      "key": "platform.amazon.title.differentiation_max_chars",
+      "value": 125,
+      "unit": "chars",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-sp-api-modular-titles",
+      "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "title_differentiation（Item Highlights）≤125 字符，逗号分隔短语、不写完整句。**只有 item_name ≤75 时才能提交这个字段** —— 主标题写超了，亮点直接提交不上去。"
+    },
+    {
+      "key": "platform.amazon.title.modular_effective",
+      "value": "2026-07-27",
+      "unit": "date",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": null
+      },
+      "source": "amazon-sp-api-modular-titles",
+      "source_url": "https://developer-docs.amazon/sp-api/docs/submit-modular-titles.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Starting July 27, 2026, this structure applies to all non-media product types submitted through the Listings Items API or the JSON_LISTINGS_FEED。"
+    },
+    {
+      "key": "platform.amazon.image.ratio_policy",
+      "value": "preserve",
+      "unit": "rule",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方只给像素范围、不给比例 ⇒ 保持原图比例直接出，不做任何几何变换。判据与 Яндекс Маркет 相同：不裁永远比猜着裁安全。"
+    },
+    {
+      "key": "platform.amazon.image.longest_side_min",
+      "value": 500,
+      "unit": "px",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：500 to 10,000 pixels on their longest side —— 下限。"
+    },
+    {
+      "key": "platform.amazon.image.longest_side_max",
+      "value": 10000,
+      "unit": "px",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：500 to 10,000 pixels on their longest side —— 上限。"
+    },
+    {
+      "key": "platform.amazon.image.zoom_min",
+      "value": 1000,
+      "unit": "px",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：We prioritize images larger than 1,000 pixels on the longest side to allow for zoom。这是放大镜门槛，不是上架门槛。"
+    },
+    {
+      "key": "platform.amazon.image.recommended_longest_side",
+      "value": 1600,
+      "unit": "px",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "旧版 G1881（2022-07-07 存档）与亚马逊全球开店中文指引均写：最长边不低于 1,600 像素可启用缩放。现行英文页只保留 1,000 像素的 zoom 门槛，1,600 属最优体验而非硬门。本项目母版最长边 1,200：达到上架线与 zoom 线，未达 1,600。"
+    },
+    {
+      "key": "platform.amazon.image.formats",
+      "value": [
+        "JPEG (.jpg/.jpeg)",
+        "TIFF (.tif)",
+        "PNG (.png)",
+        "非动图 GIF (.gif)"
+      ],
+      "unit": "formats",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Provided in JPEG, TIFF, PNG, or non-animated GIF file formats (JPEG recommended)。"
+    },
+    {
+      "key": "platform.amazon.image.min_count",
+      "value": 1,
+      "unit": "images",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Every product on Amazon must have at least one image。"
+    },
+    {
+      "key": "platform.amazon.image.recommended_count",
+      "value": 6,
+      "unit": "images",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：We recommend having at least six images and one video of the product。建议值。"
+    },
+    {
+      "key": "platform.amazon.image.model_rule_fashion",
+      "value": "成人装用模特站立实拍；童装内衣/泳装/连体衣必须平铺且不用模特；不得出现人台",
+      "unit": "rule",
+      "scope": {
+        "region": "AE,SA,SG",
+        "platform": "amazon",
+        "category": "fashion"
+      },
+      "source": "amazon-g1881-technical-requirements",
+      "source_url": "https://sellercentral.amazon.com/gp/help/external/G1881",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-02T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Show on a model if the product is clothing in adult sizes. The model must be standing, not sitting, kneeling, leaning, or lying down. Children's and baby undergarments, leotards, swimwear must be photographed lying flat and without models. Don't show any part of a mannequin。"
+    }
+  ],
+  "evidence_level": {
+    "seller_help_pages": "登录墙（external 链接 302 到开店营销页），无法直接复核",
+    "text_origin": "规则原文经第三方检索获得并逐条比对，冲突已并列记录；不作为 final 使用",
+    "upgrade_path": "拿到 Amazon 卖家后台截图 或 SP-API 凭证后，把 status 改 final 并补 cross_check"
+  }
+}

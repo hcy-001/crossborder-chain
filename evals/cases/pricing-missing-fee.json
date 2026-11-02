@@ -1,0 +1,41 @@
+{
+  "id": "pricing-missing-fee",
+  "what": "缺运费/佣金/税/手续费时不出价，并逐项点名（不许用行业均值代填）",
+  "input": {
+    "ticket": {
+      "price_cny": 67,
+      "weight_g": 280
+    },
+    "region": {
+      "currency": "RUB"
+    },
+    "costPolicy": {
+      "required_components": [
+        "shipping",
+        "commission",
+        "tax",
+        "payment_fee"
+      ]
+    },
+    "intakeAnswers": {},
+    "fxFacts": [
+      {
+        "key": "fx.USD_CNY",
+        "value": 6.6664
+      },
+      {
+        "key": "fx.USD_RUB",
+        "value": 80.8664
+      }
+    ]
+  },
+  "expect": {
+    "status": "unavailable",
+    "reasons": [
+      "shipping_missing",
+      "commission_missing",
+      "tax_missing",
+      "payment_fee_missing"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "probed_at": "2026-10-29T13:00:37.742Z",
+  "mode": "read-only",
+  "base": "https://api-seller.ozon.ru",
+  "note": "只读探测：未调用任何写端点（改价/改库存/导入商品）。写权限无法在不写入的前提下确证，需在卖家后台看 key 的勾选项。",
+  "usable_domains": [
+    "类目与属性",
+    "商品列表",
+    "价格",
+    "库存",
+    "促销活动",
+    "报表"
+  ],
+  "results": [
+    {
+      "domain": "类目与属性",
+      "path": "/v1/description-category/tree",
+      "status": 200,
+      "verdict": "可用",
+      "detail": "{\"result\":[{\"description_category_id\":17027490,\"category_name\":\"Антиквариат и коллекционирование\",\"disabled\":false,\"children\":[{\"description_category_id\":17028993,\"category_name\":\"Антиквариат и винтаж"
+    },
+    {
+      "domain": "商品列表",
+      "path": "/v3/product/list",
+      "status": 200,
+      "verdict": "可用",
+      "detail": "{\"result\":{\"items\":[],\"total\":0,\"last_id\":\"\",\"total_items\":0}}"
+    },
+    {
+      "domain": "商品信息",
+      "path": "/v3/product/info/list",
+      "status": 400,
+      "verdict": "未预期（HTTP 400）",
+      "detail": "{\"code\":3, \"message\":\"use either offer_id or product_id or sku\"}"
+    },
+    {
+      "domain": "价格",
+      "path": "/v5/product/info/prices",
+      "status": 200,
+      "verdict": "可用",
+      "detail": "{\"items\":[],\"cursor\":\"\",\"total\":0,\"total_items\":0}"
+    },
+    {
+      "domain": "库存",
+      "path": "/v4/product/info/stocks",
+      "status": 200,
+      "verdict": "可用",
+      "detail": "{\"items\":[],\"total\":0,\"cursor\":\"\",\"total_items\":0}"
+    },
+    {
+      "domain": "仓库",
+      "path": "/v1/warehouse/list",
+      "status": 400,
+      "verdict": "未预期（HTTP 400）",
+      "detail": "{\"code\":9, \"message\":\"obsolete method cannot be used\"}"
+    },
+    {
+      "domain": "订单(FBS)",
+      "path": "/v2/posting/fbs/list",
+      "status": 404,
+      "verdict": "端点不存在（版本可能变了）",
+      "detail": "404 page not found\n"
+    },
+    {
+      "domain": "促销活动",
+      "path": "/v1/actions",
+      "status": 200,
+      "verdict": "可用",
+      "detail": "{\"result\":[{\"id\":1977747,\"title\":\"Эластичный бустинг. Без ограничения срока действия\",\"date_start\":\"2025-03-19T21:00:44Z\",\"date_end\":\"2026-12-31T20:59:59Z\",\"potential_products_count\":17,\"is_participat"
+    },
+    {
+      "domain": "报表",
+      "path": "/v1/report/list",
+      "status": 200,
+      "verdict": "可用",
+      "detail": "{\"result\":{\"reports\":[],\"total\":0}}"
+    }
+  ]
+}

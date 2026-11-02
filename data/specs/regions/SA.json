@@ -1,0 +1,325 @@
+{
+  "region": "SA",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Riyadh",
+        "monthly_mean_c": [
+          14.6,
+          16.2,
+          22.1,
+          30.9,
+          35,
+          36.9,
+          38,
+          38.2,
+          35.5,
+          28.9,
+          22.5,
+          17.3
+        ],
+        "monthly_precip_mm": [
+          6,
+          32,
+          21,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          16
+        ],
+        "annual_range_c": 23.6
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=24.7136&longitude=46.6753&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FRiyadh",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Riyadh 2025 年日值聚合成月均；年温差 23.6℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 34.278,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 36156.8562500172,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2027-01-02",
+          "name": "Tweede Nuwe Jaar"
+        },
+        {
+          "date": "2027-02-21",
+          "name": "Armed Forces Day"
+        },
+        {
+          "date": "2027-03-21",
+          "name": "Human Rights Day"
+        },
+        {
+          "date": "2027-03-22",
+          "name": "Day off for Human Rights Day"
+        },
+        {
+          "date": "2027-03-26",
+          "name": "Good Friday"
+        },
+        {
+          "date": "2027-03-27",
+          "name": "Holy Saturday"
+        },
+        {
+          "date": "2027-03-28",
+          "name": "Easter Sunday"
+        },
+        {
+          "date": "2027-03-29",
+          "name": "Family Day"
+        },
+        {
+          "date": "2027-04-27",
+          "name": "Freedom Day"
+        },
+        {
+          "date": "2027-05-01",
+          "name": "Workers' Day"
+        },
+        {
+          "date": "2027-05-09",
+          "name": "Mother's Day"
+        },
+        {
+          "date": "2027-06-16",
+          "name": "Youth Day"
+        },
+        {
+          "date": "2027-06-20",
+          "name": "Father's Day"
+        },
+        {
+          "date": "2027-07-18",
+          "name": "Nelson Mandela Day"
+        },
+        {
+          "date": "2027-08-09",
+          "name": "National Women's Day"
+        },
+        {
+          "date": "2027-09-24",
+          "name": "Heritage Day"
+        },
+        {
+          "date": "2027-12-16",
+          "name": "Day of Reconciliation"
+        },
+        {
+          "date": "2027-12-24",
+          "name": "Christmas Eve"
+        },
+        {
+          "date": "2027-12-25",
+          "name": "Christmas Day"
+        },
+        {
+          "date": "2027-12-26",
+          "name": "Day of Goodwill"
+        },
+        {
+          "date": "2027-12-27",
+          "name": "Day of Goodwill observed"
+        },
+        {
+          "date": "2027-12-31",
+          "name": "New Year's Eve"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.sa%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 23 天（全国 23 / 州级 0）；用于排产与上新节奏。无第二源核对"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 12110.9443912977,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 100,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 33702731,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 84.2962388315415,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "SA",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

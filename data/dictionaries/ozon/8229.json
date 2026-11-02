@@ -1,0 +1,21 @@
+{
+  "attribute_id": 8229,
+  "type_id": 93182,
+  "description_category_id": 200000933,
+  "probed_at": "2026-11-01T07:30:45.775Z",
+  "total": 2,
+  "values": [
+    {
+      "id": 93182,
+      "value": "Платье",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 93211,
+      "value": "Сарафан",
+      "info": "",
+      "picture": ""
+    }
+  ]
+}

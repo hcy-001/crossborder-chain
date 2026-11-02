@@ -1,0 +1,112 @@
+{
+  "level": "L2",
+  "claim": "真实图像模型生图已对上架链路跑通：9 张母版图由供应商 API 实时生成并落盘为 900x1200 PNG",
+  "verified_at": "2026-10-29T04:08:00.000Z",
+  "provider": {
+    "name": "火山方舟 Ark",
+    "endpoint": "https://ark.cn-beijing.volces.com/api/v3/images/generations",
+    "model": "doubao-seedream-5-0-260128",
+    "model_id_source": "历史项目出现 63 次的既有 model id，非本文臆造的营销名",
+    "credential_source": "C:/Users/pisce/.workbuddy/skills/crossborder-upload/.env 的 ARK_API_KEY（46 字符，ark- 前缀）",
+    "credential_written_to": "config/local.secret.json（gitignored, 0600），config/local.json 不含 key"
+  },
+  "auth_probe": {
+    "empty_body_probe": "HTTP 400 MissingParameter(model) — 鉴权通过、路径正确、零成本",
+    "chat_endpoint_probe": "HTTP 400 InvalidEndpoint.ClosedEndpoint — 该账号 chat 端点关闭，不影响图像端点",
+    "paid_calls": 0
+  },
+  "real_calls": [
+    {
+      "purpose": "尺寸探针",
+      "size": "1728x2304",
+      "http": 200,
+      "usage": {"generated_images": 1, "output_tokens": 15552},
+      "note": "证明 3:4 且 ≥3686400px 的尺寸可出图"
+    },
+    {
+      "purpose": "通道单张",
+      "requested": "1024x1536",
+      "actual_after_auto_raise": "1568x2352",
+      "http": 200,
+      "usage": {"images": 1, "output_tokens": 14406},
+      "landed": "900x1200 PNG, 627471 bytes",
+      "note": "自适应尺寸逻辑首次在生产路径生效"
+    },
+    {
+      "purpose": "完整出包 9 张",
+      "run_id": "20261029-033609-ceff",
+      "exit_code": 0,
+      "wall_clock": "3m38s",
+      "provider_recorded_in_receipt": "http-openai-compat:doubao-seedream-5-0-260128"
+    }
+  ],
+  "wasted_calls": [
+    {
+      "http": 400,
+      "error_code": "InvalidParameter",
+      "error": "image size must be at least 3686400 pixels",
+      "requested_size": "1024x1536",
+      "charged": "unknown; 失败请求通常不计费，未核实账单"
+    }
+  ],
+  "outputs": {
+    "master_images": 9,
+    "dimensions": "900x1200 PNG（全部）",
+    "entropy_range": [6.18, 7.68],
+    "sha256_all_distinct": true,
+    "aHash_8x8_duplicate_pairs": 0,
+    "receipt_quality": "generated",
+    "handoff_line2": "本包图片由 http-openai-compat:doubao-seedream-5-0-260128 实时生成（quality=generated），未经人工审图",
+    "evidence_snapshot": "out/verification/realgen-package/（9 张图 + manifest + receipt）"
+  },
+  "cost": {
+    "unit_price_cny": null,
+    "unit_price_reason": "火山方舟价格页只列对话与视频模型表；图像模型单价页（docs/82379/1544107）抓取返回导航壳，未取得数字。不估算。",
+    "successful_images": 11,
+    "output_tokens_total_observed": "约 160k（每次 14406~15552）",
+    "account_balance_given_by_user": "5 CNY",
+    "billing_verified": false
+  },
+  "defects_found_and_fixed": [
+    {
+      "id": "default_size_below_provider_minimum",
+      "symptom": "1024x1536 被供应商拒绝，默认配置必然失败一次",
+      "root_cause": "defaultRequestSize 只按宽高比算，未考虑供应商最小像素",
+      "fix": "scaleToMinPixels 解析错误回执里的 at least N pixels，等比放大并对齐 16 的倍数后重试",
+      "test": "tests/channels/imagegen-prompt.test.mjs（6 项）"
+    },
+    {
+      "id": "orphan_placeholder_images_survive_channel_switch",
+      "symptom": "换真实生图后 master/images 与两个平台目录各留 9 张旧占位图，共 18 张假图会混进交付包",
+      "root_cause": "内容寻址目录按哈希命名，旧文件不被覆盖，也没有 GC",
+      "fix": "pruneUnreferencedImages 在出包末尾按 manifest 引用清理孤儿图，结果写 runs/<run_id>/images-prune.json",
+      "test": "tests/integration/images-prune.test.mjs（5 项）",
+      "real_run": "kept 9, removed 27（master 9 + ozon 9 + wildberries 9）"
+    },
+    {
+      "id": "handoff_does_not_declare_image_provenance",
+      "symptom": "真实图模式下 handoff 第二行为空，交付包无法自证图片是生成还是占位",
+      "root_cause": "renderHandoff 只在 placeholder 时写提示，generated/reuse 无文案",
+      "fix": "imageNotice 按 placeholder/generated/reuse 三态输出来源，并带 provider 名"
+    },
+    {
+      "id": "verify_package_hardcoded_mock_state",
+      "symptom": "真实图包被判定 3 项失败（要求 quality=placeholder、要求 imagegen 降级记录）",
+      "root_cause": "校验脚本把 mock 场景写死",
+      "fix": "改为三态断言：quality 必须属于 placeholder/generated/reuse，且与 provider、降级记录、handoff 文案互相一致"
+    },
+    {
+      "id": "prompt_lacked_colour_and_identity_constraint",
+      "symptom": "同一 SKU 的 9 张图颜色不一致（img-01 浅灰蓝 / img-03 灰褐 / img-05 灰）",
+      "root_cause": "输入无 colour 事实，原有 prompt 也不含颜色与同款约束；模型每张自由取色",
+      "fix": "buildPrompt 优先用 attributes.product_type，注入 facts/attributes 里的 colour，并加 identical garment 约束；meta.promptSample 记录首发 prompt 供审计",
+      "status": "已修代码，未重跑真实出图（余额限制），色差在现有真实包里仍然存在"
+    }
+  ],
+  "open_risks": [
+    "现有 9 张真实图颜色不一致，不能作为同一 SKU 的图集直接上架；需补 colour 事实后重跑，或走图生图以实货图为参考",
+    "图像模型单价未查证，无法给出精确单包成本",
+    "生成图未经人工审图，商品细节（版型、扣位、长度）与实货是否一致未核",
+    "无实货参考图，纯文生图无法保证与真实商品一致"
+  ]
+}

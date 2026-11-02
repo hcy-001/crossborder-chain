@@ -1,0 +1,105 @@
+{
+  "id": "RU",
+  "regime": "EAEU",
+  "locales": [
+    "ru-RU"
+  ],
+  "currency": "RUB",
+  "price_rounding": 0,
+  "platforms": [
+    "ozon",
+    "wildberries",
+    "yandex-market"
+  ],
+  "completion": "full",
+  "data_provenance": {
+    "note": "任何一条事实的『来源等级』都必须能在这里指到出处；指不到就是未查证，不许当成默认值。",
+    "fx": {
+      "ref": "data/sources.json + data/variables/fx.json",
+      "status": "official",
+      "detail": "CBR 官方镜像与 frankfurter 交叉校验，TTL 24h"
+    },
+    "size_system": {
+      "ref": "regions/RU/sizing.json",
+      "status": "unverified",
+      "detail": "俄码为准；俄码↔国际码对照表未取到官方版本，留空"
+    },
+    "cost_policy": {
+      "ref": "regions/RU/cost-policy.json",
+      "status": "unverified",
+      "detail": "只声明必填成本项，不给费率数字"
+    },
+    "tax_and_duty": {
+      "ref": null,
+      "status": "unverified",
+      "detail": "未取到官方税率；政策变动频繁，须按最新公告核对后再填"
+    },
+    "compliance": {
+      "ref": "regions/RU/compliance/rules.json",
+      "status": "secondary",
+      "detail": "二手整理，未获官方核验"
+    },
+    "platform_specs": {
+      "ref": "data/specs/platforms/*.json",
+      "status": "mixed",
+      "detail": "图片规格为 official；标题模板与佣金率为 unverified/candidate"
+    }
+  },
+  "signal_sources": {
+    "allowed": [
+      "vk",
+      "yandex-wordstat",
+      "marketplace-search",
+      "rutube"
+    ],
+    "blocked": [
+      {
+        "id": "instagram",
+        "reason": "资料记载俄罗斯封锁且 Meta 被认定为极端组织；需保持合规复核。",
+        "confidence": "secondary"
+      },
+      {
+        "id": "facebook",
+        "reason": "资料记载俄罗斯封锁且 Meta 被认定为极端组织；需保持合规复核。",
+        "confidence": "secondary"
+      },
+      {
+        "id": "whatsapp",
+        "reason": "资料记载 2026-02 封锁；需保持合规复核。",
+        "confidence": "secondary"
+      },
+      {
+        "id": "telegram",
+        "reason": "资料记载 2026-02 起限速，不作为稳定信号源。",
+        "confidence": "secondary"
+      },
+      {
+        "id": "youtube",
+        "reason": "资料记载已移出 NSDI，不作为稳定信号源。",
+        "confidence": "secondary"
+      }
+    ]
+  },
+  "platform_accounts": {
+    "ozon": {
+      "status": "active",
+      "note": "卖家有 Ozon Seller 账号，可用 API 只读核对类目与属性"
+    },
+    "wildberries": {
+      "status": "no_account",
+      "note": "卖家无 WB 账号（2026-10-29 确认）：不产 WB 投影，字段名不猜"
+    }
+  },
+  "tax_reference": {
+    "standard_rate": 0.22,
+    "reduced_rates": [
+      0.1
+    ],
+    "label": "НДС",
+    "status": "final",
+    "source": "中国国家税务总局转述 + 联邦法 425-ФЗ",
+    "source_url": "https://www.chinatax.gov.cn/chinatax/c102675/c5246165/content.html",
+    "note": "2026-01-01 起一般增值税由 20% 上调至 22%（2025-11-28 第 425-ФЗ 号联邦法）；10% 优惠税率保留。长期合同也按交付发生日适用新税率，不因合同早于 2026 年而豁免。大量英文资料仍写 20%，按 20% 定价会低估 2 个百分点。",
+    "checked_at": "2026-11-01"
+  }
+}

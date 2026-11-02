@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/source.schema.json",
+  "title": "Source channel configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "adapter",
+    "url",
+    "source_type",
+    "requires",
+    "enabled",
+    "ttl_hours",
+    "scope"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "kind": {"const": "source"},
+    "adapter": {"enum": ["frankfurter", "cbr", "http-json", "user-override"]},
+    "url": {"type": "string", "pattern": "^https://"},
+    "source_type": {
+      "enum": ["official", "official-mirror", "secondary", "user-override"]
+    },
+    "requires": {"enum": ["none", "key", "account"]},
+    "enabled": {"type": "boolean"},
+    "ttl_hours": {"type": "number", "exclusiveMinimum": 0},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["region", "platform", "category"],
+      "properties": {
+        "region": {"type": ["string", "null"]},
+        "platform": {"type": ["string", "null"]},
+        "category": {"type": ["string", "null"]}
+      }
+    },
+    "key_env": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+    "query": {"type": "object"},
+    "capabilities": {"type": "object"},
+    "pair": {"type": "string", "pattern": "^[A-Z]{3}_[A-Z]{3}$"},
+    "role": {"enum": ["primary", "cross-check"]},
+    "priority": {"type": "number"},
+    "mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value_path", "key", "unit"],
+      "properties": {
+        "value_path": {"type": "string", "pattern": "^/"},
+        "key": {"type": "string", "minLength": 1},
+        "unit": {"type": "string", "minLength": 1},
+        "as_of_path": {"type": "string", "pattern": "^/"},
+        "scale": {"type": "number", "exclusiveMinimum": 0},
+        "cross_check_group": {"type": "string"},
+        "cost_direction": {"enum": ["higher_is_worse", "lower_is_worse"]}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "properties": {"adapter": {"const": "http-json"}},
+        "required": ["adapter"]
+      },
+      "then": {
+        "type": "object",
+        "required": ["mapping"]
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": {"role": {"const": "cross-check"}},
+        "required": ["role"]
+      },
+      "then": {
+        "type": "object",
+        "required": ["pair"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+npm_ci EXIT=0
+npm_test EXIT=1
+gates EXIT=0
+doctor EXIT=0
+demo EXIT=0
+pack EXIT=0
+verify_package EXIT=0
+evidence EXIT=0
+npm_test_after_fix EXIT=0

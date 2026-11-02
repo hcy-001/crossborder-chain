@@ -1,0 +1,33 @@
+{
+  "package": "demo-sku",
+  "removed": [
+    "demo-sku/master/images/img-01-fe114aed.png",
+    "demo-sku/master/images/img-02-4c2430ba.png",
+    "demo-sku/master/images/img-03-9391d771.png",
+    "demo-sku/master/images/img-04-08cba134.png",
+    "demo-sku/master/images/img-05-6d882677.png",
+    "demo-sku/master/images/img-06-932f9ca9.png",
+    "demo-sku/master/images/img-07-268daae7.png",
+    "demo-sku/master/images/img-08-7c254120.png",
+    "demo-sku/master/images/img-09-18e0f998.png",
+    "demo-sku/platforms/ozon/images/img-01-fe114aed.png",
+    "demo-sku/platforms/ozon/images/img-02-4c2430ba.png",
+    "demo-sku/platforms/ozon/images/img-03-9391d771.png",
+    "demo-sku/platforms/ozon/images/img-04-08cba134.png",
+    "demo-sku/platforms/ozon/images/img-05-6d882677.png",
+    "demo-sku/platforms/ozon/images/img-06-932f9ca9.png",
+    "demo-sku/platforms/ozon/images/img-07-268daae7.png",
+    "demo-sku/platforms/ozon/images/img-08-7c254120.png",
+    "demo-sku/platforms/ozon/images/img-09-18e0f998.png",
+    "demo-sku/platforms/wildberries/images/img-01-fe114aed.png",
+    "demo-sku/platforms/wildberries/images/img-02-4c2430ba.png",
+    "demo-sku/platforms/wildberries/images/img-03-9391d771.png",
+    "demo-sku/platforms/wildberries/images/img-04-08cba134.png",
+    "demo-sku/platforms/wildberries/images/img-05-6d882677.png",
+    "demo-sku/platforms/wildberries/images/img-06-932f9ca9.png",
+    "demo-sku/platforms/wildberries/images/img-07-268daae7.png",
+    "demo-sku/platforms/wildberries/images/img-08-7c254120.png",
+    "demo-sku/platforms/wildberries/images/img-09-18e0f998.png"
+  ],
+  "kept": 9
+}

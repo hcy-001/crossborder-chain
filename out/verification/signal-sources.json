@@ -1,0 +1,94 @@
+{
+  "probed_at": "2026-10-29T14:09:14.869Z",
+  "mode": "read-only（不绕过任何反爬/登录）",
+  "region_filter": "all",
+  "summary": {
+    "total": 8,
+    "reachable": 2,
+    "auth_or_waf": 1,
+    "manual": 1,
+    "other": 4
+  },
+  "results": [
+    {
+      "id": "fx-rates",
+      "tier": "A_auto",
+      "kind": "api",
+      "what": "汇率（USD/CNY、USD/各目标币）",
+      "endpoint": "https://open.er-api.com/v6/latest/USD",
+      "status": 200,
+      "verdict": "reachable",
+      "sample": "{\"result\":\"success\",\"provider\":\"https://www.exchangerate-api.com\",\"documentation\":\"https://www.exchangerate-api.com/docs"
+    },
+    {
+      "id": "ozon-seller-api",
+      "tier": "B_auth",
+      "kind": "api",
+      "what": "自有店铺：类目树、属性字典、属性取值、商品列表、价格、库存",
+      "endpoint": "https://api-seller.ozon.ru",
+      "status": 200,
+      "verdict": "reachable",
+      "sample": ""
+    },
+    {
+      "id": "ozon-public-search",
+      "tier": "C_blocked",
+      "kind": "search",
+      "what": "公开商品搜索（竞品价格/款式）",
+      "endpoint": "https://www.ozon.ru/api/composer-api.bx/page/json/v2",
+      "status": 307,
+      "verdict": "redirect",
+      "sample": "<html> <head><title>307 Temporary Redirect</title></head> <body> <center><h1>307 Temporary Redirect</h1></center> <h"
+    },
+    {
+      "id": "wildberries-public",
+      "tier": "C_blocked",
+      "kind": "api",
+      "what": "WB 商品卡与热榜",
+      "endpoint": "https://card.wb.ru/cards/v2/detail",
+      "status": 403,
+      "verdict": "auth_or_waf",
+      "sample": ""
+    },
+    {
+      "id": "vk-public",
+      "tier": "B_auth",
+      "kind": "social",
+      "what": "俄语社媒趋势（穿搭内容、互动量）",
+      "endpoint": "https://api.vk.com/method/utils.getServerTime",
+      "status": null,
+      "verdict": "network_error",
+      "detail": "fetch failed"
+    },
+    {
+      "id": "yandex-wordstat",
+      "tier": "B_auth",
+      "kind": "search",
+      "what": "俄语搜索词频（需求强度）",
+      "endpoint": "https://wordstat.yandex.ru/",
+      "status": 200,
+      "verdict": "needs_login",
+      "sample": "<!doctype html><html><head><title data-react-helmet=\"true\">Вордстат</title><meta data-react-helmet=\"true\" name=\"descript"
+    },
+    {
+      "id": "tiktok-instagram",
+      "tier": "C_blocked",
+      "kind": "social",
+      "what": "东南亚/中东社媒趋势",
+      "endpoint": "https://www.tiktok.com/",
+      "status": null,
+      "verdict": "network_error",
+      "detail": "fetch failed"
+    },
+    {
+      "id": "marketplace-search-manual",
+      "tier": "B_auth",
+      "kind": "manual",
+      "what": "平台搜索页人工取样（竞品价格、款式、评价数）",
+      "endpoint": null,
+      "status": null,
+      "verdict": "manual",
+      "detail": "人工取样，无自动探测"
+    }
+  ]
+}

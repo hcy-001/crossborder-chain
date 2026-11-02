@@ -1,0 +1,215 @@
+{
+  "generated_at": "2026-10-29T13:22:57.654Z",
+  "generated_by": "人工汇总；每条数值都对应当日真实命令输出，不引用历史日志",
+  "overall_level": "L2（部分）：判别与出图有真实模型返回；平台提交、商品一致性、成交回流未验",
+  "baseline": {
+    "tests": {
+      "command": "npm test",
+      "total": 272,
+      "pass": 272,
+      "fail": 0,
+      "skipped": 0,
+      "at": "2026-10-29T16:2x+08:00"
+    },
+    "gates": {
+      "command": "npm run check:decouple",
+      "pass": 7,
+      "fail": 0,
+      "items": [
+        "G1-CORE scanned_core_files=16",
+        "G1-PATH scanned_files=1802",
+        "G1-FACT scanned_facts=17",
+        "G1-PROFILE scanned_profiles=9",
+        "G2-NET scanned_core_files=16 network_allowed_channels=13",
+        "G1-SOURCES scanned_pairs=4",
+        "G3-JUDGE points=10 fallbacks_schema_ok=10"
+      ]
+    },
+    "selfgrade": {
+      "command": "npm run selfgrade",
+      "score": 100,
+      "items": 7,
+      "evidence": "out/verification/selfgrade.json",
+      "at": "2026-10-29T08:26:52.288Z"
+    }
+  },
+  "capabilities": {
+    "judging_points": 10,
+    "points": [
+      "information_audit",
+      "market_profile",
+      "sourcing_match",
+      "cost_estimate",
+      "shoot_plan",
+      "ref_roles",
+      "platform_mapping",
+      "copy_pitch",
+      "persona_assign",
+      "exception_triage"
+    ],
+    "persona_layer": {
+      "registry": "data/personas.json（3 条假设，每条带 falsifier）",
+      "gate": "core/persona/gate.mjs（份额核算 / 决策封顶 / 探索配额 / 创意简报）",
+      "contract": "input/<sku>.json 的 persona / positioning / creative_brief；选品端 references/manual/s9.md 同步"
+    },
+    "listing_materials": {
+      "images": 9,
+      "size_card": "master/size/size-card.png（数据驱动，缺尺码行则 skipped）",
+      "title": "title.candidate.txt/.json（candidate），title.txt 不生成",
+      "attributes": "master/attributes.csv + platforms/<id>/attributes.csv",
+      "copy": "master/copy（desc/bullets/keywords）",
+      "handoff": "handoff.md（含 BLOCKED 首行约定）"
+    },
+    "modeling": {
+      "default": "dry（只做计划）",
+      "render": "显式 --render-modeling；product_in_scene=false；listing_contribution=none",
+      "reason": "展位几何不含商品，且包内无引用；位置让给数据驱动的尺码示意图"
+    },
+    "intake": {
+      "items": 22,
+      "blocking": 16,
+      "confirm": 4,
+      "defaultable": 2,
+      "cli": "scripts/intake.mjs",
+      "hard_gate": "--intake 缺必答或填错类型 → exit 2",
+      "type_checked": true,
+      "first_questions": [
+        "seller_account_status",
+        "platform_size_field"
+      ],
+      "unknown_rule": "任何必答项可写 unknown（明确表态），系统如实降级不逼编数字"
+    },
+    "sizing": {
+      "region": "regions/<CC>/sizing.json",
+      "adapt": "core/sizing/adapt.mjs",
+      "output": "package/<sku>/platforms/<id>/size-mapping.json",
+      "ozon": {
+        "status": "confirmed_api",
+        "category": "Одежда / Одежда / Платье（type_id 93182）",
+        "size_attribute": "Российский размер #4295（必填，集合型，字典 835）",
+        "size_table": "Таблица размеров JSON #13164",
+        "required_total": 6,
+        "required_items": [
+          "Российский размер #4295",
+          "Пол #9163",
+          "Объединить на одной карточке #8292",
+          "Цвет товара #10096",
+          "Тип #8229",
+          "Бренд #31"
+        ],
+        "mapping": "data/mapping/ozon-attributes.json",
+        "coverage_now": "3/6（缺性别、颜色、合并卡）"
+      },
+      "wildberries": {
+        "status": "pending_seller",
+        "note": "无账号；公开接口 403、开发者文档反爬，未绕过"
+      }
+    },
+    "pricing": {
+      "model": "price_from_rates（分母法）",
+      "formula": "P = 固定成本 / (1 − 佣金率 − 税率 − 支付费率 − 目标毛利率)",
+      "reference": "毛利率=(售-本)/售；加成=(售-本)/本；开源计算器与教材口径一致",
+      "fixed_bug": "旧实现把平台费按成本算，实测低估售价 26%（573 RUB/件）",
+      "outputs": [
+        "保本价",
+        "建议售价（毛利率或加成两种口径）",
+        "自洽明细（固定+佣金+税+手续费+利润=售价）"
+      ],
+      "infeasible": "费率+毛利≥100% → margin_unreachable，不给假价"
+    },
+    "compliance_gate": {
+      "brand_authorization": "自有/白牌→放行；代理/未答→decision 封顶 observe + handoff BLOCKED",
+      "title_length": "候选标题按平台 max_chars 校验，length_ok 入 validate.json"
+    },
+    "platforms": {
+      "active": [
+        "ozon"
+      ],
+      "skipped": [
+        {
+          "platform": "wildberries",
+          "reason": "卖家无账号"
+        }
+      ],
+      "switch": "regions/<CC>/profile.json → platform_accounts"
+    },
+    "ozon_api": {
+      "mode": "read-only 实测（2026-10-29）",
+      "usable_domains": [
+        "类目与属性",
+        "商品列表",
+        "价格",
+        "库存",
+        "促销",
+        "报表"
+      ],
+      "undetermined": {
+        "商品详情": "参数需 offer_id/product_id/sku；店铺无商品",
+        "仓库": "端点已废弃",
+        "订单": "端点版本待查证"
+      },
+      "shop_state": "product/list total_items = 0（店铺无商品）",
+      "evidence": "out/verification/ozon-scopes.json",
+      "plan": "docs/Ozon_API权限实测与接入方案.md（A 只读校验 / B 写入执行 / C 全托管不做）"
+    },
+    "attribute_rules": {
+      "cli": "npm run ozon:rules",
+      "evidence": "out/verification/ozon-attribute-rules.json",
+      "human_doc": "docs/商品字段说明书.md",
+      "result": "53 字段 / 必填 6 / 下拉 28 / 自由 25；取值为官方字典（尺码 44-54、颜色 белый…、类型 Платье|Сарафан、性别 Женский|Девочки）"
+    },
+    "portability": {
+      "quickstart": "npm run quickstart（零 key / 零网络 / 零外部技能，实测 exit 0）",
+      "evals": "npm run evals（3/3）",
+      "skills_optional": "--skills-root 指向空目录仍 exit 0",
+      "deps": "ajv + sharp，package-lock 存在，engines node>=20",
+      "known_issue": "重复跑覆盖写会撞本机 safe-delete 50 次/轮；首次运行不受影响"
+    }
+  },
+  "l2_evidence": {
+    "run_id": "real-l2-03",
+    "chain_receipt": "runs/real-l2-03/chain.receipt.json",
+    "summary_md": "out/verification/chain-real-l2-03.md",
+    "judgments": {
+      "total": 6,
+      "by_source": {
+        "llm": 6
+      },
+      "tokens": 12515
+    },
+    "images": {
+      "count": 9,
+      "all_900x1200": true,
+      "distinct": true
+    },
+    "modeling": {
+      "status": "rendered",
+      "files": 6,
+      "product_in_scene": false
+    },
+    "degradations": []
+  },
+  "l1_evidence": {
+    "run_id": "persona-check-02",
+    "summary_md": "out/verification/chain-persona-check-02.md",
+    "note": "离线桩通道，证明人群层端到端接线；等级如实标 L1"
+  },
+  "boundaries": [
+    "平台侧未提交、未回读；title.txt 不生成，只给标 candidate 的稿子",
+    "展陈渲染复用建模技能 zoomcare-pillbox 展位几何，商品本体不在场景内，对上架材料贡献为 0（已默认关闭）",
+    "结果回流（画像重估）未做，属 P2；人群 status 目前只能停在 hypothesis",
+    "Ozon 买家画像（Customer portrait）需 Premium 且需 ≥1 单，未订阅、未验证",
+    "图像模型单价官方页未取到数字，回执只记 token，不折算金额",
+    "尺码示意图的数字来自工单转述，未经实测；卡片底部已印“未实测”",
+    "平台尺码字段名为 unverified（未取到官方属性文档），只做结构映射，字段名需后台核对",
+    "定价公式未含体积重、退货准备金与仓储费；税率为卖家提供值，非官方口径",
+    "Wildberries 尺码字段仍待确认（无账号：公开接口 403 / 开发者文档反爬）；Ozon 侧已由 Seller API 实测"
+  ],
+  "how_to_reproduce": [
+    "npm ci",
+    "npm run selfgrade",
+    "npm run check:decouple",
+    "npm run chain -- --category 女装 --region RU --candidates 1 --mock-llm --mock-images --run-id check-local（零成本）",
+    "有 key 时去掉两个 mock 参数即为真实链路；消费前先看 --explore-quota 与出图张数提示"
+  ]
+}

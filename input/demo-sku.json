@@ -1,0 +1,50 @@
+{
+  "sku": "demo-sku",
+  "destination": "RU",
+  "category": "女装外套",
+  "close_to_skin": false,
+  "is_child": false,
+  "facts": [
+    {
+      "key": "material.composition",
+      "value": "полиэстер 100%",
+      "unit": null,
+      "source_kind": "reported",
+      "basis": "演示输入，非实货测量",
+      "confidence": "low"
+    }
+  ],
+  "variants": [],
+  "size": {
+    "status": "unavailable",
+    "reason": "演示输入未提供尺码表"
+  },
+  "title_tokens": {
+    "brand": "DEMO",
+    "product_type": "Женская куртка",
+    "key_attrs": ["демонстрационная"],
+    "spec": "M",
+    "material": "полиэстер",
+    "audience": "женщины"
+  },
+  "copy": {
+    "desc": "Демонстрационная женская куртка. Состав материала указан как пример входных данных и не является результатом измерения.",
+    "bullets": [
+      "Демонстрационный набор для проверки процесса",
+      "Изображения являются заполнителями"
+    ],
+    "keywords": ["демонстрация", "женская куртка"]
+  },
+  "attributes": [
+    {"canonical_key": "brand", "value": "DEMO", "synonyms": "brand_name", "confidence": "low"},
+    {"canonical_key": "product_type", "value": "Женская куртка", "synonyms": "category|product_name", "confidence": "low"},
+    {"canonical_key": "size", "value": "M", "synonyms": "size_name", "confidence": "low"},
+    {"canonical_key": "material", "value": "полиэстер", "synonyms": "composition", "confidence": "low"},
+    {"canonical_key": "color", "value": "чёрный", "synonyms": "color_name", "confidence": "low"},
+    {"canonical_key": "audience", "value": "Женский", "synonyms": "gender", "confidence": "low"},
+    {"canonical_key": "merge_card", "value": "demo-sku", "synonyms": "unique_articul", "confidence": "low"}
+  ],
+  "platforms": ["ozon", "wildberries"],
+  "signal_query": "женская куртка",
+  "pricing_facts": []
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/title-tokens.schema.json",
+  "title": "Platform neutral title tokens",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["brand", "product_type", "key_attrs", "spec", "material", "audience"],
+  "properties": {
+    "brand": {"type": "string"},
+    "product_type": {"type": "string", "minLength": 1},
+    "key_attrs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "spec": {"type": "string"},
+    "material": {"type": "string"},
+    "audience": {"type": "string"}
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "facts": [
+    {
+      "key": "platform.shopee.image.ratio",
+      "value": {
+        "width": 1,
+        "height": 1
+      },
+      "unit": "ratio",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-listing-optimisation",
+      "source_url": "https://seller.shopee.sg/edu/article/27838",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "shopee-help-mall-guidelines#7081",
+          "value": "封面图最小 500×500，正方形为主",
+          "agree": true
+        }
+      ],
+      "divergence_pct": 0,
+      "override": null,
+      "note": "官方原文：Images must be in either the 1:1 or 4:3 aspect ratio。选 1:1 作为投影目标，因为 1:1 在 4:3 的列表页里也不会被裁。"
+    },
+    {
+      "key": "platform.shopee.image.max_count",
+      "value": 9,
+      "unit": "count",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-best-practices",
+      "source_url": "https://seller.shopee.sg/edu/article/7998",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方原文：You can upload up to nine images (including cover image) for each product SKU。9 张母版图正好用满，无需删图。"
+    },
+    {
+      "key": "platform.shopee.image.min_size",
+      "value": {
+        "width": 500,
+        "height": 500
+      },
+      "unit": "pixel",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-mall-guidelines",
+      "source_url": "https://seller.shopee.sg/edu/article/34",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方原文：Image must be clear, sharp and have a minimum resolution of 500 x 500 pixels —— 但这条写在 Shopee Mall 规范里。普通卖家是否同样适用未在公开页确认，故标 candidate。900×900 的投影远高于此，实际不受影响。"
+    },
+    {
+      "key": "platform.shopee.title.min_chars",
+      "value": 10,
+      "unit": "chars",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-listing-optimisation",
+      "source_url": "https://seller.shopee.sg/edu/article/27838",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方原文：Title length (≥10 characters)，属于 listing 质量的十项合格线之一。"
+    },
+    {
+      "key": "platform.shopee.title.max_chars",
+      "value": null,
+      "unit": "chars",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-open-platform-global-product",
+      "source_url": "https://open.shopee.com/developer-guide/213",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 720,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "open.shopee.com/developer-guide/213",
+          "value": "global_item_name_length_limit 示例 {min 1, max 500}，中文按 multiplier 折算",
+          "agree": true
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "没有单一上限，按语言折算：global_item_name_length_limit 为 1–500，text_length_multiplier=2.44 ⇒ 纯英文最多 500 字符、纯中文最多 204 字符（500/2.44=204.92）。本地商品走 v2.product.get_item_limit 按类目返回上限。"
+    },
+    {
+      "key": "platform.shopee.title.naming",
+      "value": "品牌 + 规格与类型 + 型号；每个词首字母大写；禁止全大写（品牌名除外）、禁止促销词与关键词堆砌",
+      "unit": "guideline",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-mall-guidelines",
+      "source_url": "https://seller.shopee.sg/edu/article/34",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "shopee-help-spam-listings#6886",
+          "value": "Brand + Product Name + Model",
+          "agree": true
+        }
+      ],
+      "divergence_pct": null,
+      "override": null
+    },
+    {
+      "key": "platform.shopee.description.min_chars",
+      "value": 60,
+      "unit": "chars",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-listing-optimisation",
+      "source_url": "https://seller.shopee.sg/edu/article/27838",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：描述至少 60 字符，或有 1 张描述图。"
+    },
+    {
+      "key": "platform.shopee.variations.max_types",
+      "value": 2,
+      "unit": "count",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-list-first-product",
+      "source_url": "https://seller.shopee.sg/edu/article/6933/list-first-product",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Each product can have up to 2 types of variations（如颜色 + 尺码）。超过两类要拆卡。"
+    },
+    {
+      "key": "platform.shopee.size_chart",
+      "value": "fashion 类目建议必填（缺尺码表是 listing 质量扣分项）",
+      "unit": "rule",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-help-listing-optimisation",
+      "source_url": "https://seller.shopee.sg/edu/article/27838",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方把 Lack of a size chart 列为 listing 优化项（for Fashion listings only）；不填不会拒，但会掉质量分。"
+    },
+    {
+      "key": "platform.shopee.attribute_map",
+      "value": {},
+      "unit": "json/map",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-no-public-attribute-api",
+      "source_url": "https://open.shopee.com/documents",
+      "source_type": "official",
+      "confidence": "unverified",
+      "status": "unverified",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 720,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "必填属性与字典要 partner_id/key + 店铺授权才能拉（无公开接口）。所以属性表只按 canonical_key 原样输出，标注「未映射到平台字段」。"
+    },
+    {
+      "key": "platform.shopee.title.limit_source",
+      "value": "v2.product.get_item_limit → item_name_length_limit（按类目返回）",
+      "unit": "api-field",
+      "scope": {
+        "region": "SEA",
+        "platform": "shopee",
+        "category": "fashion"
+      },
+      "source": "shopee-open-platform-guide",
+      "source_url": "https://open.shopee.com/developer-guide/213",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "这条把「标题能写多长」从背数字变成查接口：同一平台不同类目上限不同，写死一个数一定有一半类目是错的。未调过该接口，所以标 candidate。"
+    },
+    {
+      "key": "platform.shopee.title.max_chars_en",
+      "value": 500,
+      "unit": "chars",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "shopee-open-platform-global-product",
+      "source_url": "https://open.shopee.com/developer-guide/213",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "global_item_name_length_limit.max_limit=500（纯英文）。"
+    },
+    {
+      "key": "platform.shopee.title.max_chars_zh",
+      "value": 204,
+      "unit": "chars",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "shopee-open-platform-global-product",
+      "source_url": "https://open.shopee.com/developer-guide/213",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "text_length_multiplier=2.44，中文上限 500/2.44≈204 字符。"
+    },
+    {
+      "key": "platform.shopee.title.language_mixing",
+      "value": "forbidden",
+      "unit": "rule",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "shopee-open-platform-global-product",
+      "source_url": "https://open.shopee.com/developer-guide/213",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "原文：global_item_name can only be uploaded in plain Simplified Chinese or plain English and numbers. Do not mix English and Chinese —— 混填会导致部分词不被翻译，进而商品被禁（banned）。这是硬规则，不是建议。"
+    },
+    {
+      "key": "platform.shopee.description.language",
+      "value": "简体中文 / 英文 / 数字（同标题口径）",
+      "unit": "rule",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "shopee-open-platform-global-product",
+      "source_url": "https://open.shopee.com/developer-guide/213",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "原文：Global product descriptions can only be filled in simplified Chinese, English, and numbers."
+    }
+  ]
+}

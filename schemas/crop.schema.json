@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/crop.schema.json",
+  "title": "Derived image geometry trace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "src",
+    "src_sha256",
+    "output",
+    "box",
+    "mode",
+    "canvas",
+    "algo_version"
+  ],
+  "properties": {
+    "src": {
+      "type": "string",
+      "minLength": 1
+    },
+    "src_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "output": {
+      "type": "string",
+      "minLength": 1
+    },
+    "box": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "integer",
+          "minimum": 1
+        },
+        {
+          "type": "integer",
+          "minimum": 1
+        }
+      ],
+      "items": false
+    },
+    "algo_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "center_crop",
+        "contain_pad",
+        "copy"
+      ],
+      "description": "几何变换方式。center_crop=裁切（丢画面）；contain_pad=等比缩放后补底色（不丢画面）；copy=原样复制。"
+    },
+    "canvas": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {
+          "type": "integer",
+          "minimum": 1
+        },
+        {
+          "type": "integer",
+          "minimum": 1
+        }
+      ],
+      "items": false,
+      "description": "输出画布尺寸 [宽,高]；mode=copy 时为 null。"
+    }
+  }
+}

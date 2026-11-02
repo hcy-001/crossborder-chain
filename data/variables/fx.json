@@ -1,0 +1,301 @@
+[
+  {
+    "key": "fx.USD_AED",
+    "value": 3.672495931215894,
+    "unit": "AED/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "cbr-usd-aed（USD→AED；2026-11-01；已交叉核对 1 源）",
+    "source_url": "https://www.cbr-xml-daily.ru/daily_json.js",
+    "source_type": "official-mirror",
+    "fetched_at": "2026-11-01T06:18:54.349Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "cbr-usd-aed",
+        "value": 3.672495931215894,
+        "note": "derived from USD/RUB and AED/RUB quotes; provider_date=2026-10-31T11:30:00+03:00; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+      },
+      {
+        "source": "fxratesapi-usd-aed",
+        "value": 3.6731005367,
+        "note": "provider_as_of=2026-11-02T12:44:00.000Z; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=AED"
+      }
+    ],
+    "divergence_pct": 0.0164630675,
+    "override": null,
+    "conflict_id": null,
+    "confidence": "secondary",
+    "status": "candidate"
+  },
+  {
+    "key": "fx.USD_CNY",
+    "value": 6.6529,
+    "unit": "CNY/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "frankfurter-usd-cny（USD→CNY；2026-11-01；已交叉核对 3 源）",
+    "source_url": "https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY",
+    "source_type": "official",
+    "fetched_at": "2026-11-01T06:18:54.349Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "cbr-usd-cny-cross",
+        "value": 6.664623199556559,
+        "note": "derived from USD/RUB and CNY/RUB quotes; provider_date=2026-10-31T11:30:00+03:00; fetched_at=2026-11-01T06:18:54.349Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+      },
+      {
+        "source": "frankfurter-usd-cny",
+        "value": 6.6529,
+        "note": "provider_date=2026-10-30; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY"
+      },
+      {
+        "source": "fxratesapi-usd-cny",
+        "value": 6.6517007139,
+        "note": "provider_as_of=2026-11-02T12:44:00.000Z; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=CNY"
+      }
+    ],
+    "divergence_pct": 0.176211870862,
+    "override": null,
+    "conflict_id": null,
+    "confidence": "official",
+    "status": "final"
+  },
+  {
+    "key": "fx.USD_IDR",
+    "value": 18131.950547,
+    "unit": "IDR/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "open-er-api（USD→IDR；2026-11-01；已交叉核对 1 源）",
+    "source_url": "https://open.er-api.com/v6/latest/USD",
+    "source_type": "official",
+    "fetched_at": "2026-11-01T08:24:39.011Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "frankfurter-ecb",
+        "value": 18148,
+        "note": "ECB 参考汇率；补核对 fetched_at=2026-11-01T08:25:26.545Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD"
+      }
+    ],
+    "divergence_pct": 0.09,
+    "conflict_id": null,
+    "override": null,
+    "confidence": "official",
+    "status": "final"
+  },
+  {
+    "key": "fx.USD_MYR",
+    "value": 4.057161,
+    "unit": "MYR/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "open-er-api（USD→MYR；2026-11-01；已交叉核对 1 源）",
+    "source_url": "https://open.er-api.com/v6/latest/USD",
+    "source_type": "official",
+    "fetched_at": "2026-11-01T08:24:39.011Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "frankfurter-ecb",
+        "value": 4.057,
+        "note": "ECB 参考汇率；补核对 fetched_at=2026-11-01T08:25:26.545Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD"
+      }
+    ],
+    "divergence_pct": 0,
+    "conflict_id": null,
+    "override": null,
+    "confidence": "official",
+    "status": "final"
+  },
+  {
+    "key": "fx.USD_PHP",
+    "value": 63.70505,
+    "unit": "PHP/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "open-er-api（USD→PHP；2026-11-01；已交叉核对 1 源）",
+    "source_url": "https://open.er-api.com/v6/latest/USD",
+    "source_type": "official",
+    "fetched_at": "2026-11-01T08:24:39.011Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "frankfurter-ecb",
+        "value": 63.68,
+        "note": "ECB 参考汇率；补核对 fetched_at=2026-11-01T08:25:26.545Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD"
+      }
+    ],
+    "divergence_pct": 0.04,
+    "conflict_id": null,
+    "override": null,
+    "confidence": "official",
+    "status": "final"
+  },
+  {
+    "key": "fx.USD_RUB",
+    "value": 80.5573,
+    "unit": "RUB/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "cbr-usd-rub（USD→RUB；2026-11-01；已交叉核对 2 源）",
+    "source_url": "https://www.cbr-xml-daily.ru/daily_json.js",
+    "source_type": "official-mirror",
+    "fetched_at": "2026-11-01T06:18:54.349Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "cbr-usd-rub",
+        "value": 80.5573,
+        "note": "direct USD/RUB quote; provider_date=2026-10-31T11:30:00+03:00; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+      },
+      {
+        "source": "fxratesapi-usd-rub",
+        "value": 80.9180120247,
+        "note": "provider_as_of=2026-11-02T12:44:00.000Z; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=RUB"
+      }
+    ],
+    "divergence_pct": 0.447770747902,
+    "override": null,
+    "conflict_id": null,
+    "confidence": "secondary",
+    "status": "candidate"
+  },
+  {
+    "key": "fx.USD_SAR",
+    "value": 3.75000814639301,
+    "unit": "SAR/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "cbr-usd-sar（USD→SAR；2026-11-01；已交叉核对 1 源）",
+    "source_url": "https://www.cbr-xml-daily.ru/daily_json.js",
+    "source_type": "official-mirror",
+    "fetched_at": "2026-11-01T06:18:54.349Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "cbr-usd-sar",
+        "value": 3.75000814639301,
+        "note": "derived from USD/RUB and SAR/RUB quotes; provider_date=2026-10-31T11:30:00+03:00; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+      },
+      {
+        "source": "fxratesapi-usd-sar",
+        "value": 3.7531604542,
+        "note": "provider_as_of=2026-11-02T12:44:00.000Z; fetched_at=2026-11-02T12:45:21.899Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=SAR"
+      }
+    ],
+    "divergence_pct": 0.084061358907,
+    "override": null,
+    "conflict_id": null,
+    "confidence": "secondary",
+    "status": "candidate"
+  },
+  {
+    "key": "fx.USD_SGD",
+    "value": 1.278297,
+    "unit": "SGD/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "open-er-api（USD→SGD；2026-11-01；已交叉核对 1 源）",
+    "source_url": "https://open.er-api.com/v6/latest/USD",
+    "source_type": "official",
+    "fetched_at": "2026-11-01T08:24:39.011Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "frankfurter-ecb",
+        "value": 1.2784,
+        "note": "ECB 参考汇率；补核对 fetched_at=2026-11-01T08:25:26.545Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD"
+      }
+    ],
+    "divergence_pct": 0.01,
+    "conflict_id": null,
+    "override": null,
+    "confidence": "official",
+    "status": "final"
+  },
+  {
+    "key": "fx.USD_THB",
+    "value": 33.740886,
+    "unit": "THB/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "open-er-api（USD→THB；2026-11-01；已交叉核对 1 源）",
+    "source_url": "https://open.er-api.com/v6/latest/USD",
+    "source_type": "official",
+    "fetched_at": "2026-11-01T08:24:39.011Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [
+      {
+        "source": "frankfurter-ecb",
+        "value": 33.73,
+        "note": "ECB 参考汇率；补核对 fetched_at=2026-11-01T08:25:26.545Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD"
+      }
+    ],
+    "divergence_pct": 0.03,
+    "conflict_id": null,
+    "override": null,
+    "confidence": "official",
+    "status": "final"
+  },
+  {
+    "key": "fx.USD_VND",
+    "value": 25795.62753,
+    "unit": "VND/USD",
+    "scope": {
+      "region": null,
+      "platform": null,
+      "category": null
+    },
+    "source": "open-er-api（USD→VND；2026-11-01；单源，无交叉核对）",
+    "source_url": "https://open.er-api.com/v6/latest/USD",
+    "source_type": "official",
+    "fetched_at": "2026-11-01T08:24:39.011Z",
+    "ttl_hours": 24,
+    "stale": true,
+    "cross_check": [],
+    "divergence_pct": null,
+    "conflict_id": null,
+    "override": null,
+    "confidence": "official",
+    "status": "final"
+  }
+]

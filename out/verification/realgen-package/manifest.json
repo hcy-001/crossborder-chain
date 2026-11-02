@@ -1,0 +1,106 @@
+{
+  "sku": "demo-sku",
+  "region": "RU",
+  "category": "女装外套",
+  "snapshot_id": "20261029-033609-ceff",
+  "product_facts": [
+    {
+      "key": "material.composition",
+      "value": "полиэстер 100%",
+      "unit": null,
+      "source_kind": "reported",
+      "basis": "演示输入，非实货测量",
+      "confidence": "low"
+    }
+  ],
+  "images": [
+    {
+      "file": "images/img-01-e7bf21f7.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "e7bf21f7e7ac2c796cf9df063320ade6a5cb7676955a012a4d273b1ad93530a2",
+      "role": "white_background",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-02-f68b3d77.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "f68b3d77a9f72c69bd28cae6cffcd4720b0152973ba49b05261701f573fdb4f5",
+      "role": "scene",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-03-240d429f.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "240d429f2461c5b7744bbcbb3c8fe6e6eb857dd3ae137c221bab534d47583fd9",
+      "role": "scene",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-04-742cf28f.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "742cf28faf20bf368d21723fc30858b2ce8f3a312875aed60f73880eef978a77",
+      "role": "scene",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-05-dbbb830d.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "dbbb830d22a61c62199ccf8e533b299f671128d9ec23a1334c3dee10ecdd9e0e",
+      "role": "detail",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-06-911ac6f5.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "911ac6f525c9471636308d46bcbe890fd3e9f759d2b33b9674b1dbac74c90db6",
+      "role": "detail",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-07-2c9a481e.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "2c9a481e69740765450327c7b5a7a5f96bee3e7d08e9c7ee356fe019cde48815",
+      "role": "detail",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-08-ef81ad0f.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "ef81ad0fbdcdcb6de12595e466d42a909ec7e0c119e06a0c749cbf35e2032786",
+      "role": "size",
+      "quality": "generated",
+      "crop_safe": false
+    },
+    {
+      "file": "images/img-09-99269c1a.png",
+      "width": 900,
+      "height": 1200,
+      "sha256": "99269c1a9fdedd9b14629de43baf0a0d45b5926e131450b040661aef257b1c0a",
+      "role": "size",
+      "quality": "generated",
+      "crop_safe": false
+    }
+  ],
+  "compliance": "compliance/report.json",
+  "video": {
+    "status": "unavailable",
+    "file": null,
+    "reason": "optional video not provided"
+  },
+  "variants": []
+}

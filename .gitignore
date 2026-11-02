@@ -1,0 +1,33 @@
+# 依赖
+node_modules/
+
+# 凭证与本地配置（绝不提交）
+.env
+.env.*
+!.env.example
+config/local.json
+config/local.secret.json
+
+# 运行产物（可重新生成）
+runs/
+package/
+cache/
+tmp/
+
+# 真实 SKU 输入含采购成本，只保留演示样例
+input/*
+!input/demo-sku.json
+
+# 临时验证产物（保留 out/verification/ 的证据链）
+out/verify-*/
+
+assets/
+*.log
+.DS_Store
+
+# 测试副产物（含假密钥标记，会触发 GitHub secret scanning 误报）
+out/verification/setup*
+out/verification/setup-run/
+
+# 浏览器控制台日志
+.playwright-cli/

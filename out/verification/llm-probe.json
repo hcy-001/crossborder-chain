@@ -1,0 +1,51 @@
+{
+  "at": "2026-10-29T05:19:08.114Z",
+  "configured": {
+    "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
+    "model": "doubao-seed-2-1-pro-260915",
+    "hasKey": true,
+    "maxTokens": 2048
+  },
+  "text": {
+    "ok": true,
+    "model": "doubao-seed-2-1-pro-260915",
+    "endpoint": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+    "latency_ms": 3615,
+    "usage": {
+      "completion_tokens": 68,
+      "prompt_tokens": 175,
+      "total_tokens": 243,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 63
+      }
+    },
+    "fault": null,
+    "attempts": 1
+  },
+  "vision": {
+    "ok": true,
+    "model": "doubao-seed-2-1-pro-260915",
+    "value": {
+      "is_solid": true,
+      "width": 16
+    },
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_tokens": 1488,
+      "total_tokens": 1528,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 28
+      }
+    },
+    "fault": null,
+    "latency_ms": 2543
+  },
+  "unit_price_cny": null,
+  "unit_price_reason": "供应商价格页未提供机器可读的对话模型单价，此处不折算金额"
+}

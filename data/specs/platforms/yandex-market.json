@@ -1,0 +1,375 @@
+{
+  "platform": "yandex-market",
+  "name": "Яндекс Маркет",
+  "coverage": [
+    "RU"
+  ],
+  "why": "俄语区第二大盘（仅次于 Ozon/WB 体系之外的另一极）。文档站是 Diplodoc，**同时提供 llms.txt 与 .md 纯文本版本**，是这批平台里最容易机器读取的一个。",
+  "access": {
+    "docs_index": "https://yandex.ru/support/marketplace/ru/llms.txt（32 KB，全站 .md 索引）",
+    "markdown": "任意页面把末尾换成 .md 即得纯文本，无需渲染",
+    "seller_console": "https://partner.market.yandex.ru（需账号）",
+    "api_docs": "https://yandex.ru/dev/market/partner-api/doc/ru/"
+  },
+  "facts": [
+    {
+      "key": "platform.yandex-market.title.min_chars",
+      "value": 60,
+      "unit": "chars",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-title-description",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：Оптимальная длина — 60-120 символов。这是「最优区间」的下界，不是硬性拒绝门槛。"
+    },
+    {
+      "key": "platform.yandex-market.title.max_chars",
+      "value": 120,
+      "unit": "chars",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-title-description",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方原文只给「最优区间 60–120」，没有给绝对上限。生成时按 120 控制，超过虽不一定被拒，但会掉搜索排序。"
+    },
+    {
+      "key": "platform.yandex-market.title.structure",
+      "value": "тип товара + производитель + товар (модель) + важные характеристики",
+      "unit": "rule",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-title-description",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方给的结构公式：品类 + 厂商 + 商品(型号) + 重要特征。"
+    },
+    {
+      "key": "platform.yandex-market.title.auto_generated",
+      "value": "服装/鞋/配饰类目的展示名称由平台生成，卖家填的名称只用于搜索",
+      "unit": "rule",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-title-description",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/title-description.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方原文（{% note info \"Для одежды, обуви и аксессуаров\" %}）：卖家创建时填的名称帮买家搜到商品，但**买家看不到**；商品卡上用的是 Маркет 自己生成的名称。**与 Ozon 服装类目同一逻辑** —— 这是俄语区平台的共性，不是个例。"
+    },
+    {
+      "key": "platform.yandex-market.image.min_size",
+      "value": {
+        "width": 200,
+        "height": 200
+      },
+      "unit": "px",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-images",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：размером не меньше 200 × 200 пикселей。门槛比 Ozon(≥1600)、Amazon(≥1600)、noon(宽≥660) 低一个数量级。"
+    },
+    {
+      "key": "platform.yandex-market.image.max_file_size",
+      "value": 10,
+      "unit": "MB",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-images",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：весом не больше 10 МБ。"
+    },
+    {
+      "key": "platform.yandex-market.image.format",
+      "value": [
+        "jpg",
+        "jpeg",
+        "png",
+        "heic",
+        "webp"
+      ],
+      "unit": "rule",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-images",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：.jpg, .jpeg, .png, .heic и .webp。**接受 webp 与 heic**，是这批平台里格式最宽的（noon 只收 JPEG）。"
+    },
+    {
+      "key": "platform.yandex-market.image.background",
+      "value": "нейтральный фон — белый или прозрачный",
+      "unit": "rule",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-images",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方：选中性背景 —— 白色或透明；并确保商品清晰可见、不与背景融在一起。**允许透明背景**，与要求纯白的平台不同。"
+    },
+    {
+      "key": "platform.yandex-market.image.ratio",
+      "value": null,
+      "unit": "ratio",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-images",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+      "source_type": "official",
+      "confidence": "unverified",
+      "status": "unverified",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方图片要求页**只规定最小尺寸，没有比例要求**。没有比例就不按猜测裁图 —— 保持 null，投影时如实拒绝出包。补法：后台看商品卡实际展示框，或抓一个在售商品的图测宽高。"
+    },
+    {
+      "key": "platform.yandex-market.fee.placement_all_goods",
+      "value": 42,
+      "unit": "pct",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": null
+      },
+      "source": "yandex-market-rates-placement",
+      "source_url": "https://yandex.ru/support/marketplace/ru/introduction/rates/placement.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "「Все товары」档：FBY / FBS / DBS / Express 四模式同为 42%。**这是兜底档，不是服装档** —— 见 fashion_rate_unverified 那条。"
+    },
+    {
+      "key": "platform.yandex-market.fee.calc_basis",
+      "value": "按卖家标注的售价计算，即使平台打折或用积分",
+      "unit": "rule",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": null
+      },
+      "source": "yandex-market-rates-placement",
+      "source_url": "https://yandex.ru/support/marketplace/ru/introduction/rates/placement.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方原文：Тариф за услугу размещения — это процент, который **всегда рассчитывается от указанной вами стоимости** проданного товара, даже если Маркет сделал скидку или покупатель использовал баллы Плюса。**这一点与按成交价抽佣的平台不同**：平台自己打折时，你仍按原价付服务费，折扣成本全在卖家侧。"
+    },
+    {
+      "key": "platform.yandex-market.fee.fashion_rate_unverified",
+      "value": null,
+      "unit": "pct",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-rates-placement",
+      "source_url": "https://yandex.ru/support/marketplace/ru/introduction/rates/placement.md",
+      "source_type": "official",
+      "confidence": "unverified",
+      "status": "unverified",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "费率表 581K 字符、覆盖 11 个大类（Авто / Аптека / Бытовая техника / Детские товары / Книги / Оборудование …），**没有独立的服装大类**，「одежд」只作为 Авто 与 Аптека 的子类出现。所以服装的实际费率**未查到**，不拿 42% 冒充。补法：卖家后台选类目时看报价，或抓在售商品反推。"
+    },
+    {
+      "key": "platform.yandex-market.models",
+      "value": [
+        "FBY",
+        "FBS",
+        "Express",
+        "DBS"
+      ],
+      "unit": "list",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": null
+      },
+      "source": "yandex-market-llms-index",
+      "source_url": "https://yandex.ru/support/marketplace/ru/llms.txt",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "四种履约模式：FBY（平台仓）、FBS（卖家仓+平台配送）、Express（快速）、DBS（卖家自配送）。每种费率与准入不同，是选品前要先定的事。"
+    },
+    {
+      "key": "platform.yandex-market.fitting_support",
+      "value": true,
+      "unit": "bool",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-llms-index",
+      "source_url": "https://yandex.ru/support/marketplace/ru/orders/fbs/fitting.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方有「Продажа одежды, обуви и аксессуаров с примеркой」专页：服装/鞋/配饰支持**试穿后决定**（FBS 模式）。这直接改变退货率与选品逻辑 —— 尺码不准的款在这类模式下退货成本更高。"
+    },
+    {
+      "key": "platform.yandex-market.image.ratio_policy",
+      "value": "preserve",
+      "unit": "rule",
+      "scope": {
+        "region": "RU",
+        "platform": "yandex-market",
+        "category": "fashion"
+      },
+      "source": "yandex-market-images",
+      "source_url": "https://yandex.ru/support/marketplace/ru/assortment/create/main-fields/images.md",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 4320,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方图片要求只给「最小 200×200」，**不规定宽高比**。因此投影时保持母版原比例直接出图、不做裁切 —— 平台没禁止的比例不算违规，猜一个比例去裁反而会丢画面。这就是 ratio 事实留 null 却仍能出包的原因。"
+    }
+  ]
+}

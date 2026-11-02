@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/profile.schema.json",
+  "title": "Region profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "regime",
+    "locales",
+    "currency",
+    "price_rounding",
+    "platforms",
+    "completion",
+    "signal_sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "regime": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locales": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}-[A-Z]{2}$"
+      }
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "price_rounding": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 6
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      }
+    },
+    "completion": {
+      "enum": [
+        "full",
+        "skeleton"
+      ]
+    },
+    "signal_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed",
+        "blocked"
+      ],
+      "properties": {
+        "allowed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "blocked": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "reason",
+              "confidence"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confidence": {
+                "const": "secondary"
+              }
+            }
+          }
+        }
+      }
+    },
+    "data_provenance": {
+      "type": "object"
+    },
+    "platform_accounts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "enum": [
+              "active",
+              "no_account",
+              "pending"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      }
+    },
+    "tax_reference": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "该法域的间接税参考值。只用于在交付说明里提示卖家「当地法定税率是多少」，不参与计算——计算永远用卖家在问卷里填的 vat_rate。",
+      "properties": {
+        "standard_rate": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "标准税率小数形式（0.22 = 22%）。马来西亚这类非单一税制写 null。"
+        },
+        "effective_rate": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "实际有效税率。印尼法定 12% 但按 11/12 计税基础，有效 11%，两值都要留。"
+        },
+        "reduced_rates": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "label": {
+          "type": "string",
+          "description": "当地税种名（VAT / GST / PPN / SST / НДС）"
+        },
+        "status": {
+          "enum": [
+            "final",
+            "candidate",
+            "unverified"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "checked_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "status",
+        "source",
+        "checked_at"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

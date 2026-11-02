@@ -1,0 +1,64 @@
+{
+  "platform": "ozon",
+  "probed_at": "2026-11-01T09:26:28.211Z",
+  "env_file": ".env",
+  "credentials_present": {
+    "OZON_CLIENT_ID": true,
+    "OZON_API_KEY": true
+  },
+  "read_capabilities": "4/4",
+  "write_capability": "granted",
+  "can_publish": true,
+  "results": [
+    {
+      "id": "category_tree",
+      "label": "类目树",
+      "kind": "read",
+      "http": 200,
+      "ok": true,
+      "detail": "顶层类目 26 个",
+      "write_verdict": null,
+      "ms": 1419
+    },
+    {
+      "id": "attribute_dict",
+      "label": "类目属性与字典",
+      "kind": "read",
+      "http": 200,
+      "ok": true,
+      "detail": "属性 53 个",
+      "write_verdict": null,
+      "ms": 338
+    },
+    {
+      "id": "product_list",
+      "label": "商品列表（店铺规模）",
+      "kind": "read",
+      "http": 200,
+      "ok": true,
+      "detail": "在架商品 0 个",
+      "write_verdict": null,
+      "ms": 335
+    },
+    {
+      "id": "import_task_read",
+      "label": "导入任务查询（证明可读到自己的 company）",
+      "kind": "read",
+      "http": 404,
+      "ok": true,
+      "detail": "可访问；所属 company_id=4830282",
+      "write_verdict": null,
+      "ms": 328
+    },
+    {
+      "id": "write_probe",
+      "label": "写权限（安全探测：空数组必然被参数校验拒绝，不落地任何商品）",
+      "kind": "write-probe",
+      "http": 400,
+      "ok": true,
+      "detail": "有写权限（通过鉴权后被参数校验拦下：必须 1–1000 条）",
+      "write_verdict": "granted",
+      "ms": 330
+    }
+  ]
+}

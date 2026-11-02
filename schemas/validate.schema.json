@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/validate.schema.json",
+  "title": "Platform projection validation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "platform",
+    "quality",
+    "passed",
+    "violations",
+    "conflicts",
+    "crop_unsafe",
+    "notes"
+  ],
+  "properties": {
+    "platform": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quality": {
+      "enum": [
+        "placeholder",
+        "validated",
+        "unverified"
+      ]
+    },
+    "passed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "violations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "detail"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "status"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "candidate",
+              "conflicted",
+              "unverified"
+            ]
+          }
+        }
+      }
+    },
+    "crop_unsafe": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "final",
+        "candidate",
+        "reason"
+      ],
+      "properties": {
+        "final": {
+          "type": "boolean"
+        },
+        "candidate": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chars": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "length_ok": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "auto_generated": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

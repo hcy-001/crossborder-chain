@@ -1,0 +1,20 @@
+
+> crossborder-delivery-skill@0.1.0 doctor
+> node scripts/doctor.mjs
+
+{
+  "ok": true,
+  "exitCode": 0,
+  "run_id": "20261029-025309-a410",
+  "snapshot_id": "20261029-025309-a410",
+  "status": "ok",
+  "pricing": {
+    "status": "available"
+  },
+  "receipt_counts": {
+    "fresh": 2
+  },
+  "sources_sha256": "9d8437219d76d12fbca5f273bdfbfcd0483fa202a8ca6707142f4a57fd40c727",
+  "snapshot_sha256": "fcc612510d275be5286cc0f9b595d31da12d413c18ee1a0ea45efbb19a7bdab0"
+}
+EXIT=0

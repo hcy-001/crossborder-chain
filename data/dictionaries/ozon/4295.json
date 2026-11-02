@@ -1,0 +1,285 @@
+{
+  "attribute_id": 4295,
+  "type_id": 93182,
+  "description_category_id": 200000933,
+  "probed_at": "2026-11-01T07:30:34.240Z",
+  "total": 46,
+  "values": [
+    {
+      "id": 35428,
+      "value": "44",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35429,
+      "value": "46",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35430,
+      "value": "48",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35431,
+      "value": "50",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35432,
+      "value": "52",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35433,
+      "value": "54",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35485,
+      "value": "30",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35493,
+      "value": "32",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35502,
+      "value": "34",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35512,
+      "value": "36",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35523,
+      "value": "38",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35535,
+      "value": "40",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35545,
+      "value": "42",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35576,
+      "value": "56",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35580,
+      "value": "58",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35583,
+      "value": "60",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35646,
+      "value": "универсальный",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35654,
+      "value": "92",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35660,
+      "value": "64",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35661,
+      "value": "84",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35662,
+      "value": "80",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35663,
+      "value": "72",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35664,
+      "value": "76",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35665,
+      "value": "68",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35671,
+      "value": "86",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35672,
+      "value": "98",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35673,
+      "value": "104",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35674,
+      "value": "110",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35675,
+      "value": "116",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35676,
+      "value": "122",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35677,
+      "value": "128",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35678,
+      "value": "134",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35679,
+      "value": "62",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35680,
+      "value": "74",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35681,
+      "value": "152",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35682,
+      "value": "140",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35683,
+      "value": "146",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35690,
+      "value": "158",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35754,
+      "value": "164",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35839,
+      "value": "66",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35840,
+      "value": "70",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35954,
+      "value": "176",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 35957,
+      "value": "170",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 36013,
+      "value": "78",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 36014,
+      "value": "82",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 36310,
+      "value": "182",
+      "info": "",
+      "picture": ""
+    }
+  ]
+}

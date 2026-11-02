@@ -1,0 +1,101 @@
+{
+  "signals": {
+    "signal-demand": {
+      "source": "manual-fixture",
+      "url": "https://example.com/signals/demand",
+      "fetched_at": "2026-10-29T01:00:00.000Z",
+      "data_as_of": "2026-10-28T00:00:00.000Z",
+      "reporting_lag": "T+1",
+      "is_realtime": false,
+      "raw": {"observation": "demand"},
+      "confidence": "secondary"
+    },
+    "signal-gap": {
+      "source": "manual-fixture",
+      "url": "https://example.com/signals/gap",
+      "fetched_at": "2026-10-29T01:00:00.000Z",
+      "data_as_of": "2026-10-28T00:00:00.000Z",
+      "reporting_lag": "T+1",
+      "is_realtime": false,
+      "raw": {"observation": "gap"},
+      "confidence": "secondary"
+    },
+    "signal-margin": {
+      "source": "manual-fixture",
+      "url": "https://example.com/signals/margin",
+      "fetched_at": "2026-10-29T01:00:00.000Z",
+      "data_as_of": "2026-10-29T01:00:00.000Z",
+      "reporting_lag": null,
+      "is_realtime": true,
+      "raw": {"observation": "margin"},
+      "confidence": "unverified"
+    },
+    "signal-delivery": {
+      "source": "manual-fixture",
+      "url": "https://example.com/signals/delivery",
+      "fetched_at": "2026-10-29T01:00:00.000Z",
+      "data_as_of": null,
+      "reporting_lag": null,
+      "is_realtime": false,
+      "raw": {"observation": "delivery"},
+      "confidence": "unverified"
+    },
+    "signal-competition": {
+      "source": "manual-fixture",
+      "url": "https://example.com/signals/competition",
+      "fetched_at": "2026-10-29T01:00:00.000Z",
+      "data_as_of": "2026-10-28T00:00:00.000Z",
+      "reporting_lag": "T+1",
+      "is_realtime": false,
+      "raw": {"observation": "competition"},
+      "confidence": "secondary"
+    }
+  },
+  "candidates": [
+    {
+      "id": "steady",
+      "opportunity": "Low handling burden with dependable demand.",
+      "dimensions": {"D": 60, "G": 50, "M": 60, "L": 95, "C": 20},
+      "evidence": {
+        "D": [{"signal_id": "signal-demand", "source": "manual-fixture", "url": "https://example.com/signals/demand"}],
+        "G": [{"signal_id": "signal-gap", "source": "manual-fixture", "url": "https://example.com/signals/gap"}],
+        "M": [{"signal_id": "signal-margin", "source": "manual-fixture", "url": "https://example.com/signals/margin"}],
+        "L": [{"signal_id": "signal-delivery", "source": "manual-fixture", "url": "https://example.com/signals/delivery"}],
+        "C": [{"signal_id": "signal-competition", "source": "manual-fixture", "url": "https://example.com/signals/competition"}]
+      },
+      "risks": ["Demand source is delayed by one day.", "Margin evidence has unknown provenance.", "Delivery observation time is unknown."],
+      "confidence": "secondary",
+      "signal_coverage": "medium"
+    },
+    {
+      "id": "growth",
+      "opportunity": "Strong demand and supply gap favor rapid testing.",
+      "dimensions": {"D": 95, "G": 90, "M": 80, "L": 45, "C": 70},
+      "evidence": {
+        "D": [{"signal_id": "signal-demand", "source": "manual-fixture", "url": "https://example.com/signals/demand"}],
+        "G": [{"signal_id": "signal-gap", "source": "manual-fixture", "url": "https://example.com/signals/gap"}],
+        "M": [{"signal_id": "signal-margin", "source": "manual-fixture", "url": "https://example.com/signals/margin"}],
+        "L": [{"signal_id": "signal-delivery", "source": "manual-fixture", "url": "https://example.com/signals/delivery"}],
+        "C": [{"signal_id": "signal-competition", "source": "manual-fixture", "url": "https://example.com/signals/competition"}]
+      },
+      "risks": ["High competition can raise acquisition cost.", "Low delivery friendliness can increase handling cost.", "Demand source is delayed by one day."],
+      "confidence": "secondary",
+      "signal_coverage": "medium"
+    },
+    {
+      "id": "pilot",
+      "opportunity": "High margin and simple handling support a small trial.",
+      "dimensions": {"D": 50, "G": 40, "M": 100, "L": 100, "C": 50},
+      "evidence": {
+        "D": [{"signal_id": "signal-demand", "source": "manual-fixture", "url": "https://example.com/signals/demand"}],
+        "G": [{"signal_id": "signal-gap", "source": "manual-fixture", "url": "https://example.com/signals/gap"}],
+        "M": [{"signal_id": "signal-margin", "source": "manual-fixture", "url": "https://example.com/signals/margin"}],
+        "L": [{"signal_id": "signal-delivery", "source": "manual-fixture", "url": "https://example.com/signals/delivery"}],
+        "C": [{"signal_id": "signal-competition", "source": "manual-fixture", "url": "https://example.com/signals/competition"}]
+      },
+      "risks": ["Demand is weaker than the growth candidate.", "Supply gap evidence is delayed by one day.", "Margin evidence has unknown provenance."],
+      "confidence": "unverified",
+      "signal_coverage": "low"
+    }
+  ]
+}

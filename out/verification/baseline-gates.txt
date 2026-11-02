@@ -1,0 +1,9 @@
+
+> crossborder-delivery-skill@0.1.0 check:decouple
+> node scripts/gates/check-decouple.mjs
+
+G1-CORE PASS scanned_core_files=7
+G1-PATH PASS scanned_files=87
+G1-FACT PASS scanned_facts=15
+G1-PROFILE PASS scanned_profiles=9
+EXIT=0

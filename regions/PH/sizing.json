@@ -1,0 +1,72 @@
+{
+  "id": "PH",
+  "system": "INT",
+  "label": "ASIA",
+  "unit": "cm",
+  "status": "unverified",
+  "source": {
+    "status": "unverified",
+    "reason": "该法域尺码体系与平台字段名未取得官方文档；变体名「Size」为平台默认建议值，需在后台核对一次",
+    "checked_at": "2026-11-01",
+    "reference_level": "secondary"
+  },
+  "chart": {
+    "default_columns": [
+      "Size",
+      "Bust, cm",
+      "Length, cm"
+    ],
+    "int_equivalence": null,
+    "int_equivalence_note": "菲律宾站尺码偏美码，S/M/L 与 US 并存"
+  },
+  "platform_fields": {
+    "shopee": {
+      "shape": "variation",
+      "variation_name": "Size",
+      "size_chart_required": false,
+      "status": "unverified",
+      "note": "Shopee 变体名可自定义；官方把缺尺码表列为质量扣分项（fashion），不填不拒但掉分"
+    },
+    "lazada": {
+      "shape": "variation",
+      "variation_name": "Size",
+      "size_chart_required": false,
+      "status": "unverified",
+      "note": "Lazada 用变体；尺码表在类目属性里，需后台确认"
+    },
+    "tiktok-shop": {
+      "shape": "variation",
+      "variation_name": "Size",
+      "size_chart_required": true,
+      "status": "unverified",
+      "note": "TikTok Shop 服装类目要求尺码表；变体名以后台为准"
+    },
+    "amazon": {
+      "shape": "variation",
+      "variation_name": "Size",
+      "size_chart_required": true,
+      "status": "candidate",
+      "note": "Amazon 用变体（Size / Color 两个维度）；服装类目要求尺码表。变体名以后台为准，此处取候选值。"
+    }
+  },
+  "rules": [
+    "尺码以本地常见标注为准（S/M/L 或亚码），不要直接把中国码当本地码",
+    "同一 SKU 的颜色与尺码组合会乘出 SKU 数，变体维度最多 2 类（Shopee）",
+    "尺码表数字必须是实测或工厂提供的，不能按经验估"
+  ],
+  "confirmation": {
+    "status": "pending_seller",
+    "required_from_seller": [
+      "shopee.variation_name",
+      "lazada.variation_name",
+      "tiktok-shop.variation_name",
+      "amazon.variation_name"
+    ],
+    "why": "变体维度名在各平台后台可自定义，公开文档只给示例；填错不影响提交，但会影响买家筛选体验",
+    "how_to_confirm": [
+      "登录对应平台后台 → 新建商品 → 变体设置",
+      "抄下尺码变体的实际名称与选项顺序",
+      "把名字填进本文件 platform_fields.<platform>.variation_name，并把 status 改为 confirmed_by_seller"
+    ]
+  }
+}

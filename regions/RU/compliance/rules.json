@@ -1,0 +1,58 @@
+{
+  "notes": "本报告依据二手规则整理，所有结论均为 secondary；须通过官方入口核查，不表示官方已核。blockers 列出待完成事项。",
+  "rules": [
+    {
+      "id": "adult-outerwear-access",
+      "when": {"category": "女装外套", "close_to_skin": false, "is_child": false},
+      "layer": "access",
+      "requirement": "须依据 TR CU 017/2011 完成符合性声明（DoC），并按要求使用 EAC 标志。",
+      "applies_because": "女装外套属于非贴身、非儿童服装的二三层服装。",
+      "owner": "工厂 / 进口商 / 品牌方",
+      "status": "required",
+      "source_url": "https://eec.eaeunion.org",
+      "confidence": "secondary"
+    },
+    {
+      "id": "close-to-skin-access",
+      "when": {"close_to_skin": true, "is_child": false},
+      "layer": "access",
+      "requirement": "须依据 TR CU 017/2011 取得合格证（CoC），并按要求使用 EAC 标志。",
+      "applies_because": "内衣等贴身服装适用合格证准入分支。",
+      "owner": "工厂 / 进口商 / 品牌方",
+      "status": "required",
+      "source_url": "https://eec.eaeunion.org",
+      "confidence": "secondary"
+    },
+    {
+      "id": "child-clothing-access",
+      "when": {"is_child": true},
+      "layer": "access",
+      "requirement": "须依据 TR CU 007/2011 核验并取得适用的儿童服装证书，不得套用成人服装准入结论。",
+      "applies_because": "儿童服装属于高危品类，适用单独法规并需核验额外证书。",
+      "owner": "工厂 / 进口商 / 品牌方",
+      "status": "required",
+      "source_url": "https://eec.eaeunion.org",
+      "confidence": "secondary"
+    },
+    {
+      "id": "clothing-datamatrix",
+      "layer": "traceability",
+      "requirement": "准入完成后，须由目的国进口商申请一物一码 DataMatrix，中国侧打印粘贴并在清关前完成，每码不得复用。",
+      "applies_because": "服装属于诚信标签强制追溯范围。",
+      "owner": "目的国进口商",
+      "status": "required",
+      "source_url": "https://честныйзнак.рф",
+      "confidence": "secondary"
+    },
+    {
+      "id": "import-subject-consistency",
+      "layer": "traceability",
+      "requirement": "EAC 证书主体、诚信标签申请主体与进口报关主体必须一致。",
+      "applies_because": "主体不一致会使准入与追溯资质无法对应同一进口主体。",
+      "owner": "目的国进口商",
+      "status": "required",
+      "source_url": "https://честныйзнак.рф",
+      "confidence": "secondary"
+    }
+  ]
+}

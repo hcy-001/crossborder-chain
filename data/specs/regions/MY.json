@@ -1,0 +1,333 @@
+{
+  "region": "MY",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Kuala Lumpur",
+        "monthly_mean_c": [
+          26,
+          27.3,
+          27.3,
+          26.9,
+          27.7,
+          28.4,
+          29.7,
+          28,
+          27.8,
+          27.7,
+          27.3,
+          26.5
+        ],
+        "monthly_precip_mm": [
+          300,
+          206,
+          221,
+          482,
+          209,
+          148,
+          55,
+          120,
+          134,
+          168,
+          403,
+          356
+        ],
+        "annual_range_c": 3.7
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=3.139&longitude=101.6869&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FKuala_Lumpur",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Kuala Lumpur 2025 年日值聚合成月均；年温差 3.7℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 51.592,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 11386.0395636528,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day (regional holiday)"
+        },
+        {
+          "date": "2027-01-06",
+          "name": "Isra and Mi'raj (regional holiday) (tentative)"
+        },
+        {
+          "date": "2027-01-22",
+          "name": "Thaipusam (regional holiday)"
+        },
+        {
+          "date": "2027-02-01",
+          "name": "Federal Territory Day (regional holiday)"
+        },
+        {
+          "date": "2027-02-06",
+          "name": "Chinese New Year's Day"
+        },
+        {
+          "date": "2027-02-07",
+          "name": "Chinese New Year Holiday (regional holiday)"
+        },
+        {
+          "date": "2027-02-07",
+          "name": "Second Day of Chinese New Year (regional holiday)"
+        },
+        {
+          "date": "2027-02-24",
+          "name": "Nuzul Al-Quran (regional holiday) (tentative)"
+        },
+        {
+          "date": "2027-03-10",
+          "name": "Hari Raya Puasa (tentative)"
+        },
+        {
+          "date": "2027-03-11",
+          "name": "Hari Raya Puasa Holiday Day 2 (tentative)"
+        },
+        {
+          "date": "2027-03-26",
+          "name": "Good Friday (regional holiday)"
+        },
+        {
+          "date": "2027-05-01",
+          "name": "Labour Day"
+        },
+        {
+          "date": "2027-05-16",
+          "name": "Day of Arafat (regional holiday) (tentative)"
+        },
+        {
+          "date": "2027-05-17",
+          "name": "Hari Raya Haji (tentative)"
+        },
+        {
+          "date": "2027-05-18",
+          "name": "Hari Raya Haji (Day 2) (regional holiday) (tentative)"
+        },
+        {
+          "date": "2027-05-20",
+          "name": "Wesak Day"
+        },
+        {
+          "date": "2027-05-31",
+          "name": "Second Day of Harvest Festival (regional holiday)"
+        },
+        {
+          "date": "2027-06-06",
+          "name": "Muharram (tentative)"
+        },
+        {
+          "date": "2027-06-07",
+          "name": "The Yang di-Pertuan Agong's Birthday"
+        },
+        {
+          "date": "2027-08-15",
+          "name": "The Prophet Muhammad's Birthday (tentative)"
+        },
+        {
+          "date": "2027-08-31",
+          "name": "Malaysia's National Day"
+        },
+        {
+          "date": "2027-09-16",
+          "name": "Malaysia Day"
+        },
+        {
+          "date": "2027-10-28",
+          "name": "Diwali (regional holiday)"
+        },
+        {
+          "date": "2027-12-25",
+          "name": "Christmas Day"
+        },
+        {
+          "date": "2027-12-26",
+          "name": "Isra and Mi'raj (regional holiday) (tentative)"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.malaysia.official%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 25 天（全国 12 / 州级 13）；用于排产与上新节奏。无第二源核对"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 6942.39930667473,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 97.69272633,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 35126298,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 76.4434752105739,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "MY",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

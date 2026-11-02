@@ -1,0 +1,213 @@
+{
+  "run_id": "check-llm-02",
+  "generated_at": "2026-10-29T06:23:01.289Z",
+  "duration_ms": 274907,
+  "inputs": {
+    "category": "女装",
+    "region": "RU",
+    "candidates": 1,
+    "profile": "conservative"
+  },
+  "status": "complete",
+  "judgments": {
+    "total": 6,
+    "by_source": {
+      "llm": 6
+    },
+    "total_tokens": 11012,
+    "entries": [
+      {
+        "point": "copy_pitch",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 68276,
+        "total_tokens": 2680,
+        "reasoning_tokens": 1445,
+        "reject_reason": null
+      },
+      {
+        "point": "information_audit",
+        "scope": "run",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "high",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 15368,
+        "total_tokens": 1185,
+        "reasoning_tokens": 206,
+        "reject_reason": null
+      },
+      {
+        "point": "market_profile",
+        "scope": "run",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 18482,
+        "total_tokens": 1214,
+        "reasoning_tokens": 391,
+        "reject_reason": null
+      },
+      {
+        "point": "platform_mapping",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "low",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 20738,
+        "total_tokens": 1515,
+        "reasoning_tokens": 430,
+        "reject_reason": null
+      },
+      {
+        "point": "ref_roles",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "high",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 17275,
+        "total_tokens": 2253,
+        "reasoning_tokens": 238,
+        "reject_reason": null
+      },
+      {
+        "point": "shoot_plan",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "low",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 34324,
+        "total_tokens": 2165,
+        "reasoning_tokens": 661,
+        "reject_reason": null
+      }
+    ]
+  },
+  "degradations": [
+    {
+      "kind": "imagegen",
+      "detail": "mock"
+    }
+  ],
+  "evidence_levels": {
+    "market_signals": "L1（选品工单为历史快照，source_type=secondary）",
+    "llm_judgments": "L2（全部判别点由真实模型返回，台账可回放）",
+    "images": "L1（占位图）",
+    "modeling": "L0（只做规则校验与计划）",
+    "platform_submission": "未做"
+  },
+  "images": {
+    "count": 9,
+    "items": [
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-01-fe114aed.png",
+        "role": "white_background",
+        "width": 900,
+        "height": 1200,
+        "sha256": "fe114aed21cc4d6ba85f7820bf9ed65da97bca51080bc602749d2da6d3e5ed46",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-02-4c2430ba.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "4c2430ba48ed121385f622ce1d6dc670bb75d47d2c90212c67162e2254bb05f2",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-03-9391d771.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "9391d7714f2e4d6688f9b9fb035d231e4b06db59426d6ee305ba5b9efcc23bd3",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-04-08cba134.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "08cba1346922ecf80d1b405480e058781653ba7db7be24dc1be9e72ac78dfb4a",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-05-6d882677.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "6d8826770831b0a8a25e7a856f46313222cb75eb0354e4c14628f5c49463c8e9",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-06-932f9ca9.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "932f9ca9e2a5cb330b1d0e9e9ab492fca29ff5b71a427d87d41e0d0cfacc6292",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-07-268daae7.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "268daae7e18f70c48144f956be9b292566ed3c8d2e878d4bdb80a4c67dafbc6c",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-08-7c254120.png",
+        "role": "size",
+        "width": 900,
+        "height": 1200,
+        "sha256": "7c254120ee16dc53d07c9723473ccec7c8344ed29b16b1349b48908da1a7e94d",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-09-18e0f998.png",
+        "role": "size",
+        "width": 900,
+        "height": 1200,
+        "sha256": "18e0f998429ce2d61a292b888bf1ab7dc8dc52c9ae1e3883b56bf0d5fdb5094d",
+        "quality": "placeholder"
+      }
+    ]
+  },
+  "modeling": [
+    {
+      "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+      "status": "planned",
+      "dir": "D:\\DSH\\创想\\AI创新大赛\\assets\\3d\\kardigan-udlinennyi-zhensk-01cfdb",
+      "files": 0
+    }
+  ],
+  "verdicts": {
+    "llm_judged_all": true,
+    "images_real": false,
+    "sizes_ok": true,
+    "distinct_images": true,
+    "modeling_rendered": false
+  }
+}

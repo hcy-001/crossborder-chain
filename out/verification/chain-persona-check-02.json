@@ -1,0 +1,243 @@
+{
+  "run_id": "persona-check-02",
+  "generated_at": "2026-10-29T08:12:15.672Z",
+  "duration_ms": 14233,
+  "inputs": {
+    "category": "女装",
+    "region": "RU",
+    "candidates": 1,
+    "profile": "conservative"
+  },
+  "status": "complete",
+  "judgments": {
+    "total": 6,
+    "by_source": {
+      "llm": 6
+    },
+    "total_tokens": 7175,
+    "entries": [
+      {
+        "point": "copy_pitch",
+        "scope": "selfgrade-probe-9db535",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": null,
+        "total_tokens": 1114,
+        "reasoning_tokens": null,
+        "reject_reason": null
+      },
+      {
+        "point": "information_audit",
+        "scope": "run",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": null,
+        "total_tokens": 934,
+        "reasoning_tokens": null,
+        "reject_reason": null
+      },
+      {
+        "point": "market_profile",
+        "scope": "run",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": null,
+        "total_tokens": 884,
+        "reasoning_tokens": null,
+        "reject_reason": null
+      },
+      {
+        "point": "persona_assign",
+        "scope": "selfgrade-probe-9db535",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": null,
+        "total_tokens": 1956,
+        "reasoning_tokens": null,
+        "reject_reason": null
+      },
+      {
+        "point": "platform_mapping",
+        "scope": "selfgrade-probe-9db535",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "low",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": null,
+        "total_tokens": 959,
+        "reasoning_tokens": null,
+        "reject_reason": null
+      },
+      {
+        "point": "shoot_plan",
+        "scope": "selfgrade-probe-9db535",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": null,
+        "total_tokens": 1328,
+        "reasoning_tokens": null,
+        "reject_reason": null
+      }
+    ]
+  },
+  "degradations": [
+    {
+      "kind": "llm",
+      "detail": "mock-llm"
+    },
+    {
+      "kind": "imagegen",
+      "detail": "mock"
+    }
+  ],
+  "persona_gate": {
+    "quota_total": 2,
+    "quota_used": 0,
+    "capped": 0,
+    "assigned": 1
+  },
+  "personas": [
+    {
+      "sku": "selfgrade-probe-9db535",
+      "id": "A",
+      "status": "hypothesis",
+      "source": "llm",
+      "evidence_ids": [
+        "ticket:mock-slug#signals"
+      ],
+      "falsifier": {
+        "ok": true,
+        "reason": "share_above_threshold",
+        "share": 0.6667,
+        "threshold": 0.1
+      },
+      "decision": "unpriced",
+      "gate_capped": false,
+      "gate_reason": "below_gate_line"
+    }
+  ],
+  "evidence_levels": {
+    "market_signals": "L1（选品工单为历史快照，source_type=secondary）",
+    "llm_judgments": "L1（判别桩/通道降级，非模型判断）",
+    "images": "L1（占位图）",
+    "modeling": "L0（只做规则校验与计划）",
+    "platform_submission": "未做"
+  },
+  "images": {
+    "count": 9,
+    "items": [
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-01-fe114aed.png",
+        "role": "white_background",
+        "width": 900,
+        "height": 1200,
+        "sha256": "fe114aed21cc4d6ba85f7820bf9ed65da97bca51080bc602749d2da6d3e5ed46",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-02-4c2430ba.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "4c2430ba48ed121385f622ce1d6dc670bb75d47d2c90212c67162e2254bb05f2",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-03-9391d771.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "9391d7714f2e4d6688f9b9fb035d231e4b06db59426d6ee305ba5b9efcc23bd3",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-04-08cba134.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "08cba1346922ecf80d1b405480e058781653ba7db7be24dc1be9e72ac78dfb4a",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-05-6d882677.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "6d8826770831b0a8a25e7a856f46313222cb75eb0354e4c14628f5c49463c8e9",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-06-932f9ca9.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "932f9ca9e2a5cb330b1d0e9e9ab492fca29ff5b71a427d87d41e0d0cfacc6292",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-07-268daae7.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "268daae7e18f70c48144f956be9b292566ed3c8d2e878d4bdb80a4c67dafbc6c",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-08-7c254120.png",
+        "role": "size",
+        "width": 900,
+        "height": 1200,
+        "sha256": "7c254120ee16dc53d07c9723473ccec7c8344ed29b16b1349b48908da1a7e94d",
+        "quality": "placeholder"
+      },
+      {
+        "sku": "selfgrade-probe-9db535",
+        "file": "images/img-09-18e0f998.png",
+        "role": "size",
+        "width": 900,
+        "height": 1200,
+        "sha256": "18e0f998429ce2d61a292b888bf1ab7dc8dc52c9ae1e3883b56bf0d5fdb5094d",
+        "quality": "placeholder"
+      }
+    ]
+  },
+  "modeling": [
+    {
+      "sku": "selfgrade-probe-9db535",
+      "status": "planned",
+      "dir": "D:\\DSH\\创想\\AI创新大赛\\assets\\3d\\selfgrade-probe-9db535",
+      "files": 0
+    }
+  ],
+  "verdicts": {
+    "llm_judged_all": true,
+    "images_real": false,
+    "sizes_ok": true,
+    "distinct_images": true,
+    "modeling_rendered": false
+  }
+}

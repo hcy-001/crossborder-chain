@@ -1,0 +1,18 @@
+{
+  "imagegen": {
+    "enabled": false,
+    "baseUrl": "https://api.openai.com/v1",
+    "model": "",
+    "unitPriceCny": null,
+    "requestSize": "1024x1536",
+    "maxImagesPerSku": 9
+  },
+  "sku": {
+    "mode": "new",
+    "historyDir": ""
+  },
+  "defaultRegion": "RU",
+  "fx": {
+    "forceRefresh": false
+  }
+}

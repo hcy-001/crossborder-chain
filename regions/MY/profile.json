@@ -1,0 +1,34 @@
+{
+  "id": "MY",
+  "regime": "MY",
+  "locales": [
+    "ms-MY"
+  ],
+  "currency": "MYR",
+  "price_rounding": null,
+  "platforms": [
+    "shopee",
+    "lazada",
+    "tiktok-shop"
+  ],
+  "completion": "skeleton",
+  "signal_sources": {
+    "allowed": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "marketplace-search"
+    ],
+    "blocked": []
+  },
+  "tax_reference": {
+    "standard_rate": null,
+    "reduced_rates": [],
+    "label": "SST",
+    "status": "candidate",
+    "source": "多源（结构复杂）",
+    "source_url": "https://mysst.customs.gov.my/",
+    "note": "马来西亚不是单一 VAT：Sales Tax 5%/10% + Service Tax 6%/8% 并存，按品类分。**不能用一个数字代表马来西亚税负**，必须按具体品类查 SST 税率表。",
+    "checked_at": "2026-11-01"
+  }
+}

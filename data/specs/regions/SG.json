@@ -1,0 +1,284 @@
+{
+  "region": "SG",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Singapore",
+        "monthly_mean_c": [
+          25.6,
+          26.4,
+          26.3,
+          26.3,
+          27.5,
+          27.8,
+          27.7,
+          26.9,
+          26.7,
+          27.2,
+          26.8,
+          25.9
+        ],
+        "monthly_precip_mm": [
+          415,
+          100,
+          333,
+          388,
+          226,
+          133,
+          143,
+          263,
+          180,
+          165,
+          219,
+          309
+        ],
+        "annual_range_c": 2.2
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=1.3521&longitude=103.8198&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FSingapore",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Singapore 2025 年日值聚合成月均；年温差 2.2℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 63.299,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 86382.5900499252,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year’s Day"
+        },
+        {
+          "date": "2027-02-06",
+          "name": "Chinese New Year's Day"
+        },
+        {
+          "date": "2027-02-07",
+          "name": "Second Day of Chinese New Year"
+        },
+        {
+          "date": "2027-03-10",
+          "name": "Hari Raya Puasa (tentative)"
+        },
+        {
+          "date": "2027-03-26",
+          "name": "Good Friday"
+        },
+        {
+          "date": "2027-05-01",
+          "name": "Labour Day"
+        },
+        {
+          "date": "2027-05-17",
+          "name": "Hari Raya Haji (tentative)"
+        },
+        {
+          "date": "2027-05-20",
+          "name": "Vesak Day"
+        },
+        {
+          "date": "2027-08-09",
+          "name": "National Day"
+        },
+        {
+          "date": "2027-10-28",
+          "name": "Diwali/Deepavali"
+        },
+        {
+          "date": "2027-12-25",
+          "name": "Christmas Day"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.singapore.official%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "nager.date",
+          "value": 11,
+          "agree": true,
+          "note": "Nager 记 11 天，Google 记 11 天"
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 11 天（全国 11 / 州级 0）；用于排产与上新节奏。已与 Nager 交叉核对：Nager 记 11 天，Google 记 11 天"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 23694.3446067418,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 94.28518987,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 5917648,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 100,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "SG",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "at": "2026-11-02T00:12:09.967Z",
+  "overall": 100,
+  "passed": true,
+  "items": [
+    {
+      "name": "功能完整度",
+      "score": 100,
+      "detail": "扫描 84 个源文件 + 10 个必需文件",
+      "passed": 94,
+      "total": 94,
+      "hits": [],
+      "missing": []
+    },
+    {
+      "name": "判据强度",
+      "score": 100,
+      "detail": "测试文件 57，全量 361 通过 / 0 失败，机械门 7 PASS / 0 FAIL",
+      "passed": 60,
+      "total": 60,
+      "weak": [],
+      "test_summary": {
+        "pass": 361,
+        "fail": 0,
+        "exit": 0
+      },
+      "gate_summary": {
+        "pass": 7,
+        "fail": 0,
+        "exit": 0
+      }
+    },
+    {
+      "name": "LLM 判别有效性",
+      "score": 100,
+      "detail": "10 个判别点：接受路径 / 拒绝路径 / 回退同形 · 绑定保接口 ✓ · 等级诚实 ✓",
+      "passed": 32,
+      "total": 32,
+      "detail_points": [
+        {
+          "point": "information_audit",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": false
+        },
+        {
+          "point": "market_profile",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": false
+        },
+        {
+          "point": "sourcing_match",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": true
+        },
+        {
+          "point": "cost_estimate",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": false
+        },
+        {
+          "point": "shoot_plan",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": true
+        },
+        {
+          "point": "ref_roles",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": true
+        },
+        {
+          "point": "platform_mapping",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": false
+        },
+        {
+          "point": "copy_pitch",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": false
+        },
+        {
+          "point": "persona_assign",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": true
+        },
+        {
+          "point": "exception_triage",
+          "accept_path": true,
+          "reject_path": true,
+          "has_fallback_schema": true,
+          "binding": true
+        }
+      ],
+      "interface_checks": {
+        "boundKeepsComplete": true,
+        "levelHonest": true,
+        "fallback_levels": {
+          "llm": "L1（全部回退，未取到任何模型返回）",
+          "images": "L2（9 张真实模型出图）"
+        }
+      }
+    },
+    {
+      "name": "降级完备",
+      "score": 100,
+      "detail": "5 类降级场景",
+      "passed": 5,
+      "total": 5,
+      "checks": [
+        {
+          "name": "无 LLM key 时回退而不是崩溃",
+          "ok": true,
+          "detail": "mock (缺少判别 api key，链路走确定性回退)"
+        },
+        {
+          "name": "无参考图目录时返回空而不是抛错",
+          "ok": true,
+          "detail": "1688-refs 目录不存在"
+        },
+        {
+          "name": "无建模环境时返回 unavailable",
+          "ok": true,
+          "detail": "未配置建模 skill 根目录"
+        },
+        {
+          "name": "无判别通道时走确定性回退",
+          "ok": true,
+          "detail": "channel_not_configured"
+        },
+        {
+          "name": "零 key + 零代理一次调用跑完整链路",
+          "ok": true,
+          "detail": "exit 0"
+        }
+      ]
+    },
+    {
+      "name": "可复现性",
+      "score": 100,
+      "detail": "4 项可复现前提",
+      "passed": 4,
+      "total": 4,
+      "checks": [
+        {
+          "name": "存在锁文件",
+          "ok": true
+        },
+        {
+          "name": "四条命令都在 scripts 里",
+          "ok": true
+        },
+        {
+          "name": "链路口令已登记",
+          "ok": true
+        },
+        {
+          "name": "依赖已安装（sharp 可解析）",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "文档一致性",
+      "score": 100,
+      "detail": "6 项文档一致性",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "name": "SKILL.md 存在且写了唯一入口命令",
+          "ok": true
+        },
+        {
+          "name": "SKILL.md 列出全部命令行参数",
+          "ok": true
+        },
+        {
+          "name": "README 写了链路命令",
+          "ok": true
+        },
+        {
+          "name": "质量判据文档存在",
+          "ok": true
+        },
+        {
+          "name": "文档无占位承诺",
+          "ok": true
+        },
+        {
+          "name": "traceability 覆盖 G 门",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "成本纪律",
+      "score": 100,
+      "detail": "4 项成本口径",
+      "passed": 4,
+      "total": 4,
+      "checks": [
+        {
+          "name": "存在真实连通性证据",
+          "ok": true
+        },
+        {
+          "name": "单价未查证时明确写 null 与原因",
+          "ok": true
+        },
+        {
+          "name": "真实调用带回 usage",
+          "ok": true
+        },
+        {
+          "name": "回执记录 token 账而不是编金额",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

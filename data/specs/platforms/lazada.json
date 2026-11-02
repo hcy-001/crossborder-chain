@@ -1,0 +1,373 @@
+{
+  "facts": [
+    {
+      "key": "platform.lazada.image.ratio",
+      "value": {
+        "width": 1,
+        "height": 1
+      },
+      "unit": "ratio",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-cn-apparel-image-guide",
+      "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": "LZ1",
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "同一篇的下一句",
+          "value": "图片横向和纵向比例建议 1:1.3",
+          "agree": false
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "同一篇官方文章自相矛盾：先说「图片为正方形」，紧接着说「比例建议 1:1.3」。投影按 1:1 做（正方形可被任何容器容纳），并在交付说明里写明这处冲突待后台核。"
+    },
+    {
+      "key": "platform.lazada.image.min_size",
+      "value": {
+        "width": 800,
+        "height": 800
+      },
+      "unit": "pixel",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-cn-apparel-image-guide",
+      "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "多个二手源",
+          "value": "≥800×800，纯白底",
+          "agree": true
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "来源是 Lazada 官方中文站的行业文章（不是 seller center 政策页），故标 candidate。900×900 投影满足此要求。"
+    },
+    {
+      "key": "platform.lazada.image.recommended_count",
+      "value": 4,
+      "unit": "count",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-cn-apparel-image-guide",
+      "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方建议顺序：模特或实物正面图、背面图、侧面图、细节图。这是**建议张数**，不是上限；上限未查到。"
+    },
+    {
+      "key": "platform.lazada.image.max_count",
+      "value": 8,
+      "unit": "images",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 720,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4169 CHK_IMAGE_MAX_ITEMS：Upload a maximum of 8 pictures。此前为 unverified。"
+    },
+    {
+      "key": "platform.lazada.title.max_chars",
+      "value": null,
+      "unit": "chars",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 720,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "官方没有\"字符数\"上限，只有**字节**上限 255（错误码 4160：THD_IC_ERR_F_PRODUCT_00_15_004 / The max length of Multi title for locale can not exceed 255 bytes）。中文 1 字 = 3 字节，所以中文标题实际只能约 85 字。按字符校验会放过超长标题。"
+    },
+    {
+      "key": "platform.lazada.title.naming",
+      "value": "品牌 + 产品类型 + 关键规格（容量/颜色/型号）",
+      "unit": "guideline",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-cn-apparel-image-guide",
+      "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "10100 二手文章",
+          "value": "品牌+产品类型+关键规格",
+          "agree": true
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "多个来源口径一致，但均非平台政策原文，故标 candidate；写作方向可用，长度不可用。"
+    },
+    {
+      "key": "platform.lazada.image.style_rules",
+      "value": "无杂乱背景（白/浅色底）；不放尺码、促销、文本；严禁出现汉字；主体占画面 70% 以上；禁止拼图；品牌标统一左上角",
+      "unit": "rule",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-cn-apparel-image-guide",
+      "source_url": "https://www.lazada.cn/storydetail/187/14427862",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "「严禁出现汉字」这条对中文母语卖家最容易踩：母版图上任何中文标注都不能进 Lazada 投影。"
+    },
+    {
+      "key": "platform.lazada.attribute_map",
+      "value": {},
+      "unit": "json/map",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-doc",
+      "source_url": "https://open.lazada.com/apps/doc",
+      "source_type": "official",
+      "confidence": "unverified",
+      "status": "unverified",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 720,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "类目属性需 appKey/appSecret + 店铺授权。无公开接口，属性表按 canonical_key 原样输出并标注未映射。"
+    },
+    {
+      "key": "platform.lazada.title.max_bytes",
+      "value": 255,
+      "unit": "bytes",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4160 原文：The max length of Multi title for locale can not exceed 255 bytes。换算：纯英文 255 字符、纯中文约 85 字、中英混排按实际字节。"
+    },
+    {
+      "key": "platform.lazada.title.forbidden_chars",
+      "value": "^~<>|",
+      "unit": "chars",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4129 BIZ_CHECK_PROP_SPECIAL_CHAR：Special characters are not allowed: \"^~<>|\"。"
+    },
+    {
+      "key": "platform.lazada.package.max_weight_kg",
+      "value": 40,
+      "unit": "kg",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4164：包裹重量超 40kg 需申请 DBS 权限。"
+    },
+    {
+      "key": "platform.lazada.package.max_dimension_sum_cm",
+      "value": 300,
+      "unit": "cm",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4165：长+宽+高 > 300cm 需申请 DBS 权限。"
+    },
+    {
+      "key": "platform.lazada.image.main_required",
+      "value": true,
+      "unit": "bool",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4139 BIZ_CHECK_MAIN_IMAGE_REQUIRE：无主图不允许上传。另有 4116/4158 主图重复校验。"
+    },
+    {
+      "key": "platform.lazada.attribute.enum_enforced",
+      "value": true,
+      "unit": "bool",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4115 CHK_CATPROP_CPV_NOT_ENUM：属性值必须在该类目给出的选项内 —— 与 Ozon 字典校验同理，自由文本填不进去。"
+    },
+    {
+      "key": "platform.lazada.price.sale_must_be_lower",
+      "value": true,
+      "unit": "bool",
+      "scope": {
+        "region": "SEA",
+        "platform": "lazada",
+        "category": "fashion"
+      },
+      "source": "lazada-open-platform-createproduct",
+      "source_url": "https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 2160,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "错误码 4157：促销价必须低于原价；4141 BIZ_CHECK_PRICE_IS_ZERO 价格为 0 也被拒。"
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "region": "TH",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Bangkok",
+        "monthly_mean_c": [
+          27.4,
+          28.7,
+          30.2,
+          30.2,
+          28.6,
+          28.4,
+          27.8,
+          28.2,
+          27.4,
+          27.8,
+          26.1,
+          27.7
+        ],
+        "monthly_precip_mm": [
+          0,
+          59,
+          62,
+          88,
+          257,
+          184,
+          217,
+          184,
+          263,
+          190,
+          162,
+          9
+        ],
+        "annual_range_c": 4.1
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=13.7563&longitude=100.5018&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FBangkok",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Bangkok 2025 年日值聚合成月均；年温差 4.1℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 60.311,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 7210.54130832685,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2027-02-06",
+          "name": "Chinese New Year's Day"
+        },
+        {
+          "date": "2027-02-07",
+          "name": "Second Day of Chinese New Year"
+        },
+        {
+          "date": "2027-02-08",
+          "name": "Third Day of Chinese New Year"
+        },
+        {
+          "date": "2027-02-14",
+          "name": "Valentine's Day"
+        },
+        {
+          "date": "2027-02-21",
+          "name": "Makha Bucha"
+        },
+        {
+          "date": "2027-02-22",
+          "name": "Day off for Makha Bucha"
+        },
+        {
+          "date": "2027-04-06",
+          "name": "Chakri Day"
+        },
+        {
+          "date": "2027-04-13",
+          "name": "Songkran"
+        },
+        {
+          "date": "2027-04-14",
+          "name": "Songkran Holiday"
+        },
+        {
+          "date": "2027-04-15",
+          "name": "Songkran Holiday"
+        },
+        {
+          "date": "2027-05-01",
+          "name": "Labor Day"
+        },
+        {
+          "date": "2027-05-03",
+          "name": "Labor Day observed"
+        },
+        {
+          "date": "2027-05-04",
+          "name": "Coronation Day"
+        },
+        {
+          "date": "2027-05-20",
+          "name": "Visakha Bucha"
+        },
+        {
+          "date": "2027-06-03",
+          "name": "Queen Suthida's Birthday"
+        },
+        {
+          "date": "2027-07-18",
+          "name": "Asalha Bucha"
+        },
+        {
+          "date": "2027-07-19",
+          "name": "Day off for Asalha Bucha"
+        },
+        {
+          "date": "2027-07-28",
+          "name": "King Vajiralongkorn's Birthday"
+        },
+        {
+          "date": "2027-08-12",
+          "name": "The Queen Mother's Birthday"
+        },
+        {
+          "date": "2027-10-13",
+          "name": "Anniversary of the Death of King Bhumibol"
+        },
+        {
+          "date": "2027-10-23",
+          "name": "Chulalongkorn Day"
+        },
+        {
+          "date": "2027-10-25",
+          "name": "Day off for Chulalongkorn Day"
+        },
+        {
+          "date": "2027-12-05",
+          "name": "King Bhumibol's Birthday"
+        },
+        {
+          "date": "2027-12-06",
+          "name": "King Bhumibol's Birthday observed"
+        },
+        {
+          "date": "2027-12-10",
+          "name": "Constitution Day"
+        },
+        {
+          "date": "2027-12-24",
+          "name": "Christmas Eve"
+        },
+        {
+          "date": "2027-12-25",
+          "name": "Christmas Day"
+        },
+        {
+          "date": "2027-12-31",
+          "name": "New Year's Eve"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.th%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 29 天（全国 29 / 州级 0）；用于排产与上新节奏。无第二源核对"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 3750.97612111305,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 89.53525238,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 71702435,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 60.9341926574707,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "TH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

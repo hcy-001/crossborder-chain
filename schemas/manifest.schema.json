@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/manifest.schema.json",
+  "title": "Master product manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sku",
+    "region",
+    "category",
+    "snapshot_id",
+    "product_facts",
+    "images",
+    "compliance",
+    "video",
+    "variants"
+  ],
+  "properties": {
+    "sku": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "snapshot_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "value",
+          "unit",
+          "source_kind",
+          "basis",
+          "confidence"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {},
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_kind": {
+            "enum": [
+              "measured",
+              "reported",
+              "estimated"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        }
+      }
+    },
+    "images": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "file",
+          "width",
+          "height",
+          "sha256",
+          "role",
+          "quality",
+          "crop_safe"
+        ],
+        "properties": {
+          "file": {
+            "type": "string",
+            "pattern": "^images/img-\\d{2}-[a-f0-9]{8}\\.(jpg|png)$"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 900
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1200
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "role": {
+            "enum": [
+              "white_background",
+              "scene",
+              "detail",
+              "size"
+            ]
+          },
+          "quality": {
+            "enum": [
+              "placeholder",
+              "generated",
+              "photo",
+              "template",
+              "reused"
+            ]
+          },
+          "crop_safe": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "compliance": {
+      "type": "string",
+      "pattern": "^compliance/report\\.json$"
+    },
+    "video": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "file",
+        "reason"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "available",
+            "unavailable"
+          ]
+        },
+        "file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "color",
+          "path"
+        ],
+        "properties": {
+          "color": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^variants/"
+          }
+        }
+      }
+    },
+    "size_card": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "rendered",
+            "skipped"
+          ]
+        },
+        "file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "rows": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status"
+      ]
+    }
+  }
+}

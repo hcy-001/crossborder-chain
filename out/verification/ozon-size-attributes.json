@@ -1,0 +1,103 @@
+{
+  "probed_at": "2026-10-29T12:22:20.004Z",
+  "source": {
+    "kind": "ozon-seller-api",
+    "endpoints": [
+      "/v1/description-category/tree",
+      "/v1/description-category/attribute"
+    ],
+    "note": "官方 Seller API 实测；凭证来自本机 .env，未写入本文件"
+  },
+  "query": "Платье",
+  "category": {
+    "description_category_id": 200000933,
+    "type_id": 93182,
+    "path": "Одежда / Одежда / Платье"
+  },
+  "matched_categories": [
+    "Одежда / Одежда / Платье"
+  ],
+  "attributes_total": 53,
+  "size_attributes": [
+    {
+      "id": 4295,
+      "name": "Российский размер",
+      "description": "Выберите из выпадающего списка российский размер одежды. Если товар подходит для нескольких размеров (например, 42–44), укажите все подходящие размеры через выпадающий список. В XLS-файле такие размеры укажите последовательно через точку с запятой (например: 42;44 или 50;52;54). В карточке товара покажем единый диапазон (например, 42–44 или 50–54).",
+      "type": "String",
+      "is_required": true,
+      "is_collection": true,
+      "dictionary_id": 835,
+      "group_name": ""
+    },
+    {
+      "id": 4508,
+      "name": "Размер на модели",
+      "description": "Выберите из списка размер производителя одежды или обуви на модели, если она присутствует на фотографии товара. Можно указать только одно значение.",
+      "type": "String",
+      "is_required": false,
+      "is_collection": false,
+      "dictionary_id": 945,
+      "group_name": ""
+    },
+    {
+      "id": 23074,
+      "name": "Тип ростовки",
+      "description": "Выберите из списка. Можно указать только одно значение.",
+      "type": "String",
+      "is_required": false,
+      "is_collection": false,
+      "dictionary_id": 124413016,
+      "group_name": ""
+    },
+    {
+      "id": 23063,
+      "name": "Длина юбки/платья",
+      "description": "Выберите из списка. Можно указать только одно значение.",
+      "type": "String",
+      "is_required": false,
+      "is_collection": false,
+      "dictionary_id": 124413006,
+      "group_name": ""
+    },
+    {
+      "id": 13164,
+      "name": "Таблица размеров JSON",
+      "description": "Добавьте таблицу размеров в формате JSON. Подробнее о заполнении этой характеристики можно узнать в статье \"Таблица размеров\" в \"Базе знаний\".",
+      "type": "String",
+      "is_required": false,
+      "is_collection": false,
+      "dictionary_id": 0,
+      "group_name": ""
+    },
+    {
+      "id": 9533,
+      "name": "Размер производителя",
+      "description": "Размер, как он указан на этикетке или на коробке производителя. Обратите внимание: данный размер является дополнительным, основной — Российский размер",
+      "type": "String",
+      "is_required": false,
+      "is_collection": false,
+      "dictionary_id": 0,
+      "group_name": ""
+    },
+    {
+      "id": 4296,
+      "name": "Рост",
+      "description": "Рост, на который рассчитана одежда. Не путать с ростом модели на фото. Выберите из списка. Можно указать только одно значение.",
+      "type": "String",
+      "is_required": false,
+      "is_collection": false,
+      "dictionary_id": 1866,
+      "group_name": ""
+    },
+    {
+      "id": 4506,
+      "name": "Рост модели на фото",
+      "description": "Выберите из списка. Можно указать только одно значение.",
+      "type": "String",
+      "is_required": false,
+      "is_collection": false,
+      "dictionary_id": 780,
+      "group_name": ""
+    }
+  ]
+}

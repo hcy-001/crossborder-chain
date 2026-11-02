@@ -1,0 +1,33 @@
+{
+  "kind": "sourcing_ticket",
+  "schema_version": 1,
+  "candidate_id": "kw-selfgrade-probe",
+  "slug": "selfgrade-probe",
+  "keyword": "selfgrade probe",
+  "merge_attribute": "selfgrade-probe",
+  "signal_date": "2026-10-01",
+  "trend_score": 66,
+  "evidence_level": "L1",
+  "decision": "observe",
+  "signals": {
+    "S2-场景需求": 18,
+    "S4-价格": 6,
+    "S7-互动量": 3
+  },
+  "design_elements": [
+    {"word": "плиссе", "dim": "面料", "total": 9}
+  ],
+  "offer_url": "https://detail.1688.com/offer/000000000002.html",
+  "price_cny": 49,
+  "weight_g": 280,
+  "composition": "Полиэстер 100%",
+  "cn_title": "自检用探测工单",
+  "gender": "Женский",
+  "specs": [{"color": "хаки", "color_name": "Khaki"}],
+  "listed_hits": 2,
+  "size_chart": {
+    "columns": ["Российский размер", "Обхват талии"],
+    "rows": {"44": ["60"], "46": ["64"]}
+  },
+  "_readme": "自评分脚本用它做一次零成本全链路实跑。它是一条结构完整的工单，数值为探测用，不代表真实市场。"
+}

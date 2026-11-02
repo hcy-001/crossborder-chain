@@ -1,0 +1,282 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/product-input.schema.json",
+  "title": "Product package input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sku",
+    "destination",
+    "category",
+    "close_to_skin",
+    "is_child",
+    "facts",
+    "variants",
+    "title_tokens",
+    "copy",
+    "attributes",
+    "platforms",
+    "pricing_facts"
+  ],
+  "properties": {
+    "sku": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "destination": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "close_to_skin": {
+      "type": "boolean"
+    },
+    "is_child": {
+      "type": "boolean"
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "value",
+          "unit",
+          "source_kind",
+          "basis",
+          "confidence"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {},
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_kind": {
+            "enum": [
+              "measured",
+              "reported",
+              "estimated"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "size": {
+      "type": "object"
+    },
+    "title_tokens": {
+      "$ref": "title-tokens.schema.json"
+    },
+    "copy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "desc",
+        "bullets",
+        "keywords"
+      ],
+      "properties": {
+        "desc": {
+          "type": "string"
+        },
+        "bullets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "canonical_key",
+          "value",
+          "synonyms",
+          "confidence"
+        ],
+        "properties": {
+          "canonical_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              }
+            ]
+          },
+          "synonyms": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        }
+      }
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      }
+    },
+    "signal_query": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pricing_facts": {
+      "type": "array",
+      "items": {
+        "$ref": "fact.schema.json"
+      }
+    },
+    "persona": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "hypothesis",
+            "observed",
+            "validated",
+            "unassigned"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "falsifier_ok": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "positioning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trigger",
+        "objection",
+        "proof"
+      ],
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "minLength": 2
+        },
+        "objection": {
+          "type": "string",
+          "minLength": 2
+        },
+        "proof": {
+          "type": "string",
+          "minLength": 2
+        }
+      }
+    },
+    "creative_brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "must_show",
+        "must_not"
+      ],
+      "properties": {
+        "must_show": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "must_not": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "audience": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

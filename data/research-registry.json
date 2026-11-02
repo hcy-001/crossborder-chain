@@ -1,0 +1,418 @@
+{
+  "version": 1,
+  "as_of": "2026-11-01",
+  "why": "跨境电商要判断的不是「这个货好不好」，而是「这个货在这个市场、这个平台、这个时间点能不能卖」。下面每一格都是一个会改变结论的输入。空着的格子不是不重要，是还没取到。",
+  "status_legend": {
+    "final": "已取到官方/权威数据，可直接用于判断（L2）",
+    "candidate": "已取到但来源为二手或需人工确认（L1）",
+    "unverified": "未取到，不得用于判断",
+    "paid": "只有付费源，未采购",
+    "blocked": "公开渠道实测不可达，需账号/授权",
+    "manual": "只能人工取样，已提供工具"
+  },
+  "dimensions": [
+    {
+      "id": "A",
+      "name": "市场基本盘（国别）",
+      "items": [
+        {
+          "id": "A1",
+          "what": "人口",
+          "why": "电商可达人口上限",
+          "source": "World Bank SP.POP.TOTL",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:data"
+        },
+        {
+          "id": "A2",
+          "what": "人均 GDP",
+          "why": "可接受价格带",
+          "source": "World Bank NY.GDP.PCAP.CD",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:data"
+        },
+        {
+          "id": "A3",
+          "what": "互联网渗透率",
+          "why": "线上渗透天花板",
+          "source": "World Bank IT.NET.USER.ZS",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:data"
+        },
+        {
+          "id": "A4",
+          "what": "城镇化率",
+          "why": "末端配送密度与时效",
+          "source": "World Bank SP.URB.TOTL.IN.ZS",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:data"
+        },
+        {
+          "id": "A5",
+          "what": "人均家庭消费支出",
+          "why": "消费能力（比 GDP 更贴近可支配）",
+          "source": "World Bank NE.CON.PRVT.PC.KD",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:data"
+        },
+        {
+          "id": "A6",
+          "what": "女性劳动参与率",
+          "why": "女装需求侧参考（通勤/职业场景）",
+          "source": "World Bank SL.TLF.CACT.FE.ZS",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:data"
+        },
+        {
+          "id": "A7",
+          "what": "电商渗透率 / 线上消费额",
+          "why": "真正的市场规模；A3 只是上限",
+          "source": "UNCTAD / 各国统计口径不一",
+          "kind": "report",
+          "status": "paid",
+          "collector": "无免费官方口径；需付费源（Statista/ecommerceDB）或平台自报"
+        },
+        {
+          "id": "A8",
+          "what": "主流支付方式与 COD 占比",
+          "why": "COD 高的市场退货率与拒收率翻倍",
+          "source": "平台官方支付说明 / 行业报告",
+          "kind": "doc",
+          "status": "unverified",
+          "collector": "—"
+        },
+        {
+          "id": "A9",
+          "what": "语言与文案规范",
+          "why": "直接决定标题/描述能不能被搜到",
+          "source": "regions/<CC>/profile.json locales",
+          "kind": "config",
+          "status": "final",
+          "collector": "已内建"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "时间维度（决定上新与备货节奏）",
+      "items": [
+        {
+          "id": "B1",
+          "what": "公共节假日（9/9 法域已取：Google 官方公共假日日历，Nager 交叉核对）",
+          "why": "物流停摆日、送礼节点",
+          "source": "Nager.Date 公共假日 API",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run holidays:probe"
+        },
+        {
+          "id": "B2",
+          "what": "电商大促日历（9.9/10.10/11.11/12.12/黑五）",
+          "why": "全年 GMV 集中在这些天",
+          "source": "平台官方公告",
+          "kind": "doc",
+          "status": "candidate",
+          "collector": "data/calendar/shopping-events.json"
+        },
+        {
+          "id": "B3",
+          "what": "宗教节日（开斋节/宰牲节等在 Google 假日日历内，已随 B1 一并落盘）",
+          "why": "中东与东南亚的换季与礼赠高峰",
+          "source": "Nager.Date + 平台公告",
+          "kind": "api+doc",
+          "status": "final",
+          "collector": "npm run holidays:probe"
+        },
+        {
+          "id": "B4",
+          "what": "月均气温与年温差",
+          "why": "决定卖什么厚度：年温差 5℃ 卖不了羽绒",
+          "source": "Open-Meteo 历史再分析",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:calendar"
+        },
+        {
+          "id": "B5",
+          "what": "雨季/降水集中期",
+          "why": "影响物流时效与退货",
+          "source": "Open-Meteo",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run region:calendar"
+        },
+        {
+          "id": "B6",
+          "what": "平台备货截止日（大促入仓）",
+          "why": "错过入仓等于错过整个大促",
+          "source": "平台公告",
+          "kind": "doc",
+          "status": "unverified",
+          "collector": "—"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "品类维度",
+      "items": [
+        {
+          "id": "C1",
+          "what": "品类规模（UN Comtrade 进口额/净重/中国份额，9/9 法域；增速需多年度另取）",
+          "why": "决定值不值得进",
+          "source": "第三方数据（Statista/电商DB 等）",
+          "kind": "report",
+          "status": "final",
+          "collector": "npm run trade:probe"
+        },
+        {
+          "id": "C2",
+          "what": "价格带与主流 SKU 结构",
+          "why": "定价与选款的第一约束",
+          "source": "平台前台搜索结果人工取样",
+          "kind": "manual",
+          "status": "manual",
+          "collector": "npm run signals:sample"
+        },
+        {
+          "id": "C3",
+          "what": "热销榜 / 新品榜",
+          "why": "验证款式与价位是否对路",
+          "source": "平台前台",
+          "kind": "manual",
+          "status": "manual",
+          "collector": "npm run signals:sample"
+        },
+        {
+          "id": "C4",
+          "what": "品类合规（纤维标签、儿童安全、阻燃）",
+          "why": "不合规直接下架，不可补救",
+          "source": "各国法规/标准",
+          "kind": "doc",
+          "status": "unverified",
+          "collector": "—"
+        },
+        {
+          "id": "C5",
+          "what": "尺码体系与体型分布",
+          "why": "尺码错是退货第一原因",
+          "source": "官方标准 + 人工实测",
+          "kind": "doc+manual",
+          "status": "candidate",
+          "collector": "regions/<CC>/sizing.json"
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "name": "平台维度（能不能上、怎么填）",
+      "items": [
+        {
+          "id": "D1",
+          "what": "标题规则（Lazada 255 字节、Shopee 500 英文/204 中文且禁混填、TikTok 25–200、Amazon 200/75 冲突已记）",
+          "why": "决定能不能过审与被搜到",
+          "source": "平台官方帮助",
+          "kind": "doc",
+          "status": "final",
+          "collector": "data/specs/platforms/<p>.json + npm run title:check"
+        },
+        {
+          "id": "D2",
+          "what": "图片规格：Shopee 9 张 1:1 / Lazada 8 张 / Amazon 85%·1600·1000·500·10000px / noon 宽≥660px·比例≥0.5·仅JPEG·≤10MB·服装浅灰",
+          "why": "不合规直接拒",
+          "source": "平台官方帮助",
+          "kind": "doc",
+          "status": "final",
+          "collector": "data/specs/platforms/<p>.json"
+        },
+        {
+          "id": "D3",
+          "what": "必填属性清单（Ozon 已通 API 实拉；其余需 partner 凭证）",
+          "why": "缺一项就提交不了",
+          "source": "平台 API（需凭证）/ 后台",
+          "kind": "api",
+          "status": "blocked",
+          "collector": "npm run ozon:rules"
+        },
+        {
+          "id": "D4",
+          "what": "字典取值（Ozon 4 个字典已落盘；Lazada CPV 必须在下拉内已确认，但取值表需凭证）",
+          "why": "字典型字段填自由文本必被拒",
+          "source": "平台 API",
+          "kind": "api",
+          "status": "candidate",
+          "collector": "data/dictionaries/ozon/"
+        },
+        {
+          "id": "D5",
+          "what": "变体与合并规则（Shopee 最多 2 类变体已核；其余待核）",
+          "why": "拆卡会拆散销量与评价",
+          "source": "平台官方帮助",
+          "kind": "doc",
+          "status": "candidate",
+          "collector": "data/specs/platforms/<p>.json"
+        },
+        {
+          "id": "D6",
+          "what": "佣金费率：noon 服装 27%（KSA FBN，含 1 SAR 最低）；Ozon 需先有商品才能从 product/info 读",
+          "why": "定价分母法的输入",
+          "source": "平台官方费率页",
+          "kind": "doc",
+          "status": "candidate",
+          "collector": "docs/未决问题清账.md §11.2"
+        },
+        {
+          "id": "D7",
+          "what": "物流方案与时效",
+          "why": "决定承诺时效与运费",
+          "source": "平台官方物流说明",
+          "kind": "doc",
+          "status": "unverified",
+          "collector": "—"
+        },
+        {
+          "id": "D8",
+          "what": "禁售限售与拒因：noon 图片拒因表 + Amazon 主图 14 条压制原因已记录；Ozon 拒因见引用清单",
+          "why": "踩线即封",
+          "source": "平台政策页",
+          "kind": "doc",
+          "status": "candidate",
+          "collector": "out/verification/official-docs/"
+        },
+        {
+          "id": "D9",
+          "what": "平台帮助中心可抓性：noon 245 篇全量落地；Amazon 走 Wayback 存档；WB 全站 498 封 IP",
+          "why": "规则散在几百篇帮助文章里；能不能批量拿到，决定是「逐条猜」还是「全量检索」",
+          "status": "final",
+          "collector": "scripts/probe-noon-help.mjs"
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "name": "成本与合规（定价必需）",
+      "items": [
+        {
+          "id": "E1",
+          "what": "进口关税（HS 61/62 章服装）",
+          "why": "跨境成本大头",
+          "source": "各国海关税则",
+          "kind": "doc",
+          "status": "unverified",
+          "collector": "—"
+        },
+        {
+          "id": "E2",
+          "what": "VAT/GST/SST：RU 22%（L2 官方）· AE 5% · SA 15%（均为官方原文）· SG 9% / TH 7% / PH 12% / VN 10% / ID 12%法定11%有效 / MY 非单一税制，后者为多源参考",
+          "why": "分母法里的税率项",
+          "source": "各国税务机关",
+          "kind": "doc",
+          "status": "candidate",
+          "collector": "regions/<CC>/profile.json 的 tax_reference"
+        },
+        {
+          "id": "E3",
+          "what": "认证/准入（SASO、ECAS、SNI、TISI、CR）",
+          "why": "没有认证进不去",
+          "source": "各国标准机构",
+          "kind": "doc",
+          "status": "candidate",
+          "collector": "regions/<CC>/profile.json regime"
+        },
+        {
+          "id": "E4",
+          "what": "汇率",
+          "why": "定价换算",
+          "source": "汇率 API",
+          "kind": "api",
+          "status": "final",
+          "collector": "npm run doctor"
+        },
+        {
+          "id": "E5",
+          "what": "头程物流报价（按重量段）",
+          "why": "固定成本主项",
+          "source": "货代报价",
+          "kind": "manual",
+          "status": "manual",
+          "collector": "npm run intake"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "name": "消费者行为",
+      "items": [
+        {
+          "id": "F1",
+          "what": "宗教/文化着装约束（modesty、斋月）",
+          "why": "款式与拍摄尺度",
+          "source": "官方旅游/文化指南 + 平台规范",
+          "kind": "doc",
+          "status": "unverified",
+          "collector": "—"
+        },
+        {
+          "id": "F2",
+          "what": "评价与退货习惯",
+          "why": "影响退货率与利润",
+          "source": "平台政策",
+          "kind": "doc",
+          "status": "unverified",
+          "collector": "—"
+        },
+        {
+          "id": "F3",
+          "what": "尺码偏好吗（亚洲码 vs 欧美码）",
+          "why": "同一件衣服要按市场改码",
+          "source": "行业惯例 + 实测",
+          "kind": "manual",
+          "status": "manual",
+          "collector": "—"
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "name": "账号与权限（决定能不能直接发布）",
+      "items": [
+        {
+          "id": "G1",
+          "what": "凭证位置与权限范围（只读/读写）",
+          "why": "只读只能出材料，读写才能提交；靠人猜会到提交那一步才发现不行",
+          "status": "final",
+          "collector": "npm run probe:account",
+          "note": "该脚本用\"参数必然非法但不落地数据\"的请求探写权限，三态判定 granted/denied/unknown"
+        },
+        {
+          "id": "G2",
+          "what": "店铺现状（在架商品数、所属 company）",
+          "why": "0 商品的店铺无法从商品接口反推佣金与类目选择是否可用",
+          "status": "final",
+          "collector": "npm run probe:account"
+        },
+        {
+          "id": "G3",
+          "what": "平台侧干跑校验（提交前让平台自己判一遍）",
+          "why": "本地校验再严也只是模仿；平台有 validate 接口才算真预检",
+          "status": "unverified",
+          "collector": "待确认各平台是否提供；Ozon 未找到 validate 路径",
+          "note": "Ozon 可用 attribute/values/search 用平台字典校验取值，但不是整单干跑"
+        },
+        {
+          "id": "G4",
+          "what": "回滚能力（下架/删除接口权限）",
+          "why": "能提交不能回滚等于把风险留给卖家",
+          "status": "unverified",
+          "collector": "待核"
+        }
+      ]
+    }
+  ]
+}

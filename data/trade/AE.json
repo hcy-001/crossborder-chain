@@ -1,0 +1,71 @@
+{
+  "region": "AE",
+  "year": "2023",
+  "as_of": "2026-11-01T09:16:03.236Z",
+  "source": "un-comtrade-preview",
+  "rows": [
+    {
+      "available": true,
+      "country": "AE",
+      "hs": "6204",
+      "hs_desc": "女式西服套装、连衣裙、裙、裤（非针织）",
+      "year": "2023",
+      "import_value_usd": 989649281,
+      "net_weight_kg": 40793500,
+      "china_share_pct": 31.1,
+      "unit_price_usd_per_kg": 24.26,
+      "partners": [
+        {
+          "code": 156,
+          "name": null,
+          "value_usd": 307294594.411,
+          "net_weight_kg": 21765835.81
+        },
+        {
+          "code": 380,
+          "name": null,
+          "value_usd": 153221084.41,
+          "net_weight_kg": 333360.79
+        },
+        {
+          "code": 699,
+          "name": null,
+          "value_usd": 130133007.56,
+          "net_weight_kg": 8320872.73
+        },
+        {
+          "code": 792,
+          "name": null,
+          "value_usd": 68556964.261,
+          "net_weight_kg": 1340947.32
+        },
+        {
+          "code": 50,
+          "name": null,
+          "value_usd": 62226915.237,
+          "net_weight_kg": 2811843.15
+        },
+        {
+          "code": 504,
+          "name": null,
+          "value_usd": 35748254.955,
+          "net_weight_kg": 578062.23
+        },
+        {
+          "code": 251,
+          "name": null,
+          "value_usd": 31595730.701,
+          "net_weight_kg": 35744.65
+        },
+        {
+          "code": 704,
+          "name": null,
+          "value_usd": 28898200.004,
+          "net_weight_kg": 689651.15
+        }
+      ],
+      "note": null,
+      "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=784&period=2023&cmdCode=6204&flowCode=M"
+    }
+  ]
+}

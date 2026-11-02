@@ -1,0 +1,214 @@
+{
+  "ok": true,
+  "sku": "demo-sku",
+  "package": "D:\\DSH\\创想\\AI创新大赛\\package\\demo-sku",
+  "checks_total": 18,
+  "checks_failed": 0,
+  "failed": [],
+  "checks": [
+    {
+      "id": "master_image_count",
+      "ok": true,
+      "detail": "manifest=9 files=9 expected=9"
+    },
+    {
+      "id": "master_images_900x1200_png",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "master_sha256_matches_manifest",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "images_marked_placeholder",
+      "ok": true,
+      "detail": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "platform_count_at_least_two",
+      "ok": true,
+      "detail": [
+        "ozon",
+        "wildberries"
+      ]
+    },
+    {
+      "id": "platform_images_match_master",
+      "ok": true,
+      "detail": [
+        "ozon:9",
+        "wildberries:9"
+      ]
+    },
+    {
+      "id": "platform_copy_byte_identical",
+      "ok": true,
+      "detail": [
+        "ozon:true",
+        "wildberries:true"
+      ]
+    },
+    {
+      "id": "platform_ratio_consistent",
+      "ok": true,
+      "detail": [
+        "ozon:900x1200",
+        "wildberries:900x1200"
+      ]
+    },
+    {
+      "id": "title_txt_absent_while_template_unverified",
+      "ok": true,
+      "detail": [
+        "ozon:absent",
+        "wildberries:absent"
+      ]
+    },
+    {
+      "id": "handoff_line1_blocked",
+      "ok": true,
+      "detail": "BLOCKED: 待完成：须依据 TR CU 017/2011 完成符合性声明（DoC），并按要求使用 EAC 标志。；"
+    },
+    {
+      "id": "handoff_line2_placeholder",
+      "ok": true,
+      "detail": "本包图片为占位图，仅用于验证流程，不可直接投放"
+    },
+    {
+      "id": "handoff_video_optional_wording",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "receipt_present",
+      "ok": true,
+      "detail": "20261029-025309-a410"
+    },
+    {
+      "id": "degradation_imagegen_placeholder",
+      "ok": true,
+      "detail": [
+        "imagegen",
+        "video",
+        "source",
+        "pricing"
+      ]
+    },
+    {
+      "id": "degradation_video_optional",
+      "ok": true,
+      "detail": [
+        "imagegen",
+        "video",
+        "source",
+        "pricing"
+      ]
+    },
+    {
+      "id": "receipt_pricing_has_no_invented_price",
+      "ok": true,
+      "detail": "unavailable"
+    },
+    {
+      "id": "signals_receipt_recorded",
+      "ok": true,
+      "detail": "transient"
+    },
+    {
+      "id": "video_absent_when_unavailable",
+      "ok": true,
+      "detail": 0
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ozon",
+      "images": 9,
+      "unique_dims": [
+        "900x1200"
+      ],
+      "expected_ratio": null,
+      "copy_byte_identical": true,
+      "copy_files": 3,
+      "validate_passed": [
+        "copy_byte_identical",
+        "title_tokens_preserved",
+        "attributes_mapped",
+        "ratio_3x4_source_copy",
+        "image_count",
+        "image_bytes",
+        "image_dimensions"
+      ],
+      "violations": [],
+      "conflicts": [
+        {
+          "key": "platform.ozon.image.max_count",
+          "status": "conflicted"
+        },
+        {
+          "key": "platform.ozon.title.max_chars",
+          "status": "candidate"
+        },
+        {
+          "key": "platform.ozon.title.template",
+          "status": "unverified"
+        }
+      ],
+      "crop_unsafe": [],
+      "has_title_txt": false
+    },
+    {
+      "platform": "wildberries",
+      "images": 9,
+      "unique_dims": [
+        "900x1200"
+      ],
+      "expected_ratio": null,
+      "copy_byte_identical": true,
+      "copy_files": 3,
+      "validate_passed": [
+        "copy_byte_identical",
+        "title_tokens_preserved",
+        "attributes_mapped",
+        "ratio_3x4_source_copy",
+        "image_count",
+        "image_bytes",
+        "image_dimensions"
+      ],
+      "violations": [],
+      "conflicts": [
+        {
+          "key": "platform.wildberries.image.max_bytes",
+          "status": "candidate"
+        },
+        {
+          "key": "platform.wildberries.image.max_count",
+          "status": "candidate"
+        },
+        {
+          "key": "platform.wildberries.image.min_size",
+          "status": "candidate"
+        },
+        {
+          "key": "platform.wildberries.image.ratio",
+          "status": "candidate"
+        },
+        {
+          "key": "platform.wildberries.title.max_chars",
+          "status": "candidate"
+        },
+        {
+          "key": "platform.wildberries.title.template",
+          "status": "unverified"
+        }
+      ],
+      "crop_unsafe": [],
+      "has_title_txt": false
+    }
+  ]
+}
+EXIT=0

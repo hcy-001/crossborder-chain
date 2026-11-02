@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-29",
+  "note": "三人群是假设（hypothesis），不是结论。判别变量只用现有工单里真能算出来的三样：搜索词、信号结构、成本带。每条必须有 falsifier，没有就删掉这条。",
+  "signal_keys": {
+    "S2-场景需求": "S2",
+    "S6-尺寸/空间": "S6",
+    "S7-互动量": "S7"
+  },
+  "personas": [
+    {
+      "id": "A",
+      "label_ru": "Офисный базовый",
+      "label_zh": "通勤基础款",
+      "status": "hypothesis",
+      "query_tokens": ["офис", "на работу", "базов", "повседнев"],
+      "signal_key": "S2-场景需求",
+      "cost_band_cny": [40, 90],
+      "jobs": ["上班能穿，下班不用换装"],
+      "objections": ["怕皱", "怕透"],
+      "proof_needed": ["面料近景（织纹与厚薄）", "腰线侧身 45° 可测版型"],
+      "falsifier": {
+        "metric": "signal_share",
+        "source": "ticket_signals",
+        "threshold": 0.10,
+        "window": "ticket_snapshot",
+        "action_if_false": "该人群在本批工单里不成立，降为 unassigned 并释放关键词配额"
+      }
+    },
+    {
+      "id": "B",
+      "label_ru": "Размер и посадка",
+      "label_zh": "体型适配",
+      "status": "hypothesis",
+      "query_tokens": ["размер", "полн", "по фигуре", "облегч", "больш"],
+      "signal_key": "S6-尺寸/空间",
+      "cost_band_cny": [40, 110],
+      "jobs": ["按身材选合身款，不被尺码表骗"],
+      "objections": ["尺码不准", "显胖"],
+      "proof_needed": ["平铺量尺实拍", "同款两个尺码对比"],
+      "falsifier": {
+        "metric": "signal_share",
+        "source": "ticket_signals",
+        "threshold": 0.10,
+        "window": "ticket_snapshot",
+        "action_if_false": "尺寸维度在本批不成立，合并回 A"
+      }
+    },
+    {
+      "id": "C",
+      "label_ru": "Сценарный образ",
+      "label_zh": "场景穿搭",
+      "status": "hypothesis",
+      "query_tokens": ["праздник", "выпускной", "пляж", "новый год", "свидан"],
+      "signal_key": "S7-互动量",
+      "cost_band_cny": [40, 110],
+      "jobs": ["为一个具体场合买一件，穿一次也值"],
+      "objections": ["太隆重", "穿一次就压箱底"],
+      "proof_needed": ["同一件在场合与日常各一张", "配饰可替换示意"],
+      "falsifier": {
+        "metric": "signal_share",
+        "source": "ticket_signals",
+        "threshold": 0.08,
+        "window": "ticket_snapshot",
+        "action_if_false": "季节性不可复现，降为活动款标签"
+      }
+    }
+  ]
+}

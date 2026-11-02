@@ -1,0 +1,305 @@
+{
+  "region": "AE",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Abu Dhabi",
+        "monthly_mean_c": [
+          20.1,
+          21.3,
+          23.8,
+          29.1,
+          32.2,
+          32.8,
+          34.8,
+          36.3,
+          34,
+          30.7,
+          26.5,
+          22.7
+        ],
+        "monthly_precip_mm": [
+          1,
+          4,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          16
+        ],
+        "annual_range_c": 16.2
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=24.4539&longitude=54.3773&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FDubai",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Abu Dhabi 2025 年日值聚合成月均；年温差 16.2℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 52.347,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 49850.6945082084,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2027-01-06",
+          "name": "Leilat al-Meiraj (tentative)"
+        },
+        {
+          "date": "2027-02-08",
+          "name": "Ramadan Start (tentative)"
+        },
+        {
+          "date": "2027-03-10",
+          "name": "Eid al-Fitr (tentative)"
+        },
+        {
+          "date": "2027-03-11",
+          "name": "Eid al-Fitr Holiday (tentative)"
+        },
+        {
+          "date": "2027-03-12",
+          "name": "Eid al-Fitr Holiday (tentative)"
+        },
+        {
+          "date": "2027-05-08",
+          "name": "Hajj season begins (tentative)"
+        },
+        {
+          "date": "2027-05-16",
+          "name": "Arafat (Hajj) Day (tentative)"
+        },
+        {
+          "date": "2027-05-17",
+          "name": "Eid al-Adha (Feast of Sacrifice) (tentative)"
+        },
+        {
+          "date": "2027-05-17",
+          "name": "Eid al-Adha Holiday (tentative)"
+        },
+        {
+          "date": "2027-05-18",
+          "name": "Eid al-Adha Holiday (tentative)"
+        },
+        {
+          "date": "2027-06-06",
+          "name": "Al-Hijra (Islamic New Year) (tentative)"
+        },
+        {
+          "date": "2027-08-15",
+          "name": "Mouloud (tentative)"
+        },
+        {
+          "date": "2027-11-30",
+          "name": "Commemoration Day"
+        },
+        {
+          "date": "2027-12-02",
+          "name": "National Day"
+        },
+        {
+          "date": "2027-12-03",
+          "name": "National Day Holiday"
+        },
+        {
+          "date": "2027-12-26",
+          "name": "Leilat al-Meiraj (tentative)"
+        },
+        {
+          "date": "2027-12-31",
+          "name": "New Year's Eve"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.ae%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 18 天（全国 18 / 州级 0）；用于排产与上新节奏。无第二源核对"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 22906.4179237624,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 100,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 10483751,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 85.6680699002526,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "AE",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

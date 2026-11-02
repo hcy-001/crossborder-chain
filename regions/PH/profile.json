@@ -1,0 +1,36 @@
+{
+  "id": "PH",
+  "regime": "PH",
+  "locales": [
+    "en-PH"
+  ],
+  "currency": "PHP",
+  "price_rounding": null,
+  "platforms": [
+    "shopee",
+    "lazada",
+    "tiktok-shop"
+  ],
+  "completion": "skeleton",
+  "signal_sources": {
+    "allowed": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "marketplace-search"
+    ],
+    "blocked": []
+  },
+  "tax_reference": {
+    "standard_rate": 0.12,
+    "reduced_rates": [
+      0.0
+    ],
+    "label": "VAT",
+    "status": "candidate",
+    "source": "多源一致（未逐一核 bir.gov.ph）",
+    "source_url": "https://www.bir.gov.ph/",
+    "note": "12% 标准税率。二手多源一致，未从税务局官网逐字核。",
+    "checked_at": "2026-11-01"
+  }
+}

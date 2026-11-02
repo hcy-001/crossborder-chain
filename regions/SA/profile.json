@@ -1,0 +1,35 @@
+{
+  "id": "SA",
+  "regime": "SASO",
+  "locales": [
+    "ar-SA"
+  ],
+  "currency": "SAR",
+  "price_rounding": 2,
+  "platforms": [
+    "noon",
+    "amazon"
+  ],
+  "completion": "skeleton",
+  "signal_sources": {
+    "allowed": [
+      "instagram",
+      "tiktok",
+      "snapchat",
+      "marketplace-search"
+    ],
+    "blocked": []
+  },
+  "tax_reference": {
+    "standard_rate": 0.15,
+    "reduced_rates": [
+      0.0
+    ],
+    "label": "VAT",
+    "status": "final",
+    "source": "noon 卖家条款（KSA FBN fees / T&Cs）",
+    "source_url": "https://help.noon.partners/hc/en-us/articles/10750279839767",
+    "note": "官方原文：15% VAT；进口环节由 noon 先行垫付，跨境卖家侧另有约 10% 补贴机制，实际净税负需按结算单核。",
+    "checked_at": "2026-11-01"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "pricing-margin-30",
+  "what": "目标毛利 30% 时，售价必须让毛利率精确落在 30%，且明细自洽",
+  "input": {
+    "ticket": {
+      "price_cny": 67,
+      "weight_g": 280
+    },
+    "region": {
+      "currency": "RUB"
+    },
+    "costPolicy": {
+      "required_components": [
+        "shipping",
+        "commission",
+        "tax",
+        "payment_fee"
+      ]
+    },
+    "intakeAnswers": {
+      "international_shipping_fee_cny": 33,
+      "platform_commission_rate": "18%",
+      "vat_rate": "6%",
+      "payment_fee_rate": "2%",
+      "target_margin_rate": "30%"
+    },
+    "fxFacts": [
+      {
+        "key": "fx.USD_CNY",
+        "value": 6.6664
+      },
+      {
+        "key": "fx.USD_RUB",
+        "value": 80.8664
+      }
+    ]
+  },
+  "expect": {
+    "status": "available",
+    "target_price_cny": 227.27,
+    "profit_rate": 0.3,
+    "commission_cny": 40.91
+  }
+}

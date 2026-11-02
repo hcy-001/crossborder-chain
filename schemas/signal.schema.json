@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/signal.schema.json",
+  "title": "Observed market signal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source", "url", "fetched_at", "data_as_of", "reporting_lag", "is_realtime", "raw", "confidence"],
+  "properties": {
+    "source": {"type": "string", "minLength": 1},
+    "url": {"type": "string", "pattern": "^https://"},
+    "fetched_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{3})?Z$"},
+    "data_as_of": {
+      "oneOf": [
+        {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{3})?Z$"},
+        {"type": "null"}
+      ]
+    },
+    "reporting_lag": {"type": ["string", "null"]},
+    "is_realtime": {"type": "boolean"},
+    "raw": {},
+    "confidence": {"enum": ["official", "secondary", "unverified"]}
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "properties": {"is_realtime": {"const": true}},
+        "required": ["is_realtime"]
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "data_as_of": {"type": "string"},
+          "reporting_lag": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": {"reporting_lag": {"type": "string"}},
+        "required": ["reporting_lag"]
+      },
+      "then": {
+        "type": "object",
+        "properties": {"is_realtime": {"const": false}}
+      }
+    }
+  ]
+}

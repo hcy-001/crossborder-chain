@@ -1,0 +1,224 @@
+[
+  {
+    "id": "frankfurter-usd-cny",
+    "kind": "source",
+    "adapter": "frankfurter",
+    "url": "https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY",
+    "source_type": "official",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_CNY",
+    "role": "primary",
+    "priority": 10,
+    "capabilities": {
+      "key": "fx.USD_CNY",
+      "base": "USD",
+      "quote": "CNY",
+      "unit": "CNY/USD"
+    },
+    "mapping": {
+      "value_path": "/rates/CNY",
+      "key": "fx.USD_CNY",
+      "unit": "CNY/USD",
+      "as_of_path": "/date",
+      "cross_check_group": "USD_CNY",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "cbr-usd-rub",
+    "kind": "source",
+    "adapter": "cbr",
+    "url": "https://www.cbr-xml-daily.ru/daily_json.js",
+    "source_type": "official-mirror",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_RUB",
+    "role": "primary",
+    "priority": 10,
+    "capabilities": {
+      "key": "fx.USD_RUB",
+      "base": "USD",
+      "quote": "RUB",
+      "unit": "RUB/USD"
+    },
+    "mapping": {
+      "value_path": "/Valute/USD/Value",
+      "key": "fx.USD_RUB",
+      "unit": "RUB/USD",
+      "as_of_path": "/Date",
+      "cross_check_group": "USD_RUB",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "cbr-usd-cny-cross",
+    "kind": "source",
+    "adapter": "cbr",
+    "url": "https://www.cbr-xml-daily.ru/daily_json.js",
+    "source_type": "official-mirror",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_CNY",
+    "role": "cross-check",
+    "priority": 20,
+    "capabilities": {
+      "key": "fx.USD_CNY",
+      "base": "USD",
+      "quote": "CNY",
+      "unit": "CNY/USD"
+    },
+    "mapping": {
+      "value_path": "/Valute/CNY/Value",
+      "key": "fx.USD_CNY",
+      "unit": "CNY/USD",
+      "as_of_path": "/Date",
+      "cross_check_group": "USD_CNY",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "cbr-usd-sar",
+    "kind": "source",
+    "adapter": "cbr",
+    "url": "https://www.cbr-xml-daily.ru/daily_json.js",
+    "source_type": "official-mirror",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "priority": 10,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_SAR",
+    "role": "primary",
+    "capabilities": {"key": "fx.USD_SAR", "base": "USD", "quote": "SAR", "unit": "SAR/USD"},
+    "mapping": {
+      "value_path": "/Valute/USD/Value",
+      "key": "fx.USD_SAR",
+      "unit": "SAR/USD",
+      "as_of_path": "/Date",
+      "cross_check_group": "USD_SAR",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "cbr-usd-aed",
+    "kind": "source",
+    "adapter": "cbr",
+    "url": "https://www.cbr-xml-daily.ru/daily_json.js",
+    "source_type": "official-mirror",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "priority": 10,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_AED",
+    "role": "primary",
+    "capabilities": {"key": "fx.USD_AED", "base": "USD", "quote": "AED", "unit": "AED/USD"},
+    "mapping": {
+      "value_path": "/Valute/USD/Value",
+      "key": "fx.USD_AED",
+      "unit": "AED/USD",
+      "as_of_path": "/Date",
+      "cross_check_group": "USD_AED",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "fxratesapi-usd-sar",
+    "kind": "source",
+    "adapter": "http-json",
+    "url": "https://api.fxratesapi.com/latest?base=USD&currencies=SAR",
+    "source_type": "secondary",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "priority": 20,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_SAR",
+    "role": "primary",
+    "capabilities": {"key": "fx.USD_SAR", "base": "USD", "quote": "SAR", "unit": "SAR/USD"},
+    "mapping": {
+      "value_path": "/rates/SAR",
+      "key": "fx.USD_SAR",
+      "unit": "SAR/USD",
+      "as_of_path": "/date",
+      "cross_check_group": "USD_SAR",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "fxratesapi-usd-aed",
+    "kind": "source",
+    "adapter": "http-json",
+    "url": "https://api.fxratesapi.com/latest?base=USD&currencies=AED",
+    "source_type": "secondary",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "priority": 20,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_AED",
+    "role": "primary",
+    "capabilities": {"key": "fx.USD_AED", "base": "USD", "quote": "AED", "unit": "AED/USD"},
+    "mapping": {
+      "value_path": "/rates/AED",
+      "key": "fx.USD_AED",
+      "unit": "AED/USD",
+      "as_of_path": "/date",
+      "cross_check_group": "USD_AED",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "fxratesapi-usd-cny",
+    "kind": "source",
+    "adapter": "http-json",
+    "url": "https://api.fxratesapi.com/latest?base=USD&currencies=CNY",
+    "source_type": "secondary",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "priority": 30,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_CNY",
+    "role": "primary",
+    "capabilities": {"key": "fx.USD_CNY", "base": "USD", "quote": "CNY", "unit": "CNY/USD"},
+    "mapping": {
+      "value_path": "/rates/CNY",
+      "key": "fx.USD_CNY",
+      "unit": "CNY/USD",
+      "as_of_path": "/date",
+      "cross_check_group": "USD_CNY",
+      "cost_direction": "higher_is_worse"
+    }
+  },
+  {
+    "id": "fxratesapi-usd-rub",
+    "kind": "source",
+    "adapter": "http-json",
+    "url": "https://api.fxratesapi.com/latest?base=USD&currencies=RUB",
+    "source_type": "secondary",
+    "requires": "none",
+    "enabled": true,
+    "ttl_hours": 24,
+    "priority": 30,
+    "scope": {"region": null, "platform": null, "category": null},
+    "pair": "USD_RUB",
+    "role": "primary",
+    "capabilities": {"key": "fx.USD_RUB", "base": "USD", "quote": "RUB", "unit": "RUB/USD"},
+    "mapping": {
+      "value_path": "/rates/RUB",
+      "key": "fx.USD_RUB",
+      "unit": "RUB/USD",
+      "as_of_path": "/date",
+      "cross_check_group": "USD_RUB",
+      "cost_direction": "higher_is_worse"
+    }
+  }
+]

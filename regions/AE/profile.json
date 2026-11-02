@@ -1,0 +1,35 @@
+{
+  "id": "AE",
+  "regime": "ECAS",
+  "locales": [
+    "en-AE"
+  ],
+  "currency": "AED",
+  "price_rounding": 2,
+  "platforms": [
+    "noon",
+    "amazon"
+  ],
+  "completion": "skeleton",
+  "signal_sources": {
+    "allowed": [
+      "instagram",
+      "tiktok",
+      "snapchat",
+      "marketplace-search"
+    ],
+    "blocked": []
+  },
+  "tax_reference": {
+    "standard_rate": 0.05,
+    "reduced_rates": [
+      0.0
+    ],
+    "label": "VAT",
+    "status": "final",
+    "source": "noon 卖家条款（UAE Seller T&Cs）",
+    "source_url": "https://help.noon.partners/en/category/noon-seller-terms-and-conditions",
+    "note": "官方原文：5% VAT；跨境出口销售按零税率（export sales are zero-rated for UAE VAT），所以出口卖家通常不在当地缴这 5%。",
+    "checked_at": "2026-11-01"
+  }
+}

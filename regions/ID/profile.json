@@ -1,0 +1,37 @@
+{
+  "id": "ID",
+  "regime": "ID",
+  "locales": [
+    "id-ID"
+  ],
+  "currency": "IDR",
+  "price_rounding": null,
+  "platforms": [
+    "shopee",
+    "lazada",
+    "tiktok-shop"
+  ],
+  "completion": "skeleton",
+  "signal_sources": {
+    "allowed": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "marketplace-search"
+    ],
+    "blocked": []
+  },
+  "tax_reference": {
+    "standard_rate": 0.12,
+    "effective_rate": 0.11,
+    "reduced_rates": [
+      0.0
+    ],
+    "label": "PPN",
+    "status": "candidate",
+    "source": "多源一致（PMK 131/2024）",
+    "source_url": "https://www.pajak.go.id/",
+    "note": "法定 12%，但普通非奢侈品按 11/12 计税基础计算，**实际有效税率 11%**（PMK No.131/2024，2025-01-01 起）。奢侈品按 12% 全额。定价按 11% 算成本，但要知道法定是 12%。",
+    "checked_at": "2026-11-01"
+  }
+}

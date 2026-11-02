@@ -1,0 +1,59 @@
+{
+  "id": "SA",
+  "system": "INT",
+  "label": "GULF",
+  "unit": "cm",
+  "status": "unverified",
+  "source": {
+    "status": "unverified",
+    "reason": "该法域的官方尺码规范未取得（平台侧要 partner 凭证才给类目尺码模板）。变体名与列名取行业通用做法，需在后台核对一次。",
+    "checked_at": "2026-11-01",
+    "reference_level": "secondary"
+  },
+  "chart": {
+    "default_columns": [
+      "Size",
+      "Bust, cm",
+      "Waist, cm",
+      "Hip, cm",
+      "Length, cm"
+    ],
+    "int_equivalence": null,
+    "int_equivalence_note": "沙特同样国际码 + 欧码并用；因着装规范，长袖与及地长度的占比高于其他市场，尺码表要含衣长。"
+  },
+  "platform_fields": {
+    "amazon": {
+      "shape": "variation",
+      "variation_name": "Size",
+      "size_chart_required": true,
+      "status": "candidate",
+      "note": "Amazon 用变体（Size / Color 两个维度）；服装类目要求尺码表。变体名以后台为准，此处取候选值。"
+    },
+    "noon": {
+      "shape": "variation",
+      "variation_name": "Size",
+      "size_chart_required": null,
+      "status": "unverified",
+      "note": "noon 无公开文档，变体名与尺码表要求均未核；只按变体型给出结构，字段名必须人工确认。"
+    }
+  },
+  "rules": [
+    "以国际码 S/M/L 为基准，同时给出胸/腰/臀/衣长四项实测，别只给码号",
+    "当地体型普遍偏大，中国码直接标注会偏小一档；能实测就实测，不能实测要写清\"按中国码标注\"",
+    "沙特市场长袖与及地款占比高，衣长是选购关键参数，不能省",
+    "颜色与尺码组合会乘出 SKU 数，两个维度都要控制在平台允许范围内"
+  ],
+  "confirmation": {
+    "status": "pending_seller",
+    "required_from_seller": [
+      "amazon.variation_name",
+      "noon.variation_name"
+    ],
+    "why": "变体维度名与尺码表模板在各平台后台可自定义，公开文档只给示例",
+    "how_to_confirm": [
+      "登录对应平台后台 → 新建服装类商品 → 变体与尺码表设置",
+      "抄下尺码变体的实际名称、选项顺序、尺码表模板列名",
+      "填进 platform_fields.<platform>，并把 status 改为 confirmed_by_seller"
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "as_of": "2026-10-29",
+  "why": "信息获取是这条链路的第一段。这里只登记「能自治取到的源」与「必须靠授权的源」，并把实测状态写死，避免配置里写一堆用不了的名单。",
+  "tiers": {
+    "A_auto": "无需账号/代理，实测可自动取（本 Skill 直接调用）",
+    "B_auth": "需要用户给 key/账号（代码就位，默认不跑）",
+    "C_blocked": "实测不可达或有合规风险（明确不做，写原因）"
+  },
+  "sources": [
+    {
+      "id": "fx-rates",
+      "tier": "A_auto",
+      "kind": "api",
+      "what": "汇率（USD/CNY、USD/各目标币）",
+      "endpoint": "https://open.er-api.com/v6/latest/USD",
+      "fields": [
+        "rates"
+      ],
+      "probe": {
+        "method": "GET",
+        "expect": [
+          200
+        ]
+      },
+      "regions": [
+        "*"
+      ],
+      "note": "价格链路的必需输入；已有实现与事实缓存"
+    },
+    {
+      "id": "ozon-seller-api",
+      "tier": "B_auth",
+      "kind": "api",
+      "what": "自有店铺：类目树、属性字典、属性取值、商品列表、价格、库存",
+      "endpoint": "https://api-seller.ozon.ru",
+      "fields": [
+        "description_category_id",
+        "type_id",
+        "attribute",
+        "attribute/values",
+        "product/list"
+      ],
+      "probe": {
+        "method": "POST",
+        "path": "/v1/description-category/tree",
+        "expect": [
+          200
+        ]
+      },
+      "regions": [
+        "RU"
+      ],
+      "note": "实测 6 个域可用；无 header 时返回 401「Client-Id and Api-Key headers are required」，属未带凭证而非不可达",
+      "auth": "ozon"
+    },
+    {
+      "id": "ozon-public-search",
+      "tier": "C_blocked",
+      "kind": "search",
+      "what": "公开商品搜索（竞品价格/款式）",
+      "endpoint": "https://www.ozon.ru/api/composer-api.bx/page/json/v2",
+      "fields": [],
+      "probe": {
+        "method": "GET",
+        "expect": [
+          200
+        ]
+      },
+      "regions": [
+        "RU"
+      ],
+      "note": "前台接口有反爬；不绕过。竞品数据当前只能人工抄或走第三方服务"
+    },
+    {
+      "id": "wildberries-public",
+      "tier": "C_blocked",
+      "kind": "api",
+      "what": "WB 商品卡与热榜",
+      "endpoint": "https://card.wb.ru/cards/v2/detail",
+      "fields": [],
+      "probe": {
+        "method": "GET",
+        "expect": [
+          200
+        ]
+      },
+      "regions": [
+        "RU"
+      ],
+      "note": "实测 HTTP 403（WAF）；开发者文档有浏览器校验，未绕过"
+    },
+    {
+      "id": "vk-public",
+      "tier": "B_auth",
+      "kind": "social",
+      "what": "俄语社媒趋势（穿搭内容、互动量）",
+      "endpoint": "https://api.vk.com/method/utils.getServerTime",
+      "fields": [
+        "posts",
+        "engagement"
+      ],
+      "probe": {
+        "method": "GET",
+        "expect": [
+          200
+        ]
+      },
+      "regions": [
+        "RU"
+      ],
+      "note": "实测 200，返回 error_code 8「version is required」：接口可达，需 access_token + version 参数",
+      "requires_token": true
+    },
+    {
+      "id": "yandex-wordstat",
+      "tier": "B_auth",
+      "kind": "search",
+      "what": "俄语搜索词频（需求强度）",
+      "endpoint": "https://wordstat.yandex.ru/",
+      "fields": [],
+      "probe": {
+        "method": "GET",
+        "expect": [
+          200
+        ]
+      },
+      "regions": [
+        "RU"
+      ],
+      "note": "实测 200（页面可达），但数据要登录 Yandex 账号且无公开 API；不绕过",
+      "requires_login": true
+    },
+    {
+      "id": "tiktok-instagram",
+      "tier": "C_blocked",
+      "kind": "social",
+      "what": "东南亚/中东社媒趋势",
+      "endpoint": "https://www.tiktok.com/",
+      "fields": [],
+      "probe": {
+        "method": "GET",
+        "expect": [
+          200
+        ]
+      },
+      "regions": [
+        "AE",
+        "SA",
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN"
+      ],
+      "note": "本机直连 fetch failed；即使走代理也没有公开趋势 API，抓页面属绕过反爬，不做"
+    },
+    {
+      "id": "marketplace-search-manual",
+      "tier": "B_auth",
+      "kind": "manual",
+      "what": "平台搜索页人工取样（竞品价格、款式、评价数）",
+      "endpoint": null,
+      "fields": [
+        "price",
+        "sales_hint",
+        "review_count"
+      ],
+      "probe": null,
+      "regions": [
+        "AE",
+        "SA",
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN",
+        "RU"
+      ],
+      "note": "无 API 的地区用「人工抄 20 条」的方式，产出 sourcing_ticket；这是当前唯一合规路径"
+    }
+  ],
+  "conclusion": "可达三种情形：汇率（A，直接可用）、VK/Wordstat/Ozon Seller API（B，需 token 或账号，接口已实测可达）、WB/前台搜索/社媒（C，403 或反爬，不做）。所以「工单」仍是信息获取的唯一通用入口，其余按地区选 B 档路径。"
+}

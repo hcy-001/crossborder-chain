@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/spec-record.schema.json",
+  "title": "Platform or region specification record",
+  "allOf": [
+    {"$ref": "fact.schema.json"},
+    {
+      "type": "object",
+      "required": ["confidence", "status", "conflict_id"]
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": {"source_type": {"const": "secondary"}},
+        "required": ["source_type"]
+      },
+      "then": {
+        "type": "object",
+        "properties": {"status": {"enum": ["candidate", "conflicted", "unverified"]}}
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": {"status": {"const": "final"}},
+        "required": ["status"]
+      },
+      "then": {
+        "type": "object",
+        "properties": {"confidence": {"enum": ["official", "secondary"]}}
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": {"status": {"const": "unverified"}},
+        "required": ["status"]
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "confidence": {"const": "unverified"},
+          "value": {"type": "null"}
+        }
+      }
+    }
+  ]
+}

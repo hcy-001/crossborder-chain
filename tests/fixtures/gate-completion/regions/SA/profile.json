@@ -1,0 +1,10 @@
+{
+  "id": "SA",
+  "regime": "SASO",
+  "locales": ["ar-SA"],
+  "currency": "SAR",
+  "price_rounding": 2,
+  "platforms": ["noon"],
+  "completion": "full",
+  "signal_sources": {"allowed": ["marketplace-search"], "blocked": []}
+}

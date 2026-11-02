@@ -1,0 +1,8 @@
+canonical_key,synonyms,value_type
+brand,brand_name|string
+product_type,product_name|category|string
+color,color_name|string
+size,size_name|string
+material,composition|string
+audience,gender|department|string
+merge_card,sku|unique_articul|string

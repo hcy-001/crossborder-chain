@@ -1,0 +1,336 @@
+{
+  "region": "ID",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Jakarta",
+        "monthly_mean_c": [
+          26.7,
+          26.7,
+          27.1,
+          27.1,
+          27.8,
+          27.3,
+          27.7,
+          27.3,
+          27.8,
+          28.1,
+          27.5,
+          27.4
+        ],
+        "monthly_precip_mm": [
+          419,
+          244,
+          336,
+          235,
+          278,
+          191,
+          166,
+          172,
+          158,
+          237,
+          184,
+          232
+        ],
+        "annual_range_c": 1.4
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-6.2088&longitude=106.8456&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FJakarta",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Jakarta 2025 年日值聚合成月均；年温差 1.4℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 53.487,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 4876.2992959843,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2027-01-05",
+          "name": "Ascension of the Prophet Muhammad (tentative)"
+        },
+        {
+          "date": "2027-02-05",
+          "name": "Chinese New Year Joint Holiday"
+        },
+        {
+          "date": "2027-02-06",
+          "name": "Chinese New Year's Day"
+        },
+        {
+          "date": "2027-03-08",
+          "name": "Bali's Day of Silence and Hindu New Year (Nyepi)"
+        },
+        {
+          "date": "2027-03-09",
+          "name": "Idul Fitri Joint Holiday"
+        },
+        {
+          "date": "2027-03-10",
+          "name": "Idul Fitri (tentative)"
+        },
+        {
+          "date": "2027-03-11",
+          "name": "Idul Fitri Holiday (tentative)"
+        },
+        {
+          "date": "2027-03-12",
+          "name": "Idul Fitri Joint Holiday"
+        },
+        {
+          "date": "2027-03-15",
+          "name": "Idul Fitri Joint Holiday"
+        },
+        {
+          "date": "2027-03-25",
+          "name": "Joint Holiday for Good Friday"
+        },
+        {
+          "date": "2027-03-26",
+          "name": "Good Friday"
+        },
+        {
+          "date": "2027-05-01",
+          "name": "International Labor Day"
+        },
+        {
+          "date": "2027-05-06",
+          "name": "Ascension Day of Jesus Christ"
+        },
+        {
+          "date": "2027-05-17",
+          "name": "Idul Adha (tentative)"
+        },
+        {
+          "date": "2027-05-18",
+          "name": "Joint Holiday for Idul Adha"
+        },
+        {
+          "date": "2027-05-19",
+          "name": "Joint Holiday for Waisak Day"
+        },
+        {
+          "date": "2027-05-20",
+          "name": "Waisak Day (Buddha's Anniversary)"
+        },
+        {
+          "date": "2027-06-01",
+          "name": "Pancasila Day"
+        },
+        {
+          "date": "2027-06-06",
+          "name": "Muharram / Islamic New Year (tentative)"
+        },
+        {
+          "date": "2027-08-15",
+          "name": "Maulid Nabi Muhammad (tentative)"
+        },
+        {
+          "date": "2027-08-17",
+          "name": "Indonesian Independence Day"
+        },
+        {
+          "date": "2027-12-24",
+          "name": "Christmas Eve Joint Holiday"
+        },
+        {
+          "date": "2027-12-25",
+          "name": "Christmas Day"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.indonesian.official%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "nager.date",
+          "value": 8,
+          "agree": false,
+          "note": "Nager 记 8 天，Google 记 24 天"
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 24 天（全国 24 / 州级 0）；用于排产与上新节奏。已与 Nager 交叉核对：Nager 记 8 天，Google 记 24 天"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 2345.10884062946,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 69.20836554,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 281190067,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 58.1179353397878,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "ID",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

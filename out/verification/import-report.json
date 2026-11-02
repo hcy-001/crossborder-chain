@@ -1,0 +1,28 @@
+{
+  "source": "D:\\DSH\\创想\\旅伴_交接_簇pudong_五卡_20261026",
+  "generatedAt": "2026-10-29T03:30:33.176Z",
+  "applied": false,
+  "scanned": {
+    "json": 3,
+    "images": 107
+  },
+  "sku_candidates": [],
+  "images": {
+    "readable": 107,
+    "exact_900x1200": 0,
+    "unique": 107,
+    "frames": [
+      "720x1080",
+      "700x451",
+      "270x165",
+      "750x1125",
+      "690x460",
+      "780x489",
+      "732x514",
+      "700x450",
+      "700x448",
+      "700x447"
+    ]
+  },
+  "plan": []
+}

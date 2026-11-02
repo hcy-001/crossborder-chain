@@ -1,0 +1,12 @@
+{
+  "key": "product.dimensions",
+  "value": {"width": 30, "height": 20},
+  "unit": "centimeter-dimensions",
+  "source_url": "https://example.com/specs/dimensions",
+  "source_type": "secondary",
+  "confidence": "secondary",
+  "status": "candidate",
+  "conflict_id": null,
+  "fetched_at": "2026-10-29T00:00:00.000Z",
+  "ttl_hours": 24
+}

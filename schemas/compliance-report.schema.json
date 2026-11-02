@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.schemas/compliance-report.schema.json",
+  "title": "Compliance report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sku", "destination", "items", "blockers", "notes"],
+  "properties": {
+    "sku": {"type": "string", "minLength": 1},
+    "destination": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["layer", "requirement", "applies_because", "owner", "status", "source_url", "checked_at", "confidence"],
+        "properties": {
+          "layer": {"enum": ["access", "traceability", "platform"]},
+          "requirement": {"type": "string", "minLength": 1},
+          "applies_because": {"type": "string", "minLength": 1},
+          "owner": {"type": "string", "minLength": 1},
+          "status": {"enum": ["required", "provided", "missing"]},
+          "source_url": {"type": "string", "pattern": "^https://"},
+          "checked_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{3})?Z$"},
+          "confidence": {"enum": ["official", "secondary", "unverified"]}
+        }
+      }
+    },
+    "blockers": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "notes": {"type": "string"}
+  }
+}

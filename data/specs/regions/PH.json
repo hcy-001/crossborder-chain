@@ -1,0 +1,344 @@
+{
+  "region": "PH",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Manila",
+        "monthly_mean_c": [
+          26.6,
+          26.7,
+          28.8,
+          30.7,
+          30.2,
+          27.6,
+          27.3,
+          27.7,
+          26.6,
+          27.4,
+          27.7,
+          26.8
+        ],
+        "monthly_precip_mm": [
+          51,
+          97,
+          28,
+          22,
+          122,
+          332,
+          525,
+          294,
+          343,
+          223,
+          221,
+          125
+        ],
+        "annual_range_c": 4.1
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=14.5995&longitude=120.9842&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FManila",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Manila 2025 年日值聚合成月均；年温差 4.1℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 50.445,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 3804.08274131718,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2027-01-06",
+          "name": "Lailatul Isra Wal Mi Raj (tentative)"
+        },
+        {
+          "date": "2027-02-06",
+          "name": "Lunar New Year's Day"
+        },
+        {
+          "date": "2027-02-25",
+          "name": "People Power Anniversary"
+        },
+        {
+          "date": "2027-03-10",
+          "name": "Eid al-Fitr (tentative)"
+        },
+        {
+          "date": "2027-03-25",
+          "name": "Maundy Thursday"
+        },
+        {
+          "date": "2027-03-26",
+          "name": "Good Friday"
+        },
+        {
+          "date": "2027-03-27",
+          "name": "Black Saturday"
+        },
+        {
+          "date": "2027-04-09",
+          "name": "The Day of Valor"
+        },
+        {
+          "date": "2027-05-01",
+          "name": "Labor Day"
+        },
+        {
+          "date": "2027-05-17",
+          "name": "Eid al-Adha (tentative)"
+        },
+        {
+          "date": "2027-05-18",
+          "name": "Eid al-Adha Holiday (tentative)"
+        },
+        {
+          "date": "2027-06-06",
+          "name": "Amun Jadid (tentative)"
+        },
+        {
+          "date": "2027-06-12",
+          "name": "Independence Day"
+        },
+        {
+          "date": "2027-08-15",
+          "name": "Maulid un-Nabi (tentative)"
+        },
+        {
+          "date": "2027-08-21",
+          "name": "Ninoy Aquino Day"
+        },
+        {
+          "date": "2027-08-30",
+          "name": "National Heroes Day"
+        },
+        {
+          "date": "2027-11-01",
+          "name": "All Saints' Day"
+        },
+        {
+          "date": "2027-11-02",
+          "name": "All Souls' Day"
+        },
+        {
+          "date": "2027-11-30",
+          "name": "Bonifacio Day"
+        },
+        {
+          "date": "2027-12-08",
+          "name": "Feast of the Immaculate Conception"
+        },
+        {
+          "date": "2027-12-24",
+          "name": "Christmas Eve"
+        },
+        {
+          "date": "2027-12-25",
+          "name": "Christmas Day"
+        },
+        {
+          "date": "2027-12-26",
+          "name": "Lailatul Isra Wal Mi Raj (tentative)"
+        },
+        {
+          "date": "2027-12-30",
+          "name": "Rizal Day"
+        },
+        {
+          "date": "2027-12-31",
+          "name": "New Year's Eve"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.philippines.official%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "nager.date",
+          "value": 18,
+          "agree": false,
+          "note": "Nager 记 18 天，Google 记 26 天"
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 26 天（全国 26 / 州级 0）；用于排产与上新节奏。已与 Nager 交叉核对：Nager 记 18 天，Google 记 26 天"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 2693.80305972909,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 77.86699677,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 114891199,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 55.1242716168851,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "PH",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

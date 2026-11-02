@@ -1,0 +1,208 @@
+{
+  "run_id": "real-l2-03",
+  "generated_at": "2026-10-29T07:08:24.469Z",
+  "duration_ms": 618961,
+  "inputs": {
+    "category": "女装",
+    "region": "RU",
+    "candidates": 1,
+    "profile": "conservative"
+  },
+  "status": "complete",
+  "judgments": {
+    "total": 6,
+    "by_source": {
+      "llm": 6
+    },
+    "total_tokens": 12515,
+    "entries": [
+      {
+        "point": "copy_pitch",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "high",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 66183,
+        "total_tokens": 2692,
+        "reasoning_tokens": 1456,
+        "reject_reason": null
+      },
+      {
+        "point": "information_audit",
+        "scope": "run",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "high",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 13646,
+        "total_tokens": 1139,
+        "reasoning_tokens": 158,
+        "reject_reason": null
+      },
+      {
+        "point": "market_profile",
+        "scope": "run",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "medium",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 13324,
+        "total_tokens": 1184,
+        "reasoning_tokens": 172,
+        "reject_reason": null
+      },
+      {
+        "point": "platform_mapping",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "low",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 33622,
+        "total_tokens": 1598,
+        "reasoning_tokens": 481,
+        "reject_reason": null
+      },
+      {
+        "point": "ref_roles",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "high",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 60763,
+        "total_tokens": 3454,
+        "reasoning_tokens": 1428,
+        "reject_reason": null
+      },
+      {
+        "point": "shoot_plan",
+        "scope": "kardigan-udlinennyi-zhensk-01cfdb",
+        "source": "llm",
+        "accepted": true,
+        "confidence": "low",
+        "parse_layer": "strict",
+        "attempts": 1,
+        "latency_ms": 42472,
+        "total_tokens": 2448,
+        "reasoning_tokens": 878,
+        "reject_reason": null
+      }
+    ]
+  },
+  "degradations": [],
+  "evidence_levels": {
+    "market_signals": "L1（选品工单为历史快照，source_type=secondary）",
+    "llm_judgments": "L2（全部判别点由真实模型返回，台账可回放）",
+    "images": "L2（9 张真实模型出图）",
+    "modeling": "L1（本地展陈空间渲染；商品本体不在场景内，招牌与道具来自基准展位）",
+    "platform_submission": "未做"
+  },
+  "images": {
+    "count": 9,
+    "items": [
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-01-fef17209.png",
+        "role": "white_background",
+        "width": 900,
+        "height": 1200,
+        "sha256": "fef17209062bf4e8252994d81d1b9472779fab1c3eccb71d4904224da82bea85",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-02-48812ba7.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "48812ba7adc3754b377f7a6b3914a9ac3058ff15cbd13f9ffe23c03d0b52d9bc",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-03-85aa9a03.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "85aa9a0361712d1280b865af6c069c5ae2b2f3333346c47aa4c87526b0a8e34c",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-04-9c96649d.png",
+        "role": "scene",
+        "width": 900,
+        "height": 1200,
+        "sha256": "9c96649d1f3fbb3210aea290dd11fd2c53b3b0ffa2a3bb6bd126675330663389",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-05-b57fc3f2.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "b57fc3f2304e4aede3543fcf352ee20f3ba3176db7cc92b03402fe8ab1f441cc",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-06-40dbf763.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "40dbf76399a216ac9e0a27a43c4a24c453dbf21df127ed3fc948acf639311e9a",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-07-145687e2.png",
+        "role": "detail",
+        "width": 900,
+        "height": 1200,
+        "sha256": "145687e26de73482499ab4ecccf800139bd45371ed5410142cf20c5b552d5a8c",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-08-61e72988.png",
+        "role": "size",
+        "width": 900,
+        "height": 1200,
+        "sha256": "61e72988dd5b3cf033369f2cc84db44cfbd27432921d819ff43f1e8f9296fc9f",
+        "quality": "generated"
+      },
+      {
+        "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+        "file": "images/img-09-3955be3b.png",
+        "role": "size",
+        "width": 900,
+        "height": 1200,
+        "sha256": "3955be3b9a3be86039ba8c7c4d42dace3312415c0c18d6cd6e1c4cde46a07eb9",
+        "quality": "generated"
+      }
+    ]
+  },
+  "modeling": [
+    {
+      "sku": "kardigan-udlinennyi-zhensk-01cfdb",
+      "status": "rendered",
+      "dir": "D:\\DSH\\创想\\AI创新大赛\\assets\\3d\\kardigan-udlinennyi-zhensk-01cfdb",
+      "files": 6
+    }
+  ],
+  "verdicts": {
+    "llm_judged_all": true,
+    "images_real": true,
+    "sizes_ok": true,
+    "distinct_images": true,
+    "modeling_rendered": true
+  }
+}

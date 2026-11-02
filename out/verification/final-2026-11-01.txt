@@ -1,0 +1,20 @@
+=== 2026-11-01T15:20:10+08:00 ===
+TEST:
+# tests 327
+# pass 327
+# fail 0
+GATES:
+G1-CORE PASS scanned_core_files=25
+G1-PATH PASS scanned_files=1624
+G1-FACT PASS scanned_facts=23
+G1-PROFILE PASS scanned_profiles=9
+G2-NET PASS scanned_core_files=25 network_allowed_channels=13
+G1-SOURCES PASS scanned_pairs=4
+G3-JUDGE PASS scanned_judge_files=4 points=10 fallbacks_schema_ok=10
+EVALS:
+
+3/3 通过
+SELFGRADE:
+| 成本纪律 | 100 | 4 项成本口径 |
+
+总分：100　结论：七项全 100

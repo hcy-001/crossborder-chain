@@ -1,0 +1,37 @@
+{
+  "id": "SG",
+  "regime": "SG",
+  "locales": [
+    "en-SG"
+  ],
+  "currency": "SGD",
+  "price_rounding": null,
+  "platforms": [
+    "shopee",
+    "lazada",
+    "tiktok-shop",
+    "amazon"
+  ],
+  "completion": "skeleton",
+  "signal_sources": {
+    "allowed": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "marketplace-search"
+    ],
+    "blocked": []
+  },
+  "tax_reference": {
+    "standard_rate": 0.09,
+    "reduced_rates": [
+      0.0
+    ],
+    "label": "GST",
+    "status": "candidate",
+    "source": "多源一致（未逐一核 IRAS 官网）",
+    "source_url": "https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/basics-of-gst/current-gst-rates",
+    "note": "2024 年起 9%。二手多源一致，但未从 IRAS 官网逐字核；用于提示，不用于计算。",
+    "checked_at": "2026-11-01"
+  }
+}

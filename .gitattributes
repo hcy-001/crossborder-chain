@@ -1,0 +1,12 @@
+# 统一换行符：源码与文本一律 LF，避免 Windows 提交后 CI（Linux）解析异常
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.gif binary
+
+# 包管理锁文件不要被合并策略搞乱
+package-lock.json merge=binary -diff

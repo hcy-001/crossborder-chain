@@ -1,0 +1,37 @@
+{
+  "id": "VN",
+  "regime": "VN",
+  "locales": [
+    "vi-VN"
+  ],
+  "currency": "VND",
+  "price_rounding": null,
+  "platforms": [
+    "shopee",
+    "lazada",
+    "tiktok-shop"
+  ],
+  "completion": "skeleton",
+  "signal_sources": {
+    "allowed": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "marketplace-search"
+    ],
+    "blocked": []
+  },
+  "tax_reference": {
+    "standard_rate": 0.1,
+    "reduced_rates": [
+      0.08,
+      0.05
+    ],
+    "label": "VAT",
+    "status": "candidate",
+    "source": "多源一致（未逐一核 gdt.gov.vn）",
+    "source_url": "https://www.gdt.gov.vn/",
+    "note": "10% 标准税率，另有 8%/5% 优惠档适用特定行业。二手多源一致，未从税务局官网逐字核。",
+    "checked_at": "2026-11-01"
+  }
+}

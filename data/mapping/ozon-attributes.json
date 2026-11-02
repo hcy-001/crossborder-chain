@@ -1,0 +1,26 @@
+{
+  "platform": "ozon",
+  "probed_at": "2026-10-31",
+  "category": {
+    "description_category_id": 200000933,
+    "type_id": 93182,
+    "path": "Одежда / Одежда / Платье"
+  },
+  "source": {
+    "kind": "ozon-seller-api",
+    "endpoint": "/v1/description-category/attribute",
+    "note": "属性名、必填标记与字典值来自官方接口实测（out/verification/ozon-attribute-rules.json，2026-10-29 拉取）；内部键已对齐 data/specs/attributes.csv 的 canonical_key（此前用 colour/gender 与包内 color/audience 错位，导致覆盖 3/6 的假性缺项）；canonical→attribute_id 的配对仍属人工对照，需在后台核一次"
+  },
+  "map": {
+    "brand": {"attribute_id": 31, "name": "Бренд в одежде и обуви", "confidence": "high"},
+    "product_type": {"attribute_id": 8229, "name": "Тип", "confidence": "high"},
+    "color": {"attribute_id": 10096, "name": "Цвет товара", "confidence": "medium", "aliases": ["colour"], "note": "字典 #1494（官方说明：复杂颜色用简单颜色列举，主色填这里）。工单 color 原样进包；值是否为合法字典值由预检（preflight）对字典核对，不在映射层猜"},
+    "size": {"attribute_id": 4295, "name": "Российский размер", "confidence": "high", "source": "size-mapping.json", "note": "集合型：多码用「;」串一格，来自尺码映射"},
+    "audience": {"attribute_id": 9163, "name": "Пол", "confidence": "high", "aliases": ["gender"], "note": "字典 #320 实测值含「Женский」；工单 gender 值原样进包"},
+    "merge_card": {"attribute_id": 8292, "name": "Объединить на одной карточке", "confidence": "high", "source": "attributes.csv", "note": "无字典、自由填。官方说明：不需要合并就填唯一值（如唯一货号）——单 SKU 包取工单 slug，确定性取值；未来做多色变体合并时改填共用合并键"}
+  },
+  "not_mapped": [
+    {"internal": "material", "reason": "平台侧材质属性非必填，未纳入首版映射"},
+    {"internal": "palette_hint", "reason": "是市场配色提示，不是商品颜色值，不能直接当 attribute 值"}
+  ]
+}

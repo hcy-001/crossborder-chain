@@ -1,0 +1,21 @@
+{
+  "attribute_id": 9163,
+  "type_id": 93182,
+  "description_category_id": 200000933,
+  "probed_at": "2026-11-01T07:30:46.896Z",
+  "total": 2,
+  "values": [
+    {
+      "id": 22881,
+      "value": "Женский",
+      "info": "",
+      "picture": ""
+    },
+    {
+      "id": 22882,
+      "value": "Девочки",
+      "info": "",
+      "picture": ""
+    }
+  ]
+}

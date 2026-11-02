@@ -1,0 +1,114 @@
+{
+  "ran_at": "2026-10-31T03:14:13.550Z",
+  "platform": "ozon",
+  "readonly": true,
+  "category": {
+    "description_category_id": 200000933,
+    "type_id": 93182
+  },
+  "package_dir": "D:\\DSH\\创想\\电商全链路Skill\\package\\kardigan-udlinennyi-zhensk-01cfdb",
+  "totals": {
+    "required": 6,
+    "covered": 6,
+    "passed": 4,
+    "missing": 0,
+    "dictionary_failed": 2
+  },
+  "checks": [
+    {
+      "attribute_id": 4295,
+      "name": "Российский размер",
+      "required": true,
+      "value": "48",
+      "via": "size-mapping:size",
+      "dictionary_id": 835,
+      "is_collection": true,
+      "status": "in_dictionary",
+      "detail": "字典核对通过（翻页 1，扫描 46 个值）",
+      "dictionary": {
+        "pages": 1,
+        "scanned": 46,
+        "capped": false
+      }
+    },
+    {
+      "attribute_id": 31,
+      "name": "Бренд в одежде и обуви",
+      "required": true,
+      "value": "NO BRAND",
+      "via": "attributes.csv:brand",
+      "dictionary_id": 28732849,
+      "is_collection": false,
+      "status": "cap_reached",
+      "detail": "翻到上限 40 页（扫描 39643 个值）仍有未命中：no brand",
+      "dictionary": {
+        "pages": 40,
+        "scanned": 39643,
+        "capped": true
+      }
+    },
+    {
+      "attribute_id": 9163,
+      "name": "Пол",
+      "required": true,
+      "value": "Женский",
+      "via": "attributes.csv:audience",
+      "dictionary_id": 320,
+      "is_collection": true,
+      "status": "in_dictionary",
+      "detail": "字典核对通过（翻页 1，扫描 2 个值）",
+      "dictionary": {
+        "pages": 1,
+        "scanned": 2,
+        "capped": false
+      }
+    },
+    {
+      "attribute_id": 8292,
+      "name": "Объединить на одной карточке",
+      "required": true,
+      "value": "кардиган-удлиненный-женский",
+      "via": "attributes.csv:merge_card",
+      "dictionary_id": null,
+      "is_collection": false,
+      "status": "free_text",
+      "detail": "自由填属性，只查在不在，不查字典"
+    },
+    {
+      "attribute_id": 10096,
+      "name": "Цвет товара",
+      "required": true,
+      "value": "хаки",
+      "via": "attributes.csv:color",
+      "dictionary_id": 1494,
+      "is_collection": true,
+      "status": "in_dictionary",
+      "detail": "字典核对通过（翻页 1，扫描 651 个值）",
+      "dictionary": {
+        "pages": 1,
+        "scanned": 651,
+        "capped": false
+      }
+    },
+    {
+      "attribute_id": 8229,
+      "name": "Тип",
+      "required": true,
+      "value": "韩版中长款针织毛衣外套女2025秋冬季新款加厚宽松慵懒风外穿开衫",
+      "via": "attributes.csv:product_type",
+      "dictionary_id": 1960,
+      "is_collection": false,
+      "status": "not_found",
+      "detail": "字典里没有：韩版中长款针织毛衣外套女2025秋冬季新款加厚宽松慵懒风外穿开衫（扫描 2 个值）——需要人工改用官方字典值",
+      "dictionary": {
+        "pages": 1,
+        "scanned": 2,
+        "capped": false
+      }
+    }
+  ],
+  "endpoints": [
+    "/v1/description-category/attribute",
+    "/v1/description-category/attribute/values"
+  ]
+}

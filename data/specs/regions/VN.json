@@ -1,0 +1,300 @@
+{
+  "region": "VN",
+  "as_of": "2026-11-01T09:16:48.922Z",
+  "source": "worldbank",
+  "covered": 8,
+  "total": 8,
+  "facts": [
+    {
+      "key": "region.climate",
+      "value": {
+        "city": "Hanoi",
+        "monthly_mean_c": [
+          17.9,
+          17.3,
+          20.8,
+          25.4,
+          27.1,
+          28.8,
+          28.8,
+          28.3,
+          27.8,
+          25.3,
+          20.3,
+          20.1
+        ],
+        "monthly_precip_mm": [
+          20,
+          53,
+          32,
+          149,
+          252,
+          491,
+          348,
+          371,
+          345,
+          278,
+          114,
+          38
+        ],
+        "annual_range_c": 11.5
+      },
+      "unit": "monthly-mean-c",
+      "year": 2025,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "open-meteo-era5",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=21.0278&longitude=105.8342&start_date=2025-01-01&end_date=2025-12-31&daily=temperature_2m_mean,precipitation_sum&timezone=Asia%2FHo_Chi_Minh",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "Hanoi 2025 年日值聚合成月均；年温差 11.5℃ 决定厚外套是否可卖"
+    },
+    {
+      "key": "region.female_labor_participation",
+      "value": 69.215,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SL.TLF.CACT.FE.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "女性劳动参与率（15+）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.gdp_per_capita",
+      "value": 4322.82572261566,
+      "unit": "USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NY.GDP.PCAP.CD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均 GDP（现价美元）；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.holidays",
+      "value": [
+        {
+          "date": "2027-01-01",
+          "name": "International New Year's Day"
+        },
+        {
+          "date": "2027-02-04",
+          "name": "Tet Holiday"
+        },
+        {
+          "date": "2027-02-05",
+          "name": "Vietnamese New Year's Eve"
+        },
+        {
+          "date": "2027-02-06",
+          "name": "Vietnamese New Year"
+        },
+        {
+          "date": "2027-02-07",
+          "name": "Tet Holiday"
+        },
+        {
+          "date": "2027-02-08",
+          "name": "Tet Holiday"
+        },
+        {
+          "date": "2027-02-09",
+          "name": "Tet Holiday"
+        },
+        {
+          "date": "2027-02-10",
+          "name": "Tet Holiday"
+        },
+        {
+          "date": "2027-04-16",
+          "name": "Hung Kings Festival"
+        },
+        {
+          "date": "2027-04-30",
+          "name": "Liberation Day/Reunification Day"
+        },
+        {
+          "date": "2027-05-01",
+          "name": "International Labor Day"
+        },
+        {
+          "date": "2027-05-03",
+          "name": "Day off for International Labor Day"
+        },
+        {
+          "date": "2027-09-02",
+          "name": "Independence Day"
+        },
+        {
+          "date": "2027-09-03",
+          "name": "Independence Day Holiday"
+        },
+        {
+          "date": "2027-11-24",
+          "name": "Vietnam Culture Day"
+        }
+      ],
+      "unit": "calendar",
+      "year": 2027,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "google-calendar-official",
+      "source_url": "https://calendar.google.com/calendar/ical/en.vietnamese.official%23holiday%40group.v.calendar.google.com/public/basic.ics",
+      "source_type": "official",
+      "confidence": "official-aggregator",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T09:16:48.922Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [
+        {
+          "source": "nager.date",
+          "value": 4,
+          "agree": false,
+          "note": "Nager 记 4 天，Google 记 15 天"
+        }
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "公共假日 15 天（全国 15 / 州级 0）；用于排产与上新节奏。已与 Nager 交叉核对：Nager 记 4 天，Google 记 15 天"
+    },
+    {
+      "key": "region.household_consumption_pc",
+      "value": 2106.09214536951,
+      "unit": "constant 2015 USD/person",
+      "year": 2023,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/NE.CON.PRVT.PC.KD?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "人均家庭消费支出；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.internet_users",
+      "value": 78.08,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/IT.NET.USER.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "互联网使用率；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.population",
+      "value": 100352192,
+      "unit": "person",
+      "year": 2023,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.POP.TOTL?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "总人口；世界银行口径，数据更新于 2026-10-08"
+    },
+    {
+      "key": "region.urban_population",
+      "value": 38.1298904418945,
+      "unit": "%",
+      "year": 2023,
+      "scope": {
+        "region": "VN",
+        "platform": null,
+        "category": null
+      },
+      "source": "worldbank",
+      "source_url": "https://api.worldbank.org/v2/country/ARE;IDN;MYS;PHL;RUS;SAU;SGP;THA;VNM/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200&date=2023",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T07:44:07.791Z",
+      "ttl_hours": 8760,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null,
+      "note": "城镇人口占比；世界银行口径，数据更新于 2026-10-08"
+    }
+  ]
+}

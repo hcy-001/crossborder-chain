@@ -1,0 +1,2878 @@
+{
+  "lang": "en",
+  "total": 245,
+  "done": 245,
+  "failed": 0,
+  "articles": [
+    {
+      "slug": "onboarding-and-registration",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration",
+      "ok": true,
+      "chars": 180,
+      "keywords": []
+    },
+    {
+      "slug": "product-listing",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing",
+      "ok": true,
+      "chars": 158,
+      "keywords": [
+        "sku"
+      ]
+    },
+    {
+      "slug": "price-and-inventory",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory",
+      "ok": true,
+      "chars": 152,
+      "keywords": []
+    },
+    {
+      "slug": "fulfilled-by-noon-fbn",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn",
+      "ok": true,
+      "chars": 174,
+      "keywords": []
+    },
+    {
+      "slug": "fulfilled-by-partner-fbp",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp",
+      "ok": true,
+      "chars": 188,
+      "keywords": []
+    },
+    {
+      "slug": "supermall",
+      "url": "https://helpcenter.noon.partners/en/category/supermall",
+      "ok": true,
+      "chars": 131,
+      "keywords": []
+    },
+    {
+      "slug": "global-selling",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling",
+      "ok": true,
+      "chars": 132,
+      "keywords": []
+    },
+    {
+      "slug": "promotions-and-deals",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals",
+      "ok": true,
+      "chars": 155,
+      "keywords": []
+    },
+    {
+      "slug": "advertising-and-marketing",
+      "url": "https://helpcenter.noon.partners/en/category/advertising-and-marketing",
+      "ok": true,
+      "chars": 163,
+      "keywords": []
+    },
+    {
+      "slug": "finance-and-payments",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments",
+      "ok": true,
+      "chars": 145,
+      "keywords": []
+    },
+    {
+      "slug": "reports-and-analytics",
+      "url": "https://helpcenter.noon.partners/en/category/reports-and-analytics",
+      "ok": true,
+      "chars": 156,
+      "keywords": []
+    },
+    {
+      "slug": "program-policies",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies",
+      "ok": true,
+      "chars": 143,
+      "keywords": []
+    },
+    {
+      "slug": "getting-help-and-support",
+      "url": "https://helpcenter.noon.partners/en/category/getting-help-and-support",
+      "ok": true,
+      "chars": 160,
+      "keywords": []
+    },
+    {
+      "slug": "warranty",
+      "url": "https://helpcenter.noon.partners/en/category/warranty",
+      "ok": true,
+      "chars": 116,
+      "keywords": [
+        "warranty"
+      ]
+    },
+    {
+      "slug": "reputation-management",
+      "url": "https://helpcenter.noon.partners/en/category/reputation-management",
+      "ok": true,
+      "chars": 162,
+      "keywords": []
+    },
+    {
+      "slug": "how-to-create-product-titles-of-grocery-items",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/how-to-create-product-titles-of-grocery-items",
+      "ok": true,
+      "chars": 2704,
+      "keywords": [
+        "title",
+        "reject",
+        "size",
+        "color"
+      ]
+    },
+    {
+      "slug": "fbn-packing-and-delivery-policy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fbn-packing-and-delivery-policy",
+      "ok": true,
+      "chars": 4089,
+      "keywords": [
+        "reject",
+        "rejection",
+        "sku",
+        "size",
+        "packaging",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "egypt-seller-terms-and-conditions-tandcs",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/egypt-seller-terms-and-conditions-tandcs",
+      "ok": true,
+      "chars": 53669,
+      "keywords": [
+        "character",
+        "title",
+        "image",
+        "picture",
+        "reject",
+        "size",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "managing-your-returns-managing-fbn-returns",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/managing-your-returns-managing-fbn-returns",
+      "ok": true,
+      "chars": 3680,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-fbp-fees-in-ksa",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-fbp-fees-in-ksa",
+      "ok": true,
+      "chars": 10907,
+      "keywords": [
+        "sku",
+        "size",
+        "colour",
+        "referral",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "uae-seller-terms-and-conditions-tandcs",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/uae-seller-terms-and-conditions-tandcs",
+      "ok": true,
+      "chars": 60389,
+      "keywords": [
+        "character",
+        "title",
+        "image",
+        "picture",
+        "reject",
+        "size",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-to-process-directship-order-using-the-seller-lab",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/how-to-process-directship-order-using-the-seller-lab",
+      "ok": true,
+      "chars": 9602,
+      "keywords": [
+        "image",
+        "reject",
+        "rejection",
+        "sku",
+        "fee",
+        "packaging",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "how-to-track-returned-shipments-and-raise-appeals-in-seller-lab",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/how-to-track-returned-shipments-and-raise-appeals-in-seller-lab",
+      "ok": true,
+      "chars": 7327,
+      "keywords": [
+        "title",
+        "reject",
+        "rejection",
+        "fee"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-fbp-fees-in-uae",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-fbp-fees-in-uae",
+      "ok": true,
+      "chars": 10896,
+      "keywords": [
+        "sku",
+        "size",
+        "colour",
+        "referral",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "understanding-the-promotion-center",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/understanding-the-promotion-center",
+      "ok": true,
+      "chars": 3869,
+      "keywords": [
+        "catalog",
+        "sku",
+        "commission"
+      ]
+    },
+    {
+      "slug": "how-to-calculate-the-directship-fee-in-egy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/how-to-calculate-the-directship-fee-in-egy",
+      "ok": true,
+      "chars": 3468,
+      "keywords": [
+        "size",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "getting-help-and-support",
+      "url": "https://helpcenter.noon.partners/en/category/getting-help-and-support/getting-help-and-support",
+      "ok": true,
+      "chars": 2974,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "what-is-catalog",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/what-is-catalog",
+      "ok": true,
+      "chars": 5970,
+      "keywords": [
+        "title",
+        "image",
+        "picture",
+        "reject",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "commission",
+        "fee",
+        "vat",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "how-to-process-directship-order-using-the-mobile-application",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/how-to-process-directship-order-using-the-mobile-application",
+      "ok": true,
+      "chars": 5929,
+      "keywords": [
+        "photo",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "seller-review-and-rating-dispute-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/seller-review-and-rating-dispute-policy",
+      "ok": true,
+      "chars": 5723,
+      "keywords": [
+        "reject",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "anti-fraud-anti-counterfeit-and-seller-code-of-conduct-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/anti-fraud-anti-counterfeit-and-seller-code-of-conduct-policy",
+      "ok": true,
+      "chars": 4470,
+      "keywords": [
+        "image"
+      ]
+    },
+    {
+      "slug": "bulk-upload-creating-an-asn-with-an-excel-template",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/bulk-upload-creating-an-asn-with-an-excel-template",
+      "ok": true,
+      "chars": 13154,
+      "keywords": [
+        "character",
+        "characters",
+        "title",
+        "image",
+        "catalog",
+        "sku",
+        "size",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "choosing-the-best-delivery-estimate-for-fbp-orders",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/choosing-the-best-delivery-estimate-for-fbp-orders",
+      "ok": true,
+      "chars": 6804,
+      "keywords": [
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-fbp-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-fbp-comprehensive-overview",
+      "ok": true,
+      "chars": 2729,
+      "keywords": [
+        "sku",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "seller-sku-bulk-creation",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/seller-sku-bulk-creation",
+      "ok": true,
+      "chars": 1538,
+      "keywords": [
+        "catalog",
+        "sku",
+        "size",
+        "color"
+      ]
+    },
+    {
+      "slug": "what-are-the-dimensions-of-items-that-i-can-sell-using-fbp-and-fbn",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/what-are-the-dimensions-of-items-that-i-can-sell-using-fbp-and-fbn",
+      "ok": true,
+      "chars": 8386,
+      "keywords": [
+        "photo",
+        "size",
+        "vat"
+      ]
+    },
+    {
+      "slug": "product-review-and-ratings",
+      "url": "https://helpcenter.noon.partners/en/category/reputation-management/product-review-and-ratings",
+      "ok": true,
+      "chars": 2157,
+      "keywords": [
+        "title",
+        "catalog",
+        "sku",
+        "fee"
+      ]
+    },
+    {
+      "slug": "product-listing-policy",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/product-listing-policy",
+      "ok": true,
+      "chars": 12905,
+      "keywords": [
+        "title",
+        "reject",
+        "rejection",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "vat",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "fbn-inventory-removal-process",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fbn-inventory-removal-process",
+      "ok": true,
+      "chars": 9532,
+      "keywords": [
+        "reject",
+        "sku",
+        "size",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "winning-the-buy-box",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory/winning-the-buy-box",
+      "ok": true,
+      "chars": 4155,
+      "keywords": [
+        "reject",
+        "rejection"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-noon-fbn-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-comprehensive-overview",
+      "ok": true,
+      "chars": 2078,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "documents-required-to-sell-on-noon",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/documents-required-to-sell-on-noon",
+      "ok": true,
+      "chars": 7795,
+      "keywords": [
+        "referral",
+        "vat"
+      ]
+    },
+    {
+      "slug": "image-requirements-and-rejection-reasons-for-the-seller-sku",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/image-requirements-and-rejection-reasons-for-the-seller-sku",
+      "ok": true,
+      "chars": 9333,
+      "keywords": [
+        "title",
+        "image",
+        "picture",
+        "photo",
+        "reject",
+        "rejection",
+        "sku",
+        "size",
+        "color",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "seller-registration-process",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/seller-registration-process",
+      "ok": true,
+      "chars": 7170,
+      "keywords": [
+        "reject",
+        "rejection",
+        "vat"
+      ]
+    },
+    {
+      "slug": "noon-global-shipping-program",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/noon-global-shipping-program",
+      "ok": true,
+      "chars": 10738,
+      "keywords": [
+        "sku",
+        "fee",
+        "vat",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-to-calculate-the-fbn-outbound-fee-and-the-inventory-removal-fee-in-ksa",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/how-to-calculate-the-fbn-outbound-fee-and-the-inventory-removal-fee-in-ksa",
+      "ok": true,
+      "chars": 7989,
+      "keywords": [
+        "size",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "product-listing-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/product-listing-comprehensive-overview",
+      "ok": true,
+      "chars": 2133,
+      "keywords": [
+        "title",
+        "image",
+        "reject",
+        "rejection",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "understanding-the-new-statements-view",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/understanding-the-new-statements-view",
+      "ok": true,
+      "chars": 3975,
+      "keywords": [
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "directship-express-fees-and-performance-guide",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-express-fees-and-performance-guide",
+      "ok": true,
+      "chars": 4746,
+      "keywords": [
+        "size",
+        "commission",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-noon-fbn-fees-in-ksa",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa",
+      "ok": true,
+      "chars": 12106,
+      "keywords": [
+        "reject",
+        "sku",
+        "size",
+        "colour",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "negative-account-balance-recovery-policy",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/negative-account-balance-recovery-policy",
+      "ok": true,
+      "chars": 3223,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "ksa-seller-terms-and-conditions-tandcs",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/ksa-seller-terms-and-conditions-tandcs",
+      "ok": true,
+      "chars": 67375,
+      "keywords": [
+        "character",
+        "title",
+        "image",
+        "picture",
+        "reject",
+        "size",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "what-is-directship",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/what-is-directship",
+      "ok": true,
+      "chars": 7294,
+      "keywords": [
+        "image",
+        "picture",
+        "reject",
+        "rejection",
+        "size",
+        "color",
+        "fee",
+        "vat",
+        "packaging",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "payments-processing-policy",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/payments-processing-policy",
+      "ok": true,
+      "chars": 4714,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "direct-delivery-order-fulfillment",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/direct-delivery-order-fulfillment",
+      "ok": true,
+      "chars": 10660,
+      "keywords": [
+        "photo"
+      ]
+    },
+    {
+      "slug": "fbn-inventory-detail-report",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fbn-inventory-detail-report",
+      "ok": true,
+      "chars": 4702,
+      "keywords": [
+        "title",
+        "sku",
+        "size",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-noon-fbn-fees-in-uae",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae",
+      "ok": true,
+      "chars": 12123,
+      "keywords": [
+        "reject",
+        "sku",
+        "size",
+        "colour",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "partner-sku-fbp-stock-update-import",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/partner-sku-fbp-stock-update-import",
+      "ok": true,
+      "chars": 4220,
+      "keywords": [
+        "character",
+        "characters",
+        "title",
+        "attribute",
+        "catalog",
+        "sku",
+        "size"
+      ]
+    },
+    {
+      "slug": "accessing-fbn-reports-on-seller-lab",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/accessing-fbn-reports-on-seller-lab",
+      "ok": true,
+      "chars": 3278,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "supermall-faqs",
+      "url": "https://helpcenter.noon.partners/en/category/supermall/supermall-faqs",
+      "ok": true,
+      "chars": 4807,
+      "keywords": [
+        "catalog",
+        "sku",
+        "fee"
+      ]
+    },
+    {
+      "slug": "how-can-i-sell-on-noon-as-a-non-vat-registered-seller",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/how-can-i-sell-on-noon-as-a-non-vat-registered-seller",
+      "ok": true,
+      "chars": 1030,
+      "keywords": [
+        "vat"
+      ]
+    },
+    {
+      "slug": "seller-buyer-messaging-service",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/seller-buyer-messaging-service",
+      "ok": true,
+      "chars": 8276,
+      "keywords": [
+        "image",
+        "fee"
+      ]
+    },
+    {
+      "slug": "how-to-create-noon-product-listings-using-web-urls",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/how-to-create-noon-product-listings-using-web-urls",
+      "ok": true,
+      "chars": 2334,
+      "keywords": [
+        "title",
+        "image",
+        "attribute",
+        "catalog"
+      ]
+    },
+    {
+      "slug": "single-sku-creation",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/single-sku-creation",
+      "ok": true,
+      "chars": 11636,
+      "keywords": [
+        "title",
+        "image",
+        "reject",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "colour",
+        "color",
+        "vat",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "fees-and-revenue-calculator",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory/fees-and-revenue-calculator",
+      "ok": true,
+      "chars": 9480,
+      "keywords": [
+        "title",
+        "image",
+        "picture",
+        "catalog",
+        "sku",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "overview-of-sales-view",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/overview-of-sales-view",
+      "ok": true,
+      "chars": 2697,
+      "keywords": [
+        "sku",
+        "fee"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-fbp-fees-in-egypt",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-fbp-fees-in-egypt",
+      "ok": true,
+      "chars": 9161,
+      "keywords": [
+        "sku",
+        "size",
+        "color",
+        "referral",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-integration-a-comprehensive-guide",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-integration-a-comprehensive-guide",
+      "ok": true,
+      "chars": 4430,
+      "keywords": [
+        "catalog"
+      ]
+    },
+    {
+      "slug": "fbn-fees-and-product-dimension-measurement-visibility",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fbn-fees-and-product-dimension-measurement-visibility",
+      "ok": true,
+      "chars": 5692,
+      "keywords": [
+        "title",
+        "image",
+        "reject",
+        "catalog",
+        "sku",
+        "size",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "partner-sku-price-update-import",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/partner-sku-price-update-import",
+      "ok": true,
+      "chars": 6779,
+      "keywords": [
+        "title",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "understanding-seller-tiers-and-inbound-performance",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/understanding-seller-tiers-and-inbound-performance",
+      "ok": true,
+      "chars": 10712,
+      "keywords": []
+    },
+    {
+      "slug": "participating-in-coupons-and-promo-codes",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/participating-in-coupons-and-promo-codes",
+      "ok": true,
+      "chars": 3720,
+      "keywords": [
+        "reject",
+        "rejection",
+        "sku",
+        "commission",
+        "vat"
+      ]
+    },
+    {
+      "slug": "how-can-you-register-for-cross-border-business",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/how-can-you-register-for-cross-border-business",
+      "ok": true,
+      "chars": 3022,
+      "keywords": [
+        "image",
+        "vat"
+      ]
+    },
+    {
+      "slug": "product-packing-guidelines-fbn",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/product-packing-guidelines-fbn",
+      "ok": true,
+      "chars": 6044,
+      "keywords": [
+        "reject",
+        "rejection",
+        "sku",
+        "size",
+        "color",
+        "packaging",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "supermall-offer-management",
+      "url": "https://helpcenter.noon.partners/en/category/supermall/supermall-offer-management",
+      "ok": true,
+      "chars": 1994,
+      "keywords": [
+        "catalog",
+        "sku",
+        "fee"
+      ]
+    },
+    {
+      "slug": "how-do-i-manage-my-stock-and-prices",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory/how-do-i-manage-my-stock-and-prices",
+      "ok": true,
+      "chars": 5578,
+      "keywords": [
+        "reject",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "directship-volumetric-measurement-dispute-policy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-volumetric-measurement-dispute-policy",
+      "ok": true,
+      "chars": 3229,
+      "keywords": [
+        "image",
+        "picture",
+        "reject",
+        "rejection",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "understanding-the-noon-fees-invoices",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/understanding-the-noon-fees-invoices",
+      "ok": true,
+      "chars": 2963,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "finance-and-payments-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/finance-and-payments-comprehensive-overview",
+      "ok": true,
+      "chars": 1673,
+      "keywords": [
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "guidelines-for-listing-apple-products",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/guidelines-for-listing-apple-products",
+      "ok": true,
+      "chars": 2592,
+      "keywords": [
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "relabeling-feature-for-non-saleable-inventory",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/relabeling-feature-for-non-saleable-inventory",
+      "ok": true,
+      "chars": 9081,
+      "keywords": [
+        "title",
+        "image",
+        "reject",
+        "rejection",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "fee",
+        "vat",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "creating-product-variations-adding-sizes-colors-and-other-attributes",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/creating-product-variations-adding-sizes-colors-and-other-attributes",
+      "ok": true,
+      "chars": 4682,
+      "keywords": [
+        "image",
+        "picture",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "price-drop-discount-run-your-own-instant-discount",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/price-drop-discount-run-your-own-instant-discount",
+      "ok": true,
+      "chars": 3712,
+      "keywords": [
+        "catalog",
+        "sku",
+        "commission",
+        "vat"
+      ]
+    },
+    {
+      "slug": "essential-guidelines-for-direct-delivery-selling-model",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/essential-guidelines-for-direct-delivery-selling-model",
+      "ok": true,
+      "chars": 6377,
+      "keywords": [
+        "image",
+        "picture",
+        "photo",
+        "reject",
+        "rejection",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "vat-frequently-asked-questions",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/vat-frequently-asked-questions",
+      "ok": true,
+      "chars": 3723,
+      "keywords": [
+        "commission",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "where-can-i-find-a-report-with-all-my-vat-invoices",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/where-can-i-find-a-report-with-all-my-vat-invoices",
+      "ok": true,
+      "chars": 1662,
+      "keywords": [
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "zatca-integration-for-ksa-e-invoicing",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/zatca-integration-for-ksa-e-invoicing",
+      "ok": true,
+      "chars": 3339,
+      "keywords": [
+        "attribute",
+        "catalog",
+        "sku",
+        "vat"
+      ]
+    },
+    {
+      "slug": "e-invoicing-policy-for-ksa",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/e-invoicing-policy-for-ksa",
+      "ok": true,
+      "chars": 2855,
+      "keywords": [
+        "sku",
+        "vat"
+      ]
+    },
+    {
+      "slug": "how-will-i-get-paid-for-my-sales",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/how-will-i-get-paid-for-my-sales",
+      "ok": true,
+      "chars": 2380,
+      "keywords": [
+        "commission",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "automated-reimbursement-process-for-lost-and-damaged-items",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/automated-reimbursement-process-for-lost-and-damaged-items",
+      "ok": true,
+      "chars": 9996,
+      "keywords": [
+        "photo",
+        "reject",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "managing-asn-and-storage",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/managing-asn-and-storage",
+      "ok": true,
+      "chars": 9633,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "size"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-noon-fbn-fees-in-egypt",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-egypt",
+      "ok": true,
+      "chars": 9434,
+      "keywords": [
+        "reject",
+        "sku",
+        "size",
+        "color",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "im-registered-as-a-noon-seller-whats-next",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/im-registered-as-a-noon-seller-whats-next",
+      "ok": true,
+      "chars": 1605,
+      "keywords": [
+        "image"
+      ]
+    },
+    {
+      "slug": "noon-deals-how-to-enroll-your-products",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/noon-deals-how-to-enroll-your-products",
+      "ok": true,
+      "chars": 4971,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "commission",
+        "fee"
+      ]
+    },
+    {
+      "slug": "global-selling-overview",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/global-selling-overview",
+      "ok": true,
+      "chars": 1503,
+      "keywords": [
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "how-to-calculate-the-directship-fee-in-uae",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/how-to-calculate-the-directship-fee-in-uae",
+      "ok": true,
+      "chars": 3210,
+      "keywords": [
+        "size",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "creating-and-managing-a-new-warehouse",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/creating-and-managing-a-new-warehouse",
+      "ok": true,
+      "chars": 6244,
+      "keywords": [
+        "vat"
+      ]
+    },
+    {
+      "slug": "increase-your-sales-with-the-price-engine",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory/increase-your-sales-with-the-price-engine",
+      "ok": true,
+      "chars": 6944,
+      "keywords": [
+        "catalog",
+        "sku",
+        "commission",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "barcode-requirements",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/barcode-requirements",
+      "ok": true,
+      "chars": 4479,
+      "keywords": [
+        "character",
+        "characters",
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "packaging",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "noon-api-platform",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/noon-api-platform",
+      "ok": true,
+      "chars": 872,
+      "keywords": [
+        "catalog"
+      ]
+    },
+    {
+      "slug": "brand-registration",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/brand-registration",
+      "ok": true,
+      "chars": 4375,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-integration-faqs",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-integration-faqs",
+      "ok": true,
+      "chars": 5314,
+      "keywords": []
+    },
+    {
+      "slug": "seller-sku-content-language-requirements",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/seller-sku-content-language-requirements",
+      "ok": true,
+      "chars": 1978,
+      "keywords": [
+        "title",
+        "sku"
+      ]
+    },
+    {
+      "slug": "create-a-new-product-of-a-noon-controlled-brand",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/create-a-new-product-of-a-noon-controlled-brand",
+      "ok": true,
+      "chars": 3780,
+      "keywords": [
+        "title",
+        "catalog",
+        "sku",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "understanding-the-transaction-view",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/understanding-the-transaction-view",
+      "ok": true,
+      "chars": 5614,
+      "keywords": [
+        "title",
+        "catalog",
+        "sku",
+        "commission",
+        "referral",
+        "fee"
+      ]
+    },
+    {
+      "slug": "handling-customer-returns-policy-for-fbp",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/handling-customer-returns-policy-for-fbp",
+      "ok": true,
+      "chars": 4511,
+      "keywords": [
+        "image"
+      ]
+    },
+    {
+      "slug": "how-to-categorize-your-seller-sku",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/how-to-categorize-your-seller-sku",
+      "ok": true,
+      "chars": 5824,
+      "keywords": [
+        "reject",
+        "rejection",
+        "attribute",
+        "sku"
+      ]
+    },
+    {
+      "slug": "fbn-inbound-quality-check-policy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fbn-inbound-quality-check-policy",
+      "ok": true,
+      "chars": 865,
+      "keywords": [
+        "reject",
+        "rejection",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-to-search-for-items-in-the-partner-catalog",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/how-to-search-for-items-in-the-partner-catalog",
+      "ok": true,
+      "chars": 2598,
+      "keywords": [
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "ordering-your-packaging-materials",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/ordering-your-packaging-materials",
+      "ok": true,
+      "chars": 2387,
+      "keywords": [
+        "reject",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "uae-to-ksa-onboarding-guide-for-noon-sellers",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/uae-to-ksa-onboarding-guide-for-noon-sellers",
+      "ok": true,
+      "chars": 10797,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "how-to-calculate-the-fbn-outbound-fee-and-the-inventory-removal-fee-in-uae",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/how-to-calculate-the-fbn-outbound-fee-and-the-inventory-removal-fee-in-uae",
+      "ok": true,
+      "chars": 8016,
+      "keywords": [
+        "size",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "fbn-volumetric-measurement-vm-dispute-policy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fbn-volumetric-measurement-vm-dispute-policy",
+      "ok": true,
+      "chars": 9013,
+      "keywords": [
+        "image",
+        "reject",
+        "rejection",
+        "sku",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "what-is-renewed-and-what-is-refurbished",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/what-is-renewed-and-what-is-refurbished",
+      "ok": true,
+      "chars": 5785,
+      "keywords": [
+        "image",
+        "sku",
+        "color",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "disputes-and-claims-resolution-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/disputes-and-claims-resolution-policy",
+      "ok": true,
+      "chars": 17223,
+      "keywords": [
+        "image",
+        "reject",
+        "size",
+        "commission",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "fbn-received-report-grn-report-and-crossdock-b2b-received-report",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fbn-received-report-grn-report-and-crossdock-b2b-received-report",
+      "ok": true,
+      "chars": 2000,
+      "keywords": [
+        "sku",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "reputation-management-dashboard",
+      "url": "https://helpcenter.noon.partners/en/category/reputation-management/reputation-management-dashboard",
+      "ok": true,
+      "chars": 11951,
+      "keywords": [
+        "reject",
+        "sku",
+        "color",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "what-is-fbn-inventory-dashboard",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/what-is-fbn-inventory-dashboard",
+      "ok": true,
+      "chars": 4788,
+      "keywords": [
+        "image",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "how-to-calculate-the-fbn-outbound-fee-and-inventory-removal-fees-in-egy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/how-to-calculate-the-fbn-outbound-fee-and-inventory-removal-fees-in-egy",
+      "ok": true,
+      "chars": 6577,
+      "keywords": [
+        "size",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "guidelines-for-prohibited-items-and-keywords",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/guidelines-for-prohibited-items-and-keywords",
+      "ok": true,
+      "chars": 4365,
+      "keywords": [
+        "title",
+        "image",
+        "reject",
+        "rejection"
+      ]
+    },
+    {
+      "slug": "seller-sku-content-export-and-translation",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/seller-sku-content-export-and-translation",
+      "ok": true,
+      "chars": 2915,
+      "keywords": [
+        "image",
+        "attribute",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-fbp-fees-in-uae-refurbished-and-renewed",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-fbp-fees-in-uae-refurbished-and-renewed",
+      "ok": true,
+      "chars": 6404,
+      "keywords": [
+        "size",
+        "referral",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "directship-seller-returns-dispute-and-reimbursement-policy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-seller-returns-dispute-and-reimbursement-policy",
+      "ok": true,
+      "chars": 7229,
+      "keywords": [
+        "image",
+        "commission",
+        "fee",
+        "vat",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-to-setup-the-invoicing-profile-for-global-selling",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/how-to-setup-the-invoicing-profile-for-global-selling",
+      "ok": true,
+      "chars": 4013,
+      "keywords": []
+    },
+    {
+      "slug": "error-messaging-and-routing-rules-for-asn-creation-in-seller-lab",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/error-messaging-and-routing-rules-for-asn-creation-in-seller-lab",
+      "ok": true,
+      "chars": 6027,
+      "keywords": [
+        "catalog",
+        "sku",
+        "size"
+      ]
+    },
+    {
+      "slug": "how-to-calculate-the-directship-fee-in-ksa",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/how-to-calculate-the-directship-fee-in-ksa",
+      "ok": true,
+      "chars": 3209,
+      "keywords": [
+        "size",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "update-your-legal-documents",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/update-your-legal-documents",
+      "ok": true,
+      "chars": 8892,
+      "keywords": [
+        "reject",
+        "rejection",
+        "vat"
+      ]
+    },
+    {
+      "slug": "prohibited-products",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/prohibited-products",
+      "ok": true,
+      "chars": 3298,
+      "keywords": [
+        "title",
+        "image",
+        "picture",
+        "photo",
+        "color"
+      ]
+    },
+    {
+      "slug": "content-guidelines-for-product-listing-for-home-category",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/content-guidelines-for-product-listing-for-home-category",
+      "ok": true,
+      "chars": 8350,
+      "keywords": [
+        "title",
+        "image",
+        "picture",
+        "reject",
+        "rejection",
+        "attribute",
+        "sku",
+        "size",
+        "colour",
+        "color",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-to-list-products-belonging-to-multiple-categories-in-bulk",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/how-to-list-products-belonging-to-multiple-categories-in-bulk",
+      "ok": true,
+      "chars": 5939,
+      "keywords": [
+        "character",
+        "title",
+        "image",
+        "picture",
+        "catalog",
+        "sku",
+        "size",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "statement-of-account",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/statement-of-account",
+      "ok": true,
+      "chars": 3703,
+      "keywords": [
+        "referral",
+        "fee",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "how-to-add-the-bank-details-in-the-legal-entity",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/how-to-add-the-bank-details-in-the-legal-entity",
+      "ok": true,
+      "chars": 2223,
+      "keywords": []
+    },
+    {
+      "slug": "directship-customer-returns-process",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-customer-returns-process",
+      "ok": true,
+      "chars": 7476,
+      "keywords": [
+        "image"
+      ]
+    },
+    {
+      "slug": "fulfillment-modes-in-directship",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfillment-modes-in-directship",
+      "ok": true,
+      "chars": 5816,
+      "keywords": [
+        "sku",
+        "size"
+      ]
+    },
+    {
+      "slug": "managing-your-invoices-and-credit-notes-on-noon",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/managing-your-invoices-and-credit-notes-on-noon",
+      "ok": true,
+      "chars": 5292,
+      "keywords": [
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "what-is-fbn-or-noon-express",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/what-is-fbn-or-noon-express",
+      "ok": true,
+      "chars": 2299,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "the-seller-skus-content-guidelines-for-laptop-and-monitors",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/the-seller-skus-content-guidelines-for-laptop-and-monitors",
+      "ok": true,
+      "chars": 9031,
+      "keywords": [
+        "title",
+        "image",
+        "attribute",
+        "sku",
+        "size",
+        "color"
+      ]
+    },
+    {
+      "slug": "queue-management-system",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/queue-management-system",
+      "ok": true,
+      "chars": 3683,
+      "keywords": []
+    },
+    {
+      "slug": "understanding-the-catalog-creation-page",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/understanding-the-catalog-creation-page",
+      "ok": true,
+      "chars": 11710,
+      "keywords": [
+        "title",
+        "image",
+        "reject",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "fee",
+        "vat",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "noon-opportunities-program-overview",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/noon-opportunities-program-overview",
+      "ok": true,
+      "chars": 6057,
+      "keywords": [
+        "title",
+        "image",
+        "catalog",
+        "sku",
+        "size",
+        "commission",
+        "fee",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "reports-and-analytics-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/reports-and-analytics/reports-and-analytics-comprehensive-overview",
+      "ok": true,
+      "chars": 1012,
+      "keywords": [
+        "vat"
+      ]
+    },
+    {
+      "slug": "who-can-sell-on-noon",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/who-can-sell-on-noon",
+      "ok": true,
+      "chars": 2927,
+      "keywords": [
+        "vat"
+      ]
+    },
+    {
+      "slug": "noon-guide-to-setup-global-store-in-uae-and-ksa-for-indian-sellers",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/noon-guide-to-setup-global-store-in-uae-and-ksa-for-indian-sellers",
+      "ok": true,
+      "chars": 9473,
+      "keywords": [
+        "catalog",
+        "sku",
+        "size",
+        "colour",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "cofunding-deals-commission-discount-and-shared-discount-co-funded",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/cofunding-deals-commission-discount-and-shared-discount-co-funded",
+      "ok": true,
+      "chars": 7819,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "commission"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-noon-fbn-fees-in-uae-refurbished-and-renewed",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-uae-refurbished-and-renewed",
+      "ok": true,
+      "chars": 7332,
+      "keywords": [
+        "reject",
+        "size",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "fbp-order-cancellation-and-rejection-policy",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fbp-order-cancellation-and-rejection-policy",
+      "ok": true,
+      "chars": 6353,
+      "keywords": [
+        "reject",
+        "rejection",
+        "size",
+        "color",
+        "vat"
+      ]
+    },
+    {
+      "slug": "onboarding-and-registration-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/onboarding-and-registration-comprehensive-overview",
+      "ok": true,
+      "chars": 1696,
+      "keywords": [
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "jump-integration",
+      "url": "https://helpcenter.noon.partners/en/category/getting-help-and-support/jump-integration",
+      "ok": true,
+      "chars": 6292,
+      "keywords": [
+        "image",
+        "catalog",
+        "sku",
+        "vat",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "managing-your-direct-delivery-returns",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/managing-your-direct-delivery-returns",
+      "ok": true,
+      "chars": 6250,
+      "keywords": [
+        "image",
+        "photo"
+      ]
+    },
+    {
+      "slug": "new-statement-detail-report",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/new-statement-detail-report",
+      "ok": true,
+      "chars": 6808,
+      "keywords": [
+        "sku",
+        "size",
+        "commission",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "partial-rtv-handover-in-noon-hubs",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/partial-rtv-handover-in-noon-hubs",
+      "ok": true,
+      "chars": 2006,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "product-quality-control-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/product-quality-control-policy",
+      "ok": true,
+      "chars": 5096,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "noon-vantage-your-ultimate-brand-analytics-hub",
+      "url": "https://helpcenter.noon.partners/en/category/reports-and-analytics/noon-vantage-your-ultimate-brand-analytics-hub",
+      "ok": true,
+      "chars": 24983,
+      "keywords": [
+        "title",
+        "image",
+        "catalog",
+        "sku",
+        "size"
+      ]
+    },
+    {
+      "slug": "seller-sku-content-quality",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/seller-sku-content-quality",
+      "ok": true,
+      "chars": 7260,
+      "keywords": [
+        "title",
+        "image",
+        "picture",
+        "reject",
+        "rejection",
+        "attribute",
+        "sku",
+        "fee"
+      ]
+    },
+    {
+      "slug": "understanding-the-external-ads-tracker",
+      "url": "https://helpcenter.noon.partners/en/category/advertising-and-marketing/understanding-the-external-ads-tracker",
+      "ok": true,
+      "chars": 4656,
+      "keywords": []
+    },
+    {
+      "slug": "edit-your-store-information",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/edit-your-store-information",
+      "ok": true,
+      "chars": 1519,
+      "keywords": []
+    },
+    {
+      "slug": "program-policies",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/program-policies",
+      "ok": true,
+      "chars": 2635,
+      "keywords": [
+        "reject",
+        "rejection",
+        "fee",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "whistleblowing-hotline",
+      "url": "https://helpcenter.noon.partners/en/category/getting-help-and-support/whistleblowing-hotline",
+      "ok": true,
+      "chars": 2961,
+      "keywords": []
+    },
+    {
+      "slug": "seller-warranty-policy",
+      "url": "https://helpcenter.noon.partners/en/category/warranty/seller-warranty-policy",
+      "ok": true,
+      "chars": 46248,
+      "keywords": [
+        "title",
+        "photo",
+        "reject",
+        "rejection",
+        "catalog",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "downloading-the-global-catalog-export-indian-sellers",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/downloading-the-global-catalog-export-indian-sellers",
+      "ok": true,
+      "chars": 996,
+      "keywords": [
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "what-is-the-returns-reduction-dashboard",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/what-is-the-returns-reduction-dashboard",
+      "ok": true,
+      "chars": 2847,
+      "keywords": [
+        "image",
+        "attribute",
+        "sku",
+        "vat",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-to-participate-in-flash-deals",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/how-to-participate-in-flash-deals",
+      "ok": true,
+      "chars": 3760,
+      "keywords": [
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "cross-border-selling-faq",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/cross-border-selling-faq",
+      "ok": true,
+      "chars": 1460,
+      "keywords": [
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-partner-fbp-fees-in-ksa-refurbished-and-renewed",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fulfilled-by-partner-fbp-fees-in-ksa-refurbished-and-renewed",
+      "ok": true,
+      "chars": 6026,
+      "keywords": [
+        "size",
+        "referral",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "setting-up-your-delivery-area-for-direct-delivery-warehouse",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/setting-up-your-delivery-area-for-direct-delivery-warehouse",
+      "ok": true,
+      "chars": 4443,
+      "keywords": [
+        "image",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "packing-guidelines-for-directship",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/packing-guidelines-for-directship",
+      "ok": true,
+      "chars": 8060,
+      "keywords": [
+        "image",
+        "photo",
+        "attribute",
+        "sku",
+        "size",
+        "color",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-to-use-and-make-changes-to-your-products-on-catalog-listing-page",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/how-to-use-and-make-changes-to-your-products-on-catalog-listing-page",
+      "ok": true,
+      "chars": 3716,
+      "keywords": [
+        "title",
+        "image",
+        "catalog",
+        "sku",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "seller-faqs-for-noon-global-store-from-uae-to-ksa",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/seller-faqs-for-noon-global-store-from-uae-to-ksa",
+      "ok": true,
+      "chars": 2302,
+      "keywords": [
+        "catalog",
+        "sku",
+        "vat"
+      ]
+    },
+    {
+      "slug": "how-can-i-track-my-rtv-shipments-and-notifications",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/how-can-i-track-my-rtv-shipments-and-notifications",
+      "ok": true,
+      "chars": 3978,
+      "keywords": [
+        "image"
+      ]
+    },
+    {
+      "slug": "e-invoicing-policy-for-egypt",
+      "url": "https://helpcenter.noon.partners/en/category/finance-and-payments/e-invoicing-policy-for-egypt",
+      "ok": true,
+      "chars": 5615,
+      "keywords": [
+        "commission",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "inventory-removal-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/inventory-removal-comprehensive-overview",
+      "ok": true,
+      "chars": 2101,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "understand-the-fbn-eligible-items-report-replenishment-report",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/understand-the-fbn-eligible-items-report-replenishment-report",
+      "ok": true,
+      "chars": 1759,
+      "keywords": [
+        "sku",
+        "fee"
+      ]
+    },
+    {
+      "slug": "noon-ads",
+      "url": "https://helpcenter.noon.partners/en/category/advertising-and-marketing/noon-ads",
+      "ok": true,
+      "chars": 792,
+      "keywords": []
+    },
+    {
+      "slug": "governance-and-performance-management-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/reports-and-analytics/governance-and-performance-management-comprehensive-overview",
+      "ok": true,
+      "chars": 1344,
+      "keywords": [
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "how-to-update-your-inventory-indian-sellers",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/how-to-update-your-inventory-indian-sellers",
+      "ok": true,
+      "chars": 2528,
+      "keywords": [
+        "reject",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "fbp-directship-picklists",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/fbp-directship-picklists",
+      "ok": true,
+      "chars": 6005,
+      "keywords": [
+        "sku",
+        "color",
+        "vat"
+      ]
+    },
+    {
+      "slug": "cross-border-selling",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/cross-border-selling",
+      "ok": true,
+      "chars": 5813,
+      "keywords": [
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "seller-compliance-policy-imei-registration-and-import-regulations-egypt",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/seller-compliance-policy-imei-registration-and-import-regulations-egypt",
+      "ok": true,
+      "chars": 1676,
+      "keywords": [
+        "vat"
+      ]
+    },
+    {
+      "slug": "how-to-report-the-seller-reviews",
+      "url": "https://helpcenter.noon.partners/en/category/reputation-management/how-to-report-the-seller-reviews",
+      "ok": true,
+      "chars": 2892,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "product-recall-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/product-recall-policy",
+      "ok": true,
+      "chars": 7150,
+      "keywords": [
+        "referral",
+        "fee"
+      ]
+    },
+    {
+      "slug": "a-content-on-noon-enhancing-your-product-pages",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/a-content-on-noon-enhancing-your-product-pages",
+      "ok": true,
+      "chars": 3562,
+      "keywords": [
+        "image",
+        "reject",
+        "catalog",
+        "size"
+      ]
+    },
+    {
+      "slug": "returns-and-seller-protection-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/returns-and-seller-protection-policy",
+      "ok": true,
+      "chars": 7210,
+      "keywords": [
+        "image",
+        "size",
+        "color",
+        "referral",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "title-requirements-and-rejection-reasons-for-the-seller-sku",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/title-requirements-and-rejection-reasons-for-the-seller-sku",
+      "ok": true,
+      "chars": 7489,
+      "keywords": [
+        "character",
+        "characters",
+        "title",
+        "image",
+        "reject",
+        "rejection",
+        "attribute",
+        "sku",
+        "size",
+        "color"
+      ]
+    },
+    {
+      "slug": "feature-bullets-product-highlights-and-description-for-the-seller-sku",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/feature-bullets-product-highlights-and-description-for-the-seller-sku",
+      "ok": true,
+      "chars": 19070,
+      "keywords": [
+        "character",
+        "characters",
+        "title",
+        "image",
+        "reject",
+        "rejection",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "the-seller-sku-product-attributes",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/the-seller-sku-product-attributes",
+      "ok": true,
+      "chars": 4802,
+      "keywords": [
+        "title",
+        "reject",
+        "rejection",
+        "attribute",
+        "sku",
+        "size",
+        "color"
+      ]
+    },
+    {
+      "slug": "how-to-add-user-on-the-seller-lab",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/how-to-add-user-on-the-seller-lab",
+      "ok": true,
+      "chars": 6468,
+      "keywords": [
+        "vat"
+      ]
+    },
+    {
+      "slug": "understanding-directship-express-dse",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/understanding-directship-express-dse",
+      "ok": true,
+      "chars": 5214,
+      "keywords": [
+        "sku",
+        "size",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "understanding-the-application-rejections-reason-and-how-to-resolve-them",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/understanding-the-application-rejections-reason-and-how-to-resolve-them",
+      "ok": true,
+      "chars": 7710,
+      "keywords": [
+        "character",
+        "reject",
+        "rejection",
+        "vat"
+      ]
+    },
+    {
+      "slug": "seller-sku-quick-copy-of-the-content",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/seller-sku-quick-copy-of-the-content",
+      "ok": true,
+      "chars": 1564,
+      "keywords": [
+        "attribute",
+        "catalog",
+        "sku",
+        "color"
+      ]
+    },
+    {
+      "slug": "the-seller-sku-brand",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/the-seller-sku-brand",
+      "ok": true,
+      "chars": 3923,
+      "keywords": [
+        "title",
+        "image",
+        "reject",
+        "rejection",
+        "attribute",
+        "sku"
+      ]
+    },
+    {
+      "slug": "brand-creation-guidelines",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/brand-creation-guidelines",
+      "ok": true,
+      "chars": 5775,
+      "keywords": [
+        "image",
+        "photo",
+        "reject",
+        "rejection",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "fulfilled-by-noon-fbn-fees-in-ksa-refurbished-and-renewed",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/fulfilled-by-noon-fbn-fees-in-ksa-refurbished-and-renewed",
+      "ok": true,
+      "chars": 7023,
+      "keywords": [
+        "reject",
+        "size",
+        "referral",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "seller-offboarding-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/seller-offboarding-policy",
+      "ok": true,
+      "chars": 2457,
+      "keywords": [
+        "catalog",
+        "vat"
+      ]
+    },
+    {
+      "slug": "what-is-mahali",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/what-is-mahali",
+      "ok": true,
+      "chars": 4141,
+      "keywords": [
+        "commission",
+        "fee",
+        "vat"
+      ]
+    },
+    {
+      "slug": "return-to-vendor-rtv-report",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/return-to-vendor-rtv-report",
+      "ok": true,
+      "chars": 4372,
+      "keywords": [
+        "sku",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "partner-sku-rename-import",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/partner-sku-rename-import",
+      "ok": true,
+      "chars": 3057,
+      "keywords": [
+        "character",
+        "characters",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "warranty-requirements",
+      "url": "https://helpcenter.noon.partners/en/category/warranty/warranty-requirements",
+      "ok": true,
+      "chars": 8801,
+      "keywords": [
+        "catalog",
+        "sku",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "directship-features",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-features",
+      "ok": true,
+      "chars": 3992,
+      "keywords": [
+        "sku"
+      ]
+    },
+    {
+      "slug": "supermall-model-policy-document",
+      "url": "https://helpcenter.noon.partners/en/category/supermall/supermall-model-policy-document",
+      "ok": true,
+      "chars": 2537,
+      "keywords": [
+        "catalog",
+        "sku",
+        "commission",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "listing-products-on-noon-faq",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/listing-products-on-noon-faq",
+      "ok": true,
+      "chars": 14887,
+      "keywords": [
+        "title",
+        "image",
+        "picture",
+        "reject",
+        "rejection",
+        "attribute",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "commission",
+        "fee",
+        "vat",
+        "warranty",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "how-to-upload-my-logo-and-banner-to-my-seller-profile",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/how-to-upload-my-logo-and-banner-to-my-seller-profile",
+      "ok": true,
+      "chars": 3370,
+      "keywords": [
+        "image",
+        "picture"
+      ]
+    },
+    {
+      "slug": "new-inventory-ledger-reports-summary-and-detailed-view",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/new-inventory-ledger-reports-summary-and-detailed-view",
+      "ok": true,
+      "chars": 5055,
+      "keywords": [
+        "title",
+        "reject",
+        "rejection",
+        "sku",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "how-to-setup-your-automated-return-preference",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/how-to-setup-your-automated-return-preference",
+      "ok": true,
+      "chars": 5021,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "essential-guidelines-for-bulky-directship-selling-model",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/essential-guidelines-for-bulky-directship-selling-model",
+      "ok": true,
+      "chars": 2916,
+      "keywords": [
+        "reject",
+        "rejection",
+        "fee"
+      ]
+    },
+    {
+      "slug": "directship-express-eligibility-guide-application-and-onboarding",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-express-eligibility-guide-application-and-onboarding",
+      "ok": true,
+      "chars": 6297,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "vat"
+      ]
+    },
+    {
+      "slug": "what-is-fbp-performance-dashboard",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/what-is-fbp-performance-dashboard",
+      "ok": true,
+      "chars": 3845,
+      "keywords": [
+        "reject",
+        "rejection",
+        "sku"
+      ]
+    },
+    {
+      "slug": "directship-express-operations-playbook-daily-running-and-support-guide",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-express-operations-playbook-daily-running-and-support-guide",
+      "ok": true,
+      "chars": 7202,
+      "keywords": [
+        "reject",
+        "vat",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "inventory-health-dashboard",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory/inventory-health-dashboard",
+      "ok": true,
+      "chars": 6762,
+      "keywords": [
+        "title",
+        "image",
+        "sku",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "determining-your-prices-global-min-and-max",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory/determining-your-prices-global-min-and-max",
+      "ok": true,
+      "chars": 4074,
+      "keywords": [
+        "catalog",
+        "sku",
+        "vat"
+      ]
+    },
+    {
+      "slug": "noon-finds-faqs",
+      "url": "https://helpcenter.noon.partners/en/category/advertising-and-marketing/noon-finds-faqs",
+      "ok": true,
+      "chars": 2663,
+      "keywords": []
+    },
+    {
+      "slug": "partner-sku-price-range-import",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/partner-sku-price-range-import",
+      "ok": true,
+      "chars": 3700,
+      "keywords": [
+        "character",
+        "characters",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "vouchers-fund-your-own-product-page-discount",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/vouchers-fund-your-own-product-page-discount",
+      "ok": true,
+      "chars": 3337,
+      "keywords": [
+        "sku",
+        "vat"
+      ]
+    },
+    {
+      "slug": "inventory-removal-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/inventory-removal-policy",
+      "ok": true,
+      "chars": 8827,
+      "keywords": [
+        "reject",
+        "rejection",
+        "sku",
+        "fee",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "comprehensive-guide-to-noon-brand-stores",
+      "url": "https://helpcenter.noon.partners/en/category/advertising-and-marketing/comprehensive-guide-to-noon-brand-stores",
+      "ok": true,
+      "chars": 9732,
+      "keywords": [
+        "character",
+        "characters",
+        "title",
+        "image",
+        "catalog",
+        "sku",
+        "size",
+        "color"
+      ]
+    },
+    {
+      "slug": "how-to-enroll-your-skus-for-virtual-bundles",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/how-to-enroll-your-skus-for-virtual-bundles",
+      "ok": true,
+      "chars": 5569,
+      "keywords": [
+        "title",
+        "image",
+        "catalog",
+        "sku",
+        "size"
+      ]
+    },
+    {
+      "slug": "noon-order-fulfillment-process-indian-sellers",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/noon-order-fulfillment-process-indian-sellers",
+      "ok": true,
+      "chars": 6749,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "vat",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "warranty-service-center-management-guide",
+      "url": "https://helpcenter.noon.partners/en/category/warranty/warranty-service-center-management-guide",
+      "ok": true,
+      "chars": 9161,
+      "keywords": [
+        "reject",
+        "catalog",
+        "sku",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "comprehensive-guide-to-supermall",
+      "url": "https://helpcenter.noon.partners/en/category/supermall/comprehensive-guide-to-supermall",
+      "ok": true,
+      "chars": 940,
+      "keywords": []
+    },
+    {
+      "slug": "partner-sku-delete-import",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/partner-sku-delete-import",
+      "ok": true,
+      "chars": 3408,
+      "keywords": [
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "international-seller-terms-and-conditions-in-uae",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/international-seller-terms-and-conditions-in-uae",
+      "ok": true,
+      "chars": 33734,
+      "keywords": [
+        "title",
+        "reject",
+        "rejection",
+        "catalog",
+        "commission",
+        "fee",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "seller-guide-eligibility-and-requirements-for-renewed-refurbished-items",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/seller-guide-eligibility-and-requirements-for-renewed-refurbished-items",
+      "ok": true,
+      "chars": 5206,
+      "keywords": [
+        "reject",
+        "vat",
+        "warranty",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "how-can-i-fix-listing-errors-in-promotions",
+      "url": "https://helpcenter.noon.partners/en/category/promotions-and-deals/how-can-i-fix-listing-errors-in-promotions",
+      "ok": true,
+      "chars": 2367,
+      "keywords": [
+        "reject",
+        "rejection",
+        "catalog",
+        "sku"
+      ]
+    },
+    {
+      "slug": "video-guidelines-and-rejection-reasons-for-seller-skus",
+      "url": "https://helpcenter.noon.partners/en/category/product-listing/video-guidelines-and-rejection-reasons-for-seller-skus",
+      "ok": true,
+      "chars": 8090,
+      "keywords": [
+        "character",
+        "characters",
+        "image",
+        "reject",
+        "rejection",
+        "catalog",
+        "sku",
+        "size",
+        "color",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "inventory-confiscation-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/inventory-confiscation-policy",
+      "ok": true,
+      "chars": 1847,
+      "keywords": []
+    },
+    {
+      "slug": "saleable-recommended-rtv-report",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/saleable-recommended-rtv-report",
+      "ok": true,
+      "chars": 3227,
+      "keywords": [
+        "title",
+        "sku",
+        "size",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "global-seller-warranty-policy",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/global-seller-warranty-policy",
+      "ok": true,
+      "chars": 4465,
+      "keywords": [
+        "reject",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "the-noon-sales-promise",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/the-noon-sales-promise",
+      "ok": true,
+      "chars": 3101,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "navigating-your-homepage",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/navigating-your-homepage",
+      "ok": true,
+      "chars": 3798,
+      "keywords": [
+        "catalog",
+        "sku",
+        "fee"
+      ]
+    },
+    {
+      "slug": "non-saleable-recommended-rtv-report",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/non-saleable-recommended-rtv-report",
+      "ok": true,
+      "chars": 3371,
+      "keywords": [
+        "title",
+        "sku",
+        "size",
+        "fee",
+        "barcode"
+      ]
+    },
+    {
+      "slug": "directship-seller-performance-management",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/directship-seller-performance-management",
+      "ok": true,
+      "chars": 2594,
+      "keywords": [
+        "reject",
+        "vat"
+      ]
+    },
+    {
+      "slug": "seller-reviews-and-ratings",
+      "url": "https://helpcenter.noon.partners/en/category/reputation-management/seller-reviews-and-ratings",
+      "ok": true,
+      "chars": 3421,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "setting-your-contact-preferences",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/setting-your-contact-preferences",
+      "ok": true,
+      "chars": 4117,
+      "keywords": [
+        "catalog",
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "how-to-submit-a-gatepass-for-your-freezone-returns",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/how-to-submit-a-gatepass-for-your-freezone-returns",
+      "ok": true,
+      "chars": 4498,
+      "keywords": [
+        "reject",
+        "rejection"
+      ]
+    },
+    {
+      "slug": "understanding-and-managing-your-selling-origins",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/understanding-and-managing-your-selling-origins",
+      "ok": true,
+      "chars": 2818,
+      "keywords": [
+        "reject"
+      ]
+    },
+    {
+      "slug": "price-and-inventory-management-comprehensive-overview",
+      "url": "https://helpcenter.noon.partners/en/category/price-and-inventory/price-and-inventory-management-comprehensive-overview",
+      "ok": true,
+      "chars": 1057,
+      "keywords": [
+        "sku"
+      ]
+    },
+    {
+      "slug": "customer-reviews-anti-manipulation-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/customer-reviews-anti-manipulation-policy",
+      "ok": true,
+      "chars": 3942,
+      "keywords": [
+        "sku",
+        "referral",
+        "packaging"
+      ]
+    },
+    {
+      "slug": "receiving-methods-for-rtv-delivery",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-noon-fbn/receiving-methods-for-rtv-delivery",
+      "ok": true,
+      "chars": 1171,
+      "keywords": []
+    },
+    {
+      "slug": "how-to-update-your-transfer-price-indian-sellers",
+      "url": "https://helpcenter.noon.partners/en/category/global-selling/how-to-update-your-transfer-price-indian-sellers",
+      "ok": true,
+      "chars": 2706,
+      "keywords": [
+        "reject",
+        "sku"
+      ]
+    },
+    {
+      "slug": "how-to-apply-for-a-trade-license-in-dubai",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/how-to-apply-for-a-trade-license-in-dubai",
+      "ok": true,
+      "chars": 3195,
+      "keywords": [
+        "fee"
+      ]
+    },
+    {
+      "slug": "virtual-inbox-on-seller-lab",
+      "url": "https://helpcenter.noon.partners/en/category/onboarding-and-registration/virtual-inbox-on-seller-lab",
+      "ok": true,
+      "chars": 1227,
+      "keywords": []
+    },
+    {
+      "slug": "returnless-refund-for-directship-sellers",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/returnless-refund-for-directship-sellers",
+      "ok": true,
+      "chars": 1966,
+      "keywords": []
+    },
+    {
+      "slug": "noon-conflict-of-interest-policy",
+      "url": "https://helpcenter.noon.partners/en/category/program-policies/noon-conflict-of-interest-policy",
+      "ok": true,
+      "chars": 2140,
+      "keywords": []
+    },
+    {
+      "slug": "third-party-warranty-rate-card-ksa-refurbished-and-renewed",
+      "url": "https://helpcenter.noon.partners/en/category/warranty/third-party-warranty-rate-card-ksa-refurbished-and-renewed",
+      "ok": true,
+      "chars": 1848,
+      "keywords": [
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "third-party-warranty-rate-card-uae-refurbished-and-renewed",
+      "url": "https://helpcenter.noon.partners/en/category/warranty/third-party-warranty-rate-card-uae-refurbished-and-renewed",
+      "ok": true,
+      "chars": 5526,
+      "keywords": [
+        "fee",
+        "vat",
+        "warranty"
+      ]
+    },
+    {
+      "slug": "quality-control-guidelines-for-directship",
+      "url": "https://helpcenter.noon.partners/en/category/fulfilled-by-partner-fbp/quality-control-guidelines-for-directship",
+      "ok": true,
+      "chars": 2267,
+      "keywords": [
+        "size",
+        "color",
+        "packaging",
+        "barcode"
+      ]
+    }
+  ]
+}

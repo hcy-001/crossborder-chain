@@ -1,0 +1,71 @@
+{
+  "block": "4 | SA/AE 与 SEA 法域扩展",
+  "generated_at": "2026-10-29T11:05:00+08:00",
+  "level": "L1（在线可得性为 L1 实测；法域规则内容未获得官方核验）",
+  "defect_fixed": {
+    "what": "regions/SA/profile.json 与 regions/AE/profile.json 声明 completion=full，但既无 compliance/rules.json，也无 data/specs/platforms/noon.json",
+    "why_it_matters": "空壳被标成完整支持，等于对下游说谎；违反「不得把空壳称为完整支持」",
+    "fix": "两者 completion 改为 skeleton，并新增机械门防止再发生",
+    "files": ["regions/SA/profile.json", "regions/AE/profile.json"]
+  },
+  "new_gate": {
+    "id": "G1-PROFILE（扩展，同一门）",
+    "rule": "completion=full 必须同时具备 regions/<id>/compliance/rules.json 与每个已声明平台的 data/specs/platforms/<platform>.json",
+    "implementation": "scripts/gates/check-decouple.mjs checkProfiles()",
+    "red_fixture": "tests/fixtures/gate-completion（SA 标 full，无规则无规格）",
+    "tests": "tests/gates/completion.test.mjs（红 fixture 报两条 FAIL；真实仓库不得出现 completion=full but）"
+  },
+  "fx_probe_2026_10_29": [
+    {
+      "source": "frankfurter (ECB)",
+      "url": "https://api.frankfurter.dev/v1/latest?base=USD&symbols=SAR,AED",
+      "http_status": 404,
+      "interpretation": "该源不支持 SAR/AED，因此不存在从 ECB 编造 SAR/AED 的可行路径；此结果即为「不得编造」的技术证据"
+    },
+    {
+      "source": "open.er-api.com（exchangerate-api 免费层）",
+      "url": "https://open.er-api.com/v6/latest/SAR",
+      "http_status": 200,
+      "bytes": 2980
+    },
+    {
+      "source": "open.er-api.com（exchangerate-api 免费层）",
+      "url": "https://open.er-api.com/v6/latest/AED",
+      "http_status": 200,
+      "bytes": 2996
+    }
+  ],
+  "fx_decision": {
+    "registered_as_source": false,
+    "reason": "er-api 是商业聚合器免费层，不是央行口径，只能算 secondary；而 core/data/refresh-facts.mjs 的 isTerminalSource() 明确排除 secondary 作为终值来源，登记后不会产出终值、只会留下记录。为不制造「看起来接了源其实不生效」的死配置，本轮不登记，改按交接文件规定走 missing + pricing_unavailable。",
+    "consequence": "SA/AE 定价保持 unavailable（reasons 含 fx_missing 或 pricing_unit_mismatch），不编 SAR/AED 数字",
+    "next_step_if_wanted": "先生提供一个可核验的央行/官方 SAR、AED 汇率源（含授权口径）后，再登记 primary 源并补交叉核对"
+  },
+  "end_to_end_evidence": {
+    "test": "tests/compliance/region-degradation.test.mjs",
+    "covers": ["SA", "AE"],
+    "assertions": [
+      "profile 存在 → doctor exit 0 且可运行",
+      "缺 rules.json → master/compliance/report.json blockers 非空 + notes=unverified",
+      "缺平台规格 → platforms/noon/validate.json quality=unverified、violations[0].code=spec_unavailable",
+      "缺 SAR/AED 已核汇率 → receipt.pricing.status=unavailable，reasons 含 fx_missing 或 pricing_unit_mismatch",
+      "仍出 9 张母版图；handoff 首行 BLOCKED、次行占位图声明"
+    ]
+  },
+  "sea": {
+    "state": "SG/MY/TH/VN/PH/ID 保持 profile-only 的 skeleton",
+    "action_this_turn": "未改；未把 skeleton 描述为完整支持",
+    "why": "逐国补 sources/rules/specs 需官方来源核验，缺来源时新增等于编造"
+  },
+  "add_region": {
+    "existing_test": "tests/integration/add-region.test.mjs「add-region creates four files without touching core」",
+    "claim": "新法域用 scripts/add-region.mjs 生成，core diff 为空",
+    "level": "L1（本地跑通）"
+  },
+  "unresolved": [
+    "SA/AE 官方合规规则（SASO / MOIAT / ESMA 等）未核验，rules.json 仍缺",
+    "SA/AE 平台（noon）规格未核验，spec 仍缺",
+    "SAR/AED 官方汇率源未取得",
+    "SEA 六国 sources/rules/specs 未建"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "block": "2 | G2 / G4 / G7 机械证据",
+  "generated_at": "2026-10-29T11:00:00+08:00",
+  "level": "L1",
+  "gates_run": {
+    "cmd": "npm run check:decouple",
+    "exit_code": 0,
+    "log": "out/verification/gates-block2.txt",
+    "output": [
+      "G1-CORE PASS scanned_core_files=7",
+      "G1-PATH PASS scanned_files=162",
+      "G1-FACT PASS scanned_facts=15",
+      "G1-PROFILE PASS scanned_profiles=9",
+      "G2-NET PASS scanned_core_files=7 network_allowed_channels=9"
+    ]
+  },
+  "G2": {
+    "claim": "core/ 不得直接联网；联网只允许出现在 channels/",
+    "mechanism": "scripts/gates/check-decouple.mjs 新增 G2-NET 静态扫描，四种模式：bare fetch call / globalThis.fetch / node:http|https|net|tls 导入 / http client 库（undici|axios|node-fetch|got|superagent）",
+    "scanned_core_files": 7,
+    "network_allowed_channels": 9,
+    "violations_found": 0,
+    "red_fixture": "tests/fixtures/gate-network-red（core/net-call.mjs 裸 fetch + core/net-module.mjs node:https）",
+    "green_fixture": "tests/fixtures/gate-network-green（core/pure.mjs 纯净 + channels/live-source.mjs 联网）",
+    "tests": "tests/gates/network.test.mjs（4 项：红、绿、真实仓库非空扫描、无 core 时 SKIP 而不是静默 PASS）",
+    "empty_scan_guard": "scanned_core_files=0 输出 G2-NET SKIP，不按 PASS 计；真实仓库断言 count>=7"
+  },
+  "G4": {
+    "claim": "新增同形 JSON 源只改 data/sources.json；不同响应协议必须新增 adapter，不得宣称所有响应形状都能零代码接入",
+    "same_shape_config_only_evidence": [
+      "tests/data/source-channels.test.mjs:91 「a third same-shape JSON source needs only a sources.json entry」（原有，保留）",
+      "tests/gates/config-extension.test.mjs 「G4 a third same-shape JSON source is config-only」：http-json adapter + mapping，注入 fetchImpl 返回第三方形状，值/单位/source_type/ttl 均按配置解析，代码零改动"
+    ],
+    "different_protocol_boundary_evidence": "tests/gates/config-extension.test.mjs 「G4 a different response protocol is rejected as ADAPTER_UNAVAILABLE」：adapter 未注册时抛 ADAPTER_UNAVAILABLE，不静默映射；新增协议 = 新增 channels/source/*.mjs parser 并注册进 parsers 表"
+  },
+  "G7": {
+    "claim_scope": "同一 OpenAI 兼容协议内换 base URL / model / key 只改配置；不同生图协议新增 channel，业务代码零改动",
+    "same_protocol_config_only_evidence": "tests/gates/config-extension.test.mjs「G7 the same OpenAI-compatible protocol is config-only across base URL, model and key」：两套 baseUrl/model/key 各自命中 /models/<model>，鉴权头随 key 变化，无代码分支",
+    "different_protocol_boundary_evidence": "runPackage 通过 imageChannel 依赖注入口接收 channel（scripts/lib/package-runner.mjs），新增协议只需新增 channels/imagegen/*.mjs 并注入，core/ 与 scripts/ 不改；G1-CORE 保证 core 内不出现平台/供应商字面量",
+    "real_generation_status": "UNVERIFIED — tests/gates/config-extension.test.mjs「G7 real generation stays unverified」断言 run() 即使声明 generate 也只返回 read_only_probe，networkCalls=0，不产生费用",
+    "why_unverified": "缺 OpenAI 兼容 key、单张价格与授权张数；真实生图属 opt-in L2，需先生明确同意后才执行"
+  },
+  "writer_scope_check": {
+    "files_written": [
+      "scripts/gates/check-decouple.mjs",
+      "tests/gates/network.test.mjs",
+      "tests/gates/config-extension.test.mjs",
+      "tests/fixtures/gate-network-red/core/net-call.mjs",
+      "tests/fixtures/gate-network-red/core/net-module.mjs",
+      "tests/fixtures/gate-network-green/core/pure.mjs",
+      "tests/fixtures/gate-network-green/channels/live-source.mjs",
+      "out/verification/gates-block2.txt",
+      "out/verification/gate-evidence.json"
+    ],
+    "out_of_scope_writes": "none"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "block": "5 | G11/G12 内容与第三平台投影",
+  "generated_at": "2026-10-29T11:10:00+08:00",
+  "G11": {
+    "claim": "无 image key、无浏览器时，mock + 本地模板仍可完成包结构；视频 unavailable 不阻塞",
+    "status": "L1 已证",
+    "evidence": [
+      "tests/content/content-pipeline.test.mjs「母版文本没有平台字段，视频为空目录且 unavailable 不阻塞」",
+      "tests/content/content-pipeline.test.mjs「母版固定九张 900x1200 PNG，内容寻址与 SHA-256 一致且不补满三十张」",
+      "tests/channels/mock-image.test.mjs（mock 原生输出 9 张、aHash 去重）",
+      "真实命令链：npm run demo exit 0，package/demo-sku master/images 9 张，master/video 为空，handoff 写「本平台可选。」",
+      "本次无任何 API key 环境变量参与（imagegen providers=mock）"
+    ],
+    "note": "placeholder 不参与审美像素门，validate.json quality=placeholder，符合约束 #8"
+  },
+  "G12": {
+    "claim": "第三平台必须有真实或明确 secondary/unverified 规格，不能为了门表编一个平台",
+    "status": "部分完成：投影层已证可泛化；真实第三平台规格未建（明确未完成，不编造）",
+    "proven": [
+      "tests/content/content-pipeline.test.mjs「通用 square fixture 只做上下各 12.5% center crop，逐图哈希与输出可追溯」——方形平台走 12.5% 中心裁切且逐图留 crop 溯源",
+      "tests/content/content-pipeline.test.mjs「crop_safe=false 标 crop_unsafe 且不生成该图的 square 派生」",
+      "tests/content/content-pipeline.test.mjs「两个真实平台投影的 copy 与 title tokens 零字节差异，3:4 图片仅复制」",
+      "tests/compliance/region-degradation.test.mjs：缺平台规格时 platforms/<id>/validate.json quality=unverified、violations[0].code=spec_unavailable，不假装成功"
+    ],
+    "not_done": {
+      "what": "没有新增真实第三平台规格（如 Yandex Market / noon 等）",
+      "why": "本轮未取得可核验的官方或明确 secondary 规格来源；在缺来源时写 spec 等于编造数值，违反 source_type/status 契约",
+      "consequence": "G12 只能记「架构已证 + 真实第三平台未建」，不得计入已完成"
+    }
+  },
+  "invariants_rechecked": {
+    "copy_byte_identical": "已有测试断言，且 scripts/verify-package.mjs 每次出包后复核 9 项，18/18 通过",
+    "title_txt": "platform.ozon.title.template=unverified 时不生成 title.txt，validate.json notes 明写原因"
+  }
+}

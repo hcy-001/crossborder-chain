@@ -1,0 +1,10 @@
+
+> crossborder-delivery-skill@0.1.0 demo
+> node scripts/demo.mjs
+
+{
+  "ok": true,
+  "package": "D:\\DSH\\创想\\AI创新大赛\\package\\demo-sku",
+  "run_id": "20261029-033609-ceff",
+  "pricing": "unavailable"
+}

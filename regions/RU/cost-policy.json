@@ -1,0 +1,23 @@
+{
+  "id": "RU",
+  "status": "unverified",
+  "source": {
+    "status": "unverified",
+    "reason": "佣金率按叶子类目阶梯、VAT/关税随政策变动、物流费按计费重跳档；未逐项取到官方口径，因此这里只声明『必须先有哪几项』，不给费率数字",
+    "checked_at": "2026-10-29"
+  },
+  "required_components": [
+    "shipping",
+    "commission",
+    "tax",
+    "payment_fee"
+  ],
+  "optional_components": [
+    "insurance",
+    "packaging",
+    "last_mile",
+    "storage",
+    "return_reserve"
+  ],
+  "note": "缺任一 required 组件时价格状态必须是 unavailable，并在 reasons 里指名缺哪一项；禁止用行业均值代填。optional 组件缺失不阻塞，但要在成本表里显式留空，不记 0。"
+}

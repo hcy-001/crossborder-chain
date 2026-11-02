@@ -1,0 +1,137 @@
+{
+  "ok": true,
+  "generated_at": "2026-10-29T03:02:40.162Z",
+  "checks_total": 11,
+  "checks_failed": 0,
+  "failed": [],
+  "checks": [
+    {
+      "id": "score_double_run_byte_identical",
+      "ok": true,
+      "detail": {
+        "run_one_sha256": "0db55fe3cc2b206e66650415894372f967582bd9eb785c0ffb117b8c220fd3a6",
+        "run_two_sha256": "0db55fe3cc2b206e66650415894372f967582bd9eb785c0ffb117b8c220fd3a6"
+      }
+    },
+    {
+      "id": "score_input_sha256_stable",
+      "ok": true,
+      "detail": "5ece7c4934f2504b1fbdd8f29bbc51f5877fd7b307b7c44306d08307e67803c2"
+    },
+    {
+      "id": "score_input_sha256_changes_on_input_change",
+      "ok": true,
+      "detail": {
+        "original": "5ece7c4934f2504b1fbdd8f29bbc51f5877fd7b307b7c44306d08307e67803c2",
+        "mutated": "4b268eb0426cf208c2d96c458df9261a2389a7247dd35f767e7c19e092f757f1"
+      }
+    },
+    {
+      "id": "score_ranking_reflects_input_change",
+      "ok": true,
+      "detail": {
+        "original_top": {
+          "candidate_id": "cand-b",
+          "score": 63.75,
+          "rank": 1,
+          "vector": [
+            64,
+            70,
+            58,
+            75,
+            50
+          ]
+        },
+        "mutated_top": {
+          "candidate_id": "cand-b",
+          "score": 76,
+          "rank": 1,
+          "vector": [
+            99,
+            70,
+            58,
+            75,
+            50
+          ]
+        }
+      }
+    },
+    {
+      "id": "pricing_double_run_identical",
+      "ok": true,
+      "detail": 2150.75
+    },
+    {
+      "id": "pricing_available_for_valid_snapshot",
+      "ok": true,
+      "detail": {
+        "before": 2150.75,
+        "after": 1801.25
+      }
+    },
+    {
+      "id": "pricing_attribution_closes_within_0_01",
+      "ok": true,
+      "detail": {
+        "total_delta": -349.5,
+        "attribution_sum": -349.5,
+        "gap": 0
+      }
+    },
+    {
+      "id": "pricing_attribution_covers_removed_and_added_components",
+      "ok": true,
+      "detail": {
+        "removed": {
+          "key": "logistics",
+          "before": 800.25,
+          "after": null,
+          "delta": -800.25
+        },
+        "added": {
+          "key": "acquiring",
+          "before": null,
+          "after": 300.75,
+          "delta": 300.75
+        }
+      }
+    },
+    {
+      "id": "pricing_rejects_fx_inside_cost_components",
+      "ok": true,
+      "detail": [
+        "fx_misplaced",
+        "components_invalid"
+      ]
+    },
+    {
+      "id": "storage_same_content_same_name",
+      "ok": true,
+      "detail": {
+        "one": "img-01-d6c3ab5d.png",
+        "two": "img-01-d6c3ab5d.png"
+      }
+    },
+    {
+      "id": "storage_changed_content_changes_name_and_sha",
+      "ok": true,
+      "detail": {
+        "original": {
+          "name": "img-01-d6c3ab5d.png",
+          "sha256": "d6c3ab5dbc47033cd21933d16dd206b7c37637fbdec34e363bfd281f4d431371",
+          "bytes": 46
+        },
+        "changed": {
+          "name": "img-01-8f44e020.png",
+          "sha256": "8f44e0203c768ab340d9312b205a6f7c1c91b3e17f6792931ed9d4859c8fd8c3",
+          "bytes": 54
+        }
+      }
+    }
+  ],
+  "artifacts": [
+    "out/P3/score.json",
+    "out/P1/pricing.json",
+    "out/P3/storage.json"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "vendor": "volcengine-ark",
+  "note": "图片生成单价（官方价目表）。价格随模型与像素档位变化，所以按「模型 × 像素档位」存成事实，不写进代码。",
+  "facts": [
+    {
+      "key": "image.price.table",
+      "value": {
+        "currency": "CNY",
+        "unit": "per_image",
+        "pixel_tiers": [
+          {"id": "le_2_61mp", "max_pixels": 2610000, "label": "≤ 261 万像素"},
+          {"id": "gt_2_61mp", "max_pixels": null, "label": "> 261 万像素"}
+        ],
+        "models": [
+          {
+            "id": "doubao-seedream-5-0-pro",
+            "aliases": ["doubao-seedream-5-0"],
+            "scenario": "单图生成",
+            "price": {"le_2_61mp": 0.3, "gt_2_61mp": 0.6}
+          },
+          {
+            "id": "doubao-seedream-5-0-flash",
+            "aliases": [],
+            "scenario": "单图生成",
+            "price": {"le_2_61mp": 0.12, "gt_2_61mp": 0.12}
+          },
+          {
+            "id": "doubao-seedream-5-0-lite",
+            "aliases": [],
+            "scenario": "单图生成",
+            "price": {"le_2_61mp": 0.22, "gt_2_61mp": 0.22}
+          },
+          {
+            "id": "doubao-seedream-4-5",
+            "aliases": [],
+            "scenario": "单图生成",
+            "price": {"le_2_61mp": 0.25, "gt_2_61mp": 0.25}
+          },
+          {
+            "id": "doubao-seedream-4-0",
+            "aliases": [],
+            "scenario": "单图生成",
+            "price": {"le_2_61mp": 0.2, "gt_2_61mp": 0.2}
+          }
+        ],
+        "exclusions": [
+          "因审核等原因未成功输出的图片不计费",
+          "seedream-5-0-pro 的「图层拆分场景」另有单价（0.15 / 0.30），本链路不用该场景",
+          "组图场景按实际生成张数计费"
+        ]
+      },
+      "unit": "price-table",
+      "scope": {"region": null, "platform": null, "category": null},
+      "source": "ark-model-pricing",
+      "source_url": "https://ark.volcengine.com/docs/model-pricing",
+      "source_type": "official",
+      "confidence": "official",
+      "status": "final",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 720,
+      "stale": false,
+      "cross_check": [
+        {"source": "docs.volcengine.com/84458/2123431", "value": "Doubao-Seedream-5.0 0.22 元/张（内置集成渠道）", "agree": false}
+      ],
+      "divergence_pct": null,
+      "override": null,
+      "note": "两个官方页面价位不同：方舟直连按像素与模型分档（0.12–0.60），内置集成渠道统一 0.22。本链路走方舟直连（ark.cn-beijing.volces.com），采用直连价目。"
+    },
+    {
+      "key": "image.price.model_alias_risk",
+      "value": {
+        "configured_model": "doubao-seedream-5-0-260128",
+        "matched_row": "doubao-seedream-5-0-pro",
+        "basis": "前缀匹配：价目表只列 pro / flash / lite 三个 5.0 变体，配置里的型号带日期后缀，无法逐字对应",
+        "risk": "若实际路由到 flash 或 lite，单张价会低到 0.12–0.22；本估计取 pro 上限，属保守侧"
+      },
+      "unit": "note",
+      "scope": {"region": null, "platform": null, "category": null},
+      "source": "ark-model-pricing",
+      "source_url": "https://ark.volcengine.com/docs/model-pricing",
+      "source_type": "official",
+      "confidence": "inferred",
+      "status": "candidate",
+      "conflict_id": null,
+      "fetched_at": "2026-11-01T00:00:00.000Z",
+      "ttl_hours": 720,
+      "stale": false,
+      "cross_check": [],
+      "divergence_pct": null,
+      "override": null
+    }
+  ]
+}
