@@ -49,6 +49,9 @@ npm run select:candidates -- --direction "女士针织开衫" --region RU --coun
 
 # ③ 反查货源：把候选变成能直接询价的采购规格书（含目标进价上限）
 npm run source:lookup -- --direction "女士针织开衫" --region RU --pick c01,c03
+
+# ③-a 抓真实报价（需 922 上有已登录 1688 的 Chrome）：用实测报价复核毛利
+npm run quotes:1688 -- --keyword "针织开衫" --target-price 71.6
 ```
 
 | 段 | 读什么 | 产出 | 什么时候不准往下走 |
@@ -59,6 +62,10 @@ npm run source:lookup -- --direction "女士针织开衫" --region RU --pick c01
 ② 的候选**不是「市场验证过的爆款」**，是「按已知约束枚举出的合理选项」，每条都写清了哪条证据是硬的、哪条是二手的、哪个假设破了就废。排序依据是依据强度，不是销量预测。
 
 ③ 给的是**目标进价上限**（售价扣佣金、履约、目标毛利后倒推）。高于这个价就没有毛利空间，不用去谈。倒推用的三个假设写在 `scripts/source-lookup.mjs` 的 `ASSUMPTIONS` 里，改完重跑即可；真实佣金与运费须从后台和货代报价单抄，脚本不替你猜。
+
+③-a 会把这个上限**拿去和真实报价对撞**：抓 1688 搜索列表，算「目标价以内有几家」以及按 P25/中位/P75 进价的实际毛利。没有这条数据时，规格书只给上限，不判断「拿不拿得到货」——两者是不同的问题。
+
+> ⚠️ 1688 的搜索关键词必须按 **GBK** 编码（表单 `acceptCharset=GBK`）。用 `encodeURIComponent`（UTF-8）会搜出无关商品，而页面看起来「有结果」。唯一允许拼该 URL 的地方是 `channels/source/ali1688.mjs` 的 `buildSearchUrl`；仓库内测试会扫全文拦截这类写法。
 
 拿到真实报价之后，用 `marginAt({priceCny, costCny})` 复核实际毛利，再决定要不要进 ④ 出包。
 

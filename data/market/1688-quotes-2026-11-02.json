@@ -1,0 +1,713 @@
+{
+  "channel": "ali1688-search",
+  "keyword": "针织，开衫",
+  "query_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%D5%EB%D6%AF%A3%AC%BF%AA%C9%C0",
+  "encoding": "gbk",
+  "fetched_at": "2026-11-02T14:30:35.595Z",
+  "browser_port": 9222,
+  "source_type": "official-marketplace",
+  "confidence": "measured",
+  "note": "报价为搜索列表页展示价（多为起批价或区间下限），不含运费、不含税、未含议价空间。用于判断「能不能落到目标进价」，不能直接当成交价。",
+  "summary": {
+    "keyword": "针织，开衫",
+    "total_cards": 55,
+    "priced": 55,
+    "unpriced": 0,
+    "price": {
+      "min": 20,
+      "p25": 29.7,
+      "median": 39,
+      "p75": 58.5,
+      "max": 146
+    },
+    "target_price": 71.6,
+    "under_target": 46,
+    "under_target_pct": 83.6,
+    "cheapest": [
+      {
+        "offer_id": "1057304983554",
+        "price_cny": 20,
+        "title": "包芯纱面料 圆领刺绣针织开衫女2026早春新款复古麻花显瘦针织衫",
+        "sales": null,
+        "seller": "东莞市欧思蔓服饰有限公司",
+        "url": "https://detail.1688.com/offer/1057304983554.html"
+      },
+      {
+        "offer_id": "736451105888",
+        "price_cny": 22,
+        "title": "韩版穿搭小香风针织毛衣女秋冬季新款外搭宽松慵懒感领开衫外套潮",
+        "sales": null,
+        "seller": "嘉兴市秀洲区洪合美云羊毛衫加工厂",
+        "url": "https://detail.1688.com/offer/736451105888.html"
+      },
+      {
+        "offer_id": "802398102278",
+        "price_cny": 22,
+        "title": "软糯慵懒秋冬2026新款宽松外套韩系穿搭上衣针织毛衣女慵懒风开衫",
+        "sales": null,
+        "seller": "嘉兴市秀洲区洪合美云羊毛衫加工厂",
+        "url": "https://detail.1688.com/offer/802398102278.html"
+      },
+      {
+        "offer_id": "954293407827",
+        "price_cny": 22,
+        "title": "韩版宽松V领百搭纯色针织毛衣外套开衫女2026新款春秋冬学院学生",
+        "sales": 3000,
+        "seller": "嘉兴市秀洲区洪合镇美小霞服装厂",
+        "url": "https://detail.1688.com/offer/954293407827.html"
+      },
+      {
+        "offer_id": "748110731610",
+        "price_cny": 22,
+        "title": "韩版V领慵懒风开衫2026新款日系简约毛衣女春秋冬休闲宽松针织衫",
+        "sales": 9300,
+        "seller": "嘉兴市秀洲区洪合美云羊毛衫加工厂",
+        "url": "https://detail.1688.com/offer/748110731610.html"
+      }
+    ],
+    "top_sellers": [
+      {
+        "offer_id": "847485422399",
+        "price_cny": 39,
+        "sales": 9900,
+        "title": "毛衣外套女针织开衫复古国潮牌秋季外穿拉链上衣通勤卫衣秋季薄款",
+        "url": "https://detail.1688.com/offer/847485422399.html"
+      },
+      {
+        "offer_id": "748110731610",
+        "price_cny": 22,
+        "sales": 9300,
+        "title": "韩版V领慵懒风开衫2026新款日系简约毛衣女春秋冬休闲宽松针织衫",
+        "url": "https://detail.1688.com/offer/748110731610.html"
+      },
+      {
+        "offer_id": "743929386354",
+        "price_cny": 24,
+        "sales": 5900,
+        "title": "早秋软糯亲肤薄款针织开衫女韩版V领宽松短款小外搭毛衣外套上衣",
+        "url": "https://detail.1688.com/offer/743929386354.html"
+      },
+      {
+        "offer_id": "980641299690",
+        "price_cny": 41.9,
+        "sales": 5900,
+        "title": "100%不起球软糯亲肤羊毛衫针织开衫韩版V领宽松短款外搭毛衣外套",
+        "url": "https://detail.1688.com/offer/980641299690.html"
+      },
+      {
+        "offer_id": "823949826525",
+        "price_cny": 56,
+        "sales": 3700,
+        "title": "KANING慵懒连帽长款针织开衫女2026秋季新款女装过膝毛衣长外套女",
+        "url": "https://detail.1688.com/offer/823949826525.html"
+      }
+    ]
+  },
+  "items": [
+    {
+      "offer_id": "863297707593",
+      "title": "一线成衣羊毛衫针织开衫女显瘦毛衣外套秋冬打底圆领长袖宽松上衣",
+      "price_cny": 79,
+      "sales_text": "全网2300+件",
+      "sales": 2300,
+      "moq_text": null,
+      "seller": "清河县晟睿服装服饰有限公司",
+      "repurchase_text": "回头率 40%",
+      "url": "https://detail.1688.com/offer/863297707593.html"
+    },
+    {
+      "offer_id": "908601483441",
+      "title": "果汁软糖 懒人BI备可机洗圆领羊毛开衫 通勤易搭纯色正肩针织毛衣",
+      "price_cny": 119,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "桐乡市露蒙商贸有限公司",
+      "repurchase_text": "回头率 56%",
+      "url": "https://detail.1688.com/offer/908601483441.html"
+    },
+    {
+      "offer_id": "1084287602721",
+      "title": "韩系V领撞色条纹针织衫女秋季新款洋气百搭减龄开衫上衣女A14502",
+      "price_cny": 85,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "深圳市欧裂时装有限公司",
+      "repurchase_text": "回头率 43%",
+      "url": "https://detail.1688.com/offer/1084287602721.html"
+    },
+    {
+      "offer_id": "737602963247",
+      "title": "仿水貂绒软糯毛衣外套女秋冬新款温柔慵懒中长款宽松毛衣开衫女",
+      "price_cny": 39,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇毛手毛羊毛衫加工厂",
+      "repurchase_text": "回头率 51%",
+      "url": "https://detail.1688.com/offer/737602963247.html"
+    },
+    {
+      "offer_id": "731640136874",
+      "title": "韩版中长款针织毛衣外套女2025秋冬季新款加厚宽松慵懒风外穿开衫",
+      "price_cny": 65.55,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": null,
+      "repurchase_text": "回头率 49%",
+      "url": "https://detail.1688.com/offer/731640136874.html"
+    },
+    {
+      "offer_id": "843768652786",
+      "title": "KANING软糯慵懒风宽松针织开衫女2026秋冬新款外穿中长款毛衣外套",
+      "price_cny": 44,
+      "sales_text": "全网2500+件",
+      "sales": 2500,
+      "moq_text": null,
+      "seller": "嘉兴市乐咖服饰有限公司",
+      "repurchase_text": "回头率 47%",
+      "url": "https://detail.1688.com/offer/843768652786.html"
+    },
+    {
+      "offer_id": "739288344653",
+      "title": "2024年新款高级感温柔慵懒风中长款毛衣外套女春秋季针织开衫上衣",
+      "price_cny": 39.9,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇小十岁服装经营部",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/739288344653.html"
+    },
+    {
+      "offer_id": "836325071025",
+      "title": "软糯针织开衫毛衣女秋冬新款宽松大码显瘦慵懒风仿水貂绒长款外套",
+      "price_cny": 45.9,
+      "sales_text": "全网1600+件",
+      "sales": 1600,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇小十岁服装经营部",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/836325071025.html"
+    },
+    {
+      "offer_id": "976947083928",
+      "title": "原版韩系慵懒风连帽长款过膝针织开衫女秋冬厚款宽松显瘦外套大衣",
+      "price_cny": 38,
+      "sales_text": "全网2600+件",
+      "sales": 2600,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇美小霞服装厂",
+      "repurchase_text": "回头率 49%",
+      "url": "https://detail.1688.com/offer/976947083928.html"
+    },
+    {
+      "offer_id": "1084987730620",
+      "title": "LEKA老钱风咖色蝙蝠袖针织开衫女秋季叠穿外搭披肩罩衫中长款上衣",
+      "price_cny": 36,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市乐咖服饰有限公司",
+      "repurchase_text": "回头率 47%",
+      "url": "https://detail.1688.com/offer/1084987730620.html"
+    },
+    {
+      "offer_id": "736451105888",
+      "title": "韩版穿搭小香风针织毛衣女秋冬季新款外搭宽松慵懒感领开衫外套潮",
+      "price_cny": 22,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合美云羊毛衫加工厂",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/736451105888.html"
+    },
+    {
+      "offer_id": "937894013347",
+      "title": "潮牌川久针织衫毛衣男女开衫保玲短款宽松play情侣装爱心羊毛外套",
+      "price_cny": 34,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "南宫市铭马服装厂",
+      "repurchase_text": "回头率 60%",
+      "url": "https://detail.1688.com/offer/937894013347.html"
+    },
+    {
+      "offer_id": "975162424377",
+      "title": "纯色百搭圆领麻花针织开衫女早秋季新款时尚气质修身显瘦长袖上衣",
+      "price_cny": 27.5,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "东莞市嘉之汇服装有限公司",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/975162424377.html"
+    },
+    {
+      "offer_id": "1082028108223",
+      "title": "天丝羊毛慵懒风圆领女秋冬新款绞花纹理长袖外搭显瘦纯色毛衣开衫",
+      "price_cny": 59,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "汕头市潮阳区谷饶依之欣针织内衣厂",
+      "repurchase_text": "回头率 35%",
+      "url": "https://detail.1688.com/offer/1082028108223.html"
+    },
+    {
+      "offer_id": "983174778252",
+      "title": "高级感软糯黑色v领针织开衫女秋冬加厚宽松慵懒毛衣外套上衣外搭",
+      "price_cny": 39.21,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇呗呗兔服装经营部",
+      "repurchase_text": "回头率 41%",
+      "url": "https://detail.1688.com/offer/983174778252.html"
+    },
+    {
+      "offer_id": "1080079979950",
+      "title": "eggsmile11色暖芯针织开衫女秋冬长袖纯色宽松显瘦外套通勤百搭毛",
+      "price_cny": 27,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "义乌市尚阳针织有限公司",
+      "repurchase_text": "回头率 59%",
+      "url": "https://detail.1688.com/offer/1080079979950.html"
+    },
+    {
+      "offer_id": "741088246045",
+      "title": "麻花修身显瘦针织开衫外套秋季外穿设计感毛衣上衣修身型长袖",
+      "price_cny": 23.6,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "东莞市大朗衣织秀服饰店",
+      "repurchase_text": "回头率 51%",
+      "url": "https://detail.1688.com/offer/741088246045.html"
+    },
+    {
+      "offer_id": "954293883464",
+      "title": "可扫码 RL~2025秋冬拉夫小马标麻花小扣刺绣羊毛圆领简约针织开衫",
+      "price_cny": 98,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "广州柠西服装商行",
+      "repurchase_text": "回头率 41%",
+      "url": "https://detail.1688.com/offer/954293883464.html"
+    },
+    {
+      "offer_id": "836111689377",
+      "title": "厂家批发100%羊毛2024秋冬新款女装POLO领小麻花短款拼色针织开衫",
+      "price_cny": 85,
+      "sales_text": "全网1500+件",
+      "sales": 1500,
+      "moq_text": null,
+      "seller": "清河县伦诚羊绒制品厂",
+      "repurchase_text": "回头率 46%",
+      "url": "https://detail.1688.com/offer/836111689377.html"
+    },
+    {
+      "offer_id": "937839345684",
+      "title": "日系PLAY羊绒针织开衫女上衣爱心川久保玲毛衣外套男女情侣款红心",
+      "price_cny": 35.8,
+      "sales_text": "全网900+件",
+      "sales": 900,
+      "moq_text": null,
+      "seller": "南宫市铭马服装厂",
+      "repurchase_text": "回头率 60%",
+      "url": "https://detail.1688.com/offer/937839345684.html"
+    },
+    {
+      "offer_id": "619013419962",
+      "title": "JK开衫基础款长袖毛衣针织衫纯色学院风制服薄外套V领针织开衫女",
+      "price_cny": 25,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "灌云县东王集乡曹加序缝纫店",
+      "repurchase_text": "回头率 67%",
+      "url": "https://detail.1688.com/offer/619013419962.html"
+    },
+    {
+      "offer_id": "823949826525",
+      "title": "KANING慵懒连帽长款针织开衫女2026秋季新款女装过膝毛衣长外套女",
+      "price_cny": 56,
+      "sales_text": "全网3700+件",
+      "sales": 3700,
+      "moq_text": null,
+      "seller": "嘉兴市乐咖服饰有限公司",
+      "repurchase_text": "回头率 47%",
+      "url": "https://detail.1688.com/offer/823949826525.html"
+    },
+    {
+      "offer_id": "1071100623625",
+      "title": "LEKA英伦风格纹假两件针织开衫女2026秋冬新款慵懒风麻花毛衣外搭",
+      "price_cny": 46,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市乐咖服饰有限公司",
+      "repurchase_text": "回头率 47%",
+      "url": "https://detail.1688.com/offer/1071100623625.html"
+    },
+    {
+      "offer_id": "854719995626",
+      "title": "芬娜富秋冬新款高领针织开衫女复古韩系慵懒风高级感宽松毛衣外套",
+      "price_cny": 59,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "汕头市芬娜富内衣有限公司",
+      "repurchase_text": "回头率 55%",
+      "url": "https://detail.1688.com/offer/854719995626.html"
+    },
+    {
+      "offer_id": "847485422399",
+      "title": "毛衣外套女针织开衫复古国潮牌秋季外穿拉链上衣通勤卫衣秋季薄款",
+      "price_cny": 39,
+      "sales_text": "全网9900+件",
+      "sales": 9900,
+      "moq_text": null,
+      "seller": "嘉兴市朝颜静好服饰有限公司",
+      "repurchase_text": "回头率 38%",
+      "url": "https://detail.1688.com/offer/847485422399.html"
+    },
+    {
+      "offer_id": "779855679835",
+      "title": "开衫女100%纯羊毛圆领毛衣秋冬针织打底衫刺绣宇宙厂家批发羊毛衫",
+      "price_cny": 90,
+      "sales_text": "全网300+件",
+      "sales": 300,
+      "moq_text": null,
+      "seller": "清河县正东羊绒制品厂",
+      "repurchase_text": "回头率 39%",
+      "url": "https://detail.1688.com/offer/779855679835.html"
+    },
+    {
+      "offer_id": "802398102278",
+      "title": "软糯慵懒秋冬2026新款宽松外套韩系穿搭上衣针织毛衣女慵懒风开衫",
+      "price_cny": 22,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合美云羊毛衫加工厂",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/802398102278.html"
+    },
+    {
+      "offer_id": "965565985773",
+      "title": "针织开衫春秋蝴蝶结韩系2026毛衣刺绣短款新款外套薄款上衣",
+      "price_cny": 23.5,
+      "sales_text": "全网900+件",
+      "sales": 900,
+      "moq_text": null,
+      "seller": "东莞市嘉之汇服装有限公司",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/965565985773.html"
+    },
+    {
+      "offer_id": "967378202144",
+      "title": "早秋宽松双拉链短款外穿针织开衫女春秋新款纯色字母刺绣毛衣外套",
+      "price_cny": 37,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇呗呗兔服装经营部",
+      "repurchase_text": "回头率 41%",
+      "url": "https://detail.1688.com/offer/967378202144.html"
+    },
+    {
+      "offer_id": "1080122120086",
+      "title": "气质薄款~肌理感圆领羊毛针织开衫女 2026秋新款横纹坑条长袖上衣",
+      "price_cny": 59,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "汕头市潮阳区谷饶艾纯诗针织内衣厂",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/1080122120086.html"
+    },
+    {
+      "offer_id": "894752382990",
+      "title": "慵懒感小香风过膝中长款针织开衫女宽松甜美软糯温柔纯色毛衣外套",
+      "price_cny": 31,
+      "sales_text": "全网200+件",
+      "sales": 200,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合美云羊毛衫加工厂",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/894752382990.html"
+    },
+    {
+      "offer_id": "1069102515812",
+      "title": "慵懒风羊驼毛针织开衫女秋季新款宽松软糯毛衣外套纯色通勤上衣",
+      "price_cny": 58,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴市艾琪玲服饰有限公司",
+      "repurchase_text": "回头率 46%",
+      "url": "https://detail.1688.com/offer/1069102515812.html"
+    },
+    {
+      "offer_id": "1057304983554",
+      "title": "包芯纱面料 圆领刺绣针织开衫女2026早春新款复古麻花显瘦针织衫",
+      "price_cny": 20,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "东莞市欧思蔓服饰有限公司",
+      "repurchase_text": "回头率 54%",
+      "url": "https://detail.1688.com/offer/1057304983554.html"
+    },
+    {
+      "offer_id": "824795914630",
+      "title": "秋装新款针织衫女上衣软糯圆领针织外套温柔休闲百搭毛衣小开衫",
+      "price_cny": 29.9,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴拉沐服饰有限公司",
+      "repurchase_text": "回头率 48%",
+      "url": "https://detail.1688.com/offer/824795914630.html"
+    },
+    {
+      "offer_id": "822216626023",
+      "title": "KANING灰色假两件圆领纽扣针织开衫女2026秋季新款女装韩版毛衣潮",
+      "price_cny": 39.9,
+      "sales_text": "全网3600+件",
+      "sales": 3600,
+      "moq_text": null,
+      "seller": "嘉兴市乐咖服饰有限公司",
+      "repurchase_text": "回头率 47%",
+      "url": "https://detail.1688.com/offer/822216626023.html"
+    },
+    {
+      "offer_id": "954083337409",
+      "title": "懒人BI备可机洗圆领羊毛开衫女通勤百搭纯色正肩针织毛衣果汁软糖",
+      "price_cny": 75,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "浙江澳利亚纺织服饰有限公司",
+      "repurchase_text": "回头率 53%",
+      "url": "https://detail.1688.com/offer/954083337409.html"
+    },
+    {
+      "offer_id": "972738356140",
+      "title": "羊绒开衫女2025新款秋冬圆领针织毛衣外套女提花宽松长袖外搭上衣",
+      "price_cny": 33.9,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "海宁市海昌紫瑶贸易商行",
+      "repurchase_text": "回头率 44%",
+      "url": "https://detail.1688.com/offer/972738356140.html"
+    },
+    {
+      "offer_id": "743929386354",
+      "title": "早秋软糯亲肤薄款针织开衫女韩版V领宽松短款小外搭毛衣外套上衣",
+      "price_cny": 24,
+      "sales_text": "全网5900+件",
+      "sales": 5900,
+      "moq_text": null,
+      "seller": "东莞市嘉之汇服装有限公司",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/743929386354.html"
+    },
+    {
+      "offer_id": "1076511520858",
+      "title": "2026年秋冬新款羊绒羊毛V领针织开衫长袖软糯纯色拉绒羊毛衫上衣",
+      "price_cny": 146,
+      "sales_text": "全网20+件",
+      "sales": 20,
+      "moq_text": null,
+      "seller": "清河县佐宁服装厂",
+      "repurchase_text": "回头率 43%",
+      "url": "https://detail.1688.com/offer/1076511520858.html"
+    },
+    {
+      "offer_id": "831083957832",
+      "title": "【撞色天鹅衫】26秋新款美雅碧棉晴纶v领假两件撞色针织开衫打底",
+      "price_cny": 49,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "义乌市企宝服饰有限公司",
+      "repurchase_text": "回头率 66%",
+      "url": "https://detail.1688.com/offer/831083957832.html"
+    },
+    {
+      "offer_id": "1077826519438",
+      "title": "慵懒风灰色针织开衫外套女春秋款2026新款外搭披肩中长款上衣大码",
+      "price_cny": 39,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "桐乡市濮院观衿服饰商行",
+      "repurchase_text": "回头率 41%",
+      "url": "https://detail.1688.com/offer/1077826519438.html"
+    },
+    {
+      "offer_id": "740910628841",
+      "title": "纯色简约气质百搭毛衣女外套秋冬季新款韩版宽松显瘦加厚针织开衫",
+      "price_cny": 33,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "桐乡市梧桐嘉豪服装经营部",
+      "repurchase_text": "回头率 45%",
+      "url": "https://detail.1688.com/offer/740910628841.html"
+    },
+    {
+      "offer_id": "1002979345664",
+      "title": "小众设计灰色毛衣开衫女2025秋季新款独特超好看高级感针织短外套",
+      "price_cny": 26,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "广州市唯小美贸易有限公司",
+      "repurchase_text": "回头率 43%",
+      "url": "https://detail.1688.com/offer/1002979345664.html"
+    },
+    {
+      "offer_id": "980641299690",
+      "title": "100%不起球软糯亲肤羊毛衫针织开衫韩版V领宽松短款外搭毛衣外套",
+      "price_cny": 41.9,
+      "sales_text": "全网5900+件",
+      "sales": 5900,
+      "moq_text": null,
+      "seller": null,
+      "repurchase_text": "回头率 34%",
+      "url": "https://detail.1688.com/offer/980641299690.html"
+    },
+    {
+      "offer_id": "1062824984095",
+      "title": "春款镂空花边开衫软糯针织上衣女春季新款减龄简约百搭温柔风外套",
+      "price_cny": 42.64,
+      "sales_text": "全网2100+件",
+      "sales": 2100,
+      "moq_text": null,
+      "seller": "漯河市郾城区松图百货店",
+      "repurchase_text": "回头率 35%",
+      "url": "https://detail.1688.com/offer/1062824984095.html"
+    },
+    {
+      "offer_id": "1039126208933",
+      "title": "开衫外套女新款针织开衫女减龄长袖圆领毛衣开衫百搭针织外套女装",
+      "price_cny": 29.9,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "清河县曼昭服装厂",
+      "repurchase_text": "回头率 32%",
+      "url": "https://detail.1688.com/offer/1039126208933.html"
+    },
+    {
+      "offer_id": "1046457145416",
+      "title": "榉木绿2026早秋针织衫中长款复古木质调慵懒感薄款针织外套女开衫",
+      "price_cny": 39,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "嘉兴紫叶薇服饰有限公司",
+      "repurchase_text": "回头率 49%",
+      "url": "https://detail.1688.com/offer/1046457145416.html"
+    },
+    {
+      "offer_id": "973117642806",
+      "title": "【优质面料】新款条纹开衫长袖针织修身显瘦百搭气质时尚毛衣上衣",
+      "price_cny": 25.8,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "东莞市博琳服饰有限公司",
+      "repurchase_text": "回头率 44%",
+      "url": "https://detail.1688.com/offer/973117642806.html"
+    },
+    {
+      "offer_id": "970622560448",
+      "title": "阿诗蜜学院风牛角扣软糯舒适韩系宽松慵懒风毛衣外套针织开衫女",
+      "price_cny": 59.84,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "汕头市潮阳区谷饶阿诗蜜针织内衣厂",
+      "repurchase_text": "回头率 57%",
+      "url": "https://detail.1688.com/offer/970622560448.html"
+    },
+    {
+      "offer_id": "829781870913",
+      "title": "2026春季新款麻花针织开衫学院风外搭软糯高品质短款气质毛衣外套",
+      "price_cny": 29.5,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "东莞市嘉之汇服装有限公司",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/829781870913.html"
+    },
+    {
+      "offer_id": "954293407827",
+      "title": "韩版宽松V领百搭纯色针织毛衣外套开衫女2026新款春秋冬学院学生",
+      "price_cny": 22,
+      "sales_text": "全网3000+件",
+      "sales": 3000,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇美小霞服装厂",
+      "repurchase_text": "回头率 49%",
+      "url": "https://detail.1688.com/offer/954293407827.html"
+    },
+    {
+      "offer_id": "843889785977",
+      "title": "YS软糯韩系慵懒风气质毛衣外套女2026秋冬宽松纯色灯笼袖针织开衫",
+      "price_cny": 45,
+      "sales_text": "全网2500+件",
+      "sales": 2500,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合镇云抒服装厂",
+      "repurchase_text": "回头率 43%",
+      "url": "https://detail.1688.com/offer/843889785977.html"
+    },
+    {
+      "offer_id": "748110731610",
+      "title": "韩版V领慵懒风开衫2026新款日系简约毛衣女春秋冬休闲宽松针织衫",
+      "price_cny": 22,
+      "sales_text": "全网9300+件",
+      "sales": 9300,
+      "moq_text": null,
+      "seller": "嘉兴市秀洲区洪合美云羊毛衫加工厂",
+      "repurchase_text": "回头率 50%",
+      "url": "https://detail.1688.com/offer/748110731610.html"
+    },
+    {
+      "offer_id": "731205291856",
+      "title": "澳洲美丽诺100纯羊毛针织衫女一线成衣无缝连帽开衫羊绒毛衣外套",
+      "price_cny": 72,
+      "sales_text": "全网1700+件",
+      "sales": 1700,
+      "moq_text": null,
+      "seller": "清河县特舒羊绒制品有限公司",
+      "repurchase_text": "回头率 45%",
+      "url": "https://detail.1688.com/offer/731205291856.html"
+    },
+    {
+      "offer_id": "966949289738",
+      "title": "红色针织开衫女初秋氛围感穿搭麻花复古毛衣春秋外套上衣",
+      "price_cny": 49.5,
+      "sales_text": null,
+      "sales": null,
+      "moq_text": null,
+      "seller": "合肥桐蔻服装有限公司",
+      "repurchase_text": "回头率 40%",
+      "url": "https://detail.1688.com/offer/966949289738.html"
+    }
+  ]
+}

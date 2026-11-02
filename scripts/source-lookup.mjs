@@ -17,7 +17,7 @@
  *   node scripts/source-lookup.mjs --direction "女士针织开衫" --region RU --pick c01,c03
  *   node scripts/source-lookup.mjs --help
  */
-import {mkdir, readFile, writeFile} from "node:fs/promises";
+import {mkdir, readFile, readdir, writeFile} from "node:fs/promises";
 import {dirname, join, resolve} from "node:path";
 import {fileURLToPath} from "node:url";
 
@@ -114,7 +114,87 @@ export function marginAt({priceCny, costCny, assumptions = ASSUMPTIONS}) {
   return Math.round((gross / priceCny) * 1000) / 10;
 }
 
-function buildBrief({candidate, direction}) {
+/**
+ * 读最近一次 1688 报价抓取结果。
+ *
+ * 报价是**搜索列表页展示价**（多为起批价或区间下限），不含国内段运费与税；
+ * 所以它回答的是「这个价位有没有供应商」而不是「最终落地成本」。
+ * 拿不到就返回 null —— 规格书退回「只给目标进价」，不假装问过价。
+ */
+async function loadLatestQuotes() {
+  const dir = join(ROOT, "data", "market");
+  let names;
+  try {
+    const entries = await readdir(dir);
+    names = entries.filter((name) => /^1688-quotes-.*\.json$/.test(name)).sort();
+  } catch {
+    return null;
+  }
+  if (names.length === 0) return null;
+  const latest = names.at(-1);
+  try {
+    const doc = JSON.parse(await readFile(join(dir, latest), "utf8"));
+    if (!doc?.summary) return null;
+    return {...doc, file: latest};
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * 用真实报价复核毛利。
+ *
+ * 为什么必须做这一步：`target_cost_cny` 是「售价扣掉佣金/履约/毛利后还剩多少」，
+ * 它只说「高于这个价就没赚头」，没说「市场上有没有这个价」。
+ * 接上真实报价之后，才能回答「这个目标价拿不拿得到货」。
+ */
+function buildQuoteCheck(quotes, candidate) {
+  if (!quotes?.summary) return null;
+  const {summary} = quotes;
+  const price = candidate.target_price_cny;
+  const target = targetCost({priceCny: price});
+  const at = (cost) => (Number.isFinite(cost) ? marginAt({priceCny: price, costCny: cost}) : null);
+
+  // 每个候选的目标进价不同（售价不同），所以「多少钱以内有几家」必须按各自目标价重算。
+  // 直接用 summary.under_target 是拿汇总时的 --target-price 冒充，实测会让入门档
+  // 把「71.6 以内 46 家」当成「61.2 以内 46 家」，报价门槛被悄悄放宽。
+  const priced = (quotes.items ?? []).filter((item) => Number.isFinite(item.price_cny) && item.price_cny > 0);
+  const under = Number.isFinite(target) ? priced.filter((item) => item.price_cny <= target).length : null;
+
+  // 报价关键词是否覆盖候选材质。
+  // 泛词「针织开衫」的池子里本来就以腈纶为主，所以腈纶不算「没覆盖」——
+  // 对每个材质都警告等于没有警告。只有明确溢价的材质（羊毛混纺 / 高含毛）才提示。
+  const materialCn = SPEC_BY_MATERIAL[candidate.material]?.cn ?? null;
+  const PREMIUM_MATERIALS = new Set(["wool_blend", "wool"]);
+  const keywordMatched = !PREMIUM_MATERIALS.has(candidate.material)
+    ? true
+    : (materialCn ? String(summary.keyword ?? "").includes(materialCn.split("/")[0]) : null);
+
+  return {
+    source_file: quotes.file,
+    keyword: summary.keyword,
+    fetched_at: quotes.fetched_at,
+    sample_size: summary.priced,
+    price: summary.price,
+    target_cost_cny: target,
+    under_target: under,
+    under_target_pct: under === null || priced.length === 0
+      ? null
+      : Math.round((under / priced.length) * 1000) / 10,
+    material_cn: materialCn,
+    keyword_covers_material: keywordMatched,
+    // 按三个分位进价分别算真实毛利，比单点结论稳
+    margin_at: {
+      p25: at(summary.price.p25),
+      median: at(summary.price.median),
+      p75: at(summary.price.p75)
+    },
+    caveat: "报价为列表页起批价，不含国内段运费、不含税、未含议价；实际落地成本略高于此。"
+      + "关键词若与候选材质不一致（例如泛词「针织开衫」对羊毛混纺款），实际报价会更高。"
+  };
+}
+
+function buildBrief({candidate, direction, quotes = null}) {
   const material = SPEC_BY_MATERIAL[candidate.material] ?? SPEC_BY_MATERIAL.acrylic;
   const fit = SPEC_BY_FIT[candidate.fit] ?? SPEC_BY_FIT.oversize;
   const cost = targetCost({priceCny: candidate.target_price_cny});
@@ -151,6 +231,7 @@ function buildBrief({candidate, direction}) {
         "断货补货周期（决定会不会因为缺货掉排名）"
       ]
     },
+    market_quotes: buildQuoteCheck(quotes, candidate),
     verify: {
       price: "至少询 3 家取中位；单家报价不算市场价",
       quality: "先打样 1 件，按 weight_g 与成分核对；克重不足是压价最常见手段",
@@ -177,7 +258,13 @@ async function main() {
     process.exit(3);
   }
 
-  const briefs = pool.map((c) => buildBrief({candidate: c, direction: args.direction}));
+  // 有真实报价就用上；没有就退回「只给目标进价」，不假装问过价
+  const quotes = await loadLatestQuotes();
+  if (!quotes) {
+    console.log("未找到 1688 报价数据 → 规格书只给目标进价上限，不判断「拿不拿得到货」。");
+    console.log("  补数据：node scripts/scan-1688-quotes.mjs --keyword \"针织开衫\" --target-price <目标进价>");
+  }
+  const briefs = pool.map((c) => buildBrief({candidate: c, direction: args.direction, quotes}));
 
   const doc = {
     direction: args.direction,
@@ -197,7 +284,11 @@ async function main() {
   const lines = [
     `# 采购规格书 · ${args.direction}（${args.region}）`,
     "",
-    `> 生成于 ${doc.generated_at}。目标价按售价倒推，假设见文末；真实报价须自行询价。`,
+    quotes
+      ? `> 生成于 ${doc.generated_at}。目标价按售价倒推，假设见文末；`
+        + `「能不能拿到货」已用 ${quotes.summary.priced} 条 1688 实测报价校验（起批价，不含运费与税），`
+        + `但供应商资质、成分与克重仍须自行打样核实。`
+      : `> 生成于 ${doc.generated_at}。目标价按售价倒推，假设见文末；真实报价须自行询价。`,
     ""
   ];
   for (const b of briefs) {
@@ -228,10 +319,29 @@ async function main() {
   console.log(`方向：${args.direction} ｜ ${args.region} ｜ 规格书 ${briefs.length} 份`);
   for (const b of briefs) {
     console.log(`  ${b.candidate_id}  零售 ${b.target_price_cny} CNY → 目标进价 ≤ ${b.target_cost_cny} CNY ｜ ${b.title_cn}`);
+    const q = b.market_quotes;
+    if (q) {
+      console.log(
+        `        真实报价 ${q.sample_size} 条（${q.keyword}）P25 ${q.price.p25?.toFixed(1)} / 中位 ${q.price.median?.toFixed(1)} / P75 ${q.price.p75?.toFixed(1)}`
+        + ` → 实际毛利 P25 ${q.margin_at.p25}% / 中位 ${q.margin_at.median}% / P75 ${q.margin_at.p75}%`
+      );
+      console.log(
+        q.under_target > 0
+          ? `        结论：目标进价 ${q.target_cost_cny} 以内有 ${q.under_target}/${q.sample_size} 家（${q.under_target_pct}%），能拿到货。`
+          : `        结论：目标进价 ${q.target_cost_cny} 以内一家都没有，这个价位拿不到货。`
+      );
+      if (q.keyword_covers_material === false) {
+        console.log(`        ⚠ 报价关键词「${q.keyword}」不含「${q.material_cn}」→ 该材质实际报价会高于此，上面毛利偏乐观。`);
+      }
+    }
   }
   console.log(`\n产出：${outPath.replaceAll("\\", "/")}`);
   console.log(`人读版：${mdPath.replaceAll("\\", "/")}`);
-  console.log("\n下一步：拿检索词去 1688 询 3 家，回填实价后用 marginAt 复核毛利。");
+  console.log(
+    quotes
+      ? "\n下一步：报价来自列表页（起批价、不含运费与税），挑 3 家打样核实成分与克重，再按实际到手价用 marginAt 复核。"
+      : "\n下一步：拿检索词去 1688 询 3 家，回填实价后用 marginAt 复核毛利。"
+  );
 }
 
 if (process.argv[1] && process.argv[1].endsWith("source-lookup.mjs")) {

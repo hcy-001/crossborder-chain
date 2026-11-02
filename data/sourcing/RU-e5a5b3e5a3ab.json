@@ -1,7 +1,7 @@
 {
   "direction": "女士针织开衫",
   "region": "RU",
-  "generated_at": "2026-11-02T14:12:13.834Z",
+  "generated_at": "2026-11-02T14:34:15.794Z",
   "upstream": {
     "candidates_file": "RU-e5a5b3e5a3ab.json",
     "count": 8
@@ -53,6 +53,30 @@
           "大货与样品的色差控制方式",
           "断货补货周期（决定会不会因为缺货掉排名）"
         ]
+      },
+      "market_quotes": {
+        "source_file": "1688-quotes-2026-11-02.json",
+        "keyword": "针织，开衫",
+        "fetched_at": "2026-11-02T14:30:35.595Z",
+        "sample_size": 55,
+        "price": {
+          "min": 20,
+          "p25": 29.7,
+          "median": 39,
+          "p75": 58.5,
+          "max": 146
+        },
+        "target_cost_cny": 71.6,
+        "under_target": 46,
+        "under_target_pct": 83.6,
+        "material_cn": "腈纶",
+        "keyword_covers_material": true,
+        "margin_at": {
+          "p25": 53.3,
+          "median": 48.1,
+          "p75": 37.3
+        },
+        "caveat": "报价为列表页起批价，不含国内段运费、不含税、未含议价；实际落地成本略高于此。关键词若与候选材质不一致（例如泛词「针织开衫」对羊毛混纺款），实际报价会更高。"
       },
       "verify": {
         "price": "至少询 3 家取中位；单家报价不算市场价",

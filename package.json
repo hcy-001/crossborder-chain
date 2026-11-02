@@ -62,7 +62,8 @@
     "ci": "node --test && node scripts/gates/check-decouple.mjs && node evals/run.mjs",
     "market:scan": "node scripts/market-scan.mjs",
     "select:candidates": "node scripts/select-candidates.mjs",
-    "source:lookup": "node scripts/source-lookup.mjs"
+    "source:lookup": "node scripts/source-lookup.mjs",
+    "quotes:1688": "node scripts/scan-1688-quotes.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",
