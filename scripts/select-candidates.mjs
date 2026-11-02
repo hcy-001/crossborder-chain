@@ -160,9 +160,21 @@ function buildCandidates({brief, count}) {
   }
 
   return picked.map(({tier, material, fit}, index) => {
-    // band 是卢布；先插值出卢布价，再折人民币，顺序不能反
-    const priceRub = pickPrice(band, tier.position);
-    const priceCny = toCny(priceRub, brief.fx_rub_per_cny);
+    // 价格带的币种是会变的：款级数据给 CNY，类目级回退给 CNY，
+    // 但历史/别处可能给 RUB。所以按 band.currency 判断换算方向，
+    // 不能默认「band 一定是卢布」—— 那一版把 140–210 CNY 又除了一次汇率，报出 15 元的开衫。
+    const anchor = pickPrice(band, tier.position);
+    const bandCurrency = band.currency ?? "CNY";
+    const priceCny = bandCurrency === "CNY" ? anchor : toCny(anchor, brief.fx_rub_per_cny);
+    const priceRub = bandCurrency === "CNY"
+      ? (Number.isFinite(brief.fx_rub_per_cny) ? Math.round(anchor * brief.fx_rub_per_cny) : null)
+      : anchor;
+
+    // 合理性闸门：一件针织开衫不可能 15 元，也不可能 5000 元。
+    // 单位错了要当场炸，不能把荒谬价格写进候选。
+    if (priceCny !== null && (priceCny < 30 || priceCny > 5000)) {
+      throw new Error(`价格不合理：${priceCny} CNY（档位 ${tier.id}，锚点 ${anchor} ${bandCurrency}）。多半是币种换算方向错了。`);
+    }
 
     const evidence = {
       market_size: {
@@ -231,7 +243,7 @@ function buildCandidates({brief, count}) {
       target_price_cny: priceCny,
       target_price_rub: priceRub,
       price_note: priceRub
-        ? `${tier.label}：${priceRub} RUB ÷ ${brief.fx_rub_per_cny} = ${priceCny} CNY`
+        ? `${tier.label}：${priceCny} CNY / ${priceRub} RUB（锚点 ${band.anchor ?? anchor} ${bandCurrency}，汇率 ${brief.fx_rub_per_cny}）`
           + `（区间 ${band.low}–${band.high} RUB 的 ${Math.round(tier.position * 100)}% 位；区间为二手，汇率为当日）`
         : "价格待定：价格带未取得",
       season_fit: cold >= 5 ? "秋冬主推" : "过渡季",

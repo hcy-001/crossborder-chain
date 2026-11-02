@@ -1,7 +1,7 @@
 {
   "direction": "女士针织开衫",
   "region": "RU",
-  "generated_at": "2026-11-02T13:58:11.904Z",
+  "generated_at": "2026-11-02T14:12:10.843Z",
   "hs": {
     "codes": [
       "6110"
@@ -127,16 +127,33 @@
       }
     ]
   },
+  "market_signals": {
+    "keyword": "кардиган женский 女开衫",
+    "category": "服装>服装>开襟衫",
+    "search_index": 394600,
+    "goods_count": 134100,
+    "supply_ratio": 10,
+    "cart_rate": "16.06%",
+    "cart_price_cny": 175.36,
+    "cart_price_rub": 2192,
+    "matched_by": "开衫",
+    "source": "menglar 热词（平台搜索/购物车数据）",
+    "source_file": "menglar-hotwords-服装-20260916.json",
+    "fetched_at": "2026-09-16T12:59:34.755Z",
+    "level": "L2"
+  },
   "price_band": {
-    "status": "candidate",
-    "low": 800,
-    "high": 3000,
-    "currency": "RUB",
-    "scope": "服饰鞋靴类目整体（非本方向专有）",
-    "source": "平台客单价区间（二手汇总）",
-    "level": "candidate",
-    "reason": "C 端竞品搜索页对本机 IP 拒绝，取不到款级价格；只能用类目级客单价区间做锚点",
-    "how_to_get": "卖家后台「搜索分析 / 关键词报告」，或从可访问 C 端的网络环境取样同款价格"
+    "status": "measured",
+    "low": 140,
+    "high": 210,
+    "anchor": 175.36,
+    "anchor_rub": 2192,
+    "currency": "CNY",
+    "scope": "款级：кардиган женский 女开衫",
+    "source": "menglar 热词（平台搜索/购物车数据）",
+    "level": "L2",
+    "reason": "该词购物车均价 175.36 CNY；区间按 ±20% 给出，不是猜的",
+    "how_to_get": "已取得；更新请重跑选品端采集"
   },
   "fx_rub_per_cny": 12.11,
   "verdict": {

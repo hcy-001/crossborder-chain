@@ -83,6 +83,75 @@ export function mapDirection(direction) {
   return {codes: [...hits], matched_by: [...new Set(matchedBy)]};
 }
 
+/**
+ * 从萌啦热词表里找与本方向最匹配的词，拿款级真实数据。
+ *
+ * 为什么要这一步：类目级客单价（P25–P75）只能告诉你「大概卖多少钱」，
+ * 款级搜索指数/供需比/购物车均价才能回答「这个款现在有多少人在搜、竞争多激烈」。
+ *
+ * 匹配用中文二字滑窗：「女士针织开衫」→「开衫」→ 命中「女开衫」。
+ * 匹配不到就返回 null，让上层退回类目级，不硬凑一个词。
+ */
+async function loadMarketSignals(direction) {
+  const path = join(ROOT, "data", "market", "market-words-2026-09-16.json");
+  let doc;
+  try {
+    doc = JSON.parse(await readFile(path, "utf8"));
+  } catch {
+    return null;
+  }
+  const all = [...(doc.women_apparel ?? []), ...(doc.all_apparel ?? [])];
+  const seen = new Set();
+  const uniq = [];
+  for (const w of all) {
+    if (!w?.keyword || seen.has(w.keyword)) continue;
+    seen.add(w.keyword);
+    uniq.push(w);
+  }
+
+  const cnOf = (kw) => (String(kw).match(/[\u4e00-\u9fa5]+/g) || []).join("");
+  const dirCn = String(direction).replace(/[^\u4e00-\u9fa5]/g, "");
+  // 停用词：人群词与季节/风格词几乎出现在每个词里，拿它们匹配等于随机命中。
+  // 实测反例：「女士针织开衫」靠「女士」匹配到了「女士运动鞋」。
+  const STOP = new Set([
+    "女士", "男士", "女装", "男装", "新款", "时尚", "夏季", "冬季", "春季", "秋季",
+    "春秋", "韩版", "宽松", "修身", "衣服", "服装", "女", "男", "款", "式"
+  ]);
+  // 长子串优先：4 字 → 3 字 → 2 字，品类词通常比通用词长
+  const grams = [];
+  for (let len = 4; len >= 2; len -= 1) {
+    for (let i = 0; i + len <= dirCn.length; i += 1) {
+      const g = dirCn.slice(i, i + len);
+      if (!STOP.has(g)) grams.push(g);
+    }
+  }
+
+  let hit = null;
+  let matchedBy = null;
+  for (const w of uniq) {
+    const k = cnOf(w.keyword);
+    const g = grams.find((x) => k.includes(x));
+    if (g) { hit = w; matchedBy = g; break; }
+  }
+  if (!hit) return null;
+
+  return {
+    keyword: hit.keyword,
+    category: hit.category,
+    search_index: hit.search_index ?? null,
+    goods_count: hit.goods_count ?? null,
+    supply_ratio: hit.supply_ratio ?? null,
+    cart_rate: hit.cart_rate ?? null,
+    cart_price_cny: hit.cart_price?.cny ?? null,
+    cart_price_rub: hit.cart_price?.rub ?? null,
+    matched_by: matchedBy,
+    source: "menglar 热词（平台搜索/购物车数据）",
+    source_file: doc.source_file ?? null,
+    fetched_at: hit.fetched_at ?? doc.generated_at ?? null,
+    level: "L2"
+  };
+}
+
 async function loadRegion(region) {
   const profilePath = join(ROOT, "regions", region, "profile.json");
   try {
@@ -167,6 +236,7 @@ async function main() {
 
   const season = await loadSeason(args.region);
   const window = seasonWindow(season.climate);
+  const signals = await loadMarketSignals(args.direction);
 
   // 汇率从已落盘的 fx 数据读，不在脚本里写死数字
   let fxRate = null;
@@ -222,19 +292,33 @@ async function main() {
     alternatives: usable.slice(1).map((r) => ({hs: r.hs, imports_usd: r.import_value_usd})),
     season: window,
     calendar: season.holidays ? {holidays: season.holidays} : null,
-    // 价格带：C 端竞品数据拿不到，但平台客单价区间是公开可查的二手数据。
-    // 标 candidate，并且给「区间」而不是一个点 —— 区间能承载不确定性，单点会假装精确。
-    price_band: {
-      status: "candidate",
-      low: 800,
-      high: 3000,
-      currency: "RUB",
-      scope: "服饰鞋靴类目整体（非本方向专有）",
-      source: "平台客单价区间（二手汇总）",
-      level: "candidate",
-      reason: "C 端竞品搜索页对本机 IP 拒绝，取不到款级价格；只能用类目级客单价区间做锚点",
-      how_to_get: "卖家后台「搜索分析 / 关键词报告」，或从可访问 C 端的网络环境取样同款价格"
-    },
+    // 价格带：优先用款级购物车均价（真实抓取），退回类目级 P25–P75
+    market_signals: signals,
+    price_band: signals?.cart_price_cny
+      ? {
+        status: "measured",
+        low: Math.round(signals.cart_price_cny * 0.8),
+        high: Math.round(signals.cart_price_cny * 1.2),
+        anchor: signals.cart_price_cny,
+        anchor_rub: signals.cart_price_rub,
+        currency: "CNY",
+        scope: `款级：${signals.keyword}`,
+        source: signals.source,
+        level: "L2",
+        reason: `该词购物车均价 ${signals.cart_price_cny} CNY；区间按 ±20% 给出，不是猜的`,
+        how_to_get: "已取得；更新请重跑选品端采集"
+      }
+      : {
+        status: "candidate",
+        low: 61,
+        high: 245,
+        currency: "CNY",
+        scope: "女装类目整体（P25–P75，来自 50 个 SKU 的购物车均价）",
+        source: "price-band 类目级统计",
+        level: "candidate",
+        reason: "未匹配到款级词，只能用类目级区间做锚点；它的跨度很大，不适合直接定价",
+        how_to_get: "把该方向加进选品端词库重跑采集，或用卖家后台「搜索分析」"
+      },
     // 候选段要算卢布价，汇率单独给，来源是仓库里已落盘的 fx 数据
     fx_rub_per_cny: fxRate,
     verdict,
@@ -264,7 +348,12 @@ async function main() {
     console.log("需求：未取到");
   }
   console.log(`季节：${window?.hint ?? "无气候数据"}`);
-  console.log(`价格带：${doc.price_band.low}–${doc.price_band.high} ${doc.price_band.currency}（${doc.price_band.level}，类目级）`);
+  if (signals) {
+    console.log(`款级信号：${signals.keyword} ｜ 搜索 ${signals.search_index}/月 ｜ 供需比 ${signals.supply_ratio} ｜ 加购 ${signals.cart_rate} ｜ 均价 ${signals.cart_price_cny} CNY`);
+  } else {
+    console.log("款级信号：未匹配到热词（只用类目级价格带）");
+  }
+  console.log(`价格带：${doc.price_band.low}–${doc.price_band.high} ${doc.price_band.currency}（${doc.price_band.level}，${doc.price_band.scope}）`);
   console.log(`结论：${verdict.level} —— ${verdict.reason}`);
   console.log(`\n产出：${outPath.replaceAll("\\", "/")}`);
   console.log(`下一步：${verdict.level === "证据不足" ? "先补需求数据" : "拿 sourcing.keywords_for_1688 去反查货源，而不是反过来"}`);

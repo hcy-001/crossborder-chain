@@ -1,0 +1,65 @@
+{
+  "direction": "女士针织开衫",
+  "region": "RU",
+  "generated_at": "2026-11-02T14:12:13.834Z",
+  "upstream": {
+    "candidates_file": "RU-e5a5b3e5a3ab.json",
+    "count": 8
+  },
+  "note": "规格书是「去问什么」，不是「已经问到了」。拿到真实报价后回填 target_cost_cny 对应的实价，再用 marginAt 复核。",
+  "briefs": [
+    {
+      "candidate_id": "c01",
+      "title_cn": "女士针织开衫 · 主力档 · 腈纶为主 · Oversize 宽松",
+      "target_price_cny": 180,
+      "target_price_rub": 2180,
+      "target_cost_cny": 71.6,
+      "target_cost_note": "按售价扣佣金/履约/目标毛利倒推，高于这个价就没有毛利空间",
+      "assumptions": {
+        "platform_commission_pct": 0.18,
+        "fulfillment_cny_per_order": 22,
+        "target_gross_margin_pct": 0.3,
+        "note": "三项均为假设：佣金按服装类目常见区间取中值，物流按 400g 跨境小包估，毛利按自定目标。改这三个数即可重算目标采购价；真实值须从卖家后台与货代报价单取得。"
+      },
+      "search": {
+        "keywords_1688": [
+          {
+            "text": "女 腈纶 开衫",
+            "purpose": "精确：材质 + 品类",
+            "expected_hits": "少而准"
+          },
+          {
+            "text": "腈纶 针织开衫 女 宽松",
+            "purpose": "带版型，接近目标款",
+            "expected_hits": "中等"
+          },
+          {
+            "text": "针织开衫 女 批发",
+            "purpose": "宽泛：用来比整体价格带",
+            "expected_hits": "多而杂"
+          }
+        ],
+        "spec_required": {
+          "material": "腈纶 70% 以上",
+          "weight_g": "280–360",
+          "fit": "肩宽 +4–6cm，衣长盖臀",
+          "size_range": "S–XL 或 42–50（俄码），至少 4 个码",
+          "color": "米色 / 燕麦色 / 黑（三色起，实测色差 ≤ 2 级）"
+        },
+        "must_ask_supplier": [
+          "含毛量实测值（不接受口头承诺，要成分检测或水洗标照片）",
+          "起订量（MOQ）与混色是否加价",
+          "能否按俄码 42–50 打码，而不是只做 S–XL",
+          "大货与样品的色差控制方式",
+          "断货补货周期（决定会不会因为缺货掉排名）"
+        ]
+      },
+      "verify": {
+        "price": "至少询 3 家取中位；单家报价不算市场价",
+        "quality": "先打样 1 件，按 weight_g 与成分核对；克重不足是压价最常见手段",
+        "margin_check": "若进价 71.6 CNY，按当前假设毛利约 30%；进价每高 10 元，毛利掉约 5.6 个百分点"
+      },
+      "not_done_by_tool": "不代询价、不代下单、不判断供应商可靠性 —— 这些需要人对接"
+    }
+  ]
+}

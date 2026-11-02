@@ -1,0 +1,807 @@
+{
+  "source_file": "menglar-hotwords-服装-20260916.json",
+  "generated_at": "2026-09-21T02:20:12.961Z",
+  "filter": {
+    "min_search_index": 50000,
+    "max_supply_ratio": 10
+  },
+  "legend": {
+    "search_index": "月搜索指数（D 需求强度代理）",
+    "supply_ratio": "供需比（G 供给缺口代理，越低越蓝海）",
+    "cart_rate": "加购转化率（M 动机命中市场参照）",
+    "cart_price": "购物车均价（上架定价参照，¥ 对齐 CNY 结算）"
+  },
+  "summary": {
+    "total": 50,
+    "apparel": 25,
+    "women_apparel": 19,
+    "blue_ocean": 11
+  },
+  "women_apparel": [
+    {
+      "keyword": "кроссовки женские 女士运动鞋",
+      "category": "鞋类>休闲鞋>运动鞋",
+      "search_index": 952500,
+      "goods_count": 361800,
+      "supply_ratio": 11,
+      "cart_rate": "18.52%",
+      "cart_price": {
+        "cny": 218.96,
+        "rub": 2737
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "джинсы женские 女士牛仔裤",
+      "category": "服装>服装>牛仔裤",
+      "search_index": 776300,
+      "goods_count": 347300,
+      "supply_ratio": 13,
+      "cart_rate": "17.39%",
+      "cart_price": {
+        "cny": 204.72,
+        "rub": 2559
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "футболка T恤",
+      "category": "服装>服装>T恤",
+      "search_index": 709900,
+      "goods_count": 292700,
+      "supply_ratio": 12,
+      "cart_rate": "4.63%",
+      "cart_price": {
+        "cny": 63.12,
+        "rub": 789
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "футболка женская 女士T恤",
+      "category": "服装>服装>T恤",
+      "search_index": 659700,
+      "goods_count": 277000,
+      "supply_ratio": 12,
+      "cart_rate": "21.39%",
+      "cart_price": {
+        "cny": 62.88,
+        "rub": 786
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "футболка мужская 男士T恤",
+      "category": "服装>服装>T恤",
+      "search_index": 646000,
+      "goods_count": 266000,
+      "supply_ratio": 12,
+      "cart_rate": "21.17%",
+      "cart_price": {
+        "cny": 82.16,
+        "rub": 1027
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "трусы женские 女式内裤",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 596400,
+      "goods_count": 184700,
+      "supply_ratio": 9,
+      "cart_rate": "24.09%",
+      "cart_price": {
+        "cny": 67.12,
+        "rub": 839
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "спортивный костюм женский 女士运动服",
+      "category": "服装>服装>运动服",
+      "search_index": 518500,
+      "goods_count": 190400,
+      "supply_ratio": 10,
+      "cart_rate": "13.60%",
+      "cart_price": {
+        "cny": 269.6,
+        "rub": 3370
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "платье женское 女士连衣裙",
+      "category": "服装>服装>连衣裙",
+      "search_index": 475500,
+      "goods_count": 198000,
+      "supply_ratio": 12,
+      "cart_rate": "10.67%",
+      "cart_price": {
+        "cny": 167.76,
+        "rub": 2097
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "пижама женская 女式睡衣",
+      "category": "服装>服装>睡衣",
+      "search_index": 454500,
+      "goods_count": 154800,
+      "supply_ratio": 10,
+      "cart_rate": "20.24%",
+      "cart_price": {
+        "cny": 95.44,
+        "rub": 1193
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "рубашка женская 女士衬衫",
+      "category": "服装>服装>衬衫",
+      "search_index": 452900,
+      "goods_count": 169400,
+      "supply_ratio": 10,
+      "cart_rate": "15.52%",
+      "cart_price": {
+        "cny": 137.52,
+        "rub": 1719
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "джинсы 牛仔裤",
+      "category": "服装>服装>牛仔裤",
+      "search_index": 423600,
+      "goods_count": 182400,
+      "supply_ratio": 12,
+      "cart_rate": "4.04%",
+      "cart_price": {
+        "cny": 233.68,
+        "rub": 2921
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "кардиган женский 女开衫",
+      "category": "服装>服装>开襟衫",
+      "search_index": 394600,
+      "goods_count": 134100,
+      "supply_ratio": 10,
+      "cart_rate": "16.06%",
+      "cart_price": {
+        "cny": 175.36,
+        "rub": 2192
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "платье женское летнее 女夏装连衣裙",
+      "category": "服装>服装>连衣裙",
+      "search_index": 361200,
+      "goods_count": 143500,
+      "supply_ratio": 11,
+      "cart_rate": "11.70%",
+      "cart_price": {
+        "cny": 153.76,
+        "rub": 1922
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "костюм женский 女士服装",
+      "category": "服装>服装>服装套装",
+      "search_index": 341500,
+      "goods_count": 123100,
+      "supply_ratio": 10,
+      "cart_rate": "8.57%",
+      "cart_price": {
+        "cny": 218.48,
+        "rub": 2731
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "джинсы мужские 男士牛仔裤",
+      "category": "服装>服装>牛仔裤",
+      "search_index": 336100,
+      "goods_count": 155500,
+      "supply_ratio": 13,
+      "cart_rate": "16.45%",
+      "cart_price": {
+        "cny": 264.64,
+        "rub": 3308
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "рубашка 衬衫",
+      "category": "服装>服装>衬衫",
+      "search_index": 335400,
+      "goods_count": 143300,
+      "supply_ratio": 12,
+      "cart_rate": "4.69%",
+      "cart_price": {
+        "cny": 131.52,
+        "rub": 1644
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "лоферы женские 女士乐福鞋",
+      "category": "鞋类>休闲鞋>乐福鞋",
+      "search_index": 327200,
+      "goods_count": 127200,
+      "supply_ratio": 11,
+      "cart_rate": "16.64%",
+      "cart_price": {
+        "cny": 234.08,
+        "rub": 2926
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "трусы женские набор 女内裤套装",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 324300,
+      "goods_count": 99800,
+      "supply_ratio": 9,
+      "cart_rate": "25.14%",
+      "cart_price": {
+        "cny": 47.36,
+        "rub": 592
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "костюм спортивный женский 女士运动套装",
+      "category": "服装>服装>运动服",
+      "search_index": 313600,
+      "goods_count": 112900,
+      "supply_ratio": 10,
+      "cart_rate": "13.12%",
+      "cart_price": {
+        "cny": 265.52,
+        "rub": 3319
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    }
+  ],
+  "blue_ocean_directions": [
+    {
+      "keyword": "трусы мужские 男士内裤",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 517500,
+      "supply_ratio": 8,
+      "cart_rate": "29.09%",
+      "cart_price": {
+        "cny": 89.36,
+        "rub": 1117
+      }
+    },
+    {
+      "keyword": "носки мужские 男士袜子",
+      "category": "服装>内衣>袜子",
+      "search_index": 332700,
+      "supply_ratio": 8,
+      "cart_rate": "38.62%",
+      "cart_price": {
+        "cny": 42.24,
+        "rub": 528
+      }
+    },
+    {
+      "keyword": "носки мужские набор 男式袜子套装",
+      "category": "服装>内衣>袜子",
+      "search_index": 318100,
+      "supply_ratio": 8,
+      "cart_rate": "35.24%",
+      "cart_price": {
+        "cny": 43.84,
+        "rub": 548
+      }
+    },
+    {
+      "keyword": "трусы женские 女式内裤",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 596400,
+      "supply_ratio": 9,
+      "cart_rate": "24.09%",
+      "cart_price": {
+        "cny": 67.12,
+        "rub": 839
+      }
+    },
+    {
+      "keyword": "трусы женские набор 女内裤套装",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 324300,
+      "supply_ratio": 9,
+      "cart_rate": "25.14%",
+      "cart_price": {
+        "cny": 47.36,
+        "rub": 592
+      }
+    },
+    {
+      "keyword": "спортивный костюм женский 女士运动服",
+      "category": "服装>服装>运动服",
+      "search_index": 518500,
+      "supply_ratio": 10,
+      "cart_rate": "13.60%",
+      "cart_price": {
+        "cny": 269.6,
+        "rub": 3370
+      }
+    },
+    {
+      "keyword": "пижама женская 女式睡衣",
+      "category": "服装>服装>睡衣",
+      "search_index": 454500,
+      "supply_ratio": 10,
+      "cart_rate": "20.24%",
+      "cart_price": {
+        "cny": 95.44,
+        "rub": 1193
+      }
+    },
+    {
+      "keyword": "рубашка женская 女士衬衫",
+      "category": "服装>服装>衬衫",
+      "search_index": 452900,
+      "supply_ratio": 10,
+      "cart_rate": "15.52%",
+      "cart_price": {
+        "cny": 137.52,
+        "rub": 1719
+      }
+    },
+    {
+      "keyword": "кардиган женский 女开衫",
+      "category": "服装>服装>开襟衫",
+      "search_index": 394600,
+      "supply_ratio": 10,
+      "cart_rate": "16.06%",
+      "cart_price": {
+        "cny": 175.36,
+        "rub": 2192
+      }
+    },
+    {
+      "keyword": "костюм женский 女士服装",
+      "category": "服装>服装>服装套装",
+      "search_index": 341500,
+      "supply_ratio": 10,
+      "cart_rate": "8.57%",
+      "cart_price": {
+        "cny": 218.48,
+        "rub": 2731
+      }
+    },
+    {
+      "keyword": "костюм спортивный женский 女士运动套装",
+      "category": "服装>服装>运动服",
+      "search_index": 313600,
+      "supply_ratio": 10,
+      "cart_rate": "13.12%",
+      "cart_price": {
+        "cny": 265.52,
+        "rub": 3319
+      }
+    }
+  ],
+  "all_apparel": [
+    {
+      "keyword": "кроссовки женские 女士运动鞋",
+      "category": "鞋类>休闲鞋>运动鞋",
+      "search_index": 952500,
+      "goods_count": 361800,
+      "supply_ratio": 11,
+      "cart_rate": "18.52%",
+      "cart_price": {
+        "cny": 218.96,
+        "rub": 2737
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "кроссовки мужские 男士运动鞋",
+      "category": "鞋类>休闲鞋>运动鞋",
+      "search_index": 913100,
+      "goods_count": 344400,
+      "supply_ratio": 11,
+      "cart_rate": "15.06%",
+      "cart_price": {
+        "cny": 283.28,
+        "rub": 3541
+      },
+      "is_women_apparel": false,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "джинсы женские 女士牛仔裤",
+      "category": "服装>服装>牛仔裤",
+      "search_index": 776300,
+      "goods_count": 347300,
+      "supply_ratio": 13,
+      "cart_rate": "17.39%",
+      "cart_price": {
+        "cny": 204.72,
+        "rub": 2559
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "футболка T恤",
+      "category": "服装>服装>T恤",
+      "search_index": 709900,
+      "goods_count": 292700,
+      "supply_ratio": 12,
+      "cart_rate": "4.63%",
+      "cart_price": {
+        "cny": 63.12,
+        "rub": 789
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "футболка женская 女士T恤",
+      "category": "服装>服装>T恤",
+      "search_index": 659700,
+      "goods_count": 277000,
+      "supply_ratio": 12,
+      "cart_rate": "21.39%",
+      "cart_price": {
+        "cny": 62.88,
+        "rub": 786
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "футболка мужская 男士T恤",
+      "category": "服装>服装>T恤",
+      "search_index": 646000,
+      "goods_count": 266000,
+      "supply_ratio": 12,
+      "cart_rate": "21.17%",
+      "cart_price": {
+        "cny": 82.16,
+        "rub": 1027
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "кроссовки 运动鞋",
+      "category": "鞋类>休闲鞋>运动鞋",
+      "search_index": 602200,
+      "goods_count": 327900,
+      "supply_ratio": 15,
+      "cart_rate": "5.80%",
+      "cart_price": {
+        "cny": 245.36,
+        "rub": 3067
+      },
+      "is_women_apparel": false,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "трусы женские 女式内裤",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 596400,
+      "goods_count": 184700,
+      "supply_ratio": 9,
+      "cart_rate": "24.09%",
+      "cart_price": {
+        "cny": 67.12,
+        "rub": 839
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "спортивный костюм женский 女士运动服",
+      "category": "服装>服装>运动服",
+      "search_index": 518500,
+      "goods_count": 190400,
+      "supply_ratio": 10,
+      "cart_rate": "13.60%",
+      "cart_price": {
+        "cny": 269.6,
+        "rub": 3370
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "трусы мужские 男士内裤",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 517500,
+      "goods_count": 146700,
+      "supply_ratio": 8,
+      "cart_rate": "29.09%",
+      "cart_price": {
+        "cny": 89.36,
+        "rub": 1117
+      },
+      "is_women_apparel": false,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "платье женское 女士连衣裙",
+      "category": "服装>服装>连衣裙",
+      "search_index": 475500,
+      "goods_count": 198000,
+      "supply_ratio": 12,
+      "cart_rate": "10.67%",
+      "cart_price": {
+        "cny": 167.76,
+        "rub": 2097
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "пижама женская 女式睡衣",
+      "category": "服装>服装>睡衣",
+      "search_index": 454500,
+      "goods_count": 154800,
+      "supply_ratio": 10,
+      "cart_rate": "20.24%",
+      "cart_price": {
+        "cny": 95.44,
+        "rub": 1193
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "рубашка женская 女士衬衫",
+      "category": "服装>服装>衬衫",
+      "search_index": 452900,
+      "goods_count": 169400,
+      "supply_ratio": 10,
+      "cart_rate": "15.52%",
+      "cart_price": {
+        "cny": 137.52,
+        "rub": 1719
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "джинсы 牛仔裤",
+      "category": "服装>服装>牛仔裤",
+      "search_index": 423600,
+      "goods_count": 182400,
+      "supply_ratio": 12,
+      "cart_rate": "4.04%",
+      "cart_price": {
+        "cny": 233.68,
+        "rub": 2921
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "кардиган женский 女开衫",
+      "category": "服装>服装>开襟衫",
+      "search_index": 394600,
+      "goods_count": 134100,
+      "supply_ratio": 10,
+      "cart_rate": "16.06%",
+      "cart_price": {
+        "cny": 175.36,
+        "rub": 2192
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "платье женское летнее 女夏装连衣裙",
+      "category": "服装>服装>连衣裙",
+      "search_index": 361200,
+      "goods_count": 143500,
+      "supply_ratio": 11,
+      "cart_rate": "11.70%",
+      "cart_price": {
+        "cny": 153.76,
+        "rub": 1922
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "костюм женский 女士服装",
+      "category": "服装>服装>服装套装",
+      "search_index": 341500,
+      "goods_count": 123100,
+      "supply_ratio": 10,
+      "cart_rate": "8.57%",
+      "cart_price": {
+        "cny": 218.48,
+        "rub": 2731
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "джинсы мужские 男士牛仔裤",
+      "category": "服装>服装>牛仔裤",
+      "search_index": 336100,
+      "goods_count": 155500,
+      "supply_ratio": 13,
+      "cart_rate": "16.45%",
+      "cart_price": {
+        "cny": 264.64,
+        "rub": 3308
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "рубашка 衬衫",
+      "category": "服装>服装>衬衫",
+      "search_index": 335400,
+      "goods_count": 143300,
+      "supply_ratio": 12,
+      "cart_rate": "4.69%",
+      "cart_price": {
+        "cny": 131.52,
+        "rub": 1644
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "носки мужские 男士袜子",
+      "category": "服装>内衣>袜子",
+      "search_index": 332700,
+      "goods_count": 94200,
+      "supply_ratio": 8,
+      "cart_rate": "38.62%",
+      "cart_price": {
+        "cny": 42.24,
+        "rub": 528
+      },
+      "is_women_apparel": false,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "носки 袜子",
+      "category": "服装>内衣>袜子",
+      "search_index": 329800,
+      "goods_count": 129200,
+      "supply_ratio": 11,
+      "cart_rate": "10.37%",
+      "cart_price": {
+        "cny": 38.8,
+        "rub": 485
+      },
+      "is_women_apparel": false,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "лоферы женские 女士乐福鞋",
+      "category": "鞋类>休闲鞋>乐福鞋",
+      "search_index": 327200,
+      "goods_count": 127200,
+      "supply_ratio": 11,
+      "cart_rate": "16.64%",
+      "cart_price": {
+        "cny": 234.08,
+        "rub": 2926
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "трусы женские набор 女内裤套装",
+      "category": "服装>内衣>内裤套装",
+      "search_index": 324300,
+      "goods_count": 99800,
+      "supply_ratio": 9,
+      "cart_rate": "25.14%",
+      "cart_price": {
+        "cny": 47.36,
+        "rub": 592
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "носки мужские набор 男式袜子套装",
+      "category": "服装>内衣>袜子",
+      "search_index": 318100,
+      "goods_count": 88700,
+      "supply_ratio": 8,
+      "cart_rate": "35.24%",
+      "cart_price": {
+        "cny": 43.84,
+        "rub": 548
+      },
+      "is_women_apparel": false,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    },
+    {
+      "keyword": "костюм спортивный женский 女士运动套装",
+      "category": "服装>服装>运动服",
+      "search_index": 313600,
+      "goods_count": 112900,
+      "supply_ratio": 10,
+      "cart_rate": "13.12%",
+      "cart_price": {
+        "cny": 265.52,
+        "rub": 3319
+      },
+      "is_women_apparel": true,
+      "source": "menglar",
+      "fetched_at": "2026-09-16T12:59:34.755Z"
+    }
+  ]
+}

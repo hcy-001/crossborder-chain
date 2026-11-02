@@ -61,7 +61,8 @@
     "holidays:probe": "node scripts/probe-region-calendar.mjs",
     "ci": "node --test && node scripts/gates/check-decouple.mjs && node evals/run.mjs",
     "market:scan": "node scripts/market-scan.mjs",
-    "select:candidates": "node scripts/select-candidates.mjs"
+    "select:candidates": "node scripts/select-candidates.mjs",
+    "source:lookup": "node scripts/source-lookup.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",

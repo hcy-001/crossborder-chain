@@ -1,9 +1,9 @@
 {
   "direction": "女士针织开衫",
   "region": "RU",
-  "generated_at": "2026-11-02T13:58:37.837Z",
+  "generated_at": "2026-11-02T14:12:12.294Z",
   "upstream": {
-    "brief_generated_at": "2026-11-02T13:58:11.904Z",
+    "brief_generated_at": "2026-11-02T14:12:10.843Z",
     "verdict": {
       "level": "方向成立",
       "reason": "进口 $1.02B、中国占 31.3%，说明需求真实存在且中国货已是主力供应"
@@ -40,10 +40,10 @@
       "warm_months": 1,
       "hint": "低温月 ≥5，秋冬是主战场；针织/厚料的上新窗口在 8–10 月"
     },
-    "price_band_status": "candidate"
+    "price_band_status": "measured"
   },
   "scope_note": "候选是「按已知约束枚举出的合理选项」，不是「市场验证过的爆款」。排序依据是依据强度与差异化，不是销量预测。任何候选在拿到竞品数据前都不该单独下注。",
-  "count": 6,
+  "count": 8,
   "candidates": [
     {
       "id": "c01",
@@ -52,9 +52,9 @@
       "tier": "core",
       "material": "acrylic",
       "fit": "oversize",
-      "target_price_cny": 157,
-      "target_price_rub": 1900,
-      "price_note": "主力档：1900 RUB ÷ 12.11 = 157 CNY（区间 800–3000 RUB 的 50% 位；区间为二手，汇率为当日）",
+      "target_price_cny": 180,
+      "target_price_rub": 2180,
+      "price_note": "主力档：180 CNY / 2180 RUB（锚点 180 CNY，汇率 12.11）（区间 140–210 RUB 的 50% 位；区间为二手，汇率为当日）",
       "season_fit": "秋冬主推",
       "evidence": {
         "market_size": {
@@ -65,10 +65,10 @@
         },
         "price_band": {
           "value": {
-            "low": 800,
-            "high": 3000,
-            "currency": "RUB",
-            "level": "candidate"
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
           },
           "level": "candidate",
           "source": "二手区间（平台客单价）",
@@ -104,8 +104,8 @@
       },
       "sensitivity": [
         {
-          "assumption": "客单价区间下沿约 800",
-          "if_broken": "若实际主流成交价低于 800，本档位（主力档）没有价格空间，应退到入门档或换材质"
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（主力档）没有价格空间，应退到入门档或换材质"
         },
         {
           "assumption": "供货端能按规格找到对应材质",
@@ -121,9 +121,9 @@
       "tier": "core",
       "material": "wool_blend",
       "fit": "regular",
-      "target_price_cny": 157,
-      "target_price_rub": 1900,
-      "price_note": "主力档：1900 RUB ÷ 12.11 = 157 CNY（区间 800–3000 RUB 的 50% 位；区间为二手，汇率为当日）",
+      "target_price_cny": 180,
+      "target_price_rub": 2180,
+      "price_note": "主力档：180 CNY / 2180 RUB（锚点 180 CNY，汇率 12.11）（区间 140–210 RUB 的 50% 位；区间为二手，汇率为当日）",
       "season_fit": "秋冬主推",
       "evidence": {
         "market_size": {
@@ -134,10 +134,10 @@
         },
         "price_band": {
           "value": {
-            "low": 800,
-            "high": 3000,
-            "currency": "RUB",
-            "level": "candidate"
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
           },
           "level": "candidate",
           "source": "二手区间（平台客单价）",
@@ -173,8 +173,8 @@
       },
       "sensitivity": [
         {
-          "assumption": "客单价区间下沿约 800",
-          "if_broken": "若实际主流成交价低于 800，本档位（主力档）没有价格空间，应退到入门档或换材质"
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（主力档）没有价格空间，应退到入门档或换材质"
         },
         {
           "assumption": "供货端能按规格找到对应材质",
@@ -190,9 +190,9 @@
       "tier": "entry",
       "material": "acrylic",
       "fit": "oversize",
-      "target_price_cny": 111,
-      "target_price_rub": 1350,
-      "price_note": "入门档：1350 RUB ÷ 12.11 = 111 CNY（区间 800–3000 RUB 的 25% 位；区间为二手，汇率为当日）",
+      "target_price_cny": 160,
+      "target_price_rub": 1938,
+      "price_note": "入门档：160 CNY / 1938 RUB（锚点 160 CNY，汇率 12.11）（区间 140–210 RUB 的 25% 位；区间为二手，汇率为当日）",
       "season_fit": "秋冬主推",
       "evidence": {
         "market_size": {
@@ -203,10 +203,10 @@
         },
         "price_band": {
           "value": {
-            "low": 800,
-            "high": 3000,
-            "currency": "RUB",
-            "level": "candidate"
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
           },
           "level": "candidate",
           "source": "二手区间（平台客单价）",
@@ -242,8 +242,8 @@
       },
       "sensitivity": [
         {
-          "assumption": "客单价区间下沿约 800",
-          "if_broken": "若实际主流成交价低于 800，本档位（入门档）没有价格空间，应退到入门档或换材质"
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（入门档）没有价格空间，应退到入门档或换材质"
         },
         {
           "assumption": "供货端能按规格找到对应材质",
@@ -259,9 +259,9 @@
       "tier": "entry",
       "material": "wool_blend",
       "fit": "regular",
-      "target_price_cny": 111,
-      "target_price_rub": 1350,
-      "price_note": "入门档：1350 RUB ÷ 12.11 = 111 CNY（区间 800–3000 RUB 的 25% 位；区间为二手，汇率为当日）",
+      "target_price_cny": 160,
+      "target_price_rub": 1938,
+      "price_note": "入门档：160 CNY / 1938 RUB（锚点 160 CNY，汇率 12.11）（区间 140–210 RUB 的 25% 位；区间为二手，汇率为当日）",
       "season_fit": "秋冬主推",
       "evidence": {
         "market_size": {
@@ -272,10 +272,10 @@
         },
         "price_band": {
           "value": {
-            "low": 800,
-            "high": 3000,
-            "currency": "RUB",
-            "level": "candidate"
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
           },
           "level": "candidate",
           "source": "二手区间（平台客单价）",
@@ -311,8 +311,8 @@
       },
       "sensitivity": [
         {
-          "assumption": "客单价区间下沿约 800",
-          "if_broken": "若实际主流成交价低于 800，本档位（入门档）没有价格空间，应退到入门档或换材质"
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（入门档）没有价格空间，应退到入门档或换材质"
         },
         {
           "assumption": "供货端能按规格找到对应材质",
@@ -328,9 +328,9 @@
       "tier": "core",
       "material": "wool",
       "fit": "oversize",
-      "target_price_cny": 157,
-      "target_price_rub": 1900,
-      "price_note": "主力档：1900 RUB ÷ 12.11 = 157 CNY（区间 800–3000 RUB 的 50% 位；区间为二手，汇率为当日）",
+      "target_price_cny": 180,
+      "target_price_rub": 2180,
+      "price_note": "主力档：180 CNY / 2180 RUB（锚点 180 CNY，汇率 12.11）（区间 140–210 RUB 的 50% 位；区间为二手，汇率为当日）",
       "season_fit": "秋冬主推",
       "evidence": {
         "market_size": {
@@ -341,10 +341,10 @@
         },
         "price_band": {
           "value": {
-            "low": 800,
-            "high": 3000,
-            "currency": "RUB",
-            "level": "candidate"
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
           },
           "level": "candidate",
           "source": "二手区间（平台客单价）",
@@ -380,8 +380,8 @@
       },
       "sensitivity": [
         {
-          "assumption": "客单价区间下沿约 800",
-          "if_broken": "若实际主流成交价低于 800，本档位（主力档）没有价格空间，应退到入门档或换材质"
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（主力档）没有价格空间，应退到入门档或换材质"
         },
         {
           "assumption": "供货端能按规格找到对应材质",
@@ -397,9 +397,9 @@
       "tier": "entry",
       "material": "wool",
       "fit": "regular",
-      "target_price_cny": 111,
-      "target_price_rub": 1350,
-      "price_note": "入门档：1350 RUB ÷ 12.11 = 111 CNY（区间 800–3000 RUB 的 25% 位；区间为二手，汇率为当日）",
+      "target_price_cny": 160,
+      "target_price_rub": 1938,
+      "price_note": "入门档：160 CNY / 1938 RUB（锚点 160 CNY，汇率 12.11）（区间 140–210 RUB 的 25% 位；区间为二手，汇率为当日）",
       "season_fit": "秋冬主推",
       "evidence": {
         "market_size": {
@@ -410,10 +410,10 @@
         },
         "price_band": {
           "value": {
-            "low": 800,
-            "high": 3000,
-            "currency": "RUB",
-            "level": "candidate"
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
           },
           "level": "candidate",
           "source": "二手区间（平台客单价）",
@@ -449,8 +449,8 @@
       },
       "sensitivity": [
         {
-          "assumption": "客单价区间下沿约 800",
-          "if_broken": "若实际主流成交价低于 800，本档位（入门档）没有价格空间，应退到入门档或换材质"
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（入门档）没有价格空间，应退到入门档或换材质"
         },
         {
           "assumption": "供货端能按规格找到对应材质",
@@ -458,6 +458,144 @@
         }
       ],
       "rank_reason": "依据强度 5/9：区间下四分位，靠量；客单价上探，但起订与验货要求高；尺码不准时退货风险高"
+    },
+    {
+      "id": "c07",
+      "title_cn": "女士针织开衫 · 上探档 · 腈纶为主 · Oversize 宽松",
+      "title_ru_template": "{{brand}} {{product_type}} женский, {{material}}, {{fit}}, {{color}}",
+      "tier": "premium",
+      "material": "acrylic",
+      "fit": "oversize",
+      "target_price_cny": 200,
+      "target_price_rub": 2422,
+      "price_note": "上探档：200 CNY / 2422 RUB（锚点 200 CNY，汇率 12.11）（区间 140–210 RUB 的 80% 位；区间为二手，汇率为当日）",
+      "season_fit": "秋冬主推",
+      "evidence": {
+        "market_size": {
+          "value": 1021263284,
+          "level": "L2",
+          "source": "UN Comtrade",
+          "note": "方向级数据，不是款级数据；它证明品类有需求，不证明这个款好卖"
+        },
+        "price_band": {
+          "value": {
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
+          },
+          "level": "candidate",
+          "source": "二手区间（平台客单价）",
+          "note": "区间来自二手，具体价位按分位推算"
+        },
+        "season": {
+          "value": {
+            "cold_months": 5,
+            "hint": "低温月 ≥5，秋冬是主战场；针织/厚料的上新窗口在 8–10 月"
+          },
+          "level": "L2",
+          "source": "Open-Meteo 月均气温",
+          "note": "决定上新窗口与厚度，不决定款式"
+        }
+      },
+      "verification": {
+        "level": "L1",
+        "verifiable_now": [
+          "品类规模（Comtrade，可复算）",
+          "季节窗口（月均气温，可复算）",
+          "平台必填属性与字典值（Seller API 实拉）"
+        ],
+        "not_verifiable_now": [
+          "这个款在目标市场是否好卖（缺竞品销量与评价）",
+          "目标定价能否成交（缺竞品价格带）",
+          "采购成本与毛利（缺 1688 实盘报价）"
+        ],
+        "how_to_verify": [
+          "竞品：从可访问 C 端的环境取样，或在卖家后台看「搜索分析」的同款价格与转化",
+          "成本：按 sourcing 关键词去 1688 询价，至少 3 家取中位",
+          "成交：先小批量上架 2–3 个候选，用 2 周曝光/点击/加购数据淘汰"
+        ]
+      },
+      "sensitivity": [
+        {
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（上探档）没有价格空间，应退到入门档或换材质"
+        },
+        {
+          "assumption": "供货端能按规格找到对应材质",
+          "if_broken": "供货正常，风险低"
+        }
+      ],
+      "rank_reason": "依据强度 6/9：区间上五分位，靠材质与版型差异化；1688 供货最充足，起订低；覆盖体型差异，退货率相对低"
+    },
+    {
+      "id": "c08",
+      "title_cn": "女士针织开衫 · 上探档 · 羊毛混纺 · 常规合身",
+      "title_ru_template": "{{brand}} {{product_type}} женский, {{material}}, {{fit}}, {{color}}",
+      "tier": "premium",
+      "material": "wool_blend",
+      "fit": "regular",
+      "target_price_cny": 200,
+      "target_price_rub": 2422,
+      "price_note": "上探档：200 CNY / 2422 RUB（锚点 200 CNY，汇率 12.11）（区间 140–210 RUB 的 80% 位；区间为二手，汇率为当日）",
+      "season_fit": "秋冬主推",
+      "evidence": {
+        "market_size": {
+          "value": 1021263284,
+          "level": "L2",
+          "source": "UN Comtrade",
+          "note": "方向级数据，不是款级数据；它证明品类有需求，不证明这个款好卖"
+        },
+        "price_band": {
+          "value": {
+            "low": 140,
+            "high": 210,
+            "currency": "CNY",
+            "level": "L2"
+          },
+          "level": "candidate",
+          "source": "二手区间（平台客单价）",
+          "note": "区间来自二手，具体价位按分位推算"
+        },
+        "season": {
+          "value": {
+            "cold_months": 5,
+            "hint": "低温月 ≥5，秋冬是主战场；针织/厚料的上新窗口在 8–10 月"
+          },
+          "level": "L2",
+          "source": "Open-Meteo 月均气温",
+          "note": "决定上新窗口与厚度，不决定款式"
+        }
+      },
+      "verification": {
+        "level": "L1",
+        "verifiable_now": [
+          "品类规模（Comtrade，可复算）",
+          "季节窗口（月均气温，可复算）",
+          "平台必填属性与字典值（Seller API 实拉）"
+        ],
+        "not_verifiable_now": [
+          "这个款在目标市场是否好卖（缺竞品销量与评价）",
+          "目标定价能否成交（缺竞品价格带）",
+          "采购成本与毛利（缺 1688 实盘报价）"
+        ],
+        "how_to_verify": [
+          "竞品：从可访问 C 端的环境取样，或在卖家后台看「搜索分析」的同款价格与转化",
+          "成本：按 sourcing 关键词去 1688 询价，至少 3 家取中位",
+          "成交：先小批量上架 2–3 个候选，用 2 周曝光/点击/加购数据淘汰"
+        ]
+      },
+      "sensitivity": [
+        {
+          "assumption": "客单价区间下沿约 140",
+          "if_broken": "若实际主流成交价低于 140，本档位（上探档）没有价格空间，应退到入门档或换材质"
+        },
+        {
+          "assumption": "供货端能按规格找到对应材质",
+          "if_broken": "供货正常，风险低"
+        }
+      ],
+      "rank_reason": "依据强度 5/9：区间上五分位，靠材质与版型差异化；保暖卖点成立，需标注含毛量；尺码不准时退货风险高"
     }
   ]
 }
