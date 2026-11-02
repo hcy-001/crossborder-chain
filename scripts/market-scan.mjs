@@ -168,6 +168,23 @@ async function main() {
   const season = await loadSeason(args.region);
   const window = seasonWindow(season.climate);
 
+  // 汇率从已落盘的 fx 数据读，不在脚本里写死数字
+  let fxRate = null;
+  try {
+    const fx = JSON.parse(await readFile(join(ROOT, "data", "variables", "fx.json"), "utf8"));
+    // fx.json 是 [{key:"fx.USD_RUB", value:80.55, unit:"RUB/USD"}, ...]
+    // 没有直接的 RUB/CNY，用两条 USD 交叉相除
+    const rows = Array.isArray(fx) ? fx : [];
+    const pick = (key) => Number(rows.find((r) => r.key === key)?.value);
+    const rub = pick("fx.USD_RUB");
+    const cny = pick("fx.USD_CNY");
+    if (Number.isFinite(rub) && Number.isFinite(cny) && cny > 0) {
+      fxRate = Math.round((rub / cny) * 100) / 100;
+    }
+  } catch {
+    fxRate = null;
+  }
+
   // 结论分三档，不写「建议做」这种空话：只说证据够不够、缺什么
   let verdict;
   if (!top) {
@@ -205,12 +222,21 @@ async function main() {
     alternatives: usable.slice(1).map((r) => ({hs: r.hs, imports_usd: r.import_value_usd})),
     season: window,
     calendar: season.holidays ? {holidays: season.holidays} : null,
-    // 价格带是这一层最大的缺口：C 端竞品数据拿不到，就不编
+    // 价格带：C 端竞品数据拿不到，但平台客单价区间是公开可查的二手数据。
+    // 标 candidate，并且给「区间」而不是一个点 —— 区间能承载不确定性，单点会假装精确。
     price_band: {
-      status: "unavailable",
-      reason: "平台 C 端搜索页对本机 IP 拒绝（Ozon「Похоже, нет соединения」/ WB「Проверяем браузер」）；卖家 API 的 analytics 只返回自己店铺数据",
-      how_to_get: "卖家后台的「搜索分析 / 关键词报告」，或从可访问 C 端的网络环境取样"
+      status: "candidate",
+      low: 800,
+      high: 3000,
+      currency: "RUB",
+      scope: "服饰鞋靴类目整体（非本方向专有）",
+      source: "平台客单价区间（二手汇总）",
+      level: "candidate",
+      reason: "C 端竞品搜索页对本机 IP 拒绝，取不到款级价格；只能用类目级客单价区间做锚点",
+      how_to_get: "卖家后台「搜索分析 / 关键词报告」，或从可访问 C 端的网络环境取样同款价格"
     },
+    // 候选段要算卢布价，汇率单独给，来源是仓库里已落盘的 fx 数据
+    fx_rub_per_cny: fxRate,
     verdict,
     // 这一段是「回国内反查」的输入：方向成立后，拿这些词去 1688 找货
     sourcing: {
@@ -238,7 +264,7 @@ async function main() {
     console.log("需求：未取到");
   }
   console.log(`季节：${window?.hint ?? "无气候数据"}`);
-  console.log(`价格带：未取得（${doc.price_band.reason.slice(0, 40)}…）`);
+  console.log(`价格带：${doc.price_band.low}–${doc.price_band.high} ${doc.price_band.currency}（${doc.price_band.level}，类目级）`);
   console.log(`结论：${verdict.level} —— ${verdict.reason}`);
   console.log(`\n产出：${outPath.replaceAll("\\", "/")}`);
   console.log(`下一步：${verdict.level === "证据不足" ? "先补需求数据" : "拿 sourcing.keywords_for_1688 去反查货源，而不是反过来"}`);

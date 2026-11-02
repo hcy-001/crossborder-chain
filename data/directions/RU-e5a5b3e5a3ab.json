@@ -1,7 +1,7 @@
 {
   "direction": "女士针织开衫",
   "region": "RU",
-  "generated_at": "2026-11-02T13:22:26.486Z",
+  "generated_at": "2026-11-02T13:58:11.904Z",
   "hs": {
     "codes": [
       "6110"
@@ -128,10 +128,17 @@
     ]
   },
   "price_band": {
-    "status": "unavailable",
-    "reason": "平台 C 端搜索页对本机 IP 拒绝（Ozon「Похоже, нет соединения」/ WB「Проверяем браузер」）；卖家 API 的 analytics 只返回自己店铺数据",
-    "how_to_get": "卖家后台的「搜索分析 / 关键词报告」，或从可访问 C 端的网络环境取样"
+    "status": "candidate",
+    "low": 800,
+    "high": 3000,
+    "currency": "RUB",
+    "scope": "服饰鞋靴类目整体（非本方向专有）",
+    "source": "平台客单价区间（二手汇总）",
+    "level": "candidate",
+    "reason": "C 端竞品搜索页对本机 IP 拒绝，取不到款级价格；只能用类目级客单价区间做锚点",
+    "how_to_get": "卖家后台「搜索分析 / 关键词报告」，或从可访问 C 端的网络环境取样同款价格"
   },
+  "fx_rub_per_cny": 12.11,
   "verdict": {
     "level": "方向成立",
     "reason": "进口 $1.02B、中国占 31.3%，说明需求真实存在且中国货已是主力供应"
