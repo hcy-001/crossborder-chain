@@ -15,7 +15,7 @@ import { dirname, join, resolve } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
-import { extractPackageDir, parseMissingFields, slugOf } from "../../scripts/run-direction.mjs";
+import { extractPackageDir, parseMissingFields, readHandoffBlockers, slugOf } from "../../scripts/run-direction.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -94,4 +94,46 @@ test("extractPackageDir：相对路径形态", () => {
 test("extractPackageDir：没有 handoff 路径时返回 null，不瞎猜", () => {
   assert.equal(extractPackageDir("出包成功：ozon、yandex-market"), null);
   assert.equal(extractPackageDir(""), null);
+});
+
+// ── 平台侧阻断：答卷填齐 ≠ 能上架 ─────────────────────
+test("readHandoffBlockers：读出 BLOCKED 与逐条待办", async () => {
+  const {mkdtemp, mkdir, writeFile} = await import("node:fs/promises");
+  const {tmpdir} = await import("node:os");
+  const root = await mkdtemp(join(tmpdir(), "handoff-"));
+  const dir = join(root, "package", "sku-x");
+  await mkdir(dir, {recursive: true});
+  await writeFile(join(dir, "handoff.md"), [
+    "BLOCKED: 本包暂不可直接上架（2 项待解）",
+    "  1. 待完成：须申请诚信标签 DataMatrix，每码不得复用。",
+    "     怎么解：找服务商办。",
+    "  2. 待完成：EAC 证书主体与报关主体必须一致。",
+    "本包图片为占位图，仅用于验证流程",
+    "# 人工交付说明"
+  ].join("\n"), "utf8");
+
+  const result = await readHandoffBlockers("package/sku-x", {root});
+  assert.equal(result.blocked, true);
+  assert.equal(result.headline, "本包暂不可直接上架（2 项待解）");
+  assert.equal(result.items.length, 2);
+  assert.match(result.items[0], /DataMatrix/);
+  assert.match(result.items[1], /EAC/);
+});
+
+test("readHandoffBlockers：没有 BLOCKED 时不编造", async () => {
+  const {mkdtemp, mkdir, writeFile} = await import("node:fs/promises");
+  const {tmpdir} = await import("node:os");
+  const root = await mkdtemp(join(tmpdir(), "handoff-ok-"));
+  const dir = join(root, "package", "sku-y");
+  await mkdir(dir, {recursive: true});
+  await writeFile(join(dir, "handoff.md"), "# 人工交付说明\n开箱即用\n", "utf8");
+
+  const result = await readHandoffBlockers("package/sku-y", {root});
+  assert.equal(result.blocked, false);
+  assert.deepEqual(result.items, []);
+});
+
+test("readHandoffBlockers：目录不存在返回 null，不抛错中断链路", async () => {
+  assert.equal(await readHandoffBlockers(null), null);
+  assert.equal(await readHandoffBlockers("package/does-not-exist", {root: ROOT}), null);
 });

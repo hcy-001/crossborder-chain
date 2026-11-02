@@ -72,6 +72,27 @@ export function extractPackageDir(text) {
   return relative ? relative[0] : null;
 }
 
+/**
+ * 读 handoff 第一屏的平台侧阻断。
+ *
+ * 为什么必须有这一步：答卷填齐 ≠ 能上架。像俄罗斯服装还要 Честный знак
+ * 的 DataMatrix 码，且 EAC 证书主体、标签申请主体、报关主体必须一致 ——
+ * 这些不是答卷里能解的问题，是主体资质与合规流程。
+ * 只报「答卷 0 项待填」会让人以为可以直接上架，那是最误导人的一种「完成」。
+ */
+export async function readHandoffBlockers(packageDir, {root = ROOT} = {}) {
+  if (!packageDir) return null;
+  const abs = /^[A-Za-z]:[\\/]/.test(packageDir) ? packageDir : resolve(root, packageDir);
+  const text = await readFile(join(abs, "handoff.md"), "utf8").catch(() => null);
+  if (!text) return null;
+  const head = text.split("\n").slice(0, 16).join("\n");
+  const headline = head.match(/BLOCKED[:：]\s*(.+)/);
+  if (!headline) return {blocked: false, headline: null, items: []};
+  const items = [...head.matchAll(/^\s*\d+\.\s*(?:待完成|待解)[:：]?\s*(.+)$/gm)]
+    .map((matched) => matched[1].trim());
+  return {blocked: true, headline: headline[1].trim(), items};
+}
+
 function usage() {
   console.log(`一个方向 → 一个可提交包（串跑 ①②③④，并列出 ⑤ 还差什么）
 
@@ -364,7 +385,10 @@ async function main() {
   const forPublish = skeleton.questions.filter(
     (q) => !blocking.some((item) => item.key === q.key)
   );
-  console.log(`  ⑤ 上架    还差 ${skeleton.questions.length} 项人答`);
+  const handoff = await readHandoffBlockers(packageDir).catch(() => null);
+  const platformBlocked = handoff?.blocked ? handoff.items : [];
+
+  console.log(`  ⑤ 上架    答卷差 ${skeleton.questions.length} 项；平台侧阻断 ${platformBlocked.length} 项`);
   if (blocking.length > 0) {
     console.log(`      阻断出包（${blocking.length} 项，填完才能出包）：`);
     for (const q of blocking) console.log(`        · ${q.key} — ${q.question}`);
@@ -374,6 +398,11 @@ async function main() {
   if (forPublish.length > 0) {
     console.log(`      只挡上架（${forPublish.length} 项，包可以先出）：`);
     for (const q of forPublish) console.log(`        · ${q.key} — ${q.question}（${q.where}）`);
+  }
+  // 平台侧阻断单独一段：这些不是填表能解的，是要办资质
+  if (platformBlocked.length > 0) {
+    console.log(`      平台侧阻断（${platformBlocked.length} 项，填答卷解决不了，要办资质）：`);
+    for (const item of platformBlocked) console.log(`        · ${item}`);
   }
   console.log("");
   if (chainOk) {
