@@ -38,3 +38,4 @@ config/local.secret.json
 # 演示答卷留一份，方便 clone 后直接跑通。
 /data/intake/*
 !/data/intake/demo-ru.json
+!/data/intake/acquisition.json

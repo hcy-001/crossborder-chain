@@ -82,6 +82,8 @@ npm run quotes:1688 -- --keyword "针织开衫" --target-price 71.6
 
 ```bash
 node scripts/intake.mjs --list        # 1. 打印必问清单（29 项：必答 16 / 需确认 11 / 可默认 2）
+node scripts/intake.mjs --list --how   #    同上，每项追加「从哪拿 / 抄什么 / 查不到怎么办」
+node scripts/intake.mjs --guide        #    只打印获取手册；同内容见 docs/信息需求清单.md
 # 2. 把答复存成 answers.json（键名见清单），先校验：
 node scripts/intake.mjs --check --answers answers.json      # 缺必答项 exit 2，并点名缺哪几条
 # 3. 带答案跑链路（缺必答项时价格不出、只出包）

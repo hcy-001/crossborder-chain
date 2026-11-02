@@ -381,7 +381,12 @@ function explainShape(item) {
   return `${item.key}（文字）`;
 }
 
-export function renderQuestionnaire() {
+/**
+ * @param {object} [options]
+ * @param {Map<string, object>} [options.howByKey] 传入时在每项后追加「从哪拿/抄什么/查不到」。
+ *   不传就是原样，保持既有输出不变（有测试锁着）。
+ */
+export function renderQuestionnaire({howByKey = null} = {}) {
   const lines = [
     "怎么答：照 example 的样子写；不确定就写 unknown——那是明确表态，不是漏答。",
     "写 unknown 的项，系统会如实降级（不出价/不出图/标未核），不会替你编数字。"
@@ -397,6 +402,12 @@ export function renderQuestionnaire() {
       lines.push(`   键名：${explainShape(item)}`);
       lines.push(`   为什么问：${item.why}`);
       lines.push(`   不答会怎样：${item.consequence}`);
+      const how = howByKey?.get(item.key);
+      if (how) {
+        lines.push(`   从哪拿：${how.at}`);
+        lines.push(`   抄什么：${how.take}`);
+        lines.push(`   查不到：${how.fallback}　（${how.owner} ｜ ${how.level}）`);
+      }
     }
   }
   return lines.join("\n");

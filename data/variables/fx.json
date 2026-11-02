@@ -23,7 +23,7 @@
       {
         "source": "cbr-usd-aed",
         "value": 3.672496212911477,
-        "note": "derived from USD/RUB and AED/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-02T15:59:14.235Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "note": "derived from USD/RUB and AED/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-02T16:07:30.878Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       }
     ],
     "divergence_pct": 0.01918596228,
@@ -61,7 +61,7 @@
       {
         "source": "frankfurter-usd-cny",
         "value": 6.6483,
-        "note": "provider_date=2026-11-02; fetched_at=2026-11-02T15:59:14.235Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY"
+        "note": "provider_date=2026-11-02; fetched_at=2026-11-02T16:07:30.878Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY"
       }
     ],
     "divergence_pct": 0.176211870862,
@@ -178,7 +178,7 @@
       {
         "source": "cbr-usd-rub",
         "value": 80.9734,
-        "note": "direct USD/RUB quote; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-02T15:59:14.235Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "note": "direct USD/RUB quote; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-02T16:07:30.878Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       }
     ],
     "divergence_pct": 0.516526745559,
@@ -211,7 +211,7 @@
       {
         "source": "cbr-usd-sar",
         "value": 3.7500011577879766,
-        "note": "derived from USD/RUB and SAR/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-02T15:59:14.235Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "note": "derived from USD/RUB and SAR/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-02T16:07:30.878Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       }
     ],
     "divergence_pct": 0.082461199717,

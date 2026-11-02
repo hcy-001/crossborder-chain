@@ -14,6 +14,7 @@ import {mkdir, readFile, writeFile} from "node:fs/promises";
 import {dirname, join, resolve} from "node:path";
 import {fileURLToPath} from "node:url";
 import {INTAKE_ITEMS, renderQuestionnaire, validateIntake} from "../core/intake/checklist.mjs";
+import {loadAcquisition, renderGuideMd, validateAcquisition} from "../core/intake/acquisition.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -26,7 +27,9 @@ const has = (name) => args.includes(`--${name}`);
 if (has("help") || args.length === 0) {
   console.log(`上架前必问清单
 
-  node scripts/intake.mjs --list
+  node scripts/intake.mjs --list                 # 打印问卷
+  node scripts/intake.mjs --list --how           # 打印问卷 + 每项「从哪拿」
+  node scripts/intake.mjs --guide                # 只打印「从哪拿」手册（markdown）
   node scripts/intake.mjs --check --answers <answers.json>
   node scripts/intake.mjs --answers <answers.json> --sku <sku>
 
@@ -34,8 +37,25 @@ if (has("help") || args.length === 0) {
   process.exit(0);
 }
 
+if (has("guide")) {
+  // 生成给人看的「从哪拿」文档。与 --list 分开：一个是问卷，一个是获取手册。
+  const {byKey} = await loadAcquisition();
+  const check = validateAcquisition(INTAKE_ITEMS, byKey);
+  if (!check.ok) {
+    console.error(`获取方式与问卷不同步：缺 ${check.missing.join(",") || "-"}；多 ${check.extra.join(",") || "-"}；等级异常 ${check.badLevels.join(",") || "-"}；空字段 ${check.emptyFields.join(",") || "-"}`);
+    process.exit(2);
+  }
+  console.log(renderGuideMd(INTAKE_ITEMS, byKey));
+  process.exit(0);
+}
+
 if (has("list")) {
-  console.log(`# 上架前必问清单（共 ${INTAKE_ITEMS.length} 项）${renderQuestionnaire()}`);
+  // --how：把「从哪拿」附在每项后面。不传就是原样，输出体积不变。
+  let howByKey = null;
+  if (has("how")) {
+    howByKey = (await loadAcquisition()).byKey;
+  }
+  console.log(`# 上架前必问清单（共 ${INTAKE_ITEMS.length} 项）${renderQuestionnaire({howByKey})}`);
   process.exit(0);
 }
 

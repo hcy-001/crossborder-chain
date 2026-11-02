@@ -1,6 +1,6 @@
 {
   "name": "crossborder-delivery-skill",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "跨境电商全链路：给品类+法域+候选数，产出一份能被人接手提交的上品包，每段留可回放台账。覆盖 8 平台 × 9 法域。",
   "license": "MIT",
   "type": "module",
@@ -64,7 +64,9 @@
     "select:candidates": "node scripts/select-candidates.mjs",
     "source:lookup": "node scripts/source-lookup.mjs",
     "quotes:1688": "node scripts/scan-1688-quotes.mjs",
-    "chain:dir": "node scripts/run-direction.mjs"
+    "chain:dir": "node scripts/run-direction.mjs",
+    "intake:guide": "node scripts/intake.mjs --guide",
+    "intake:render": "node scripts/render-intake-guide.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",
