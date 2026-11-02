@@ -8,26 +8,28 @@ node_modules/
 config/local.json
 config/local.secret.json
 
-# 运行产物（可重新生成）
-runs/
-package/
-cache/
-tmp/
+# 运行产物（可重新生成）。
+# 注意：必须带前导斜杠，只匹配仓库根目录 —— 写成 `package/` 会把 core/package/ 一起忽略，
+# clone 下来直接缺模块、测试全挂。
+/package/
+/runs/
+/cache/
+/tmp/
+/assets/
 
 # 真实 SKU 输入含采购成本，只保留演示样例
-input/*
-!input/demo-sku.json
+/input/*
+!/input/demo-sku.json
 
 # 临时验证产物（保留 out/verification/ 的证据链）
-out/verify-*/
-
-assets/
-*.log
-.DS_Store
+/out/verify-*/
 
 # 测试副产物（含假密钥标记，会触发 GitHub secret scanning 误报）
-out/verification/setup*
-out/verification/setup-run/
+/out/verification/setup*
+/out/verification/setup-run/
 
 # 浏览器控制台日志
-.playwright-cli/
+/.playwright-cli/
+
+*.log
+.DS_Store
