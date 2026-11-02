@@ -1,7 +1,7 @@
 ---
 name: crossborder-chain
-description: 跨境电商全链路单入口（选品→找货→生图→建模→上品信息）。用户只给大品类、目标法域、候选数量，链路先做信息自检，再吃选品技能产出的真实工单，按确定性打分排序，随后并行出图与建模，最后按目标法域的平台要求组装上品信息。模型只做判别（选择/异常处置/现场推导），不做打分与定价。信息源按地区分档登记（`data/signal-sources.json`）：汇率全地区可自动，自有店铺 API 仅俄罗斯，其余地区靠人工取样工单——不做绕过反爬的采集。
-version: 1.3.0
+description: 跨境电商全链路单入口（选品→找货→生图→建模→上品信息）。用户只给大品类、目标法域、候选数量，链路先做信息自检，再吃选品技能产出的真实工单，按确定性打分排序，随后并行出图与建模，最后按目标法域的平台要求组装上品信息。覆盖 8 个平台（Ozon / Яндекс Маркет / Wildberries / Shopee / Lazada / TikTok Shop / Amazon / noon）× 9 个法域（RU SG MY TH PH ID VN AE SA），全部可出包。平台规则来自官方开放平台文档、卖家帮助中心（含中文站）、llms.txt 与存档页，每条事实带 source_url 与 final/candidate/unverified 等级。模型只做判别（选择/异常处置/现场推导），不做打分与定价。产出是「可被人接手提交」的材料包，不调用上架 API、不保存凭证、不自动提交。
+version: 2.0.0
 agent_created: true
 user-invocable: true
 disable-model-invocation: false
@@ -52,7 +52,7 @@ node scripts/chain.mjs --category 女装 --region RU --candidates 2
 | 体积重 | 本链路默认 除数 6000（行业常规），可用 `volumetric_divisor` 覆盖 | 常规口径 | 缺包装尺寸 → 只用实重并标 `volumetric_unknown` |
 | 选品信号 | 选品技能工单（`kind=sourcing_ticket`） | secondary 快照 | 工单缺失直接 `exit 2` |
 
-一句话：**除了汇率与平台图片规格，其余都不是官方口径**；所以别在交付里说"已核实"，只说"标了等级"。
+一句话：**平台侧（图片/标题/数量/费用）已有大量官方原文，法定侧（税费/认证/进口要求）仍多为二手或未核**。所以交付里不写"已核实"，只写"这条事实的等级 + 出处 + 抓取时间"——`final` 才可当依据，`candidate` 必须留人核。
 
 
 ## 1. 它是什么 / 不是什么
