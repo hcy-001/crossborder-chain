@@ -163,14 +163,18 @@ test("离线全链路：零 key、零网络、占位图，一次调用产出成�
 
 test("空工单目录必须报错退出，不能用空候选冒充「市场没有机会」", async () => {
   const empty = await mkdtemp(join(tmpdir(), "tickets-empty-"));
+  // runId 要留出变量名，否则退出码 2 之后 runs/ 里会留一份 test-empty-* 台账。
+  // 门禁随后会扫到它，把 CI 的绝对路径当成硬编码（已由 shouldIgnore 兜住，但不该靠兜）。
+  const runId = `test-empty-${Date.now()}`;
   try {
     const result = await runChain([
       "--category", "女装", "--region", "RU", "--candidates", "1",
-      "--tickets", empty, "--mock-llm", "--mock-images", "--run-id", `test-empty-${Date.now()}`
+      "--tickets", empty, "--mock-llm", "--mock-images", "--run-id", runId
     ]);
     assert.equal(result.code, 2);
     assert.match(`${result.stderr}${result.stdout}`, /采集为空/);
   } finally {
+    await cleanupQuietly(join(repoRoot, "runs", runId));
     await rm(empty, {recursive: true, force: true});
   }
 });

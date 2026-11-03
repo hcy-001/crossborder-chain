@@ -71,6 +71,13 @@ function shouldIgnore(relativePath, fixtureRoot) {
   if (parts.some((part) => ["node_modules", ".git", "docs", "out"].includes(part))) {
     return true;
   }
+  // 根级的运行产物不审：runs/ 是跑批台账、package/ 是出的包、input/ 是按 SKU 生成的输入。
+  // 它们全是 gitignore 的产物，内容里带本机或 CI 的绝对路径是正常的 ——
+  // 门禁审它们是拿源码的尺子量产物，CI 上必然红（测试会先跑，产物后到）。
+  // 注意只跳根级：core/package/ 是源码，必须照审。
+  if (["runs", "package", "input"].includes(parts[0])) {
+    return true;
+  }
   return !fixtureRoot && parts.some((part, index) => part === "tests" && parts[index + 1] === "fixtures");
 }
 
