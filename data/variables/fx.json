@@ -18,15 +18,15 @@
       {
         "source": "cbr-usd-aed",
         "value": 3.672496212911477,
-        "note": "derived from USD/RUB and AED/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "note": "derived from USD/RUB and AED/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       },
       {
         "source": "fxratesapi-usd-aed",
-        "value": 3.6731006685,
-        "note": "provider_as_of=2026-11-03T02:48:00.000Z; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=AED"
+        "value": 3.6731003984,
+        "note": "provider_as_of=2026-11-03T02:51:00.000Z; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=AED"
       }
     ],
-    "divergence_pct": 0.01646665634,
+    "divergence_pct": 0.016459301669,
     "override": null,
     "conflict_id": null,
     "confidence": "secondary",
@@ -56,15 +56,15 @@
       {
         "source": "frankfurter-usd-cny",
         "value": 6.6483,
-        "note": "provider_date=2026-11-02; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY"
+        "note": "provider_date=2026-11-02; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY"
       },
       {
         "source": "fxratesapi-usd-cny",
-        "value": 6.6660012402,
-        "note": "provider_as_of=2026-11-03T02:48:00.000Z; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=CNY"
+        "value": 6.6713010622,
+        "note": "provider_as_of=2026-11-03T02:51:00.000Z; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=CNY"
       }
     ],
-    "divergence_pct": 0.196925253649,
+    "divergence_pct": 0.276587085331,
     "override": null,
     "conflict_id": null,
     "confidence": "official",
@@ -173,12 +173,12 @@
       {
         "source": "cbr-usd-rub",
         "value": 80.9734,
-        "note": "direct USD/RUB quote; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "note": "direct USD/RUB quote; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       },
       {
         "source": "fxratesapi-usd-rub",
-        "value": 80.9180087872,
-        "note": "provider_as_of=2026-11-03T02:48:00.000Z; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=RUB"
+        "value": 80.9180157528,
+        "note": "provider_as_of=2026-11-03T02:51:00.000Z; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=RUB"
       }
     ],
     "divergence_pct": 0.516526745559,
@@ -206,15 +206,15 @@
       {
         "source": "cbr-usd-sar",
         "value": 3.7500011577879766,
-        "note": "derived from USD/RUB and SAR/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "note": "derived from USD/RUB and SAR/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       },
       {
         "source": "fxratesapi-usd-sar",
-        "value": 3.753160547,
-        "note": "provider_as_of=2026-11-03T02:48:00.000Z; fetched_at=2026-11-03T02:48:21.824Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=SAR"
+        "value": 3.7531604899,
+        "note": "provider_as_of=2026-11-03T02:51:00.000Z; fetched_at=2026-11-03T02:52:22.817Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=SAR"
       }
     ],
-    "divergence_pct": 0.084063833569,
+    "divergence_pct": 0.084062310905,
     "override": null,
     "conflict_id": null,
     "confidence": "secondary",

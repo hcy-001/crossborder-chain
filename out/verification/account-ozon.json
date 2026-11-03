@@ -46,7 +46,7 @@
       "kind": "read",
       "http": 404,
       "ok": true,
-      "detail": "可访问；所属 company_id=4830282",
+      "detail": "可访问；所属 company_id=***（店铺标识，已隐去）",
       "write_verdict": null,
       "ms": 328
     },
