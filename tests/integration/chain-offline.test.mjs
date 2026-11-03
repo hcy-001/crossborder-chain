@@ -69,7 +69,14 @@ test("离线全链路：零 key、零网络、占位图，一次调用产出成�
     assert.ok(receipt.judges.total >= 5, `判别次数应覆盖自检与主要判别点，实际 ${receipt.judges.total}`);
     assert.ok(receipt.judges.by_source.llm > 0, "桩通道也应当走 LLM 路径，以便与回退路径区分");
     assert.equal(receipt.stages.produce[0].package, "ok");
-    assert.equal(receipt.stages.produce[0].modeling, "planned");
+    // 建模阶段要外部建模 skill 的根目录：配了就是 planned（dry 模式不下真单），
+    // 没配就如实降级成 unavailable。CI / 别人 clone 的机器上通常没配 ——
+    // 断言写死 planned 等于要求「你的机器和我的机器一样」，那不是测试该管的事。
+    const modeling = receipt.stages.produce[0].modeling;
+    assert.ok(
+      modeling === "planned" || modeling === "unavailable",
+      `建模状态只能是 planned（已配置建模 skill）或 unavailable（未配置，如实降级），实际 ${modeling}`
+    );
 
     // 七个判别点必须都有明确去向：llm / fallback / skipped_*，不许静默缺席
     const judged = receipt.stages.produce[0].judgments;

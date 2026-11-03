@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {spawnSync} from "node:child_process";
-import {cp, mkdir, mkdtemp, rm, writeFile} from "node:fs/promises";
+import {cp, mkdir, mkdtemp, rm, writeFile, symlink} from "node:fs/promises";
 import {tmpdir} from "node:os";
 import {fileURLToPath} from "node:url";
 import {join} from "node:path";
@@ -77,6 +77,14 @@ test("real repository copy turns red for an injected bad fact and green after re
   t.after(() => rm(root, {recursive: true, force: true}));
   await cp(join(repoRoot, "core"), join(root, "core"), {recursive: true});
   await cp(join(repoRoot, "data"), join(root, "data"), {recursive: true});
+  // 复制出来的目录要能解析第三方依赖（core/judge 会 import ajv）。
+  // 不建这条链接时，本机能过是因为向上查找恰好撞到某个 node_modules，
+  // 而在 CI 的 /home/runner/work 下没有，G3-JUDGE 直接 FAIL —— 典型的「只在我机器上过」。
+  await symlink(
+    join(repoRoot, "node_modules"),
+    join(root, "node_modules"),
+    process.platform === "win32" ? "junction" : "dir"
+  );
 
   const baseline = runGate(root);
   const baselineOutput = baseline.stdout + baseline.stderr;
