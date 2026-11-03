@@ -10,16 +10,28 @@
  * 实际只是最后一段没装依赖 —— ①②③ 与问卷完全不依赖它们。
  */
 
-import {assertDeps} from "./lib/deps.mjs";
+import {ensureDeps, probeDeps} from "./lib/deps.mjs";
 
 const USAGE = "node scripts/chain.mjs --category <品类> --region <法域> --candidates <N> --intake <answers.json>";
 
-assertDeps({
-  fallback:
-    "不装也能跑：①方向验证（market:scan）、②选品决策（select:candidates）、"
-    + "③反查货源（source:lookup）、问卷（intake）与报价（quotes:1688）。",
-  usage: USAGE
-});
+const wantsHelp = process.argv.includes("--help") || process.argv.includes("-h");
+const missing = probeDeps();
+
+// 只看用法时不装依赖、也不加载主逻辑：主逻辑静态 import 了 ajv/sharp，
+// 缺包时连 --help 都会崩，那是「问它怎么用却先报错」，最没道理的一种体验。
+if (wantsHelp && missing.length > 0) {
+  console.log(`出包入口（当前未装依赖：${missing.map((m) => m.name).join(", ")}，首次真正出包时会自动安装）
+
+用法：
+  ${USAGE}
+
+其他参数：--mock-llm --mock-images（零成本试跑）、--tickets <目录>、--run-id <id>
+完整说明见 README 的「安装」与「命令」两节。`);
+  process.exit(0);
+}
+
+// 缺依赖时自动装一次（拖进 skills 目录的人不会先去终端敲 npm ci）
+await ensureDeps({autoInstall: !wantsHelp});
 
 // 依赖齐了才加载主逻辑
 await import("./chain-main.mjs");

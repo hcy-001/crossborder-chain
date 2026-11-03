@@ -29,41 +29,52 @@
 
 ## 安装
 
-三种拿到它的方式。**无论哪种，装完先跑一次 `node install.mjs`**——它检查 Node 版本、装依赖、冒烟三项，缺什么一次说清。
+**不需要在终端跑任何命令。** 放到技能目录、开一个新的会话，就能被调用。
 
-### 方式一：当作 skill 装进 WorkBuddy（推荐）
+### 方式一：拖进去（最常用）
+
+1. 从 [Releases](https://github.com/hcy-001/crossborder-chain/releases) 下 zip，或点 Code → Download ZIP
+2. 解压得到 `crossborder-chain/` 文件夹（**整个文件夹**，不要拆开）
+3. 把它拖进技能目录：
+   - WorkBuddy：`~/.workbuddy/skills/`
+   - Claude Code：`~/.claude/skills/`
+   - Codex 等：各自的 skills 目录
+4. 重开一个会话 —— 目录名 `crossborder-chain` 与 `SKILL.md` 的 `name` 一致，会被直接识别
+
+**第一次真正出包时，它会自己装依赖**（两个包，约 5–10 秒，只一次），屏幕上会打一行「首次运行：先装两个依赖…」。装不上会退化成只跑前几段，并给出手动命令。
+
+### 方式二：git clone
 
 ```bash
 git clone https://github.com/hcy-001/crossborder-chain.git ~/.workbuddy/skills/crossborder-chain
-cd ~/.workbuddy/skills/crossborder-chain && node install.mjs
 ```
 
-**目录名必须是 `crossborder-chain`**，与 `SKILL.md` 里的 `name` 一致。目录名对不上，WorkBuddy 不会把它当成技能加载——这是「解压了但用不了」最常见的原因。
+不用 `npm ci`，不用改配置。
 
-技能识别只看 `SKILL.md` 的 frontmatter（`name` / `description` / `version`），不需要改任何配置。Claude Code 同理，放到 `~/.claude/skills/crossborder-chain`。
-
-### 方式二：解压当命令行工具用
+### 方式三：只当命令行工具
 
 ```bash
-unzip crossborder-chain-*.zip     # 解出来是一个 crossborder-chain/ 目录
 cd crossborder-chain
-node install.mjs                  # 装依赖 + 冒烟，约 5 秒
+node scripts/run-direction.mjs --direction "女士针织开衫" --region RU --intake data/intake/demo-ru.json
 ```
 
-### 方式三：只读文档，不装
+### 想先自检再装（可选）
 
-看 [`docs/信息需求清单.md`](docs/信息需求清单.md)（29 项从哪拿）与 [`docs/交接.md`](docs/交接.md) 即可，不需要 Node。
+```bash
+node install.mjs          # 检查 Node ≥ 20、装依赖、跑三项冒烟
+node install.mjs --check  # 只检查，不安装
+```
 
 ### 装不上怎么办
 
 | 现象 | 原因 | 处理 |
 |---|---|---|
-| `Cannot find package 'sharp'` | 没跑 `npm ci` | `node install.mjs`，或 `npm ci --registry=https://registry.npmmirror.com` |
-| `npm ci` 报 `EAI_AGAIN` / 超时 | 到 npm 官方源不通 | 换镜像：`npm ci --registry=https://registry.npmmirror.com` |
-| 放进 skills 目录但没被识别 | 目录名不是 `crossborder-chain` | 改名，与 `SKILL.md` 的 `name` 对齐 |
-| `Node 版本过低` | 需要 Node ≥ 20 | 装 LTS，或 `nvm install 20` |
+| 技能列表里没有它 | 目录名不是 `crossborder-chain`，或没重开会话 | 改名与 `SKILL.md` 的 `name` 对齐，重开会话 |
+| 出包时报缺 `sharp`/`ajv` | 自动安装没跑成（离线/代理） | 在 skill 目录跑 `npm ci --registry=https://registry.npmmirror.com` |
+| `npm ci` 超时 | 到 npm 官方源不通 | 同上换镜像 |
+| `Node 版本过低` | 需要 Node ≥ 20 | 装 LTS |
 
-**只有 ④ 出包需要 `ajv` + `sharp`。** ①方向验证、②选品决策、③反查货源、问卷、1688 报价全是纯 Node，不装依赖也能跑——`chain.mjs` 会明确告诉你缺哪个包、怎么装，而不是甩一串 `ERR_MODULE_NOT_FOUND`。
+**只有 ④ 出包用到 `ajv` + `sharp`。** ①方向验证、②选品决策、③反查货源、问卷、1688 报价全是纯 Node，装不上依赖也能用。
 
 ### 装完之后：跑一遍样例
 

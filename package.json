@@ -1,6 +1,6 @@
 {
   "name": "crossborder-delivery-skill",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "跨境电商全链路：给品类+法域+候选数，产出一份能被人接手提交的上品包，每段留可回放台账。覆盖 8 平台 × 9 法域。",
   "license": "MIT",
   "type": "module",

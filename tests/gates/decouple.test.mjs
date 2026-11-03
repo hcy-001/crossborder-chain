@@ -78,8 +78,9 @@ test("real repository copy turns red for an injected bad fact and green after re
   await cp(join(repoRoot, "core"), join(root, "core"), {recursive: true});
   await cp(join(repoRoot, "data"), join(root, "data"), {recursive: true});
   // 复制出来的目录要能解析第三方依赖（core/judge 会 import ajv）。
-  // 不建这条链接时，本机能过是因为向上查找恰好撞到某个 node_modules，
-  // 而在 CI 的 /home/runner/work 下没有，G3-JUDGE 直接 FAIL —— 典型的「只在我机器上过」。
+  // 不建这条链接时，本机能过是因为向上查找恰好撞到某个 node_modules；
+  // 换到 CI 的工作目录就没有了，G3-JUDGE 直接 FAIL —— 典型的「只在我机器上过」。
+  // 注意：注释里不要写绝对家目录路径，G1-PATH 会把它当成硬编码路径判红。
   await symlink(
     join(repoRoot, "node_modules"),
     join(root, "node_modules"),

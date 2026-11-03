@@ -16,17 +16,17 @@
     "stale": true,
     "cross_check": [
       {
-        "source": "cbr-usd-aed",
-        "value": 3.672496212911477,
-        "note": "derived from USD/RUB and AED/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "source": "fxratesapi-usd-aed",
+        "value": 3.6730003962,
+        "note": "provider_as_of=2026-11-03T03:03:00.000Z; fetched_at=2026-11-03T03:04:18.131Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=AED"
       },
       {
-        "source": "fxratesapi-usd-aed",
-        "value": 3.6728007183,
-        "note": "provider_as_of=2026-11-03T02:59:00.000Z; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=AED"
+        "source": "cbr-usd-aed",
+        "value": 3.672496212911477,
+        "note": "derived from USD/RUB and AED/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T03:06:04.564Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       }
     ],
-    "divergence_pct": 0.008299180988,
+    "divergence_pct": 0.013736297972,
     "override": null,
     "conflict_id": null,
     "confidence": "secondary",
@@ -54,17 +54,17 @@
         "note": "derived from USD/RUB and CNY/RUB quotes; provider_date=2026-10-31T11:30:00+03:00; fetched_at=2026-11-01T06:18:54.349Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       },
       {
-        "source": "frankfurter-usd-cny",
-        "value": 6.6483,
-        "note": "provider_date=2026-11-02; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY"
+        "source": "fxratesapi-usd-cny",
+        "value": 6.6697010404,
+        "note": "provider_as_of=2026-11-03T03:03:00.000Z; fetched_at=2026-11-03T03:04:18.131Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=CNY"
       },
       {
-        "source": "fxratesapi-usd-cny",
-        "value": 6.6701010772,
-        "note": "provider_as_of=2026-11-03T02:59:00.000Z; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=CNY"
+        "source": "frankfurter-usd-cny",
+        "value": 6.6483,
+        "note": "provider_date=2026-11-02; fetched_at=2026-11-03T03:06:04.564Z; source_url=https://api.frankfurter.dev/v1/latest?base=USD&symbols=CNY"
       }
     ],
-    "divergence_pct": 0.258550063882,
+    "divergence_pct": 0.252537095101,
     "override": null,
     "conflict_id": null,
     "confidence": "official",
@@ -171,14 +171,14 @@
     "stale": true,
     "cross_check": [
       {
-        "source": "cbr-usd-rub",
-        "value": 80.9734,
-        "note": "direct USD/RUB quote; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "source": "fxratesapi-usd-rub",
+        "value": 80.9180156915,
+        "note": "provider_as_of=2026-11-03T03:03:00.000Z; fetched_at=2026-11-03T03:04:18.131Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=RUB"
       },
       {
-        "source": "fxratesapi-usd-rub",
-        "value": 80.9180111359,
-        "note": "provider_as_of=2026-11-03T02:59:00.000Z; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=RUB"
+        "source": "cbr-usd-rub",
+        "value": 80.9734,
+        "note": "direct USD/RUB quote; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T03:06:04.564Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       }
     ],
     "divergence_pct": 0.516526745559,
@@ -204,17 +204,17 @@
     "stale": true,
     "cross_check": [
       {
-        "source": "cbr-usd-sar",
-        "value": 3.7500011577879766,
-        "note": "derived from USD/RUB and SAR/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
+        "source": "fxratesapi-usd-sar",
+        "value": 3.7531006587,
+        "note": "provider_as_of=2026-11-03T03:03:00.000Z; fetched_at=2026-11-03T03:04:18.131Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=SAR"
       },
       {
-        "source": "fxratesapi-usd-sar",
-        "value": 3.753100396,
-        "note": "provider_as_of=2026-11-03T02:59:00.000Z; fetched_at=2026-11-03T03:00:39.224Z; source_url=https://api.fxratesapi.com/latest?base=USD&currencies=SAR"
+        "source": "cbr-usd-sar",
+        "value": 3.7500011577879766,
+        "note": "derived from USD/RUB and SAR/RUB quotes; provider_date=2026-11-03T11:30:00+03:00; fetched_at=2026-11-03T03:06:04.564Z; source_url=https://www.cbr-xml-daily.ru/daily_json.js"
       }
     ],
-    "divergence_pct": 0.082459810386,
+    "divergence_pct": 0.082466815705,
     "override": null,
     "conflict_id": null,
     "confidence": "secondary",

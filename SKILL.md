@@ -1,7 +1,7 @@
 ---
 name: crossborder-chain
 description: 跨境电商全链路单入口（选品→找货→生图→建模→上品信息）。用户只给大品类、目标法域、候选数量，链路先做信息自检，再吃选品技能产出的真实工单，按确定性打分排序，随后并行出图与建模，最后按目标法域的平台要求组装上品信息。覆盖 8 个平台（Ozon / Яндекс Маркет / Wildberries / Shopee / Lazada / TikTok Shop / Amazon / noon）× 9 个法域（RU SG MY TH PH ID VN AE SA），全部可出包。平台规则来自官方开放平台文档、卖家帮助中心（含中文站）、llms.txt 与存档页，每条事实带 source_url 与 final/candidate/unverified 等级。模型只做判别（选择/异常处置/现场推导），不做打分与定价。产出是「可被人接手提交」的材料包，不调用上架 API、不保存凭证、不自动提交。
-version: 1.2.0
+version: 1.2.1
 agent_created: true
 user-invocable: true
 disable-model-invocation: false
