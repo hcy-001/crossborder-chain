@@ -27,13 +27,50 @@
 | 「预估毛利 35%」 | 每个数字带口径与来源；缺一项就 `unavailable` 并点名缺哪项，不编 |
 | 「已通过校验」 | 说清楚是 L0 静态检查 / L1 本地跑通 / L2 平台侧实证 |
 
-## 30 秒上手
+## 安装
+
+三种拿到它的方式。**无论哪种，装完先跑一次 `node install.mjs`**——它检查 Node 版本、装依赖、冒烟三项，缺什么一次说清。
+
+### 方式一：当作 skill 装进 WorkBuddy（推荐）
+
+```bash
+git clone https://github.com/hcy-001/crossborder-chain.git ~/.workbuddy/skills/crossborder-chain
+cd ~/.workbuddy/skills/crossborder-chain && node install.mjs
+```
+
+**目录名必须是 `crossborder-chain`**，与 `SKILL.md` 里的 `name` 一致。目录名对不上，WorkBuddy 不会把它当成技能加载——这是「解压了但用不了」最常见的原因。
+
+技能识别只看 `SKILL.md` 的 frontmatter（`name` / `description` / `version`），不需要改任何配置。Claude Code 同理，放到 `~/.claude/skills/crossborder-chain`。
+
+### 方式二：解压当命令行工具用
+
+```bash
+unzip crossborder-chain-*.zip     # 解出来是一个 crossborder-chain/ 目录
+cd crossborder-chain
+node install.mjs                  # 装依赖 + 冒烟，约 5 秒
+```
+
+### 方式三：只读文档，不装
+
+看 [`docs/信息需求清单.md`](docs/信息需求清单.md)（29 项从哪拿）与 [`docs/交接.md`](docs/交接.md) 即可，不需要 Node。
+
+### 装不上怎么办
+
+| 现象 | 原因 | 处理 |
+|---|---|---|
+| `Cannot find package 'sharp'` | 没跑 `npm ci` | `node install.mjs`，或 `npm ci --registry=https://registry.npmmirror.com` |
+| `npm ci` 报 `EAI_AGAIN` / 超时 | 到 npm 官方源不通 | 换镜像：`npm ci --registry=https://registry.npmmirror.com` |
+| 放进 skills 目录但没被识别 | 目录名不是 `crossborder-chain` | 改名，与 `SKILL.md` 的 `name` 对齐 |
+| `Node 版本过低` | 需要 Node ≥ 20 | 装 LTS，或 `nvm install 20` |
+
+**只有 ④ 出包需要 `ajv` + `sharp`。** ①方向验证、②选品决策、③反查货源、问卷、1688 报价全是纯 Node，不装依赖也能跑——`chain.mjs` 会明确告诉你缺哪个包、怎么装，而不是甩一串 `ERR_MODULE_NOT_FOUND`。
+
+### 装完之后：跑一遍样例
 
 不需要任何 key、不需要联网、不需要外部服务：
 
 ```bash
-npm ci              # 只有两个依赖：ajv、sharp
-npm run quickstart  # 内置样例工单 + 占位图 + 桩判别，约 10 秒
+npm run quickstart   # 内置样例工单 + 占位图 + 桩判别，约 10 秒
 ```
 
 跑完打开它打印的 `handoff.md`。你会看到一份**带 4 项阻断的降级包**——这是刻意的：样例没填问卷、没品牌授权、没认证。工具不会假装它能上架。
@@ -41,25 +78,10 @@ npm run quickstart  # 内置样例工单 + 占位图 + 桩判别，约 10 秒
 想看「填完问卷之后」的样子：
 
 ```bash
-npm run intake -- --list                                  # 29 项必问清单（必答 16 / 需确认 9 / 可默认 2）
+node scripts/intake.mjs --list --how                      # 29 项清单，每项带「从哪拿」
 node scripts/intake.mjs --check --answers answers.json    # 先校验，缺必答项 exit 2 并点名
 node scripts/chain.mjs --category 女装 --region RU --candidates 1 --intake answers.json
 ```
-
-## 装进你自己的 Agent
-
-这是一个标准 Skill 目录（`SKILL.md` + `scripts/` + `core/` + `data/`），三种用法：
-
-```bash
-# 1) 直接放进技能目录（WorkBuddy / Claude Code 通用）
-cp -r . ~/.workbuddy/skills/crossborder-chain     # 或 ~/.claude/skills/
-# 2) 只当命令行工具用
-npm ci && npm run quickstart
-# 3) 当库引用
-import {computePricing} from "./scripts/lib/chain-stages.mjs";
-```
-
-技能识别靠 `SKILL.md` 的 frontmatter（name / description / version），不需要改配置。
 
 ## 产出长什么样
 

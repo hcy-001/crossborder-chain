@@ -1,7 +1,7 @@
 ---
 name: crossborder-chain
 description: 跨境电商全链路单入口（选品→找货→生图→建模→上品信息）。用户只给大品类、目标法域、候选数量，链路先做信息自检，再吃选品技能产出的真实工单，按确定性打分排序，随后并行出图与建模，最后按目标法域的平台要求组装上品信息。覆盖 8 个平台（Ozon / Яндекс Маркет / Wildberries / Shopee / Lazada / TikTok Shop / Amazon / noon）× 9 个法域（RU SG MY TH PH ID VN AE SA），全部可出包。平台规则来自官方开放平台文档、卖家帮助中心（含中文站）、llms.txt 与存档页，每条事实带 source_url 与 final/candidate/unverified 等级。模型只做判别（选择/异常处置/现场推导），不做打分与定价。产出是「可被人接手提交」的材料包，不调用上架 API、不保存凭证、不自动提交。
-version: 2.0.0
+version: 1.2.0
 agent_created: true
 user-invocable: true
 disable-model-invocation: false
@@ -11,7 +11,19 @@ disable-model-invocation: false
 
 **这条链路只做一件事：把「一句话需求」变成一个可以被人接手提交的上品包，并且每一步都能被数字否掉。**
 
-## 0. 唯一的开始方式
+## 0. 装好之后第一件事
+
+```bash
+node install.mjs
+```
+
+它检查 Node 版本（需 ≥ 20）、装依赖、跑三项冒烟，缺什么一次说清。
+
+**只有 ④ 出包需要 `ajv` + `sharp`**；①方向验证、②选品决策、③反查货源、问卷与 1688 报价都是纯 Node，不装依赖也能跑。
+
+目录名必须与本文 `name` 一致（`crossborder-chain`），否则不会被当成技能加载。
+
+## 0.1 唯一的开始方式
 
 ### 0.0 两条入口，先分清你手里有什么
 
