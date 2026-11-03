@@ -33,7 +33,8 @@
 
 ### 方式一：拖进去（最常用）
 
-1. 从 [Releases](https://github.com/hcy-001/crossborder-chain/releases) 下 zip，或点 Code → Download ZIP
+1. 从 [Releases](https://github.com/hcy-001/crossborder-chain/releases) 下 `crossborder-chain-v1.2.1.zip`
+   （用 Code → Download ZIP 也行，但解出来叫 `crossborder-chain-main/`，**要改回 `crossborder-chain`**，否则技能名对不上不会被加载）
 2. 解压得到 `crossborder-chain/` 文件夹（**整个文件夹**，不要拆开）
 3. 把它拖进技能目录：
    - WorkBuddy：`~/.workbuddy/skills/`
