@@ -7,7 +7,7 @@
     "endpoint": "https://ark.cn-beijing.volces.com/api/v3/images/generations",
     "model": "doubao-seedream-5-0-260128",
     "model_id_source": "历史项目出现 63 次的既有 model id，非本文臆造的营销名",
-    "credential_source": "C:/Users/pisce/.workbuddy/skills/crossborder-upload/.env 的 ARK_API_KEY（46 字符，ark- 前缀）",
+    "credential_source": "仓库外的凭证文件（未随本仓库分发）中的 ARK_API_KEY",
     "credential_written_to": "config/local.secret.json（gitignored, 0600），config/local.json 不含 key"
   },
   "auth_probe": {
