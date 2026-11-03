@@ -314,7 +314,7 @@ async function costDiscipline() {
     checks.push({name: "单价未查证时明确写 null 与原因", ok: false});
     checks.push({name: "真实调用带回 usage", ok: false});
   }
-  const chainSrc = await readIfExists(join(ROOT, "scripts/chain.mjs"));
+  const chainSrc = await readIfExists(join(ROOT, "scripts/chain-main.mjs"));
   checks.push({name: "回执记录 token 账而不是编金额", ok: Boolean(chainSrc) && /unit_price_cny: null/.test(chainSrc)});
   const total = checks.length;
   const passed = checks.filter((item) => item.ok).length;
